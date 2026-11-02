@@ -5,7 +5,7 @@ description: 내 할 일 보드(docs/todo.md)와 STWS 티켓(보고용)을 동�
 
 # 할 일 동기화 (todo-sync)
 
-원본 = docs/todo.md. STWS는 보고용 → 티켓 상태 변경·생성은 사용자가 직접(Claude는 제안만). 장기 프로젝트는 사용자가 따로 관리(관련 있으면 이름만 적음). D-20261102-18
+원본 = docs/todo.md. STWS는 보고용 → 티켓 상태 변경은 사용자가 승인한 목록만 Claude가 반영(5절), 생성·삭제·담당자 변경·댓글은 요청 시에만. 장기 프로젝트는 사용자가 따로 관리(관련 있으면 이름만 적음). D-20261102-18
 
 ## 1. STWS 읽기 (크롬, 읽기만)
 - `https://stws.seoulgrocery.com/st/dashboard/tickets?page=N&per_page=20&sort=updated_at&direction=desc&assignee=89` (assignee 89 = Hyunmyung Lee)
@@ -25,3 +25,9 @@ description: 내 할 일 보드(docs/todo.md)와 STWS 티켓(보고용)을 동�
 ## 4. 보고·저장
 - 표: 새 티켓 / 상태 바뀜 / 닫기 제안 / ⏸ 결정 필요 / "지금" 제안
 - todo.md 머리줄 갱신일·건수 고치고 커밋
+
+## 5. 상태 변경 반영 (승인된 목록만)
+- 먼저 "T-번호 → 상태" 목록을 보여 주고 승인받는다. 승인은 그 목록에만 유효
+- 티켓 주소 `https://stws.seoulgrocery.com/st/dashboard/tickets/<번호>` → wait 2 → 오른쪽 Status 드롭다운 클릭 → 값 클릭(Open, In progress, Pending, Resolved, Cancelled). 고르면 바로 저장됨(저장 버튼 없음)
+- 확인: 같은 주소 다시 열고 find "Status select current value" → 값 확인 후 todo.md 4절에 기록
+- 드롭다운 위치는 화면마다 스크린샷(scale 0.6)으로 확인 후 클릭
