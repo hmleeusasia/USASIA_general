@@ -25,11 +25,13 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 
 ## 4. 메일 (기준일 이후만)
 Gmail — 텍스트 방식(가벼움)
-- 크롬 새 탭에서 `https://mail.google.com/mail/u/0/#search/after:YYYY/MM/DD` → get_page_text 1번
-- 광고·알림(ChatGPT, Newegg, Claude Team 등)은 빼고, 업무 메일만 표로
+- 크롬 새 탭에서 `https://mail.google.com/mail/u/0/#inbox` → get_page_text 1번 (검색 결과 화면은 get_page_text가 비어 나옴)
+- 기준일 이후 줄만 본다. 광고·알림(ChatGPT, Newegg, Claude Team 등)은 빼고 업무 메일만 표로
 
-Outlook — 스크린샷 방식(무거움, 아끼기)
-- `https://outlook.office.com/mail/` 검색창에 `received>=YYYY-MM-DD` 입력 후 목록 스크린샷(scale 0.6) 1~2장
+Outlook — 접근성 목록 방식 (메일을 열지 않음 → 읽음 처리 없음)
+- `https://outlook.office.com/mail/` → find "message list listbox" → read_page(ref, depth 3)
+- 각 줄 앞 "Unread" = 안 읽음. 목록은 화면에 보이는 것만 나오므로 browser_batch로 [scroll 10 → read_page] 반복, 기준일 지나면 멈춤
+- 검색창 입력(isread:no 등)은 적용이 안 됐음 — 쓰지 말 것. 스크린샷은 필요할 때만(scale 0.6)
 - 본문은 사용자가 고른 메일만: 클릭 → find "message body" → read_page(ref, max_chars 4000)
 - 메일을 열면 읽음 처리됨 → 꼭 필요한 것만 열고, 연 메일을 보고에 적는다
 - get_page_text는 Outlook에서 안 됨(시도하지 말 것)

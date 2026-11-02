@@ -12,7 +12,8 @@
 | H-local | 로컬 PC 통과. 드라이브 커넥터·크롬(Gmail 텍스트 OK, Outlook 화면만) 확인(2026-11-02). 클라우드 계정 커넥터 동일 여부 미확인 | 거의 완료 | 사용자 |
 | H-drive1 | 내 드라이브 전체 1차 색인 완료(docs/drive-index, 2026-11-02). 남은 것: 공유 드라이브·공유 문서함, 사진·DB 제목 기준 행 | 1차 완료 | 지휘 |
 | H-share | 공유 정리 후보 검토 (docs/drive-index/sharing-review.md) — 비밀번호 문서 외부 공유 등 | 대기 | 사용자 |
-| H-mail | 이메일 지원·업무 기록 시작. Outlook은 Microsoft 365 커넥터 연결 검토 | 대기 | 사용자와 함께 |
+| H-mail | 2026-11-02 안 읽은 메일 점검 → 열린 건 7개 log/2026/2026-11-02.md (인보이스 자동발송, PLU LIST, SAP GRPO, Cloudflare 다운 반복, 토론토 메일 실패, POS 포인트, 보안 알림) | 진행 중 | 사용자 |
+| H-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
 
 ## D. 확인 안 된 것
@@ -23,6 +24,9 @@
 - archive 이동 주기 3개월
 
 ## F. 함정
+- check.py "민감 정보 의심"은 '비밀번호' 같은 단어에도 걸림(색인의 ⚠민감 표시) → 값이 있는지만 눈으로 확인
+- Outlook 웹 get_page_text 불가, Gmail 검색결과 화면도 get_page_text 비어 나옴 → start-day skill 참고
+- 하위 에이전트가 제목만 보고 행을 채움 → 브리프에 "모든 문서 내용 읽기, 제목 기준 금지" 명시
 - 동의어 검색은 짧은 영문(PO 등)이 다른 단어 속에 걸림 → find.py가 단어 단위로 처리. 셸 awk 대신 Python 사용
 
 ## G. 새 세션 첫 멘트
