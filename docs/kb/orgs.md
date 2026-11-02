@@ -15,12 +15,13 @@
 | Comcast | 벤더(통신) | 매장 회선·전화. 우리 담당자 Tae Lee | 확인 |
 | Ziply / Lumen / CenturyLink / Verizon / Spectrum | 벤더(통신) | 매장 회선·전화 | 추정 |
 | ITSolution | 벤더 | 사용자와 거래하는 케이블링 업체 (WA·OR Cable Run) | 확인 |
-| Cloudflare | 벤더 | NewIntra·InfoCenter 회선 상태 알림 | 추정 |
+| Cloudflare | 벤더 | NewIntra·InfoCenter 회선 상태 알림. 회선 관리는 본사(Andy Han) 쪽 | 확인 2026-11-02 |
 | Meraki (Cisco) / Aspire | 벤더 | 네트워크 장비 / 장비 공급 | 추정 |
 | Campeon, Ishida, DistrictScale | 벤더 | 저울 | 추정 |
 | Leverage Cloud Solutions | 벤더 | ISP 관련 (ISP information 공유) | 추정 |
 | SSS Camera | 협력 | CO 케이블·CCTV (jorden) | 추정 |
-| KF (kf-usa.com), KRM, Daifuku, SSP | 계열사? | 경비 PDF 공유(KF), Medicare 공지 대상 법인 | 추정 |
+| KF (kf-usa.com) | 협력 | 우리 회사 회계 담당 회사 | 확인 2026-11-02 |
+| KRM, Daifuku, SSP | 계열사? | Medicare 공지 대상 법인 | 추정 (사용자도 확인 필요) |
 | beOne Solutions | 벤더? | SCAN4SAP VPN 설정 | 추정 |
-| STI (stiseattle.com) | 협력? | 512 Boundary Blvd 냉동창고 네트워크 | 추정 |
+| STI (stiseattle.com) | 계열사 | 서울트레이딩 계열 회사 중 하나(지역 미확인, 도메인상 시애틀?). 512 Boundary Blvd 냉동창고 네트워크 | 확인 2026-11-02 (지역 추정) |
 | hanbiro | 벤더 | 메일/호스팅 보안 공지 | 추정 |
