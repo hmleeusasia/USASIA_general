@@ -5,9 +5,10 @@
 - `python3 tools/find.py --open` → CURRENT_STATE C절 갱신
 - CURRENT_STATE.md 80줄 이하, kb/facts.md 50줄 이하인가
 - 새로 알게 된 계속 유효한 사실 → kb/facts.md 반영
-- 분기마다: 지난 분기 log를 월별 요약(docs/log/YYYY/YYYY-MM-summary.md, 주요 건·결정·미결 10~20줄)으로 정리한 뒤 원본 log는 docs/archive/YYYY/ 로 이동. 요약은 log 폴더에 남는다
-- #waiting 건: 다시 확인할 날이 지났는가 (python3 tools/find.py --open)
-- 두 번 이상 나온 #tip → kb 문서로 승격했는가
+- 분기마다, 단 docs/log의 기록 파일이 60개 이상일 때만: 오래된 달부터 월별 요약(docs/log/YYYY/YYYY-MM-summary.md, 10~20줄, 건마다 "### 제목  #태그" 한 줄 + 결정 ID) 작성 → 원본은 docs/archive/YYYY/로 이동
+  - 요약에는 #open/#waiting 쓰지 않음. 이동 전 미결 건은 #done 처리하거나 CURRENT_STATE로 옮김
+- python3 tools/find.py --open (기한초과 확인), --due (30일 일정)
+- 팁 승격은 쓸 때 검색으로 처리(템플릿 주석). 점검 때 따로 찾지 않음
 - 분기마다: 남은 claude/* 원격 브랜치 정리를 사용자에게 알림 (GitHub 웹 Branches 화면에서 삭제, D-20261102-7)
 - INDEX 파일들이 실제 파일과 맞는가 (빠진 것·죽은 링크)
 - keywords.md 밖의 키워드나 같은 뜻 중복이 생겼나

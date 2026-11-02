@@ -1,5 +1,6 @@
 # 계속 유효한 사실 (50줄 이하, 세션 시작 때 읽음)
-<!-- 바뀌지 않는 사실만. 상태·할 일은 CURRENT_STATE, 결정은 decisions.md. 민감 정보 금지(storage_rules.md) -->
+<!-- 바뀌지 않는 사실만. 상태·할 일은 CURRENT_STATE, 결정은 decisions.md. 민감 정보 금지(storage_rules.md)
+     각 항목 끝에 (확인: YYYY-MM). 6개월 지난 항목은 분기 점검 때 사용자에게 확인 -->
 
 ## 회사·환경
 - USASIA 마트, 미국 워싱턴주, 여러 매장. 사용자는 IT 부서 담당

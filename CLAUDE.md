@@ -39,7 +39,8 @@
 | 업무 지식·팁 | docs/kb/INDEX.md |
 | 과거 업체 일 | docs/vendors/INDEX.md → 업체 파일 |
 | 특정 키워드·업체·일 | `python3 tools/find.py Granite demarc` (동의어 자동, AND) |
-| 열린 건 | `python3 tools/find.py --open` |
+| 열린 건·기한초과 | `python3 tools/find.py --open` |
+| 다가오는 일정(30일) | `python3 tools/find.py --due` |
 | 드라이브 문서 찾기 | docs/drive-index/INDEX.md |
 | 진행 중 계획 | docs/requests/ |
 
