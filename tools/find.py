@@ -21,7 +21,7 @@ def pattern(word, groups):
     parts = []
     for a in alts:
         e = re.escape(a)
-        parts.append(rf"(?<![\w-]){e}(?![\w-])" if re.fullmatch(r"[A-Za-z0-9]{1,3}", a) else e)
+        parts.append(rf"(?<![A-Za-z0-9-]){e}(?![A-Za-z0-9-])" if re.fullmatch(r"[A-Za-z0-9]{1,3}", a) else e)
     return re.compile("|".join(parts), re.I)
 
 def entries():
