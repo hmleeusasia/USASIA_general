@@ -42,6 +42,10 @@ def main(args):
         g = synonyms(); pats = [pattern(a, g) for a in args]
     hits = [(f, n, h) for f, n, h, b in entries() if all(p.search(b) for p in pats)]
     for f, n, h in hits: print(f"{f}:{n}: {h[4:]}")
+    if args != ["--open"]:
+        for line in (ROOT/"docs/decisions.md").read_text().splitlines():
+            if line.startswith("- D-") and all(p.search(line) for p in pats):
+                hits.append(1); print(("[대체됨] " if "대체: D-" in line else "") + "결정 " + line[2:])
     if not hits: print("결과 없음")
 
 sys.exit(main(sys.argv[1:]))

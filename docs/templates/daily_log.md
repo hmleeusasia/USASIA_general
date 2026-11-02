@@ -9,5 +9,7 @@
 - 다음: 날짜가 있으면 calendar.md에도
 - 번호: PO-/INV-/티켓 번호
 - 원본: [드라이브](링크)
+- (#waiting이면) 기다리는 상대: / 다시 확인할 날: → calendar.md
 
 ### 오늘의 팁  #tip #분야
+<!-- 같은 팁이 두 번째 나오면 docs/kb/<주제>.md로 옮기고 kb/INDEX.md에 한 줄 -->
