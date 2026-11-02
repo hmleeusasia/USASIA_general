@@ -30,4 +30,5 @@ description: 내 할 일 보드(docs/todo.md)와 STWS 티켓(보고용)을 동�
 - 먼저 "T-번호 → 상태" 목록을 보여 주고 승인받는다. 승인은 그 목록에만 유효
 - 티켓 주소 `https://stws.seoulgrocery.com/st/dashboard/tickets/<번호>` → wait 2 → 오른쪽 Status 드롭다운 클릭 → 값 클릭(Open, In progress, Pending, Resolved, Cancelled). 고르면 바로 저장됨(저장 버튼 없음)
 - 확인: 같은 주소 다시 열고 find "Status select current value" → 값 확인 후 todo.md 4절에 기록
+- Close(닫기)는 상태 값이 아니라 페이지 맨 아래 "Close ticket" 버튼(find "Close ticket button"). 누르면 브라우저 확인창이 떠 크롬 도구가 멈춤 → 클릭 후 사용자에게 확인창 "확인"을 눌러 달라고 하고, 다시 열어 Status "CLOSED" 확인. 순서: Resolved → (사용자 확인) → Close
 - 드롭다운 위치는 화면마다 스크린샷(scale 0.6)으로 확인 후 클릭
