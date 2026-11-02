@@ -21,10 +21,12 @@ for t in sorted(tags):
     elif t not in known:
         problems.append(f"미등록 태그: {t}")
 
+EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 for f in D.rglob("*.md"):
     if any(s in f.parts or f.name == s for s in SKIP): continue
     for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
         if SENS.search(line): problems.append(f"민감 정보 의심: {f.relative_to(ROOT)}:{i}: {line.strip()[:60]}")
+        if EMAIL.search(line): problems.append(f"이메일 주소: {f.relative_to(ROOT)}:{i}: {EMAIL.search(line).group()} → 드라이브 Claude 폴더로 (D-20261102-16)")
 
 for sub in ("kb", "drive-index"):
     idx = (D / sub / "INDEX.md").read_text(encoding="utf-8")
