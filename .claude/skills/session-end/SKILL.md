@@ -7,6 +7,7 @@ description: 세션 마무리·인계 절차. 점검표(docs/session_review.md) 
 
 1. docs/session_review.md 점검표 1절 전부 (check.py, find.py --open/--due, 줄 수, INDEX 일치, 민감 정보)
 2. 드라이브 Claude 폴더 공유 0명 확인: get_file_permissions(폴더 ID는 docs/drive-index/claude-folder.md). 로컬 세션만
+   - 클라우드 세션(시트 커넥터 있음): 90_변경대기 '대기' 줄을 대상 시트 셀에 반영 → 상태 '완료'·반영일 → CURRENT_STATE H-sheet 갱신 (D-20261102-17)
 3. 열린 건(#open/#waiting) → CURRENT_STATE C절. 바뀐 절만 고침, 80줄 이하
 4. 계속 유효한 새 사실 → kb/facts.md(확인일), 새 결정 → decisions.md(ID), 새 조직 → kb/orgs.md
 5. 이번 세션에 만든 kb 문서·skill이 kb/INDEX.md·CLAUDE.md에 있는지
