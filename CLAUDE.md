@@ -3,6 +3,7 @@
 작업 원칙: **docs/project_instructions.md** 를 따른다 (이 파일은 저장소별 설정만 담는다).
 
 ## 세션 시작 순서
+(로컬 PC에서는 `/start-day` 루틴이 아래 1~2를 포함해 메일·드라이브까지 확인. D-20261102-13)
 1. 이 파일 → `docs/CURRENT_STATE.md` → `docs/kb/facts.md` 전부 읽기
 2. 할 일·등급(가벼움/무거움)·맡을 곳을 한 번에 알리고 승인받기
 3. 끝날 때: CURRENT_STATE 바뀐 절만 고침(80줄 이하), 새 결정은 `docs/decisions.md`, 커밋·push → **main에 합치고 push** (D-20261102-6)

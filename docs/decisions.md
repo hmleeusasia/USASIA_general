@@ -15,3 +15,4 @@
 - D-20261102-10: 알려진 기법 4가지 적용 — ①ADR(결정 대체 표시, find.py가 결정도 검색) ②GTD 대기 목록(기다리는 상대·확인일) ③점진적 요약(분기마다 월별 요약 후 archive) ④제텔카스텐식 승격(반복 팁 → kb). PARA·Johnny.Decimal 같은 폴더 분류법은 태그 3갈래와 겹쳐 제외
 - D-20261102-11: D-20261102-10 보완(Sonnet 토론) — 날짜 원본은 기록 건 본문(calendar.md는 반복·장기 일정만), find.py --open 기한초과·--due 추가, 요약 파일 검색 지원, 팁 승격은 쓸 때 검색, 요약·archive는 기록 60개 이상일 때만, facts.md에 확인일. 역링크 제외 이유: 태그 검색이 같은 역할
 - D-20261102-12: 로컬 PC 작업 허용 — 시작 시 git pull, main에서 작업 후 push, 한 번에 한 곳만. 드라이브 색인은 Cowork 크롬 화면 공유(export?format=txt). 점검 도구 check.sh → check.py(Windows 대응)
+- D-20261102-13: 업무 시작 루틴을 프로젝트 skill로 고정(.claude/skills/start-day). 메일은 Gmail=크롬 텍스트, Outlook=크롬 스크린샷+접근성(Microsoft 365 커넥터는 관리자 승인 대기), 드라이브는 커넥터(크롬 export 방식 대체). 근거: 2026-11-02 시험에서 Outlook이 호출 수 약 3배
