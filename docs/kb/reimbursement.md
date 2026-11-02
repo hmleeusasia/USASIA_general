@@ -8,7 +8,7 @@
 
 ## 규칙
 - Milage 아닌 건 → Others 탭(A~I). Milage → Driving 탭(H 마일, J `=$I$1*H행`, 단가 I1)
-- 코드: 분류가 여러 개면 **앞의 분류** 기준. Meal→WE0002, Business Trip→WE0001, Parking→WE0006, Office→WE0011, 정액 출장비→ETC
+- 코드: 분류가 여러 개면 **앞의 분류** 기준. 예외: Meal+Visitor(외부인사 식사)→WE0003. Meal→WE0002, Business Trip→WE0001, Parking→WE0006, Office→WE0011, 정액 출장비→ETC
 - 출장 정액 출장비 행(예: 5일 $250)은 노션에 없으므로 따로 추가
 - **점심 $18 = 최대 청구 금액**(사용자가 수동으로 깎음). 영수증 금액이 더 커도 같은 날 영수증이면 연결
 - 마일 빈칸은 Driving·이전 마일리지 탭의 같은 구간 거리로 채움, 기록 없는 구간은 빼고 알림
