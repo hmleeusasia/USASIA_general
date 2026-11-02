@@ -51,7 +51,7 @@
 ## 질문 유형별 먼저 볼 곳
 | 질문 | 먼저 볼 곳 |
 |---|---|
-| 지금 상태·할 일 | docs/CURRENT_STATE.md |
+| 지금 상태·할 일 | docs/CURRENT_STATE.md (저장소 작업), docs/todo.md (내 업무 할 일, STWS 동기화) |
 | 과거 결정 이유 | docs/decisions.md |
 | 업무 지식·팁 | docs/kb/INDEX.md |
 | 과거 업체 일 | docs/vendors/INDEX.md → 업체 파일 |
@@ -62,7 +62,7 @@
 | 진행 중 계획 | docs/requests/ |
 | 지식·조직·메일 분류 기준 | docs/kb/INDEX.md (orgs.md 계열사·벤더, mail_triage.md 메일 분류) |
 | 이메일 주소·전화·계정번호 등 민감 값 | 드라이브 Claude 폴더 → docs/drive-index/claude-folder.md (ID·열 이름만) |
-| 작업 절차 | .claude/skills/ — start-day(업무 시작), mail-triage(메일), drive-index(드라이브 색인), session-end(마무리) |
+| 작업 절차 | .claude/skills/ — start-day(업무 시작), todo-sync(할 일·STWS), mail-triage(메일), drive-index(드라이브 색인), session-end(마무리) |
 
 ## 저장소별 설정 (임시값 — 정해지면 교체)
 - 시험·빌드:          해당 없음 (문서 저장소). 점검은 python3 tools/check.py + session_review.md

@@ -26,6 +26,9 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 ## 4. 메일 (기준일 이후만)
 - mail-triage skill 절차대로 3개 메일함(받은편지함+보낸편지함) 점검·분류
 
+## 4-1. 할 일
+- todo-sync skill로 STWS 동기화 → "지금" 제안
+
 ## 5. 드라이브 변경
 - 드라이브 커넥터 search_files: `modifiedTime > '<기준일>T00:00:00Z'`, excludeContentSnippets true
 - docs/drive-index에 없는 새 문서·바뀐 문서를 표로 (색인 갱신 후보)
@@ -37,6 +40,7 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 |---|---|---|---|
 | 기한초과·열린 건 | | | |
 | 30일 일정 | | | |
+| 할 일 (todo-sync) | 새 티켓·닫기 제안·⏸ | | "지금" 제안 |
 | ⚠·기한·긴급 메일 | | | 맨 위 |
 | 새 업무 메일 (할 일/기다림/참고) | | | 기록·답장 초안 등 |
 | 새 연락처·조직 후보 | | | 승인 시 주소록·orgs.md |
