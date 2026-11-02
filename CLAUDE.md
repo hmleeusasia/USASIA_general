@@ -30,7 +30,9 @@
 - 열린 건(#open/#waiting)은 세션 끝에 CURRENT_STATE C절에 반영
 - 민감 정보 발견 시 빼고 "드라이브 보관 추천" 알림
 - 드라이브 색인은 폴더 단위로 나눠 진행, 대량 읽기는 작은 모델 하위 에이전트에 맡김
-- 세션 끝: docs/session_review.md 점검표 수행 후 비효율 평가 표 보고
+- 세션 끝: session-end skill (docs/session_review.md 점검표, 틀 변경 제안·비효율 평가 표 보고)
+- 민감 값(이메일 주소·전화·계정번호·회선 ID)은 드라이브 Claude 폴더에만. 비밀번호·키는 어디에도 저장 금지. 이 폴더는 공유 금지, 쓰기는 로컬 세션에서 승인받은 것만 (D-20261102-16)
+- 새 연락처·조직은 발견 즉시 사용자에게 묻고 승인 후 주소록·orgs.md에 추가
 
 ## 작업 장소 (D-20261102-12)
 | 장소 | 시작 | 브랜치 | 끝 |
@@ -58,6 +60,9 @@
 | 다가오는 일정(30일) | `python3 tools/find.py --due` |
 | 드라이브 문서 찾기 | docs/drive-index/INDEX.md |
 | 진행 중 계획 | docs/requests/ |
+| 지식·조직·메일 분류 기준 | docs/kb/INDEX.md (orgs.md 계열사·벤더, mail_triage.md 메일 분류) |
+| 이메일 주소·전화·계정번호 등 민감 값 | 드라이브 Claude 폴더 → docs/drive-index/claude-folder.md (ID·열 이름만) |
+| 작업 절차 | .claude/skills/ — start-day(업무 시작), mail-triage(메일), drive-index(드라이브 색인), session-end(마무리) |
 
 ## 저장소별 설정 (임시값 — 정해지면 교체)
 - 시험·빌드:          해당 없음 (문서 저장소). 점검은 python3 tools/check.py + session_review.md

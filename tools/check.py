@@ -26,6 +26,11 @@ for f in D.rglob("*.md"):
     for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
         if SENS.search(line): problems.append(f"민감 정보 의심: {f.relative_to(ROOT)}:{i}: {line.strip()[:60]}")
 
+for sub in ("kb", "drive-index"):
+    idx = (D / sub / "INDEX.md").read_text(encoding="utf-8")
+    for f in (D / sub).glob("*.md"):
+        if f.name != "INDEX.md" and f.name not in idx: problems.append(f"INDEX 누락: docs/{sub}/{f.name}")
+
 for name, limit in (("CURRENT_STATE.md", 80), ("kb/facts.md", 50)):
     n = len((D / name).read_text(encoding="utf-8").splitlines())
     if n > limit: problems.append(f"{name} {n}줄 > {limit}")

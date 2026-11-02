@@ -1,0 +1,46 @@
+---
+name: mail-triage
+description: Gmail·Outlook·인트라넷 메일을 크롬으로 읽고(메일을 열지 않음) mail_triage.md 기준으로 할 일/기다림/참고/자동·버림 분류, 업무 기록에 반영. 새 연락처·조직은 즉시 사용자에게 묻고 승인 시 드라이브 주소록·orgs.md에 추가. "메일 확인", "안 읽은 메일", "메일 정리" 때 사용.
+---
+
+# 메일 점검·분류 (mail-triage)
+
+먼저 읽기: docs/kb/mail_triage.md(분류 기준) → docs/kb/orgs.md(조직 목록)
+읽기만 한다: 보내기·지우기·이동·읽음 표시 변경 금지. 기준일 = 사용자가 말한 날짜, 없으면 CURRENT_STATE "마지막 업무 시작".
+
+## 1. 메일함별 읽는 법
+Gmail — 텍스트 방식(가벼움)
+- 크롬 새 탭에서 `https://mail.google.com/mail/u/0/#inbox` → get_page_text 1번 (검색 결과 화면은 get_page_text가 비어 나옴)
+- 기준일 이후 줄만 본다. 광고·알림(ChatGPT, Newegg, Claude Team 등)은 빼고 업무 메일만 표로
+
+Outlook — 접근성 목록 방식 (메일을 열지 않음 → 읽음 처리 없음)
+- `https://outlook.office.com/mail/` → find "message list listbox" → read_page(ref, depth 3)
+- 각 줄 앞 "Unread" = 안 읽음. 목록은 화면에 보이는 것만 나오므로 browser_batch로 [scroll 10 → read_page] 반복, 기준일 지나면 멈춤
+- 검색창 입력(isread:no 등)은 적용이 안 됐음 — 쓰지 말 것. 스크린샷은 필요할 때만(scale 0.6)
+- 본문은 사용자가 고른 메일만: 클릭 → find "message body" → read_page(ref, max_chars 4000)
+- 메일을 열면 읽음 처리됨 → 꼭 필요한 것만 열고, 연 메일을 보고에 적는다
+- get_page_text는 Outlook에서 안 됨(시도하지 말 것)
+
+인트라넷 메일(그룹웨어) — 스크린샷 1장
+- **받은메일함만** 본다: `https://newintra.seoulgrocery.com/ngw/app/#/mail/list/Maildir/` 로 바로 이동(홈 화면 스크린샷은 멈출 수 있음) → 3초 대기 → 스크린샷(scale 0.7) 1장
+- 인보이스 관련 개인메일함(안 읽음 약 4,250)은 보지 않는다. 전체 메일 화면도 쓰지 않는다
+- get_page_text는 미리보기만 나옴. 기준일 지난 줄까지만 본다
+
+보낸편지함 (기다림 판정용)
+- Gmail `#sent` → get_page_text / Outlook 보낸 편지함 → find "message list listbox" → read_page / 인트라넷 보낸메일함 스크린샷 1장
+- 내가 요청하고 답이 없는 건 → 기다림 후보 (사용자 확인 후 #waiting)
+
+## 2. 분류
+- mail_triage.md 판정 순서대로 메일(스레드)마다 하나. 규칙에 없으면 "추측" 표시
+- 기한 요청·긴급·경고 뉘앙스·⚠보안은 분류와 상관없이 보고 맨 위
+- 같은 건이 여러 메일함에 있으면 한 건
+
+## 3. 새 연락처·조직 (바로 묻기 — 사용자 요청: 나중에 물으면 기억 못 함)
+- orgs.md에 없는 회사·도메인, 주소록에 없는 사람이 보이면 그 자리에서 묻는다: "누구/어느 조직/무슨 관계?"
+- 승인되면: 조직 → orgs.md 한 줄 / 사람 → 드라이브 Claude 폴더 10_주소록 (ID: docs/drive-index/claude-folder.md). 시트는 셀 편집 도구가 없으므로 CSV로 새 버전을 만들어 교체(이전 파일은 이름에 _old 붙여 두고 사용자에게 삭제 맡김)
+- GitHub에는 이름·직함·소속까지만
+
+## 4. 기록
+- docs/log/YYYY/YYYY-MM-DD.md: 할 일 #open, 기다림 #waiting(대상·확인일), 참고 한 줄, 자동·버림은 "메일 점검" 줄에 건수만
+- 경계 사례·사용자 판정은 mail_triage.md 2절, 확정된 규칙은 1절(사용자 확인 시에만)
+- 메일 원문·주소·전화·비밀번호는 저장소에 쓰지 않음(storage_rules.md)
