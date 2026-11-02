@@ -15,7 +15,7 @@ known = set(re.findall(r"#[a-z][a-z0-9-]*", (D / "keywords.md").read_text(encodi
 tags = {t for f in logs for t in re.findall(r"(?<![\w#])#[a-z][a-z0-9-]*", f.read_text(encoding="utf-8"))}
 for t in sorted(tags):
     m = re.match(r"#(vendor|store|asset|proj)-(.+)", t)
-    if m and t != "#store-ops":
+    if m and t not in ("#store-ops", "#vendor-mgmt"):
         hub = D / HUB[m[1]] / f"{m[2]}.md"
         if not hub.exists(): problems.append(f"허브 없음: {t} → {hub.relative_to(ROOT)}")
     elif t not in known:
