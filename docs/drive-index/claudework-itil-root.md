@@ -15,8 +15,8 @@
 
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|---|
-| Lynnwood Network Table | Lynnwood 매장 엔드포인트별 케이블·패치패널·스위치 포트 매핑표 | NVR/AP/CS/POS 등 장비 위치, 벽면 포트, 패치패널·스위치 포트, 비고(불량 포트) | Lynnwood | 도메인 전체(편집); 🌐 hmart.com: leo.seo, danny, dennis.ghill, david.hwang (댓글) | network, infra, store-ops, install | 2026-04-21 | https://docs.google.com/spreadsheets/d/1h8jD7N7E4jQebjnW95twaQ71qkAXNFp_VQ9T2q2y4BA/edit |
-| Tacoma Network Table | Tacoma 매장 엔드포인트별 포트 매핑표 | 저울/가격조회기/AP 등 위치, 벽면 포트, 패치패널 포트 | Tacoma | 도메인 전체(편집); 🌐 hmart.com: leo.seo, danny, dennis.ghill, david.hwang (댓글) | network, infra, store-ops, install | 2025-11-19 | https://docs.google.com/spreadsheets/d/1X7Qi1zyg0BW6OdEYLyhokEqi5Ts0bEsHzsoub7O6Vas/edit |
+| Lynnwood Network Table | Lynnwood 매장 엔드포인트별 케이블·패치패널·스위치 포트 매핑표 | NVR/AP/CS/POS 등 장비 위치, 벽면 포트, 패치패널·스위치 포트, 비고(불량 포트) | Lynnwood | 도메인 전체(편집); 🌐 GBK(hmart.com) 4명(댓글) | network, infra, store-ops, install | 2026-04-21 | https://docs.google.com/spreadsheets/d/1h8jD7N7E4jQebjnW95twaQ71qkAXNFp_VQ9T2q2y4BA/edit |
+| Tacoma Network Table | Tacoma 매장 엔드포인트별 포트 매핑표 | 저울/가격조회기/AP 등 위치, 벽면 포트, 패치패널 포트 | Tacoma | 도메인 전체(편집); 🌐 GBK(hmart.com) 4명(댓글) | network, infra, store-ops, install | 2025-11-19 | https://docs.google.com/spreadsheets/d/1X7Qi1zyg0BW6OdEYLyhokEqi5Ts0bEsHzsoub7O6Vas/edit |
 | Comcast Information from Tae Lee | 이전 담당자(Tae Lee)가 넘긴 WA 매장별 Comcast 회선·계정 정보 | 매장 주소, ⚠민감: 고객/계정번호·계정 ID(이메일), 회선·전화 번호, 매장별 서비스 목록 | WA 전 매장(Lynnwood, UW, Ballard, Bellevue, Redmond 등), Comcast | 도메인 전체(편집) | network, vendor-mgmt, billing, support | 2025-10-17 | https://docs.google.com/spreadsheets/d/1R62nT0oRSbq5FbPMusGhZ-kCgXnOIvlhYAJK6Lf_YHI/edit |
 | FW Network Table | Federal Way 매장 엔드포인트별 포트 매핑표 | 저울/가격조회기/AP 등 위치, 패치패널·스위치 포트 | Federal Way | 비공개 | network, infra, store-ops | 2025-10-30 | https://docs.google.com/spreadsheets/d/1rI2n9-ED9WMWx3khkrTehRwTm25bICWdwPBt-Lxpznw/edit |
 | Survey Sample | 매장 현장 조사(서베이) 샘플 양식·메모, Ballard 사례 | VLAN 구성 메모(⚠민감: IP 대역), 사진/IP 정보 수집 체크리스트, ISP 상태 메모 | Ballard, CenturyLink, Comcast | 비공개 | network, infra, install, tip | 2025-09-15 | https://docs.google.com/spreadsheets/d/1S_TQzoPvFymtFITQNG0lF8BjzqODxmYyNBGqiAmEJGA/edit |
@@ -42,7 +42,7 @@
 
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|---|
-| OT Tracer | 개인 초과근무(OT) 시간 기록 시트 (값 기재 안 함) | 날짜별 사용/적립 시간 기록, 사유 메모 | 개인(IT 담당자) | 🌐 ***@*** (편집) | general, paperwork | 2026-10-26 | https://docs.google.com/spreadsheets/d/1CaeBnIJ2InMqUYwDn4OxBJl-S30weXpZjgFfZYxpKHc/edit |
+| OT Tracer | 개인 초과근무(OT) 시간 기록 시트 (값 기재 안 함) | 날짜별 사용/적립 시간 기록, 사유 메모 | 개인(IT 담당자) | 🌐 개인 Gmail (편집) | general, paperwork | 2026-10-26 | https://docs.google.com/spreadsheets/d/1CaeBnIJ2InMqUYwDn4OxBJl-S30weXpZjgFfZYxpKHc/edit |
 | IT Information | IT 마스터 회선·서비스 목록(매장별 ISP·전화 서비스) | ⚠민감: 회선 계정번호·IP·서브넷·회선 ID 등, 서비스 상태, 속도 | 전 매장(FW, BL, TC, UW 등), Comcast, Verizon, Lumen | 도메인 전체(편집); fellix.lyu, andy.han (편집) | network, vendor-mgmt, billing, infra | 2026-09-07 | https://docs.google.com/spreadsheets/d/1SWMgtWFGpnIVINYLuo0kSMX9G_L6ngeusAge-SXSrHk/edit |
 | Copy of IT Information | IT Information의 사본(더 최신 열 구성, 2026-10-19 복사) | ⚠민감: 비밀번호·계정·IP·월 비용 등 포함 가능성 높음(로그인 정보 확인됨), 회선·서비스 | 전 매장, Comcast, Lumen, CenturyLink | 비공개 | network, vendor-mgmt, billing, security | 2026-10-19 | https://docs.google.com/spreadsheets/d/1U9taWRd5mOsxAf1gQi5o83F5QEqlEKyWnPuB1H2S0kY/edit |
 | Task Tracker | IT 진행 과제 및 관련 파일 추적 시트 | 과제 목록(POS 교체, 보조 DIA, 케이블 공사, 신규 오픈 등), 상태, 다음 작업, 파일 링크 모음 | WA/OR/CO 매장(BM, AR, WM, UW, LW, IQ), STD | 비공개 | schedule, install, network, pos | 2026-09-11 | https://docs.google.com/spreadsheets/d/1y6y_ZYMyZAUD5biwhLzrewQplaZZFBrKgFHKQVcBRhw/edit |

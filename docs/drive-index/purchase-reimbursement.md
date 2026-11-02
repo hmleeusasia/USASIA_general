@@ -4,7 +4,7 @@
 
 # Purchase / Reimbursement 색인 (금액·개인정보 값 미기재)
 조회 한계: Drive 검색이 폴더당 약 5건씩만 한 페이지로 주고 다음 토큰이 빈 경우가 많아, 건수는 "N건"(확인된 수) 기준이며 일부 폴더는 "N건 이상"으로 표기. 영수증 PDF는 내용 미열람(제목·폴더 기준).
-공유 약칭: [A]=도메인 전체(보기) 비공개 소유자 hm.lee / [B]=도메인 전체(댓글)+🌐 jin.kim, lynn.kwon (@kf-usa.com, 댓글) / [C]=비공개(소유자만)
+공유 약칭: [A]=도메인 전체(보기) 비공개 소유자 hm.lee / [B]=도메인 전체(댓글)+🌐 KF 2명(댓글) / [C]=비공개(소유자만)
 
 ## Purchase (1Qsf1PgABYXEwb3v2ByVnEXGM6bfB1dte) — 폴더 공유 [C]
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
@@ -58,7 +58,7 @@
 | Scanned_20261021-1437.pdf | 재고 시스템(POS 품목 이력) 화면 스캔: 한 품목의 가격 변경/입고 이력 | 품목 이력, 가격 변경 내역 ⚠민감: 단가·금액 | Seattle 매장 POS/재고, 가격 변경 이슈 | pos store-ops | 2026-10-21 | https://drive.google.com/file/d/1Oejv5_x_R2fr6QXhZfsewH6p27qR4mnp/view |
 | Scanned_20260820-1315.pdf | 스캔 문서(내용 미확인, 영수증류 추정) | — | — | expense | 2026-08-20 | https://drive.google.com/file/d/1w_sCCQa37BPTUEdL1Y-A6U7kBPxmIOWB/view |
 
-영수증 폴더(공유는 전부 폴더와 같음 [B], 🌐 jin.kim/lynn.kwon 댓글):
+영수증 폴더(공유는 전부 폴더와 같음 [B], 🌐 KF 2명 댓글):
 | 폴더 | 건수·종류 | 수정일 | 링크 |
 |---|---|---|---|
 | WE0002(식비) | 식비 영수증 약 25건 이상(2026-10 한 달, 패스트푸드·식당·카페) | 2026-10-30 | https://drive.google.com/drive/folders/1xIG_MXzOgCBqYRC1Ahnpgn42mAYUKg9M |
