@@ -1,20 +1,12 @@
----
-date: YYYY-MM-DD
-vendors: []
-stores: []
-keywords: []
-decisions: []        # D-YYYYMMDD-N
-drive_links: []
----
 # YYYY-MM-DD 업무 기록
+<!-- 규칙: 건마다 ### 소제목 + 태그. 같은 날 여러 세션은 아래에 시간순으로 이어 쓴다. 200줄 넘으면 YYYY-MM-DD-2.md로 나눈다.
+     금지: 금액·계정·키·IP·시리얼·개인 연락처 (docs/storage_rules.md). 번호(PO·인보이스·티켓)는 적어도 됨. -->
 
-## 요약 (3줄 이내)
-
-## 업체·업무별
-### <업체/주제>  #vendor-xxx #...
+### <건 제목>  #분야 #종류 #대상 #open
 - 있었던 일:
-- 결정: (D-ID, decisions.md에도 한 줄)
-- 다음 할 일 / 일정:
-- 원본: [드라이브 문서](링크)
+- 결정: D-YYYYMMDD-N (설명은 decisions.md에만)
+- 다음: 날짜가 있으면 calendar.md에도
+- 번호: PO-/INV-/티켓 번호
+- 원본: [드라이브](링크)
 
-## 오늘의 팁·지식  #tip
+### 오늘의 팁  #tip #분야

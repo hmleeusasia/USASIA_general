@@ -16,11 +16,11 @@
 - 없음
 
 ## E. 임시값
-- keywords.md 분야 키워드 초안
+- keywords.md 분야·종류 키워드와 동의어 표 초안
 - archive 이동 주기 3개월
 
 ## F. 함정
-- 없음
+- 동의어 검색은 짧은 영문(PO 등)이 다른 단어 속에 걸림 → find.py가 단어 단위로 처리. 셸 awk 대신 Python 사용
 
 ## G. 새 세션 첫 멘트
 CLAUDE.md와 docs/CURRENT_STATE.md를 읽고, 할 일 표(C절) 기준으로 이번 세션 계획을 알려줘.

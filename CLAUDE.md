@@ -16,13 +16,17 @@
 | 종류 | 위치 | 템플릿 |
 |---|---|---|
 | 날짜별 업무 기록 | docs/log/YYYY/YYYY-MM-DD.md | docs/templates/daily_log.md |
-| 업체별 요약 | docs/vendors/<이름>.md | docs/templates/vendor.md |
+| 허브(업체·매장·자산·프로젝트) | docs/{vendors,stores,assets,projects}/<이름>.md | docs/templates/{vendor,store,asset,project}.md |
+| 일정·갱신·만료 | docs/calendar.md | — |
 | 드라이브 색인 | docs/drive-index/<주제>.md | docs/templates/drive_index.md |
 | 키워드 표준 | docs/keywords.md | — |
 | 오래된 기록 | docs/archive/YYYY/ | — |
 
 ## 작업 규칙
-- 업무 기록 작성 시: 키워드는 keywords.md에서만, 결정은 decisions.md에도 한 줄, 업체 파일 이력 표 갱신
+- 업무 기록: 건마다 `### 제목  #분야 #종류 #대상` 한 줄이 검색 기준 (keywords.md 규칙)
+- 허브는 관련 건이 처음 생길 때 만든다. 허브에 이력 표를 손으로 쓰지 않는다(검색 명령으로 대체)
+- 결정 설명은 decisions.md에만, 기록에는 ID만. 날짜 있는 일은 calendar.md에도
+- 열린 건(#open/#waiting)은 세션 끝에 CURRENT_STATE C절에 반영
 - 민감 정보 발견 시 빼고 "드라이브 보관 추천" 알림
 - 드라이브 색인은 폴더 단위로 나눠 진행, 대량 읽기는 작은 모델 하위 에이전트에 맡김
 - 세션 끝: docs/session_review.md 점검표 수행 후 비효율 평가 표 보고
@@ -34,13 +38,15 @@
 | 과거 결정 이유 | docs/decisions.md |
 | 업무 지식·팁 | docs/kb/INDEX.md |
 | 과거 업체 일 | docs/vendors/INDEX.md → 업체 파일 |
-| 특정 날짜·키워드 | `grep -rl "#키워드" docs/log` |
+| 특정 키워드·업체·일 | `python3 tools/find.py Granite demarc` (동의어 자동, AND) |
+| 열린 건 | `python3 tools/find.py --open` |
 | 드라이브 문서 찾기 | docs/drive-index/INDEX.md |
 | 진행 중 계획 | docs/requests/ |
 
 ## 저장소별 설정 (임시값 — 정해지면 교체)
-- 시험·빌드:          해당 없음 (문서 저장소). 점검은 session_review.md
-- 검색 도구:          grep -rn "#키워드" docs/ (전용 스크립트는 필요해지면 tools/에)
+- 시험·빌드:          해당 없음 (문서 저장소). 점검은 tools/check.sh + session_review.md
+- 검색 도구:          python3 tools/find.py <단어...>
+- 문서 점검:          tools/check.sh (미등록 태그·허브 없는 태그·민감 정보 의심·줄 수)
 - 지식 문서 시작점:   docs/kb/INDEX.md
 - 작업 브랜치 규칙:   claude/* 브랜치에서 작업, main 병합은 사용자 요청 시에만
 - 사용자 언어·말투:   한국어, 결론 먼저, 표 활용

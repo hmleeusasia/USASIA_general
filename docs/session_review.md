@@ -1,6 +1,8 @@
 # 세션 종료 점검표 (매 세션 끝에 Claude가 수행·보고)
 
 ## 1. 문서 점검
+- `tools/check.sh` 실행 (아래 중 자동 항목 포함)
+- `python3 tools/find.py --open` → CURRENT_STATE C절 갱신
 - CURRENT_STATE.md 80줄 이하인가
 - 3개월 지난 log → docs/archive/YYYY/ 로 이동 대상인가 (분기마다)
 - INDEX 파일들이 실제 파일과 맞는가 (빠진 것·죽은 링크)
