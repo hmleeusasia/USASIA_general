@@ -4,7 +4,7 @@
 - 릴리스 없음
 
 ## B. 브랜치·진행 중
-- claude/laughing-curie-kx6wj2 — 저장소 기본 세팅
+- 없음 (claude/wonderful-brahmagupta-5nf6ku main에 합침)
 
 ## C. 할 일
 | ID | 내용 | 상태 | 맡길 곳 |
@@ -18,6 +18,7 @@
 | H-todo | 할 일 보드 docs/users/hmlee/todo.md 생성(STWS 33건+메일 2건). ⏸ 18건 닫기/미루기 판단, '지금' 확정 | 진행 중 | 사용자 |
 | H-multi | 여러 사용자 1단계 완료(D-20261102-19). 2단계(팀원 합류 때): mail_triage 0절 → users/<id>/mail_rules.md, CURRENT_STATE 개인 할 일 분리, onboarding.md. 미정: 공용 규칙 승인자, 개인 파일 공개 범위. 팀원 합류 전 git 이력 정리(예전 이메일 주소·sharing-review.md, 강제 push 필요) 여부 결정 | 대기 | 사용자 |
 | H-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
+| H-reimb | 10월 경비 청구 시트·노션 반영 완료. 남은 것: 노션 마일 6건, Yi's 금액, 렌트비 Note, Driving 시각 서식 (log 2026-11-02, kb/reimbursement.md) | 진행 중 | 사용자 |
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
 
 ## D. 확인 안 된 것
