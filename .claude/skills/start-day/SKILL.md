@@ -37,8 +37,9 @@ Outlook — 접근성 목록 방식 (메일을 열지 않음 → 읽음 처리 �
 - get_page_text는 Outlook에서 안 됨(시도하지 말 것)
 
 인트라넷 메일(그룹웨어) — 스크린샷 1장
-- `https://newintra.seoulgrocery.com/ngw/app/#/mail` 로 바로 이동(홈 화면 스크린샷은 멈출 수 있음) → 2~3초 대기 → 스크린샷(scale 0.7) 1장
-- get_page_text는 미리보기만 나옴. 기준일 지난 줄까지만 본다(안 읽음이 수천 개 쌓여 있어 개수로 판단하지 않음)
+- **받은메일함만** 본다: `https://newintra.seoulgrocery.com/ngw/app/#/mail/list/Maildir/` 로 바로 이동(홈 화면 스크린샷은 멈출 수 있음) → 3초 대기 → 스크린샷(scale 0.7) 1장
+- 인보이스 관련 개인메일함(안 읽음 약 4,250)은 보지 않는다. 전체 메일 화면도 쓰지 않는다
+- get_page_text는 미리보기만 나옴. 기준일 지난 줄까지만 본다
 
 공통: 끝나면 만든 탭을 닫는다. 메일 원문은 저장소에 쓰지 않는다(요약만, storage_rules.md).
 
