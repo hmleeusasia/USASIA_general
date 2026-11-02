@@ -1,7 +1,7 @@
 # 세션 종료 점검표 (매 세션 끝에 Claude가 수행·보고)
 
 ## 1. 문서 점검
-- `tools/check.sh` 실행 (아래 중 자동 항목 포함)
+- `python3 tools/check.py` 실행 (아래 중 자동 항목 포함)
 - `python3 tools/find.py --open` → CURRENT_STATE C절 갱신
 - CURRENT_STATE.md 80줄 이하, kb/facts.md 50줄 이하인가
 - 새로 알게 된 계속 유효한 사실 → kb/facts.md 반영
@@ -28,6 +28,6 @@
 채택된 안은 decisions.md에 기록하고 해당 문서에 바로 반영.
 
 ## 3. 마무리
-1. tools/check.sh 통과 → CURRENT_STATE 갱신 → 커밋·push(작업 브랜치)
+1. python3 tools/check.py 통과 → CURRENT_STATE 갱신 → 커밋·push(작업 브랜치)
 2. `git fetch origin main && git checkout -B main origin/main && git merge --ff-only <작업 브랜치> && git push origin main`
 3. fast-forward 안 되면 멈추고 사용자에게 알림
