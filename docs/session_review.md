@@ -21,3 +21,8 @@
 - 사용량: 큰 파일 통째 읽기, 드라이브 중복 조회 등
 
 채택된 안은 decisions.md에 기록하고 해당 문서에 바로 반영.
+
+## 3. 마무리
+1. tools/check.sh 통과 → CURRENT_STATE 갱신 → 커밋·push(작업 브랜치)
+2. `git fetch origin main && git checkout -B main origin/main && git merge --ff-only <작업 브랜치> && git push origin main`
+3. fast-forward 안 되면 멈추고 사용자에게 알림

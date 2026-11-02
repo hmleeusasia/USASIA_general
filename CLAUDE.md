@@ -5,7 +5,7 @@
 ## 세션 시작 순서
 1. 이 파일 → `docs/CURRENT_STATE.md` 전부 읽기
 2. 할 일·등급(가벼움/무거움)·맡을 곳을 한 번에 알리고 승인받기
-3. 끝날 때: CURRENT_STATE 바뀐 절만 고침(80줄 이하), 새 결정은 `docs/decisions.md`, 커밋·push
+3. 끝날 때: CURRENT_STATE 바뀐 절만 고침(80줄 이하), 새 결정은 `docs/decisions.md`, 커밋·push → **main에 합치고 push** (D-20261102-6)
 
 ## 저장소 개요
 - USASIA 마트(미국 워싱턴주, 여러 매장) IT 부서 업무 기록·색인 저장소
@@ -48,5 +48,5 @@
 - 검색 도구:          python3 tools/find.py <단어...>
 - 문서 점검:          tools/check.sh (미등록 태그·허브 없는 태그·민감 정보 의심·줄 수)
 - 지식 문서 시작점:   docs/kb/INDEX.md
-- 작업 브랜치 규칙:   claude/* 브랜치에서 작업, main 병합은 사용자 요청 시에만
+- 작업 브랜치 규칙:   claude/* 브랜치에서 작업, 세션 마무리 때 main에 합침(fast-forward). 그 밖의 병합은 요청 시에만
 - 사용자 언어·말투:   한국어, 결론 먼저, 표 활용
