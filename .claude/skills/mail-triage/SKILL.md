@@ -5,7 +5,7 @@ description: Gmail·Outlook·인트라넷 메일을 크롬으로 읽고(메일�
 
 # 메일 점검·분류 (mail-triage)
 
-먼저 읽기: docs/kb/mail_triage.md(분류 기준) → docs/kb/orgs.md(조직 목록)
+먼저 읽기: docs/users/<id>/profile.md(메일함·범위) → docs/kb/mail_triage.md(분류 기준) → docs/kb/orgs.md(조직 목록). 아래 메일함 읽는 법은 profile에 있는 메일함만
 읽기만 한다: 보내기·지우기·이동·읽음 표시 변경 금지. 기준일 = 사용자가 말한 날짜, 없으면 CURRENT_STATE "마지막 업무 시작".
 
 ## 1. 메일함별 읽는 법
@@ -37,11 +37,11 @@ Outlook — 접근성 목록 방식 (메일을 열지 않음 → 읽음 처리 �
 
 ## 3. 새 연락처·조직 (바로 묻기 — 사용자 요청: 나중에 물으면 기억 못 함)
 - orgs.md에 없는 회사·도메인, 주소록에 없는 사람이 보이면 그 자리에서 묻는다: "누구/어느 조직/무슨 관계?"
-- 승인되면: 조직 → orgs.md 한 줄 / 사람 → 드라이브 Claude 폴더 10_주소록 (ID: docs/drive-index/claude-folder.md). 이 계정 커넥터는 셀 편집 불가 → Claude 폴더 90_변경대기 시트에 줄 단위로 적고(요청일·대상·작업·이름·열·새 값·승인), CURRENT_STATE C절 H-sheet 건수 갱신. 반영은 클라우드 계정(D-20261102-17). 이 계정은 90_변경대기에도 줄을 못 붙이므로 변경 묶음마다 같은 열의 새 시트 `90_변경대기_YYYY-MM-DD_n`을 Claude 폴더에 만든다(create_file, CSV). 클라우드가 반영 후 원본 90_변경대기 시트로 옮겨 적고 묶음 파일 이름 앞에 `완료_`
+- 승인되면: 조직 → orgs.md 한 줄 / 사람 → 드라이브 본인 드라이브 Claude 폴더(profile) 10_주소록 (ID: docs/drive-index/claude-folder.md). 이 계정 커넥터는 셀 편집 불가 → Claude 폴더 90_변경대기 시트에 줄 단위로 적고(요청일·대상·작업·이름·열·새 값·승인), CURRENT_STATE C절 H-sheet 건수 갱신. 반영은 클라우드 계정(D-20261102-17). 이 계정은 90_변경대기에도 줄을 못 붙이므로 변경 묶음마다 같은 열의 새 시트 `90_변경대기_YYYY-MM-DD_n`을 Claude 폴더에 만든다(create_file, CSV). 클라우드가 반영 후 원본 90_변경대기 시트로 옮겨 적고 묶음 파일 이름 앞에 `완료_`
 - 주소록을 읽을 때는 90_변경대기와 `완료_`가 안 붙은 묶음 파일의 '대기' 줄도 함께 본다
 - GitHub에는 이름·직함·소속까지만
 
 ## 4. 기록
-- docs/log/YYYY/YYYY-MM-DD.md: 할 일 #open, 기다림 #waiting(대상·확인일), 참고 한 줄, 자동·버림은 "메일 점검" 줄에 건수만
+- docs/log/YYYY/YYYY-MM-DD_<id>.md: 할 일 #open, 기다림 #waiting(대상·확인일), 참고 한 줄, 자동·버림은 "메일 점검" 줄에 건수만
 - 경계 사례·사용자 판정은 mail_triage.md 2절, 확정된 규칙은 1절(사용자 확인 시에만)
 - 메일 원문·주소·전화·비밀번호는 저장소에 쓰지 않음(storage_rules.md)

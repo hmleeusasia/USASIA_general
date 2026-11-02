@@ -6,3 +6,6 @@ __pycache__/
 .venv/
 .DS_Store
 Thumbs.db
+
+# 개인 설정 연결 (docs/users/INDEX.md)
+CLAUDE.local.md

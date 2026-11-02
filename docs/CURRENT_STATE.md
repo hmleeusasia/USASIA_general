@@ -11,11 +11,12 @@
 |---|---|---|---|
 | H-local | 로컬 PC 통과. 드라이브 커넥터·크롬(Gmail 텍스트 OK, Outlook 화면만) 확인(2026-11-02). 클라우드 계정 커넥터 동일 여부 미확인 | 거의 완료 | 사용자 |
 | H-drive1 | 내 드라이브 전체 1차 색인 완료(docs/drive-index, 2026-11-02). 남은 것: 공유 드라이브·공유 문서함, 사진·DB 제목 기준 행 | 1차 완료 | 지휘 |
-| H-share | 공유 정리 후보 검토 (docs/drive-index/sharing-review.md) — 비밀번호 문서 외부 공유 등 | 대기 | 사용자 |
-| H-mail | 메일 분류 첫 검토 완료(mail_triage.md 1절 규칙 8개, 2026-11-02). 남은 할 일: Wifi 어댑터 구입, Granite 계정 생성 (log/2026/2026-11-02.md). 미확인 조직: KRM·Daifuku·SSP·beOne | 진행 중 | 사용자 |
+| H-share | 공유 정리 후보 검토 (드라이브 Claude 폴더 30_드라이브 공유 점검) — 비밀번호 문서 외부 공유 등 | 대기 | 사용자 |
+| H-mail | 메일 분류 첫 검토 완료(mail_triage.md 1절 규칙 8개, 2026-11-02). 남은 할 일: Wifi 어댑터 구입, Granite 계정 생성 (log/2026/2026-11-02_hmlee.md). 미확인 조직: KRM·Daifuku·SSP·beOne | 진행 중 | 사용자 |
 | H-collect | 숙제: 기존 드라이브 문서(IT Information, Comcast Information 등)의 계정·회선 정보를 Claude 폴더 20_계정·회선으로 모으기 | 대기 | 사용자와 함께 |
 | H-sheet | 드라이브 시트 수정 대기 0건 (Claude 폴더 90_변경대기). 클라우드 계정이 반영 (D-20261102-17) | 대기 0 | 클라우드 |
-| H-todo | 할 일 보드 docs/todo.md 생성(STWS 33건+메일 2건). ⏸ 18건 닫기/미루기 판단, '지금' 확정 | 진행 중 | 사용자 |
+| H-todo | 할 일 보드 docs/users/hmlee/todo.md 생성(STWS 33건+메일 2건). ⏸ 18건 닫기/미루기 판단, '지금' 확정 | 진행 중 | 사용자 |
+| H-multi | 여러 사용자 1단계 완료(D-20261102-19). 2단계(팀원 합류 때): mail_triage 0절 → users/<id>/mail_rules.md, CURRENT_STATE 개인 할 일 분리, onboarding.md. 미정: 공용 규칙 승인자, 개인 파일 공개 범위 | 대기 | 사용자 |
 | H-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
 

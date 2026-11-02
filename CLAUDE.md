@@ -2,6 +2,11 @@
 
 작업 원칙: **docs/project_instructions.md** 를 따른다 (이 파일은 저장소별 설정만 담는다).
 
+## 여러 사용자 (D-20261102-19)
+- 이 파일 = 팀 공용. 개인 설정은 `docs/users/<id>/CLAUDE.md`로 **더하기만**. 부딪히면 공용이 이기고, 보안·저장 규칙은 개인 설정으로 못 푼다
+- 누구인지: ① `CLAUDE.local.md`(git 제외)가 불러온 개인 설정 → ② git 사용자를 docs/users/INDEX.md에서 찾기 → ③ 세션 시작 때 한 번 묻기. 모르면 개인 파일(users/, 업무 기록)에 쓰지 않는다
+- 사람마다 다른 값(STWS 번호·메일함·드라이브 폴더)은 skill에 쓰지 않고 `docs/users/<id>/profile.md`에서 읽는다
+
 ## 세션 시작 순서
 (로컬 PC에서는 `/start-day` 루틴이 아래 1~2를 포함해 메일·드라이브까지 확인. D-20261102-13)
 1. 이 파일 → `docs/CURRENT_STATE.md` → `docs/kb/facts.md` 전부 읽기
@@ -16,7 +21,7 @@
 ## 문서 위치
 | 종류 | 위치 | 템플릿 |
 |---|---|---|
-| 날짜별 업무 기록 | docs/log/YYYY/YYYY-MM-DD.md | docs/templates/daily_log.md |
+| 날짜별 업무 기록 | docs/log/YYYY/YYYY-MM-DD_<id>.md (한 파일 한 사람) | docs/templates/daily_log.md |
 | 허브(업체·매장·자산·프로젝트) | docs/{vendors,stores,assets,projects}/<이름>.md | docs/templates/{vendor,store,asset,project}.md |
 | 일정·갱신·만료 | docs/calendar.md | — |
 | 드라이브 색인 | docs/drive-index/<주제>.md | docs/templates/drive_index.md |
@@ -39,7 +44,7 @@
 |---|---|---|---|
 | 클라우드 세션 | 자동 클론(main) | claude/* | push → main에 fast-forward 합침 |
 | 로컬 PC (Claude Code·Cowork) | `git pull origin main` | main에서 바로 | 커밋 → `git push origin main` |
-- 한 번에 한 곳에서만 작업 (동시 작업 시 충돌). 작업 단위마다 커밋, 세션 끝 push 필수
+- 한 사람은 한 번에 한 곳에서만 작업. 여러 사람은 개인 파일로 충돌을 피하고, 공용 파일은 커밋 전 `git pull --rebase`. 작업 단위마다 커밋, 세션 끝 push 필수
 - 도구는 Python만 필요 (`python3 tools/find.py`, `python3 tools/check.py`). Windows에서는 `py` 또는 `python`
 
 ## 드라이브 색인 (크롬 화면 공유 방식)
@@ -51,7 +56,7 @@
 ## 질문 유형별 먼저 볼 곳
 | 질문 | 먼저 볼 곳 |
 |---|---|
-| 지금 상태·할 일 | docs/CURRENT_STATE.md (저장소 작업), docs/todo.md (내 업무 할 일, STWS 동기화) |
+| 지금 상태·할 일 | docs/CURRENT_STATE.md (저장소 작업), docs/users/<id>/todo.md (개인 업무 할 일, STWS 동기화) |
 | 과거 결정 이유 | docs/decisions.md |
 | 업무 지식·팁 | docs/kb/INDEX.md |
 | 과거 업체 일 | docs/vendors/INDEX.md → 업체 파일 |
@@ -62,6 +67,7 @@
 | 진행 중 계획 | docs/requests/ |
 | 지식·조직·메일 분류 기준 | docs/kb/INDEX.md (orgs.md 계열사·벤더, mail_triage.md 메일 분류) |
 | 이메일 주소·전화·계정번호 등 민감 값 | 드라이브 Claude 폴더 → docs/drive-index/claude-folder.md (ID·열 이름만) |
+| 사용자·개인 설정 | docs/users/INDEX.md |
 | 작업 절차 | .claude/skills/ — start-day(업무 시작), todo-sync(할 일·STWS), mail-triage(메일), drive-index(드라이브 색인), session-end(마무리) |
 
 ## 저장소별 설정 (임시값 — 정해지면 교체)
@@ -70,4 +76,4 @@
 - 문서 점검:          python3 tools/check.py (미등록 태그·허브 없는 태그·민감 정보 의심·줄 수)
 - 지식 문서 시작점:   docs/kb/INDEX.md
 - 작업 브랜치 규칙:   claude/* 브랜치에서 작업, 세션 마무리 때 main에 합침(fast-forward). 그 밖의 병합은 요청 시에만
-- 사용자 언어·말투:   한국어, 결론 먼저, 표 활용
+- 사용자 언어·말투:   한국어, 결론 먼저, 표 활용 (개인 설정이 있으면 그쪽)

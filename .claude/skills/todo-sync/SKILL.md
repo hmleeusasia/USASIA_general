@@ -1,14 +1,14 @@
 ---
 name: todo-sync
-description: 내 할 일 보드(docs/todo.md)와 STWS 티켓(보고용)을 동기화하고 "지금" 할 일을 제안한다. "할 일", "할일 목록", "티켓 동기화", "todo" 때 사용. start-day에서도 부른다.
+description: 개인 할 일 보드(docs/users/<id>/todo.md)와 STWS 티켓(보고용)을 동기화하고 "지금" 할 일을 제안한다. "할 일", "할일 목록", "티켓 동기화", "todo" 때 사용. start-day에서도 부른다.
 ---
 
 # 할 일 동기화 (todo-sync)
 
-원본 = docs/todo.md. STWS는 보고용 → 티켓 상태 변경은 사용자가 승인한 목록만 Claude가 반영(5절), 생성·삭제·담당자 변경·댓글은 요청 시에만. 장기 프로젝트는 사용자가 따로 관리(관련 있으면 이름만 적음). D-20261102-18
+원본 = docs/users/<id>/todo.md (<id>는 CLAUDE.md '누구인지' 규칙). STWS 담당자 번호는 profile.md. STWS는 보고용 → 티켓 상태 변경은 사용자가 승인한 목록만 Claude가 반영(5절), 생성·삭제·담당자 변경·댓글은 요청 시에만. 장기 프로젝트는 사용자가 따로 관리(관련 있으면 이름만 적음). D-20261102-18
 
 ## 1. STWS 읽기 (크롬, 읽기만)
-- `https://stws.seoulgrocery.com/st/dashboard/tickets?page=N&per_page=20&sort=updated_at&direction=desc&assignee=89` (assignee 89 = Hyunmyung Lee)
+- `https://stws.seoulgrocery.com/st/dashboard/tickets?page=N&per_page=20&sort=updated_at&direction=desc&assignee=<profile의 STWS 담당자 번호>`
 - browser_batch로 [navigate → wait 2 → get_page_text]를 페이지마다. "x–y of N"으로 끝 확인. 첫 화면은 표가 늦게 뜨므로 wait 필수
 - 내가 Reporter인 남의 티켓은 assignee 필터에 안 나옴 → 필요할 때만 필터 없이 1쪽 확인
 
