@@ -3,7 +3,8 @@
 ## 1. 문서 점검
 - `tools/check.sh` 실행 (아래 중 자동 항목 포함)
 - `python3 tools/find.py --open` → CURRENT_STATE C절 갱신
-- CURRENT_STATE.md 80줄 이하인가
+- CURRENT_STATE.md 80줄 이하, kb/facts.md 50줄 이하인가
+- 새로 알게 된 계속 유효한 사실 → kb/facts.md 반영
 - 3개월 지난 log → docs/archive/YYYY/ 로 이동 대상인가 (분기마다)
 - 분기마다: 남은 claude/* 원격 브랜치 정리를 사용자에게 알림 (GitHub 웹 Branches 화면에서 삭제, D-20261102-7)
 - INDEX 파일들이 실제 파일과 맞는가 (빠진 것·죽은 링크)

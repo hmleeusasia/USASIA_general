@@ -17,5 +17,6 @@ for t in $(grep -hoE '#[a-z][a-z0-9-]*' $logs /dev/null | sort -u); do
 done
 grep -rnE '\$ ?[0-9]|[0-9]{1,3}(\.[0-9]{1,3}){3}|([0-9A-Fa-f]{2}:){5}|password|passwd|비밀번호|api[_-]?key' docs --include='*.md' \
   | grep -v -e storage_rules.md -e templates/ -e keywords.md -e requests/ -e CLAUDE.md && { echo "↑ 민감 정보 의심 (storage_rules.md)"; rc=1; }
+m=$(wc -l < docs/kb/facts.md); [ "$m" -gt 50 ] && { echo "facts.md $m줄 > 50"; rc=1; }
 n=$(wc -l < docs/CURRENT_STATE.md); [ "$n" -gt 80 ] && { echo "CURRENT_STATE $n줄 > 80"; rc=1; }
 [ $rc -eq 0 ] && echo "점검 통과"; exit $rc
