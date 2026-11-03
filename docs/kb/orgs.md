@@ -20,6 +20,7 @@
 | Campeon, Ishida, DistrictScale | 벤더 | 저울 | 추정 |
 | Leverage Cloud Solutions | 협력 | Granite 협력·중개 업체 (ISP information, Granite DIA 시트 공유) | 확인 2026-11-02 |
 | SSS Camera | 벤더 | CO(Aurora·Westminster) 케이블 시공업체 (jorden) | 확인 2026-11-02 |
+| Cannon Companies | 벤더(추정) | Comcast 관련 케이블 업체 (사용자 추정 2026-11-02) | 추정 |
 | Tommy Song (송대호) | 협력(외부 인사) | 마트 IT 자문 겸 도우미 | 확인 2026-11-02 |
 | KF (kf-usa.com) | 협력 | 우리 회사 회계 담당 회사 | 확인 2026-11-02 |
 | KRM, Daifuku, SSP | 계열사? | Medicare 공지 대상 법인 | 추정 (사용자도 확인 필요) |
