@@ -16,3 +16,4 @@
 | Q10 | check.py를 커밋 전에 자동 실행(pre-commit hook) | 2026-11-03 | 지금은 규칙만, hook 없음 |
 | Q11 | 05_Inbox·06_Files 절차를 skill로 만들까? (팀원도 같은 방식) | 2026-11-03 | D-20261103-4 |
 | Q12 | Existing Korean docs → English: bulk convert now, or convert as each file is edited? Which first (skills, kb, CLAUDE.md)? Keep Korean synonyms in keywords.md for search? | 2026-11-03 | D-20261103-5 set English for new text |
+| Q13 | Onboarding tutorial (new teammate, fresh Claude account) — **receipt/expense setup step**: (1) ask where receipt photos/PDFs are stored (Drive folder per code?) (2) ask where expenses are recorded; if none, create it (Notion DB + Sheet from template) (3) ask whether they already track expenses another way, adopt theirs. Reference flow: kb/reimbursement.md "Daily receipt intake" | 2026-11-03 | User request; goes into onboarding.md (H-multi stage 2) |
