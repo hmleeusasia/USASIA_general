@@ -5,6 +5,9 @@
 |---|---|---|---|
 | hmlee | Hyunmyung Lee | 서북미 H Mart IT (네트워크·low voltage·인프라·POS 일부·필드) | [hmlee/](hmlee/) |
 
+## 개인 값 찾는 순서 (D-20261103-3)
+드라이브 본인 Claude 폴더(원본) → 이 폴더 users/<id>/(커넥터 없을 때 사본, 민감 값 없음) → 사용자에게 묻기. 값이 다르면 드라이브가 맞음
+
 ## 새 팀원 추가 (짧은 안내 — 2단계에서 docs/onboarding.md로)
 1. `docs/users/<아이디>/` 에 CLAUDE.md(개인 설정), profile.md 만들기 (hmlee 폴더를 본뜸)
 2. 저장소 폴더에 `CLAUDE.local.md` (git 제외) 한 줄: `@docs/users/<아이디>/CLAUDE.md`
