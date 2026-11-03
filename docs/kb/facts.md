@@ -13,11 +13,12 @@
 - EGMM = H Mart 관리 본부, "서북미마트본부" 또는 "본부"라고 부름
 - 계열사·협력사 목록: docs/kb/orgs.md (새 이름이 보이면 사용자에게 물어 추가)
 
-## 매장 (약칭 → 태그 #store-<약칭>)
-- (미정)
+## 매장 (확인: 2026-11)
+- 약어표: docs/kb/store_codes.md (TC=Tacoma(주소 Lakewood), BV=Bellevue, BL=Ballard 등). 허브가 생기면 태그 #store-<약칭>
 
-## 주요 시스템·서비스
-- (미정)
+## 주요 시스템·서비스 (확인: 2026-11)
+- 티켓: STWS (보고용, 할 일 원본은 todo.md, D-18) / POS: HANA(하나로), HBOM / 방화벽 FortiGate, 일부 Meraki
+- 주간 IT 정기 회의: 매주 월요일 10:00, 회의록은 드라이브 Meeting 폴더 (D-23)
 
 ## 주요 업체 (태그 #vendor-<이름>)
 - (미정)
