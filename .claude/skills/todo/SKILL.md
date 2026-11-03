@@ -30,6 +30,7 @@ description: 사용자가 말로 준 새 요청을 할 일 목록에 추가. 메
 - 입력은 좌표 클릭 후 type (ref로 넣으면 안 들어감), Create는 find로 찾은 "Create request" 버튼 ref로 누른다. 없는 기한은 쓰지 않는다
 - Create 누르기 전에 입력값을 사용자에게 보여 주고 승인받는다
 - 만든 뒤 목록에서 새 번호를 확인 (생성 직후 목록에 안 보이면 다시 만들지 말고 사용자에게 확인)
+- 기존 티켓의 연장이면 서브 티켓으로: 상위 티켓 `https://stws.seoulgrocery.com/st/dashboard/tickets/<번호>` → "Add subtask" → 제목 입력 → Create (Assignee는 상위 티켓 담당을 따름). **이 창은 제목만 받으므로** 새 티켓을 열어 Description "Edit" → 설명(첫 줄에 상위 TICKET 번호) → Save. 설명도 Create 전에 승인받는다
 - 내 일이 확실하면 Assignee를 나(profile.md STWS 번호)로 바꾸자고 먼저 사용자에게 묻고, 승인 뒤 바꾼다 (기본 담당자는 Dan Choi)
 
 ## 4. 끝
