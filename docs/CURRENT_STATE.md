@@ -15,7 +15,7 @@
 | H-mail | 메일 분류 첫 검토 완료(mail_triage.md 1절 규칙 8개, 2026-11-02). 남은 할 일: Wifi 어댑터 구입, Granite 계정 생성 (log/2026/2026-11-02_hmlee.md). 미확인 조직: KRM·Daifuku·SSP·beOne | 진행 중 | 사용자 |
 | H-collect | 숙제: 기존 드라이브 문서(IT Information, Comcast Information 등)의 계정·회선 정보를 Claude 폴더 20_계정·회선으로 모으기 | 대기 | 사용자와 함께 |
 | H-sheet | 드라이브 시트 수정 대기 3묶음(90_변경대기_2026-11-02_1~_3, 주소록 12줄). 클라우드 계정이 반영 (D-20261102-17) | 대기 3 | 클라우드 |
-| H-todo | 할 일 보드 docs/users/hmlee/todo.md 생성(STWS 33건+메일 2건). ⏸ 18건 닫기/미루기 판단, '지금' 확정 | 진행 중 | 사용자 |
+| H-todo | 할 일 보드 docs/users/hmlee/todo.md. **2026-11-02 받은 요청 4건 → 다음 start-day 맨 위에 알림**: T-606 LW 저울(~11/06), M-nwhq-pc NWHQs PC 이동(~11/30), M-lw-scale-junk LW 고장 저울 폐기, T-624 BV 포인트 카드 테스트(BV 갈 때 James 과장님께 연락). 티켓 작성 필요 2건(M-). ⏸ 18건 판단·'지금' 확정 남음 | 진행 중 | 사용자 |
 | H-multi | 여러 사용자 1단계 완료(D-20261102-19). 2단계(팀원 합류 때): mail_triage 0절 → users/<id>/mail_rules.md, CURRENT_STATE 개인 할 일 분리, onboarding.md. 미정: 공용 규칙 승인자, 개인 파일 공개 범위. 팀원 합류 전 git 이력 정리(예전 이메일 주소·sharing-review.md, 강제 push 필요) 여부 결정 | 대기 | 사용자 |
 | H-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
 | H-reimb | 10월 경비 청구 시트·노션 반영 완료. 남은 것: 노션 마일 6건, Yi's 금액, 렌트비 Note, Driving 시각 서식 (log 2026-11-02, kb/reimbursement.md) | 진행 중 | 사용자 |
