@@ -39,7 +39,7 @@
 폴더 공유: 도메인 전체(댓글)
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|---|
-| BV POS Work | BV(Ballard) POS 이전 작업 체크리스트 | 점검/문서화 항목, 상태, 메모(Wi-Fi·POS 연결 테스트, 보관 공간, 케이블 태깅, Comcast 일정) | BV, Ballard, POS, Meraki, Comcast, Level3 | 폴더와 같음 | pos project network | 2026-10-14 | https://docs.google.com/spreadsheets/d/1iK4DZUtDkYs93Xey6M5Y7aVqOjAPyYGbWLZhbA7YB_0/edit |
+| BV POS Work | BV(Bellevue) POS 이전 작업 체크리스트 | 점검/문서화 항목, 상태, 메모(Wi-Fi·POS 연결 테스트, 보관 공간, 케이블 태깅, Comcast 일정) | BV, Bellevue, POS, Meraki, Comcast, Level3 | 폴더와 같음 | pos project network | 2026-10-14 | https://docs.google.com/spreadsheets/d/1iK4DZUtDkYs93Xey6M5Y7aVqOjAPyYGbWLZhbA7YB_0/edit |
 | Bellevue-Usasia-EGMM-Interconnect.drawio (+ Copy of ...-20260326.png) | Bellevue-USASIA-EGMM 상호연결 구성도(원본 drawio + 이미지) | ⚠민감: 네트워크 구성도 | Bellevue, EGMM | 폴더와 같음 | network infra | 2026-06-03 | https://drive.google.com/file/d/1YA73kHtGYAN2tPeryaxc-GTIgDP0vjEB/view ; https://drive.google.com/file/d/18zOi9qz_2zwehH-uNpPwECRlJlkk24ZI/view |
 
 ## Ongoing Project/UW Deli Fixed Wireless Antena

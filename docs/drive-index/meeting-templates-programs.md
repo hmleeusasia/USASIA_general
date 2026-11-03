@@ -4,6 +4,7 @@
 
 ## Meeting
 (폴더 공유: 비공개. 하위 폴더 2025. 회의록은 개별 파일 권한 모두 확인함)
+매주 월요일 10:00 정기 회의 회의록. 사용자가 결정·To-do를 적고 Claude가 정리 (weekly-meeting skill, D-20261102-23). 매장 약어: docs/kb/store_codes.md
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|---|
 | 회의록 101926 | 2026-10 중순 주간 IT 회의: 서북미 총괄본부·RM·Campeon 중심 이월 과제와 Belmont/Aurora/Westminster 출장 결과 정리 | 이월 안건(Ziply 유선 Comcast 이전, Campeon 저울·신규 회선, RM Coax 해지, CP 정리) + 22개 To-do(총괄본부 AP·DIA·보안, UPS/PDU, 백업 DIA 8개, 저울 펌웨어, CCTV, CO/OR 출장), 의제(Issaquah Comcast BB, 냉동창고 케이블링, GFC VoIP, EGMM SD-WAN, Granite BV 제안, RM 광·Comcast 이전, 저울 PLU 5자리 공지, 서버·저울 배송), 출장 검수 결과(분실품·케이블 드롭·AP 부족). ⚠민감: 금액(회선·견적 비용) | 서북미 총괄본부, RM, BV, Belmont, Aurora, Westminster, EGMM, GFC, Granite, Comcast, Ziply, 하나로 | 비공개 | meeting network pos vendor-mgmt | 2026-10-19 | https://docs.google.com/document/d/1_BLSxenhCSc6oU9R1z4T1tYVi9vaywo4kbb2As_f7iA/edit |
@@ -53,14 +54,14 @@
 
 
 ## Templates
-(폴더 공유: 비공개)
+(폴더 공유: 비공개) **중요.** 매장마다 반복할 작업의 기본 문서. 템플릿 다듬기는 숙제(H-template)
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|---|
-| Switchport_and_IP | 스위치 포트별 VLAN/모드 및 IP 매핑 시각화 시트 | 스위치별 포트-VLAN 표. ⚠민감: IP 대역·네트워크 구성 | 스위치(USORHPDSW01 등), 네트워크 | 비공개 | network infra asset | 2026-08-31 | https://docs.google.com/spreadsheets/d/1vaUMeYELc3mWtzf1UT4hPGsornC1eFMlcJ3AL0mVhMY/edit |
-| Network Map Template | 네트워크 장비 연결 맵 작성용 템플릿(샘플 데이터 포함) | 장비 목록 컬럼(이름/유형/연결/포트/VLAN/펌웨어 등). ⚠민감: 실제 IP·장비 정보 일부 포함 | 라우터·스위치·Comcast DIA | 비공개 | network infra asset | 2026-04-30 | https://docs.google.com/spreadsheets/d/1KEG8YoaR0gxZymRDTRkB4X6fL-IxIfD6r0EUVxcmtqY/edit |
+| Switchport_and_IP | 매장 스위치·패치패널·VLAN 전반 관리용 템플릿(포트별 VLAN/모드·IP 매핑) | 스위치별 포트-VLAN 표. ⚠민감: IP 대역·네트워크 구성 | 스위치(USORHPDSW01 등), 네트워크 | 비공개 | network infra asset | 2026-08-31 | https://docs.google.com/spreadsheets/d/1vaUMeYELc3mWtzf1UT4hPGsornC1eFMlcJ3AL0mVhMY/edit |
+| Network Map Template | 네트워크 구성도를 자동으로 그리기 위한 장비 연결 맵 템플릿(샘플 데이터 포함) | 장비 목록 컬럼(이름/유형/연결/포트/VLAN/펌웨어 등). ⚠민감: 실제 IP·장비 정보 일부 포함 | 라우터·스위치·Comcast DIA | 비공개 | network infra asset | 2026-04-30 | https://docs.google.com/spreadsheets/d/1KEG8YoaR0gxZymRDTRkB4X6fL-IxIfD6r0EUVxcmtqY/edit |
 
 ## Programs
-(폴더 공유: 비공개)
+(폴더 공유: 비공개) 최신 원격 지원·백신 프로그램을 둘 폴더(사용자 계획 2026-11-02)
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|---|
-| DamewareRE.exe | Dameware 원격 지원 실행 파일(설치/바이너리, 제목 기준 색인) | 실행 파일 약 8MB | 원격 지원 소프트웨어 | 비공개 | software support | 2025-08-28 | https://drive.google.com/file/d/15jbnV9dGi1y9ZBn1YcoI_OJTglT5mUUh/view |
+| DamewareRE.exe | Dameware 원격 지원 실행 파일(낡음, 사용자가 곧 삭제) | 실행 파일 약 8MB | 원격 지원 소프트웨어 | 비공개 | software support | 2025-08-28 | https://drive.google.com/file/d/15jbnV9dGi1y9ZBn1YcoI_OJTglT5mUUh/view |

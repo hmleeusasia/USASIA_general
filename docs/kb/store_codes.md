@@ -1,0 +1,26 @@
+# 매장·조직 약어 (회의록·시트에서 쓰는 코드)
+최종 갱신: 2026-11-02 · 근거: 사용자 확인 (드라이브 색인 리뷰)
+<!-- 방화벽 백업 파일명의 코드(HBE·BUW 등)는 사용자가 정한 이름이 아님 → 여기 넣지 않는다 -->
+
+| 약어 | 매장·조직 | 비고 |
+|---|---|---|
+| TC | Tacoma | 주소는 Lakewood. 같은 매장 |
+| FW | Federal Way | |
+| BV | Bellevue | Ballard 아님 |
+| RM | Redmond | |
+| MW | Mellow Way | |
+| DH | District H | |
+| M2M | M2M | |
+| UW | University Way | UW Deli는 따로 약어 없음 |
+| BL | Ballard | |
+| LW | Lynnwood | |
+| GLW | G Mart Lynnwood | 회의록에 G-LW로도 씀 |
+| IQ | Issaquah | |
+| CP | Campeon | Champeon으로도 씀 |
+| EGMM | EGMM (서북미마트본부) | kb/orgs.md |
+| BM | Belmont (OR) | |
+| WM | Westminster (CO) | |
+| GBV | Beaverton (G Mart) | |
+| AR | Aurora (CO) | |
+| NHQs | NHQs | 북미 총괄본부(추정) |
+| GFC | GFC (Greenfield Foods) | kb/orgs.md |

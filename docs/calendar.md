@@ -3,4 +3,5 @@
 
 | 날짜 | 내용 | 태그 | 기록 |
 |---|---|---|---|
+| 매주 월요일 10:00 | 주간 IT 정기 회의 — 회의 전 회의록 틀, 회의 뒤 정리 (weekly-meeting skill) | #general #meeting | D-20261102-23 |
 | 매달 첫 업무일 | 드라이브 월초 점검(링크·삭제·공유 변경, Claude 폴더 백업) — drive-check skill | #general #schedule | D-20261102-21 |

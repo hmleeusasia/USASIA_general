@@ -8,4 +8,5 @@
 | mail_triage.md | 메일 분류 기준 (내 범위·발신자 규칙·경계 사례) |
 | orgs.md | 계열사·벤더·협력업체 목록 (새 이름은 물어서 추가) |
 | reimbursement.md | 월별 경비 청구 정리(노션→시트→영수증) |
+| store_codes.md | 매장·조직 약어 (TC·BV·RM·MW 등) |
 | subagents.md | 하위 에이전트 활용법 (등급·모델 분담·프롬프트 틀·결과 확인) |
