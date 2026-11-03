@@ -19,6 +19,7 @@
 ## 주요 시스템·서비스 (확인: 2026-11)
 - 티켓: STWS (보고용, 할 일 원본은 todo.md, D-18) / POS: HANA(하나로), HBOM / 방화벽 FortiGate, 일부 Meraki
 - 저울: 예전 Ishida Uni 5·Uni 7 → Toshiba POS 이전하며 CAS CL5500. CAS 수리는 대한시스템 (확인: 2026-11)
+- Remote support tool: DameWare only (other remote programs not allowed for now) (확인: 2026-11)
 - 주간 IT 정기 회의: 매주 월요일 10:00, 회의록은 드라이브 Meeting 폴더 (D-23)
 
 ## 주요 업체 (태그 #vendor-<이름>)
