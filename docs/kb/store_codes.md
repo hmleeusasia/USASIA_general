@@ -15,7 +15,7 @@
 | BL | Ballard | |
 | LW | Lynnwood | STWS 매장 목록엔 "Lynwood"로 잘못 들어가 있음(같은 매장) |
 | GLW | G Mart Lynnwood | 회의록에 G-LW로도 씀 |
-| IQ | Issaquah | |
+| IQ | Issaquah | IS로도 씀(STWS·메모 혼용) → 기록엔 IQ |
 | CP | Campeon | Champeon으로도 씀 |
 | EGMM | EGMM (서북미마트본부) | 워싱턴주 지역 본부. kb/orgs.md |
 | BM | Belmont (OR) | |
