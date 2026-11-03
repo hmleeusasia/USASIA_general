@@ -78,3 +78,4 @@
 - 지식 문서 시작점:   docs/kb/INDEX.md
 - 작업 브랜치 규칙:   claude/* 브랜치에서 작업, 세션 마무리 때 main에 합침(fast-forward). 그 밖의 병합은 요청 시에만
 - 사용자 언어·말투:   한국어, 결론 먼저, 표 활용 (개인 설정이 있으면 그쪽)
+- Internal docs language: **English** for all repo docs, skills, decisions, logs written from now on (D-20261103-5). Chat replies to the user stay in the user's language. Existing Korean docs: convert when edited or in a later bulk pass (ai-system-questions Q12)

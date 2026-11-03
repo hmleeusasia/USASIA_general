@@ -15,3 +15,4 @@
 | Q9 | 공동 편집 파일(vendors/·calendar.md) 정리·archive 때 남의 내용 보호 규칙 | 2026-11-03 | |
 | Q10 | check.py를 커밋 전에 자동 실행(pre-commit hook) | 2026-11-03 | 지금은 규칙만, hook 없음 |
 | Q11 | 05_Inbox·06_Files 절차를 skill로 만들까? (팀원도 같은 방식) | 2026-11-03 | D-20261103-4 |
+| Q12 | Existing Korean docs → English: bulk convert now, or convert as each file is edited? Which first (skills, kb, CLAUDE.md)? Keep Korean synonyms in keywords.md for search? | 2026-11-03 | D-20261103-5 set English for new text |
