@@ -10,7 +10,7 @@ if hasattr(sys.stdout, "reconfigure"): sys.stdout.reconfigure(encoding="utf-8")
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DIRS = [ROOT/"docs/log", ROOT/"docs/archive"]
 TODAY = datetime.date.today()
-DATE = re.compile(r"(확인일|다음)[^\n]*?(\d{4}-\d{2}-\d{2})")
+DATE = re.compile(r"(확인일|다음|기한)[^\n]*?(\d{4}-\d{2}-\d{2})")
 
 def synonyms():
     groups = []
