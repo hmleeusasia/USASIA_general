@@ -17,10 +17,10 @@
 | GLW | G Mart Lynnwood | 회의록에 G-LW로도 씀 |
 | IQ | Issaquah | |
 | CP | Campeon | Champeon으로도 씀 |
-| EGMM | EGMM (서북미마트본부) | kb/orgs.md |
+| EGMM | EGMM (서북미마트본부) | 워싱턴주 지역 본부. kb/orgs.md |
 | BM | Belmont (OR) | |
 | WM | Westminster (CO) | |
 | GBV | Beaverton (G Mart) | |
 | AR | Aurora (CO) | |
-| NHQs | NHQs | 북미 총괄본부(추정) |
+| NHQs / NWHQs | 서북미마트총괄본부 | 서북미 전체 총괄. EGMM(워싱턴주)과 다른 조직 |
 | GFC | GFC (Greenfield Foods) | kb/orgs.md |
