@@ -30,3 +30,4 @@
 | beOne Solutions | 벤더? | SCAN4SAP VPN 설정 | 추정 |
 | STI (stiseattle.com) | 계열사 | 서울트레이딩 계열 회사 중 하나(지역 미확인, 도메인상 시애틀?). 512 Boundary Blvd 냉동창고 네트워크 | 확인 2026-11-02 (지역 추정) |
 | hanbiro | 벤더 | 메일/호스팅 보안 공지 | 추정 |
+| UPS 유지보수 업체 (이름 미확인, 담당 Jeana Smith) | 벤더 | USASIA 장비 UPS 유지보수 계약. Andy Han 담당 | 확인 2026-11-03 (이름 미확인) |
