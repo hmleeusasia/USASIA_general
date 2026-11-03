@@ -12,7 +12,7 @@
 | Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
 | Wed 11/04 | T-587 | Scale + PC move | GLW |
 | Thu 11/05 | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
-| Thu 11/05 | T-639/T-603, T-375 | Manager PC (if not done), Wi-Fi dead zone / AP | MW |
+| Thu 11/05 | T-639/T-603, T-375 | Install manager PC (arrived 11/03), Wi-Fi dead zone / AP | MW |
 | Any | M-wifi, M-granite, T-295+T-285 | Wi-Fi adapter, Granite account, EGMM internet vendor | office |
 
 ## 2. 전체 목록
@@ -35,7 +35,7 @@
 | T-587 | 저울 문제 + PC 이동 지원 | GLW | #pos | 진행 | 2026-10-20 | |
 | T-386 | 컴퓨터 구입·Laptop 세팅 | GLW | #hardware | 기다림(매장) | 2026-11-03 | Pending 11/03 |
 | T-603 | PC 급격히 느려짐 | MW | #hardware | 진행 | 2026-10-22 | 서브 T-639 |
-| T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-03 | 오늘 설치 |
+| T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-03 | 새 PC가 매장에 도착(11/03). 설치는 목 11/05 MW 방문 때 |
 | T-375 | Wifi dead zone 확인·AP 추가 | MW | #network | 진행 | 2026-08-20 ⏸ | 진행: 오늘 MW에서 (11/03 판단) |
 | T-362 | NVR 앱 재설정: DH 카메라를 NVR 앱에서 MW와 함께 보기. 이준호 점장(MW·DH 겸임) 2026-11-03 재촉 | DH·MW | #security | 진행 | 2026-11-03 | 기한 2026-11-06(이번 주, 사용자 추정) |
 | T-600 | Comcast BB 연결 지원·카메라 설치 설계 | IQ | #network | 진행 | 2026-10-15 | |
