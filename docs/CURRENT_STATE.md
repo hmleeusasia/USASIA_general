@@ -19,6 +19,7 @@
 | H-multi | 여러 사용자 1단계 완료(D-20261102-19). 2단계(팀원 합류 때): mail_triage 0절 → users/<id>/mail_rules.md, CURRENT_STATE 개인 할 일 분리, onboarding.md. 미정: 공용 규칙 승인자, 개인 파일 공개 범위. 팀원 합류 전 git 이력 정리(예전 이메일 주소·sharing-review.md, 강제 push 필요) 여부 결정 | 대기 | 사용자 |
 | H-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
 | H-reimb | 10월 경비 청구 시트·노션 반영 완료. 남은 것: 노션 마일 6건, Yi's 금액, 렌트비 Note, Driving 시각 서식 (log 2026-11-02, kb/reimbursement.md) | 진행 중 | 사용자 |
+| H-tracker | 드라이브 Task Tracker를 할 일 화면으로 관리(D-20261102-22). 업무 파악 뒤 시작: 시트 구조 읽기 → 탭 설계 사용자와 → 클라우드 계정이 갱신 | 대기 (업무 파악 후) | 지휘·클라우드 |
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
 
 ## D. 확인 안 된 것
