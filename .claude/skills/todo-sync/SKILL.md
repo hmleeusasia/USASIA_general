@@ -31,5 +31,6 @@ description: 개인 할 일 보드(docs/users/<id>/todo.md)와 STWS 티켓(보�
 - 먼저 "T-번호 → 상태" 목록을 보여 주고 승인받는다. 승인은 그 목록에만 유효
 - 티켓 주소 `https://stws.seoulgrocery.com/st/dashboard/tickets/<번호>` → wait 2 → 오른쪽 Status 드롭다운 클릭 → 값 클릭(Open, In progress, Pending, Resolved, Cancelled). 고르면 바로 저장됨(저장 버튼 없음)
 - 확인: 같은 주소 다시 열고 find "Status select current value" → 값 확인 후 todo.md 4절에 기록
+- After all STWS changes (status, ticket create, assignee): open the bell → notifications created by this session's own changes (actor = me, matching ticket, today) → click each to mark read (clicking marks it read; read items drop off the list, so clicking the top item repeatedly works). Leave notifications from other people unread. Confirm the unread count is gone (2026-11-03)
 - Close(완전히 닫기)는 **사용자가 직접**(2026-11-02 사용자 결정). Claude는 Resolved까지만 바꾸고 "닫을 티켓: T-…" 목록만 보고. 다음 동기화 때 CLOSED면 todo.md에서 뺌 (참고: Close ticket 버튼은 브라우저 확인창을 띄워 크롬 도구가 멈춤)
 - 드롭다운 위치는 화면마다 스크린샷(scale 0.6)으로 확인 후 클릭
