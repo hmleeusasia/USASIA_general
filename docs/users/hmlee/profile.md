@@ -11,3 +11,4 @@
 | 드라이브 Claude 폴더 | 1g9q_Povbwi0-7HH2dPqh6zWeMOyz7Fwf (목차: docs/drive-index/claude-folder.md) |
 | 상사 | Dan Choi |
 | 업무 기록 파일 | docs/log/YYYY/YYYY-MM-DD_hmlee.md |
+| Claude 계정 | 로컬 = 팀 공유 계정, 클라우드 = 개인 계정 (D-20261103-1) |
