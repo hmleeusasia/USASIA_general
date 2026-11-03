@@ -9,9 +9,10 @@
 | Tue 11/03 | T-565, T-619, T-585 | PIN Pad sticker, POS serial numbers, new CS PC | BV |
 | Tue 11/03 | M-bv-pos-label | Fix wrong POS label numbers (with T-619 serial survey) | BV |
 | Tue 11/03 | T-438, T-500 | Old store scale wiring check; call Lumen to reschedule | BV(old) |
-| Wed 11/04 | T-606 | Pick up 2 repaired scales, deliver & set up (due 11/06) | LW |
+| Wed 11/04 | T-606 | 2 repaired scales already picked up 11/03 (InStore) → deliver & set up (due 11/06) | LW |
 | Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
-| Wed 11/04 | T-587 | Scale + PC move | GLW |
+| Wed 11/04 | T-587 | Scale + PC move (+ deliver 1 scale picked up 11/03) | GLW |
+| next FW visit | — | Deliver 1 scale picked up at InStore 11/03 (ticket?) | FW |
 | Thu 11/05 | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
 | Thu 11/05 | T-639/T-603, T-375 | Install manager PC (arrived 11/03), Wi-Fi dead zone / AP | MW |
 | Any | M-wifi, M-granite, T-295+T-285 | Wi-Fi adapter, Granite account, EGMM internet vendor | office |
