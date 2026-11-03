@@ -23,6 +23,15 @@ description: 사용자가 말로 준 새 요청을 할 일 목록에 추가. 메
 - 오늘 업무 기록 `docs/log/YYYY/YYYY-MM-DD_<id>.md`: `### 제목  #분야 #종류 #open` + 요청자·내용·기한·다음
 - 티켓이 생기면 M-ID를 T-번호로 바꾼다 (todo-sync가 맞춤)
 
+## 3-1. STWS 티켓 만들기 (사용자가 요청할 때만, 하나씩)
+- Create → Summary: 사용자 스타일 `<매장약어>-<내용>` (예: `LW- 델리 저울 고장`, `NWHQs-PC office 재설치`)
+- Request type: General IT Support / Store: 목록에 있으면 그 매장, 본부 등은 No store / Department: ETC
+- Description: 요청자, 기한, 작업 단계
+- 입력은 좌표 클릭 후 type (ref로 넣으면 안 들어감), Create는 find로 찾은 "Create request" 버튼 ref로 누른다. 없는 기한은 쓰지 않는다
+- Create 누르기 전에 입력값을 사용자에게 보여 주고 승인받는다
+- 만든 뒤 목록에서 새 번호를 확인 (생성 직후 목록에 안 보이면 다시 만들지 말고 사용자에게 확인)
+- 내 일이 확실하면 Assignee를 나(profile.md STWS 번호)로 바꾸자고 먼저 사용자에게 묻고, 승인 뒤 바꾼다 (기본 담당자는 Dan Choi)
+
 ## 4. 끝
 - 받은 건을 표로 짧게 보고 (ID·할 일·기한), 물을 점은 맨 끝에 묶어서
 - 여러 건을 받는 중이면 사용자가 "끝"이라고 할 때 커밋·push

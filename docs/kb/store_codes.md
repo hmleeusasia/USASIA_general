@@ -13,7 +13,7 @@
 | M2M | M2M | |
 | UW | University Way | UW Deli는 따로 약어 없음 |
 | BL | Ballard | |
-| LW | Lynnwood | |
+| LW | Lynnwood | STWS 매장 목록엔 "Lynwood"로 잘못 들어가 있음(같은 매장) |
 | GLW | G Mart Lynnwood | 회의록에 G-LW로도 씀 |
 | IQ | Issaquah | |
 | CP | Campeon | Champeon으로도 씀 |
