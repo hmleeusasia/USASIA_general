@@ -2,17 +2,18 @@
 갱신: 2026-11-02 · STWS 동기화: 2026-11-02 (담당 47건, 안 끝난 33건) · 규칙: D-20261102-18, 절차: todo-sync skill
 <!-- 기한은 요청에 있을 때만 적는다(없으면 기한 없음). 원본은 이 파일. STWS는 보고용(상태 변경은 사용자가 직접). 장기 프로젝트는 따로 관리, 관련 있으면 이름만. 민감 값 금지 -->
 
-## 1. 지금 (Claude 제안 — 사용자가 고름)
-| ID | 할 일 | 매장 | 이유 |
+## 1. Now (Claude suggests, user picks) — visit plan set 2026-11-03
+| Day | ID | Task | Store |
 |---|---|---|---|
-| M-wifi | 데스크탑용 Wifi 어댑터 구입 | ? | 메일 10/22, 티켓 없음 |
-| T-362 | MW-NVR 앱 재설정: DH 카메라를 MW와 함께 보기 (이준호 점장 재촉) | DH·MW | 기한 11/06(이번 주, 추정) |
-| M-granite | Granite 계정 생성 | — | 메일 10/19, 티켓 없음 |
-| T-637 | NWHQs PC 자리 이동·설치 (새 직원 오기 전) | NWHQs | 기한 11/30 |
-| T-638 | LW 2층 고장 저울 정리 (송대호 님 상의 → 부품 확보 → 폐기) | LW | 기한 없음 |
-| T-606 | LW 델리 저울 고장 — 수리 저울 2대 픽업·전달·셋팅 | LW | 기한 11/06(이번 주) |
-| T-624 | BV POS 포인트 카드 테스트 (BV 갈 때, James 과장님께 미리 연락) | BV | POS 포인트 프로젝트와 연결 |
-| T-295 | EGMM 본부 인터넷 속도 증가 | 본부 | Pending 4개월 → 업체 재확인 |
+| Tue 11/03 | T-624 | POS point card test (call James Yoo first) + TICKET-635 smart card scan | BV |
+| Tue 11/03 | T-565, T-619, T-585 | PIN Pad sticker, POS serial numbers, new CS PC | BV |
+| Tue 11/03 | T-438, T-500 | Old store scale wiring check; call Lumen to reschedule | BV(old) |
+| Wed 11/04 | T-606 | Pick up 2 repaired scales, deliver & set up (due 11/06) | LW |
+| Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
+| Wed 11/04 | T-587 | Scale + PC move | GLW |
+| Thu 11/05 | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
+| Thu 11/05 | T-639/T-603, T-375 | Manager PC (if not done), Wi-Fi dead zone / AP | MW |
+| Any | M-wifi, M-granite, T-295+T-285 | Wi-Fi adapter, Granite account, EGMM internet vendor | office |
 
 ## 2. 전체 목록
 상태: 할 일 / 진행 / 기다림(대상) / 끝 / 취소 · 움직임 = 마지막 업데이트(STWS 또는 기록) · ⏸ = 30일 넘게 안 움직임
