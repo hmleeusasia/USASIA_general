@@ -10,18 +10,19 @@
 
 ## Archive
 (폴더 공유: 비공개) 하위폴더: PLU Project for Ballard / Invoice Analyzing / Pictures
+**낡은 문서가 많이 섞인 폴더.** 🟢현역 = Task Tracker의 File Tracker 탭에 등록된 문서(목적으로 짝지음). 나머지는 낡은 문서·정리 후보 (사용자 확인 2026-11-03)
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|---|
-| ISP information | 매장별 인터넷 회선(ISP) 현황과 개선 필요 여부 정리 | 매장 목록, 주/보조 ISP 종류, 비고(교체 검토·완료), ⚠민감: 매장 주소 | WA·OR·UT·CO 전 매장, Comcast/Lumen/Verizon/T-Mobile/Frontier | 도메인 전체(편집); 🌐 Leverage, Leverage, 개인 Gmail (모두 댓글) | network vendor-mgmt store-ops | 2026-02-13 | https://docs.google.com/spreadsheets/d/1M3WamAxkPTk-qYNzMBnYG90-G2b6-LLdhfxHJC93GgA/edit |
-| NW Seattle Area Marts | 시애틀권 매장별 CS(고객서비스)·담당자·스캐너·교육 현황 | 매장별 CS 유무, 담당 팀장(이름), CS PC, 교육 상태, 비고 | Tacoma, Federal Way, Bellevue, Redmond, Lynnwood, Ballard 등 | 도메인 전체(댓글) | store-ops hardware general | 2026-03-19 | https://docs.google.com/spreadsheets/d/1lCPsvTjNxV4N_bxNSjY9pjjqJWe_O1XeVs7WNXk4XzQ/edit |
+| 🟢ISP information | 매장별 인터넷 회선(ISP) 현황과 개선 필요 여부 정리 | 매장 목록, 주/보조 ISP 종류, 비고(교체 검토·완료), ⚠민감: 매장 주소 | WA·OR·UT·CO 전 매장, Comcast/Lumen/Verizon/T-Mobile/Frontier | 도메인 전체(편집); 🌐 Leverage, Leverage, 개인 Gmail (모두 댓글) | network vendor-mgmt store-ops | 2026-02-13 | https://docs.google.com/spreadsheets/d/1M3WamAxkPTk-qYNzMBnYG90-G2b6-LLdhfxHJC93GgA/edit |
+| 🟢NW Seattle Area Marts | 시애틀권 매장별 CS(고객서비스)·담당자·스캐너·교육 현황 | 매장별 CS 유무, 담당 팀장(이름), CS PC, 교육 상태, 비고 | Tacoma, Federal Way, Bellevue, Redmond, Lynnwood, Ballard 등 | 도메인 전체(댓글) | store-ops hardware general | 2026-03-19 | https://docs.google.com/spreadsheets/d/1lCPsvTjNxV4N_bxNSjY9pjjqJWe_O1XeVs7WNXk4XzQ/edit |
 | FISHplu_072324_slp-v 4-9-26 | 수산부 저울용 PLU 번호별 용기무게(Tare) 설정표(대용량) | PLU 번호와 Tare 값 목록 (가격 없음) | 수산부, 저울(Ishida 추정) | 비공개 | pos hardware store-ops | 2026-05-11 | https://docs.google.com/spreadsheets/d/1VFROsDVAht4YwSziGZy3je7bAM0xsa7WNY3tRhE8J8A/edit |
 | MainDataNW.mdb / MainDataNW.ldb | NW 메인 데이터 Access DB와 잠금파일 | ⚠민감: POS/상품 DB 추정, 58MB(제목 기준) | NW 매장, POS | 비공개 | pos software | 2026-04-20 | https://drive.google.com/file/d/1J7q4HLXUig7VJVTtTm6Cch2nXxhQb5nN/view |
 | Meraki Shipping for CO | 콜로라도 신규 매장(Aurora, Belmont 등)용 Meraki 장비 주문·배송·백오더 추적표 | 장비 모델(카메라/방화벽/스위치/AP), 수량, 주문 상태, 예정일, 라이선스·RMA 항목; ⚠민감: UPS 송장번호·라이선스 키 | Colorado 매장, Meraki(MX/MR/MV), Cisco 스위치 | 비공개 | network hardware purchase install | 2026-04-08 | https://docs.google.com/spreadsheets/d/127vLHF4jnqTboU_uuuu_XcWGN9pqjAW3aQwTJJ8NaKg/edit |
-| Bellevue Network Diagram.pdf | Bellevue 매장 네트워크 구성도 | FortiGate 방화벽, 스택 스위치, VLAN 구성(LAN/POS/NVR/Lumen/Legacy), Hana 서버, AP 4대, Lumen·고정 무선 회선 배치; ⚠민감: 네트워크 다이어그램 | Bellevue, Fortinet, Lumen, POS | 비공개 | network infra | 2026-03-26 | https://drive.google.com/file/d/1aStgEFZiENHbQD2KvUKH1u7jq3bNuMlK/view |
-| H Mart Ballard-Cashier 명단.xlsx | Ballard 캐셔 명단 엑셀 사본(같은 이름 시트가 PLU 폴더에 있음) | ⚠민감: 직원 개인정보 | Ballard, POS | 비공개 | pos store-ops paperwork | 2026-03-20 | https://drive.google.com/file/d/1mT7JP2Zv1MExclexyc4Vo5mR5Af5_k1C/view |
-| Ballard POS Register ID/PW | Ballard POS 계정 정보 | ⚠민감: 비밀번호 포함, 계정 | Ballard, POS | 비공개 | pos security | 2026-03-13 | https://docs.google.com/spreadsheets/d/1RXHcC0LUyWLzk5NH-gQI7rf9ogZuzzG_IxxuL1DmmwU/edit |
+| 🟢Bellevue Network Diagram.pdf | Bellevue 매장 네트워크 구성도 | FortiGate 방화벽, 스택 스위치, VLAN 구성(LAN/POS/NVR/Lumen/Legacy), Hana 서버, AP 4대, Lumen·고정 무선 회선 배치; ⚠민감: 네트워크 다이어그램 | Bellevue, Fortinet, Lumen, POS | 비공개 | network infra | 2026-03-26 | https://drive.google.com/file/d/1aStgEFZiENHbQD2KvUKH1u7jq3bNuMlK/view |
+| H Mart Ballard-Cashier 명단.xlsx | Ballard 캐셔 명단 엑셀 사본(같은 이름 시트가 PLU 폴더에 있음). 낡은 문서 | ⚠민감: 직원 개인정보 | Ballard, POS | 비공개 | pos store-ops paperwork | 2026-03-20 | https://drive.google.com/file/d/1mT7JP2Zv1MExclexyc4Vo5mR5Af5_k1C/view |
+| Ballard POS Register ID/PW | Ballard POS 계정 정보 (낡은 문서, 참고 가치 없음) | ⚠민감: 비밀번호 포함, 계정 | Ballard, POS | 비공개 | pos security | 2026-03-13 | https://docs.google.com/spreadsheets/d/1RXHcC0LUyWLzk5NH-gQI7rf9ogZuzzG_IxxuL1DmmwU/edit |
 | UW CCTV | University Way 매장 CCTV 녹화기(NVR) 2대 정보 내보내기 | 녹화기 모델, 펌웨어 버전, 상태, 가동 시작일, Hik-Connect 연동 여부; ⚠민감: IP/MAC/시리얼 | University Way, Hikvision NVR | 비공개 | security hardware store-ops | 2026-03-10 | https://docs.google.com/spreadsheets/d/10IwxNXDvQN55AD6nBb4H-R6UOynOPBybDEjyArebKFk/edit |
-| Printer Head | 매장별 라벨(저울) 프린터 현황표(시트명은 Services 사본) | 매장별 모델(UNI 5/7), 부서, 시리얼, 메모(LAN 포트 불량·개별용 등); ⚠민감: 시리얼/IP 일부 | Lynnwood, District H, Campeon, G-Lynnwood, Ishida 저울 | 도메인 전체(보기) | hardware asset pos | 2025-11-10 | https://docs.google.com/spreadsheets/d/1q-GtvoC0FnxqOjoB7r2Wv8M5zelIy7pTp2GNW2aTCBI/edit |
+| 🟢Printer Head | 매장별 라벨(저울) 프린터 현황표(시트명은 Services 사본) | 매장별 모델(UNI 5/7), 부서, 시리얼, 메모(LAN 포트 불량·개별용 등); ⚠민감: 시리얼/IP 일부 | Lynnwood, District H, Campeon, G-Lynnwood, Ishida 저울 | 도메인 전체(보기) | hardware asset pos | 2025-11-10 | https://docs.google.com/spreadsheets/d/1q-GtvoC0FnxqOjoB7r2Wv8M5zelIy7pTp2GNW2aTCBI/edit |
 | Gift Card - H Mart Bellevue.pdf | Bellevue 지류 상품권 인수증 | 수령 매장, 상품권 시리얼 번호 범위, 수령일(2026-03-18), 수령인·서명; ⚠민감: 상품권 시리얼, 서명 | Bellevue | 비공개 | paperwork pos | 2026-03-19 | https://drive.google.com/file/d/1gPm9SUF1fKQyX507V2TQ3Wf1FXvn8ikr/view |
 | DH DB Rebuilding | District H 델리 등 PLU(저울 상품) 데이터베이스 재구축용 목록(대용량) | PLU 번호, 한글/영문 상품명, 판매 단가; ⚠민감: 가격 | District H, 저울/라벨 시스템 | 도메인 전체(편집); 🌐 개인 Gmail(편집) | pos software store-ops | 2025-10-01 | https://docs.google.com/spreadsheets/d/1tQViv0w5-nS0rNd-ePWEW0pZjRQlnScub3xykExNEsA/edit |
 | Automated Attendant | 전화 시스템 자동응답(AA) 메뉴와 내선 연결 정리 | 대표번호·헌트번호, 영업시간 메뉴 키별 연결 내선(회계, 수입사무실, 회의실, GM), 영업외 시간 음성메일; ⚠민감: 전화번호 | 전화 시스템(GFC 추정) | 비공개 | phone infra | 2026-02-04 | https://docs.google.com/spreadsheets/d/1t-pb-BwIvQmyGjEuHdgjizzqAM_8iOmADYBHJMTBxH4/edit |
@@ -36,7 +37,7 @@
 | Basic computer settings and software list | 매장 PC 표준 설치 소프트웨어와 Windows 설정 기준표 | 설치 SW 목록(Office, Acrobat, 보안, 원격, 저울/라벨 등), 제거 앱, 기본 설정, 업데이트·개인정보 설정 | 매장 PC, Windows 10 | 비공개 | software hardware install tip | 2025-08-28 | https://docs.google.com/spreadsheets/d/1vKUSYf1jsNV7hTLKqPu9sq5xVGrwiojUIYT0_VuFsdU/edit |
 
 ## Archive/PLU Project for Ballard
-(폴더 공유: 비공개)
+(폴더 공유: 비공개) **낡은 문서, 참고 가치 없음** (사용자 확인 2026-11-03). Cashier 명단 공유자 중 1명은 Ballard 회계 성미아 대리
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|---|
 | H Mart Ballard-Cashier 명단 | Ballard 캐셔 명단과 POS 로그인 ID 표 | 직원 이름·역할, 캐셔 등록번호, 기존/변경 POS ID 테이블; ⚠민감: 비밀번호 포함, 직원 이름 | Ballard, POS | 도메인 전체(편집); 🌐 개인 Gmail(편집), 개인 Gmail(편집) | pos security store-ops | 2026-05-26 | https://docs.google.com/spreadsheets/d/1Jm3iVsalnfbkICWbjidX08gfB4856bvwTO5tt48hEnA/edit |

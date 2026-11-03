@@ -21,6 +21,7 @@
 | BM | Belmont (OR) | |
 | WM | Westminster (CO) | |
 | GBV | Beaverton (G Mart) | |
+| TG | Tigard (OR) | Task Tracker Options 탭 |
 | AR | Aurora (CO) | |
 | NHQs / NWHQs | 서북미마트총괄본부 | 서북미 전체 총괄. EGMM(워싱턴주)과 다른 조직 |
 | GFC | GFC (Greenfield Foods) | kb/orgs.md |
