@@ -69,7 +69,7 @@
 | 지식·조직·메일 분류 기준 | docs/kb/INDEX.md (orgs.md 계열사·벤더, mail_triage.md 메일 분류) |
 | 이메일 주소·전화·계정번호 등 민감 값 | 드라이브 Claude 폴더 → docs/drive-index/claude-folder.md (ID·열 이름만) |
 | 사용자·개인 설정 | docs/users/INDEX.md |
-| 작업 절차 | .claude/skills/ — start-day(업무 시작), drive-check(월초 드라이브 점검), weekly-meeting(월요일 회의), todo(말로 준 요청 추가, "Todo:"로 시작), todo-sync(할 일·STWS), mail-triage(메일), drive-index(드라이브 색인), session-end(마무리) |
+| 작업 절차 | docs/skills.md (표) · .claude/skills/ — start-day(업무 시작), drive-check(월초 드라이브 점검), weekly-meeting(월요일 회의), todo(말로 준 요청 추가, "Todo:"로 시작), todo-sync(할 일·STWS), mail-triage(메일), drive-index(드라이브 색인), session-end(마무리) |
 
 ## 저장소별 설정 (임시값 — 정해지면 교체)
 - 시험·빌드:          해당 없음 (문서 저장소). 점검은 python3 tools/check.py + session_review.md

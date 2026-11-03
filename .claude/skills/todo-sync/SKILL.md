@@ -1,6 +1,6 @@
 ---
 name: todo-sync
-description: 개인 할 일 보드(docs/users/<id>/todo.md)와 STWS 티켓(보고용)을 동기화하고 "지금" 할 일을 제안한다. "할 일", "할일 목록", "티켓 동기화", "todo" 때 사용. start-day에서도 부른다.
+description: 개인 할 일 보드(docs/users/<id>/todo.md)와 STWS 티켓(보고용)을 동기화하고 "지금" 할 일을 제안한다. "할 일 목록", "티켓 동기화", "STWS 동기화" 때 사용 ("Todo:"로 시작하는 새 요청은 todo skill). start-day에서도 부른다.
 ---
 
 # 할 일 동기화 (todo-sync)
