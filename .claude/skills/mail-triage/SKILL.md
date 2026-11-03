@@ -45,3 +45,6 @@ Outlook — 접근성 목록 방식 (메일을 열지 않음 → 읽음 처리 �
 - docs/log/YYYY/YYYY-MM-DD_<id>.md: 할 일 #open, 기다림 #waiting(대상·확인일), 참고 한 줄, 자동·버림은 "메일 점검" 줄에 건수만
 - 경계 사례·사용자 판정은 mail_triage.md 2절, 확정된 규칙은 1절(사용자 확인 시에만)
 - 메일 원문·주소·전화·비밀번호는 저장소에 쓰지 않음(storage_rules.md)
+
+## 5. Reply drafts
+- Before a draft states facts from quotes, specs or files (models, power, storage, what is included, locations), first show a short table: **confirmed (source) / assumed**. Only confirmed facts go into the draft; ask the user about the assumed ones. Draft in the recipient's language; Claude never sends — the user sends (2026-11-03: IQ camera reply took 6 rounds from assumptions)
