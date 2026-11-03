@@ -5,7 +5,7 @@
 | [ongoing-project.md](ongoing-project.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | Ongoing Project (STD 인프라, Issaquah, Cable Run WA/OR/CO, BV POS, UW Deli 안테나, Resources) | 2026-11-02 |
 | [claudework-itil-root.md](claudework-itil-root.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | Claudework, IT Infrastructure Library(매장 네트워크 표, 방화벽 백업, GBK 매뉴얼), 내 드라이브 루트 파일 | 2026-11-02 |
 | [meeting-templates-programs.md](meeting-templates-programs.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | Meeting(주간 IT 회의록 2025~2026), Templates, Programs | 2026-11-02 |
-| [purchase-reimbursement.md](purchase-reimbursement.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | Purchase(품의서·영수증), Reimbursement(개인경비 신청·증빙) | 2026-11-02 |
+| [purchase-reimbursement.md](purchase-reimbursement.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | Purchase(품의서·영수증), Reimbursement(개인경비 신청·증빙) + Dan Choi 소유 공유 폴더(경비 제출, 공유받음) | 2026-11-02 |
 | [claude-folder.md](claude-folder.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | 드라이브 Claude 폴더(민감 값 보관소) 파일 ID·열 이름 | 2026-11-02 |
 | [archive-saves.md](archive-saves.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | Archive(PLU Ballard, Invoice Analyzing, 매장 사진), Saves | 2026-11-02 |
 

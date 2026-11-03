@@ -6,6 +6,11 @@
 - 시트: https://docs.google.com/spreadsheets/d/1MifTpXF_xGcix8ULSKGXnWDnS1pPOi76D2Nh9MmnZEU
 - 영수증 폴더: https://drive.google.com/drive/folders/1nrYiVV5Nrwp9glxhdM_Vjyz8P8Gx6hx0 (코드별 하위 폴더)
 
+## 제출
+- Dan Choi 부장님 소유 공유 폴더 "Hyunmyung Lee"/Monthly 개인경비/<연도>/ 에 그 달 폴더 `YYYYMM(신청)`을 만들고 정산 시트·사용 내역을 넣는다 (회계 KF 2명 편집 공유)
+- 처리 끝나면 폴더 이름을 `YYYYMM(완료)`로 바꾼다. 영수증 원본은 내 드라이브 Reimbursement/PDF/Archive/<월> 아래 WE코드 폴더
+- 위치: docs/drive-index/purchase-reimbursement.md "공유 폴더" 절
+
 ## 규칙
 - Milage 아닌 건 → Others 탭(A~I). Milage → Driving 탭(H 마일, J `=$I$1*H행`, 단가 I1)
 - 코드: 분류가 여러 개면 **앞의 분류** 기준. 예외: Meal+Visitor(외부인사 식사)→WE0003. Meal→WE0002, Business Trip→WE0001, Parking→WE0006, Office→WE0011, 정액 출장비→ETC

@@ -44,7 +44,7 @@
 | Reimbursement Driving 082025 HML.pdf | 2025-08 업무 운행 마일리지 정산표 | 일자별 출발·도착(매장명)·거리·마일리지 금액, 차종 ⚠민감: 개인 이동경로·금액 | 매장 간 이동(Federal Way, Ballard, Redmond, Bellevue 등) | 폴더와 같음(비공개) | expense | 2025-09-15 | https://drive.google.com/file/d/1t5HBQLeb7sToXZmWngp3Iaje3e8h3Ktk/view |
 
 ### Reimbursement/PDF (1nrYiVV5Nrwp9glxhdM_Vjyz8P8Gx6hx0) — 폴더 공유 [B]
-루트 비영수증 문서 (공유 [B]와 같음):
+루트 비영수증 문서 (공유 [B]와 같음). **스캔하다 섞인 업무 문서 → 정리 후보** (네트워크 도면이 KF에 공유됨, 사용자 확인 2026-11-03):
 | 문서 | 목적·요약 | 담긴 정보 | 대상 | 키워드 | 수정일 | 링크 |
 |---|---|---|---|---|---|---|
 | Granite RT Installation 051426.pdf | Granite 회선 개통 작업 고객 확인서(현장 작업 완료 서명본) | 티켓/작업 일자·현장 도착·완료 시각, 작업 설명(장비 마운트, 케이블 정리, 속도 테스트), 회선 개통 스코프 ⚠민감: 회선·계정·IP·전화번호 | Lynnwood 매장, Granite, Ziply Fiber(회선), 라우터/MDF | network install vendor-mgmt | 2026-05-14 | https://drive.google.com/file/d/1XFVfFIf4Ppalu40vN0zK-RAwIP2fgiL0/view |
@@ -55,8 +55,8 @@
 | OR Belmont AP | Belmont(OR) 매장 AP 배치 스캔 | AP 위치 도면 ⚠민감: 네트워크 구성도 | OR Belmont | network | 2026-01-08 | https://drive.google.com/file/d/1UJ7sixhLbhNyBtZKbcBWYj0L_DYJ3BuC/view |
 | Tigard Ethernet Map | Tigard(OR) 매장 이더넷/POS 배치 도면 (As-Built 풍 평면도) | POS·사무실·베이커리 위치 포함 ⚠민감: 네트워크 구성도 | Tigard OR | network pos | 2026-01-07 | https://drive.google.com/file/d/1Nu_FJK03ehE9i3PC6CrbzSVWirbyGFB1/view |
 | Tigard Wifi map | Tigard 매장 WiFi 배치도 | AP 위치 ⚠민감: 네트워크 구성도 | Tigard OR | network | 2026-01-07 | https://drive.google.com/file/d/1earxLNS2PpTnjzgxJgFVzwkf8tFExycD/view |
-| Scanned_20261021-1437.pdf | 재고 시스템(POS 품목 이력) 화면 스캔: 한 품목의 가격 변경/입고 이력 | 품목 이력, 가격 변경 내역 ⚠민감: 단가·금액 | Seattle 매장 POS/재고, 가격 변경 이슈 | pos store-ops | 2026-10-21 | https://drive.google.com/file/d/1Oejv5_x_R2fr6QXhZfsewH6p27qR4mnp/view |
-| Scanned_20260820-1315.pdf | 스캔 문서(내용 미확인, 영수증류 추정) | — | — | expense | 2026-08-20 | https://drive.google.com/file/d/1w_sCCQa37BPTUEdL1Y-A6U7kBPxmIOWB/view |
+| Scanned_20261021-1437.pdf | 재고 시스템(POS 품목 이력) 화면 스캔: 한 품목의 가격 변경/입고 이력. TICKET-625(MW 임의 상품·가격 변동) 자료 | 품목 이력, 가격 변경 내역 ⚠민감: 단가·금액 | MW(Mellow Way) POS/재고, 가격 변경 이슈 | pos store-ops | 2026-10-21 | https://drive.google.com/file/d/1Oejv5_x_R2fr6QXhZfsewH6p27qR4mnp/view |
+| Scanned_20260820-1315.pdf | 저울 수리 후 받은 작업 티켓 스캔. 필요 없음, 사용자가 곧 삭제 | — | 저울 | hardware | 2026-08-20 | https://drive.google.com/file/d/1w_sCCQa37BPTUEdL1Y-A6U7kBPxmIOWB/view |
 
 영수증 폴더(공유는 전부 폴더와 같음 [B], 🌐 KF 2명 댓글):
 | 폴더 | 건수·종류 | 수정일 | 링크 |
@@ -85,7 +85,17 @@
 | August2025 | (루트 파일) | Office Lens 스캔·스크린샷 5건 이상 | 2025-09-18 | https://drive.google.com/drive/folders/18FPLexGhJ0HbzOcTrDAVjmvfjdPORgfC |
 | 식비Archive | — | Office Lens 식비 영수증 스캔 5건 이상(2026-01~02) | 2026-07-01 | https://drive.google.com/drive/folders/1IzXriDTnAnrS9PlczhFIPNMLIRgifAAI |
 | 교통비Archive | — | Office Lens 교통비 스캔 5건 이상(2026-01) | 2026-07-01 | https://drive.google.com/drive/folders/1g_znyA5Vscc0k7bGasfYK_GdWJkPIWGS |
+| Oct2026 | WE0001, WE0002, WE0003, WE0006 | 2026-10 경비 영수증(2026-11-02 정리) | 2026-11-02 | https://drive.google.com/drive/folders/1YUJeW4P8cUvzzk_PttkzfD5MvqBbzhZk |
 | 루트 마일리지표 PDF | — | Reimbursement - Jan2026, Feb2026 마일리지표 PDF 2건(월간 운행 정산 ⚠민감: 개인 이동·금액) | 2026-03-03 | https://drive.google.com/drive/folders/1jYFuzPYjocsXODlp7JgF8Ibwhi4i2BRP |
+
+## 공유 폴더: Hyunmyung Lee (Dan Choi 소유, 나에게 공유) — 경비 제출용
+소유 계정: Dan Choi(공유받음). 공유: Dan Choi(소유), 나(편집), 🌐KF 2명(편집). 매달 정산 서류를 여기 올려 회계(KF)가 처리
+| 폴더 | 목적·요약 | 담긴 정보 | 수정일 | 링크 |
+|---|---|---|---|---|
+| (루트) Hyunmyung Lee | 내 경비·구매 제출 공유 폴더 | 하위 2개 | 2025-09-18 | https://drive.google.com/drive/folders/1opf75P4M6PkVn5FgQ24txZUK1CCOM7KM |
+| Monthly 개인경비/2026 | 월별 개인경비 제출. 규칙: 제출할 달은 `YYYYMM(신청)`, 처리 끝나면 `YYYYMM(완료)`로 이름 변경 | 202601~202609(완료), 202610(신청) — 각 달 정산 시트·개인경비 사용 내역 ⚠금액 | 2026-11-02 | https://drive.google.com/drive/folders/15R-jdM7AKzbWXzntgsI3Bq0H_xaUxVTJ |
+| Monthly 개인경비/2025 | 2025년 제출분 | 월별 폴더 | 2026-03-30 | https://drive.google.com/drive/folders/1jmfgGn8kmIqZgomiOta7o4Cyyp7anGh- |
+| 구매Receipt | 구매 영수증 바로가기 2개: 영수증 폴더(Purchase/영수증&품의서), 구매 기록 시트 | 바로가기 | 2025-09-16 | https://drive.google.com/drive/folders/1VgcrmmOUrx86CS2lP-_LVa6E5Hzux-pw |
 
 WE코드 의미(문서 근거): WE0001 이동경비/출장, WE0002 식비, WE0003 외부인사 식사(접대), WE0006 교통·주차·마일리지, WE0011 사무용품.
 한계 요약: 위 건수의 "이상" 표기는 해당 폴더 첫 페이지 후 추가 페이지를 모두 열지 못한 곳이며, 일부 폴더 하위 WE폴더 안의 영수증 개별 제목은 요약으로만 기재. 개별 영수증 PDF의 공유는 폴더별 샘플 확인(WE0001/WE0002/Archive 루트/PDF 루트)이 폴더와 동일.

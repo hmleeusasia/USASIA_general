@@ -10,7 +10,7 @@
 | ID | 내용 | 상태 | 맡길 곳 |
 |---|---|---|---|
 | H-local | 로컬 PC 통과. 드라이브 커넥터·크롬(Gmail 텍스트 OK, Outlook 화면만) 확인(2026-11-02). 클라우드 계정 커넥터 동일 여부 미확인 | 거의 완료 | 사용자 |
-| H-drive1 | 내 드라이브 1차 색인 완료. **사용자 리뷰 3/5 끝**(Ongoing·ITIL·Meeting, 2026-11-02). 다음: purchase-reimbursement.md → archive-saves.md (질문은 하나씩 창으로). 그 뒤 공유 드라이브·공유 문서함 | 리뷰 중 | 사용자와 함께 |
+| H-drive1 | 내 드라이브 1차 색인 완료. **사용자 리뷰 4/5 끝**(Ongoing·ITIL·Meeting·Purchase, ~2026-11-03). 다음: archive-saves.md (질문은 하나씩 창으로). 그 뒤 공유 드라이브·공유 문서함 | 리뷰 중 | 사용자와 함께 |
 | H-share | 공유 정리 후보 검토 (드라이브 Claude 폴더 30_드라이브 공유 점검) — 비밀번호 문서 외부 공유 등. 추가 후보: Ballard 캐셔 명단이 yksccl(Comcast·Cannon 쪽 추정)에 편집 공유. 정리 후보 표시 문서들(색인 "정리 후보") | 대기 | 사용자 |
 | H-mail | 메일 분류 첫 검토 완료(mail_triage.md 1절 규칙 8개, 2026-11-02). 남은 할 일: Wifi 어댑터 구입, Granite 계정 생성 (log/2026/2026-11-02_hmlee.md). 미확인 조직: KRM·Daifuku·SSP·beOne | 진행 중 | 사용자 |
 | H-collect | 숙제: 기존 드라이브 문서(IT Information, Comcast Information 등)의 계정·회선 정보를 Claude 폴더 20_계정·회선으로 모으기 | 대기 | 사용자와 함께 |
