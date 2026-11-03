@@ -20,3 +20,9 @@
 - 새 달 넣을 때 요청여부 ✔, 지난달은 완료(Others I / Driving L) ✔
 - 노션 시각은 UTC 저장 → PDT/PST로 바꿔 넣기
 - 영수증 파일명은 엉터리가 많음 → 내용(날짜·금액)으로 맞춤
+
+## Daily receipt intake (agreed 2026-11-03)
+- User scans receipt with Drive app (+ → Scan) straight into the code folder (e.g. WE0002), then says "receipt uploaded"
+- Claude: find new file in folder → read date/amount → rename `Receipt - <place> - YYYY. M. D..pdf` → add Notion row (Unpaid) → add Sheet Others row with link (요청여부/완료 FALSE until month-end)
+- Photo in chat only when unavoidable: Claude makes PDF and sends it back; user uploads it (connector upload needs inline base64 = error-prone)
+- Meal receipt: Notion Doc name "점심", Category Meal, code WE0002(식비); claim cap $18
