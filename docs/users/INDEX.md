@@ -11,5 +11,5 @@
 ## 새 팀원 추가 (짧은 안내 — 2단계에서 docs/onboarding.md로)
 1. `docs/users/<아이디>/` 에 CLAUDE.md(개인 설정), profile.md 만들기 (hmlee 폴더를 본뜸)
 2. 저장소 폴더에 `CLAUDE.local.md` (git 제외) 한 줄: `@docs/users/<아이디>/CLAUDE.md`
-3. 자기 구글 드라이브에 Claude 폴더(비공개, 상속 권한 끔) 만들고 ID를 profile.md에
+3. 자기 구글 드라이브에 Claude 폴더(비공개, 상속 권한 끔) 만들고, 그 안에 00_profile 시트(항목·값·비고, 원본)를 만들고, 폴더 ID를 profile.md(사본)에
 4. 개인 skill은 `.claude/skills/<아이디>-<이름>/`, 설명에 "<아이디> 전용"
