@@ -29,6 +29,9 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 ## 4-1. 할 일
 - todo-sync skill로 STWS 동기화 → "지금" 제안
 
+## 4-2. 월초 점검
+- CURRENT_STATE H절 "마지막 월초 점검"이 이번 달이 아니면 drive-check skill 실행을 오늘 할 일로 제안 (D-20261102-21)
+
 ## 5. 드라이브 변경
 - 드라이브 커넥터 search_files: `modifiedTime > '<기준일>T00:00:00Z'`, excludeContentSnippets true
 - docs/drive-index에 없는 새 문서·바뀐 문서를 표로 (색인 갱신 후보)
@@ -45,6 +48,7 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 | 새 업무 메일 (할 일/기다림/참고) | | | 기록·답장 초안 등 |
 | 새 연락처·조직 후보 | | | 승인 시 주소록·orgs.md |
 | 드라이브 변경 | | | 색인 갱신 여부 |
+| 월초 점검 | 이번 달 했는지 | | 안 했으면 drive-check |
 
 그다음 오늘 계획(할 일·등급 가벼움/무거움·맡을 곳)을 제안하고 승인을 받는다.
 승인 뒤 CURRENT_STATE의 "마지막 업무 시작" 날짜를 오늘로 고친다.
