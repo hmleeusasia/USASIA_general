@@ -2,7 +2,7 @@
 """기록 검색. 사용:
   python3 tools/find.py <단어|#태그> [...]   모두 포함한 건만 (AND, 대소문자 무시). 결정 기록도 함께 검색
   python3 tools/find.py --open               열린 건(#open/#waiting) + 확인일, 지난 것은 [기한초과]
-  python3 tools/find.py --due                앞으로 30일 안의 날짜(확인일·다음) + calendar.md
+  python3 tools/find.py --due                앞으로 30일 안의 날짜(확인일·다음·기한) + calendar.md
 동의어는 docs/keywords.md 표에서 자동 확장. 3자 이하 영문은 단어 단위로 찾는다.
 ### 없는 파일(월별 요약 등)은 파일 전체를 한 건으로 본다."""
 import re, sys, pathlib, datetime
@@ -53,7 +53,7 @@ def main(args):
         n = 0
         for f, i, h, b in entries():
             if "summary" in f.name or not re.search(r"#(open|waiting)\b", h): continue
-            ds = dates(b); late = any(d < TODAY for k, d in ds if k == "확인일")
+            ds = dates(b); late = any(d < TODAY for k, d in ds if k in ("확인일", "기한"))
             print(f"{'[기한초과] ' if late else ''}{f}:{i}: {h[4:]}" + "".join(f"  ({k} {d})" for k, d in ds)); n += 1
         if not n: print("열린 건 없음")
         return
