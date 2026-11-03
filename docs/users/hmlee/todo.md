@@ -23,7 +23,7 @@
 | T-556 | 잔여 POS 장비 창고로 옮기기 | BV | #pos | 끝 | 2026-11-02 | STWS Closed (다음 동기화 때 목록에서 뺌) |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 할 일 | 2026-11-03 | Survey today with M-bv-pos-label |
 | M-bv-pos-label | BV: fix wrong POS label numbers. Requested by user 2026-11-03. Ticket needed? (maybe sub of T-619) | BV | #pos #asset | 할 일 | 2026-11-03 | Today at BV |
-| T-624 | POS 포인트 카드 테스트 (+ 하위 TICKET-635 smart card 스캔 테스트, James Yoo 생성 11/02) | BV | #pos | 할 일 | 2026-11-03 | BV 방문 때 함. 가기 전 James Yoo 과장님께 미리 연락. 블록한 스마트 포인트 카드가 POS에서 어떻게 막히고 찍히는지 + 미등록 smart card 스캔 시 POS 반응(11/03 추가) + 간단한 기타 테스트 |
+| T-624 | POS 포인트 카드 테스트 (+ 하위 TICKET-635 smart card 스캔 테스트, James Yoo 생성 11/02) | BV | #pos | 끝 | 2026-11-03 | BV 방문 때 함. 가기 전 James Yoo 과장님께 미리 연락. 블록한 스마트 포인트 카드가 POS에서 어떻게 막히고 찍히는지 + 미등록 smart card 스캔 시 POS 반응(11/03 추가) + 간단한 기타 테스트 |
 | T-585 | 새 CS 컴퓨터 세팅 | BV | #hardware | 할 일 | 2026-10-15 | |
 | T-565 | PIN Pad Tap 스티커 붙이기 | BV | #pos | 할 일 | 2026-09-20 ⏸ | 진행: BV 방문 때 T-624와 함께 (11/03) |
 | T-438 | POS 저울 유선 설치 | BV(구) | #pos | 진행 | 2026-11-03 | 아직 남음 (11/03 확인) |
