@@ -13,6 +13,7 @@ description: 세션 마무리·인계 절차. 점검표(docs/session_review.md) 
 5. 이번 세션에 만든 kb 문서·skill이 kb/INDEX.md·CLAUDE.md·docs/skills.md에 있는지
 6. 보고 (한 번에):
    - 틀 변경 제안 표 (무엇·왜·영향 파일) — 없으면 "없음". 승인 전엔 바꾸지 않음
-   - 비효율 평가 표 (session_review.md 2절 형식)
+   - 비효율 평가 표 (session_review.md 2절 형식, 상태 칸 포함)
+   - 보고 뒤 "승인 필요"인 고칠 안·틀 변경 제안을 하나씩 물어 반영 여부를 정한다 (말로만 끝내지 않음)
    - 남은 일·확인 안 된 것
 7. 커밋 → 작업 장소 규칙대로 push (로컬: `git pull --rebase origin main` 후 `git push origin main` / 클라우드: session_review.md 3절)
