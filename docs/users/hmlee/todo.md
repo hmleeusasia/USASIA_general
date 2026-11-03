@@ -28,7 +28,7 @@
 | M-bv-printer | BV: 1st-floor printer drops connection often — investigate (new request 11/03). Ticket needed? | BV | #hardware #network | 할 일 | 2026-11-03 | Check while at BV today: wired/Wi-Fi, IP (DHCP vs static), sleep mode, switch port |
 | T-585 | 새 CS 컴퓨터 세팅 | BV | #hardware | 할 일 | 2026-10-15 | |
 | T-565 | PIN Pad Tap 스티커 붙이기 | BV | #pos | 할 일 | 2026-09-20 ⏸ | 진행: BV 방문 때 T-624와 함께 (11/03) |
-| T-438 | POS 저울 유선 설치 | BV(구) | #pos | 진행 | 2026-11-03 | 아직 남음 (11/03 확인). Scales needing wired link: seafood FISH70, FISH71; meat MEAT73; produce PROD76 (11/03) |
+| T-438 | POS 저울 유선 설치 | BV(구) | #pos | 진행 | 2026-11-03 | 아직 남음 (11/03 확인). Scales needing wired link: seafood FISH70, FISH71; meat MEAT73; produce PROD76 (11/03). Survey done 11/03; install = separate visit, schedule TBD |
 | T-368 | bypass PDU/UPS 설치 | BV(구) | #infra | 끝 | 2026-11-03 | Resolved 11/03 |
 | T-323 | 델리 저울 head 이상 | BV(구) | #pos | 취소 | 2026-11-03 | Cancelled 11/03 (구매장, 새 저울 CAS로 바뀜) |
 | T-500 | Lumen 회선 개통 | BV(구) | #network | 진행 | 2026-11-03 | 아직 남음. Lumen 연락 없음 → Lumen에 재스케줄 확인 필요 (11/03) |
