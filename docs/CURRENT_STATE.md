@@ -16,7 +16,7 @@
 | H-collect | 숙제: 기존 드라이브 문서(IT Information, Comcast Information 등)의 계정·회선 정보를 Claude 폴더 20_계정·회선으로 모으기 | 대기 | 사용자와 함께 |
 | H-sheet | 7묶음 20줄 반영 완료(2026-11-03, 주소록 40명, 묶음 파일 `완료_` 붙임). 남은 1묶음: 90_변경대기_2026-11-03_6(Jeongho Roh, 승인·열 형식 맞춤). _5는 반영하지 말고 '완료_' 대신 '취소_' 붙이기 | 대기 1 | 클라우드 |
 | H-todo | 할 일 보드 docs/users/hmlee/todo.md. **2026-11-02 받은 요청 4건 → 다음 start-day 맨 위에 알림**: T-606 LW 저울(~11/06), M-nwhq-pc NWHQs PC 이동(~11/30), M-lw-scale-junk LW 고장 저울 폐기, T-624 BV 포인트 카드 테스트(BV 갈 때 James 과장님께 연락). 티켓 작성 필요 2건(M-). ⏸ 판단 끝(11/03): '확인 후 닫기' 11건은 사용자 확인 대기 | 진행 중 | 사용자 |
-| H-multi | 여러 사용자 1단계 완료(D-20261102-19). 2단계(팀원 합류 때): mail_triage 0절 → users/<id>/mail_rules.md, CURRENT_STATE 개인 할 일 분리, onboarding.md. 미정: 공용 규칙 승인자, 개인 파일 공개 범위. 팀원 합류 전 git 이력 정리(예전 이메일 주소·sharing-review.md, 강제 push 필요) 여부 결정 | 대기 | 사용자 |
+| H-multi | **틀 고민은 docs/requests/multi-user-questions.md에 모았다가 한꺼번에 결정(사용자 요청 2026-11-03, 나올 때마다 추가).** 여러 사용자 1단계 완료(D-20261102-19). 2단계(팀원 합류 때): mail_triage 0절 → users/<id>/mail_rules.md, CURRENT_STATE 개인 할 일 분리, onboarding.md. 미정: 공용 규칙 승인자, 개인 파일 공개 범위. 팀원 합류 전 git 이력 정리(예전 이메일 주소·sharing-review.md, 강제 push 필요) 여부 결정 | 대기 | 사용자 |
 | H-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
 | H-reimb | 10월 경비 청구 시트·노션 반영 완료. 남은 것: 노션 마일 6건, Yi's 금액, 렌트비 Note, Driving 시각 서식 (log 2026-11-02, kb/reimbursement.md) | 진행 중 | 사용자 |
 | H-tracker | 드라이브 Task Tracker를 할 일 화면으로 관리(D-20261102-22). 업무 파악 뒤 시작: 시트 구조 읽기 → 탭 설계 사용자와 → 클라우드 계정이 갱신 | 대기 (업무 파악 후) | 지휘·클라우드 |
