@@ -26,3 +26,4 @@
 - Claude: find new file in folder → read date/amount → rename `Receipt - <place> - YYYY. M. D..pdf` → add Notion row (Unpaid) → add Sheet Others row with link (요청여부/완료 FALSE until month-end)
 - Photo in chat only when unavoidable: Claude makes PDF and sends it back; user uploads it (connector upload needs inline base64 = error-prone)
 - Meal receipt: Notion Doc name "점심", Category Meal, code WE0002(식비); claim cap $18
+- Before writing a Sheet row: read the target row back and confirm it is empty (2026-11-03 an off-by-one overwrote a row)
