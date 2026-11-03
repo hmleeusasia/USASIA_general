@@ -27,6 +27,7 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 - mail-triage skill 절차대로 3개 메일함(받은편지함+보낸편지함) 점검·분류
 
 ## 4-1. 할 일
+- 먼저: 어제(지난 업무일) todo skill로 받은 요청(todo.md 2절, 움직임=그날 M-건·덧붙인 T-건)을 보고 맨 위 "어제 받은 요청"으로
 - todo-sync skill로 STWS 동기화 → "지금" 제안
 
 ## 4-2. 월요일 회의
