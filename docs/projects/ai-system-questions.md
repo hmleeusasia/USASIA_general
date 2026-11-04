@@ -8,7 +8,7 @@
 | Q2 | 공용 결정은 누가 승인? (hmlee 개발자 / Dan Choi 부장 / 팀 합의) | 2026-11-02 | H-multi 미정 항목 |
 | Q3 | CURRENT_STATE를 공용(저장소 작업)과 개인(`users/<id>/state.md`)으로 나눌까? | 2026-11-03 | → D-20261103-8 (personal tasks moved to todo.md) |
 | Q4 | 로컬도 main 직접 대신 브랜치에서 작업할까? (D-12 개정) | 2026-11-03 | → D-33 (main kept) |
-| Q5 | git 이력의 예전 이메일 주소 정리(filter-repo + 강제 push + 재클론) | 2026-11-02 | 실제 15개 이상 확인(2026-11-03). 한 사람일 때가 쉬움 |
+| Q5 | git 이력의 예전 이메일 주소 정리(filter-repo + 강제 push + 재클론) | 2026-11-02 | → D-34 (done 11/03) |
 | Q6 | 팀 공용 민감 값·주소록·90_변경대기를 공유 드라이브로? (D-16·17 개정) | 2026-11-03 | 각자 Claude 폴더만으로는 팀원이 서로 못 봄 |
 | Q7 | 사람별 git 사용자·커밋 작성자 표시 (클라우드 커밋이 "Claude"로만 남음) | 2026-11-03 | |
 | Q8 | mail_triage.md 0절(hmlee 담당 범위)을 users/hmlee/mail_rules.md로 옮기기 | 2026-11-02 | H-multi 2단계 |
