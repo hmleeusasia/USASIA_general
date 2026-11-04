@@ -42,7 +42,8 @@
 | T-579 | CS PC 교체 | LW | #hardware | 진행 | 2026-10-22 | |
 | T-515 | 레이블 PC 파일 이상 | LW | #hardware | 할 일 | 2026-09-08 ⏸ | 진행: 이번 주 LW 방문 때 (11/03) |
 | T-587 | 저울 문제 + PC 이동 지원 | GLW | #pos | 끝 | 2026-11-04 | Done 11/04: PC move + extra PC move/install, repaired scale installed, Soundtrack moved to new PC. Close in STWS |
-| M-glw-scale-repair | GLW: send 1 extra scale for repair (new 11/04). Ticket needed? | GLW | #pos #vendor | 할 일 | 2026-11-04 | Arrange repair (InStore?) |
+| M-glw-scale-repair | GLW: send 1 extra Ishida scale for repair to InStore Technology (new 11/04). Ticket needed | GLW | #pos #vendor | 할 일 | 2026-11-04 | Create STWS ticket; arrange InStore pickup/repair |
+| M-glw-touch | GLW: PC touchscreen phantom touches (ripple marks, random clicks, lost control) 11/04. Cause: touchscreen fault | GLW | #hardware | 할 일 | 2026-11-04 | Confirm fix (disable touch / replace monitor?) |
 | T-386 | 컴퓨터 구입·Laptop 세팅 | GLW | #hardware | 기다림(매장) | 2026-11-03 | Pending 11/03 |
 | T-603 | PC 급격히 느려짐 | MW | #hardware | 진행 | 2026-10-22 | 서브 T-639 |
 | T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-03 | 새 PC가 매장에 도착(11/03). 설치는 목 11/05 MW 방문 때 |
