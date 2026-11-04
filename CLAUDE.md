@@ -1,5 +1,5 @@
 # CLAUDE.md
-Principles: docs/project_instructions.md. Lookup table: docs/kb/INDEX.md "Where to look first". Procedures: docs/skills.md.
+Principles: docs/project_instructions.md. Lookup table: docs/kb/INDEX.md "Where to look first". Procedures: .claude/skills/ (each skill's description says when to use it).
 Supervisor hooks (tools/hooks/README.md) enforce checkable rules and say which rule you broke — fix and continue. This file keeps judgment rules only (budget ~3,000 chars, PLAN-lean-context-001).
 
 ## Repo

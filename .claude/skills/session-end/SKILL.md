@@ -1,19 +1,24 @@
 ---
 name: session-end
-description: 세션 마무리·인계 절차. 점검표(docs/session_review.md) 수행, CURRENT_STATE·facts·decisions 갱신, 틀 변경 제안·비효율 평가 표 보고, 커밋·push. "마무리", "인계", "세션 종료", "세션 닫기" 때 사용.
+description: Session wrap-up and handoff. Every session — check.py, open items to CURRENT_STATE, new facts/decisions, commit and push. Weekly (Monday meeting day, or when asked) — full review incl. framework-change and inefficiency tables. Use for "마무리", "인계", "세션 종료", "세션 닫기", "주간 점검".
 ---
 
-# 세션 마무리 (session-end)
+# Session end (session-end)
 
-1. docs/session_review.md 점검표 1절 전부 (check.py, find.py --open/--due, 줄 수, INDEX 일치, 민감 정보)
-2. 드라이브 Claude 폴더 공유 0명 확인: get_file_permissions(폴더 ID는 docs/drive-index/claude-folder.md). 로컬 세션만
-   - 클라우드 세션(시트 커넥터 있음): `완료_` 없는 90_변경대기_* 묶음 파일의 줄을 대상 시트 셀에 반영 → 90_변경대기에 옮겨 적고 상태 '완료'·반영일 → 묶음 파일 이름 앞에 `완료_` → CURRENT_STATE H-sheet 갱신 (D-20261102-17)
-3. 열린 건(#open/#waiting) → CURRENT_STATE C절. 바뀐 절만 고침. (Stop hook already blocks: CURRENT_STATE > 80 lines, open T-IDs missing from the board — tools/hooks/stop.py. Here: H-items without T-ID, wording)
-4. 계속 유효한 새 사실 → kb/facts.md(확인일), 새 결정 → decisions.md(ID), 새 조직 → kb/orgs.md
-5. 이번 세션에 만든 kb 문서·skill이 kb/INDEX.md·CLAUDE.md·docs/skills.md에 있는지
-6. 보고 (한 번에):
-   - 틀 변경 제안 표 (무엇·왜·영향 파일) — 없으면 "없음". 승인 전엔 바꾸지 않음
-   - 비효율 평가 표 (session_review.md 2절 형식, 상태 칸 포함)
-   - 보고 뒤 "승인 필요"인 고칠 안·틀 변경 제안을 하나씩 물어 반영 여부를 정한다 (말로만 끝내지 않음)
-   - 남은 일·확인 안 된 것
-7. 커밋 → 작업 장소 규칙대로 push (로컬: `git pull --rebase origin main` 후 `git push origin main` / 클라우드: session_review.md 3절)
+## A. Every session (light — keep it short)
+1. `python3 tools/check.py` passes (Stop hook already blocks: CURRENT_STATE > 80 lines, open T-IDs missing from the board — tools/hooks/stop.py)
+2. Open items (#open/#waiting) → CURRENT_STATE section C, changed sections only. New lasting fact → kb/facts.md (with date); new hard-to-reverse decision → decisions.md; new org → kb/orgs.md
+3. Report in a few lines: what was done, what is left or unverified. **No framework-change or inefficiency tables here** — note friction as one line in docs/projects/ai-system-questions.md instead
+4. Commit → push by work place: local `git pull --rebase origin main` then `git push origin main`; cloud: push the claude/* branch, then `git fetch origin main && git checkout -B main origin/main && git merge --ff-only <branch> && git push origin main` (stop and tell the user if not fast-forward)
+
+## B. Weekly (Monday, with weekly-meeting, or when the user asks)
+1. `python3 tools/find.py --open` (overdue) and `--due` (30 days); CURRENT_STATE ≤ 80 lines, kb/facts.md ≤ 50 lines
+2. INDEX files match real files (missing entries, dead links); kb docs and skills created this week are in kb/INDEX.md
+3. Tags outside keywords.md or duplicate meanings; anything that must not be in GitHub (storage_rules.md)
+4. Local session only: Drive Claude folder shared with 0 people — get_file_permissions (folder ID: docs/drive-index/claude-folder.md)
+   - Cloud session with Sheets connector: apply rows of 90_변경대기_* batch files without the `완료_` prefix to target sheets → copy to 90_변경대기 with status '완료' and date → rename batch with `완료_` → update CURRENT_STATE H-sheet (D-20261102-17)
+5. Review ai-system-questions.md friction lines from the week, then report (one message):
+   - Framework-change table (what · why · files) — evidence such as repeated tag combos, a target with no hub mentioned twice or more, ambiguous classifications, an oversized file. "None" if none. Change nothing before approval
+   - Inefficiency table: | waste | cause | fix | where | status (committed / needs approval) | — look at repeated manual work, model choice for subagents, question round-trips, large reads
+   - Ask about each "needs approval" item one at a time; apply only approved ones
+6. Quarterly: remind the user to delete leftover claude/* remote branches in GitHub web (D-20261102-7). Only when docs/log has 60+ files: monthly summaries (docs/log/YYYY/YYYY-MM-summary.md, 10–20 lines, one "### title  #tags" line per item + decision IDs, no #open/#waiting) → move originals to docs/archive/YYYY/
