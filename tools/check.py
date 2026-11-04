@@ -37,5 +37,24 @@ for name, limit in (("CURRENT_STATE.md", 80), ("kb/facts.md", 50)):
     n = len((D / name).read_text(encoding="utf-8").splitlines())
     if n > limit: problems.append(f"{name} {n}줄 > {limit}")
 
+# --files a b c : only problems about these files (pre-commit). Soft "민감 정보 의심" is shown, not counted.
+if "--files" in sys.argv:
+    files = [a.replace("\\", "/") for a in sys.argv[sys.argv.index("--files") + 1:]]
+    ftags = set()
+    for a in files:
+        p = ROOT / a
+        if p.suffix == ".md" and p.exists():
+            ftags |= set(re.findall(r"(?<![\w#])#[a-z][a-z0-9-]*", p.read_text(encoding="utf-8")))
+    def mine(pr):
+        if pr.startswith(("허브 없음", "미등록 태그")):
+            return pr.split(": ")[1].split(" ")[0] in ftags
+        return any(a in pr.replace("\\", "/") or a.endswith(pr.split(" ")[0]) for a in files)
+    problems = [pr for pr in problems if mine(pr)]
+    soft = [pr for pr in problems if pr.startswith("민감 정보 의심")]
+    hard = [pr for pr in problems if pr not in soft]
+    if soft: print("(warn) " + "\n(warn) ".join(soft))
+    if hard: print("\n".join(hard))
+    sys.exit(1 if hard else 0)
+
 print("\n".join(problems) if problems else f"점검 통과 (기록 파일 {len(logs)}개)")
 sys.exit(1 if problems else 0)

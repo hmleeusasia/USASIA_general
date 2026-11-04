@@ -8,6 +8,12 @@ Plan: docs/requests/PLAN-lean-context-001-draft2.md. Per-rule mode: config.json 
 | probe.py | Step-0 probe: logs event/shell/Python to hits.log (gitignored) |
 | digest.py | SessionStart (startup/resume/compact): ~10-line summary — user ID, local/cloud, last start-day, H-sheet, open/overdue/due ≤7d, traps, git state, pointers. ~730 chars vs ~4,800 for CURRENT_STATE+facts. Manual: `py tools/hooks/digest.py --print` |
 
+| guard.py | PreToolUse Write/Edit/MultiEdit/Bash: scans **new text only**. Rules: sens-email, sens-secret, sens-soft, log-path, users-unknown, english-nudge (once per file per session), git-force (-f, --force, --force-with-lease, `+` refspec), rm-docs. Warn → additionalContext; block → exit 2 with rule ID + line + fix |
+| test_hooks.py | 23 hit/no-hit twin fixtures + digest smoke. Run `py tools/hooks/test_hooks.py` before changing any rule mode |
+| ../githooks/pre-commit | Backstop on staged files via `check.py --files` (emails, tags, hubs, INDEX, budgets; soft sensitive = warn). Enable per clone: `git config core.hooksPath tools/githooks` |
+
+Settings edits take effect after a short delay (the very next tool call may still run without the new hook).
+
 Register in settings: `bash "$CLAUDE_PROJECT_DIR/tools/hooks/launch.sh" <script.py>`.
 While testing, hooks live in `.claude/settings.local.json` (personal); they move to shared `.claude/settings.json` only after review (Q2).
 

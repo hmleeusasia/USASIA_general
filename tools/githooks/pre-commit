@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Backstop for every writer (Claude tools, sed, editors, teammates). Enable once per clone:
+#   git config core.hooksPath tools/githooks
+# Checks only staged files: emails, unregistered tags, missing hubs, INDEX gaps, line budgets.
+# Fails open if no Python. Bypass only on purpose: git commit --no-verify
+ROOT="$(git rev-parse --show-toplevel)"
+FILES=$(git diff --cached --name-only --diff-filter=ACM)
+[ -z "$FILES" ] && exit 0
+for p in python3 py python; do
+  if command -v "$p" >/dev/null 2>&1 && "$p" -c "" >/dev/null 2>&1; then
+    "$p" "$ROOT/tools/check.py" --files $FILES
+    rc=$?
+    [ $rc -ne 0 ] && echo "pre-commit: fix the lines above (tools/check.py), then commit again." >&2
+    exit $rc
+  fi
+done
+exit 0

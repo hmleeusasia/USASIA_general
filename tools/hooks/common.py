@@ -34,7 +34,9 @@ def norm_path(p):
 
 
 def log(rule, msg):
-    """Local, gitignored (*.log). Never pass secret values here."""
+    """Local, gitignored (*.log). Never pass secret values here. Tests set HOOKS_TEST=1 (no logging)."""
+    if os.environ.get("HOOKS_TEST"):
+        return
     try:
         with open(os.path.join(HERE, "hits.log"), "a", encoding="utf-8") as f:
             f.write(f"{datetime.datetime.now():%Y-%m-%d %H:%M:%S}\t{rule}\t{msg}\n")

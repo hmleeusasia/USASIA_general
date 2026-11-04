@@ -1,14 +1,16 @@
 {
-  "_doc": "Per-rule mode: off | warn | block. See docs/requests/PLAN-lean-context-001-draft2.md section 3.",
+  "_doc": "Per-rule mode: off | warn | block. Plan: docs/requests/PLAN-lean-context-001-draft2.md section 3. Flip warn->block one rule at a time when test_hooks.py is green and hits.log shows no false positives (step 7).",
   "rules": {
     "probe": "warn",
     "digest": "warn",
-    "sens-email": "off",
-    "sens-secret": "off",
-    "sens-soft": "off",
-    "log-path": "off",
-    "users-unknown": "off",
-    "english-nudge": "off",
+    "sens-email": "warn",
+    "sens-secret": "warn",
+    "sens-soft": "warn",
+    "log-path": "warn",
+    "users-unknown": "warn",
+    "english-nudge": "warn",
+    "git-force": "block",
+    "rm-docs": "block",
     "budget": "off",
     "stop-state": "off"
   }
