@@ -17,8 +17,9 @@
 - 약어표: docs/kb/store_codes.md (TC=Tacoma(주소 Lakewood), BV=Bellevue, BL=Ballard 등). 허브가 생기면 태그 #store-<약칭>
 
 ## 주요 시스템·서비스 (확인: 2026-11)
-- 티켓: STWS (보고용, 할 일 원본은 todo.md, D-18) / POS: HANA(하나로), HBOM / 방화벽 FortiGate, 일부 Meraki
+- 티켓: STWS (보고용, 할 일 원본은 todo.md, D-18; STWS 관리자 James Yoo 과장, 확인 2026-11-04) / POS: HANA(하나로), HBOM / 방화벽 FortiGate, 일부 Meraki
 - 저울: 예전 Ishida Uni 5·Uni 7 → Toshiba POS 이전하며 CAS CL5500. CAS 수리는 대한시스템 (확인: 2026-11)
+- Point cards: H-Point = current/old point program, managed by HANA (하나로, current POS vendor). Smart card = new H-mart point card, managed by GBK (확인: 2026-11)
 - Remote support tool: DameWare only (other remote programs not allowed for now) (확인: 2026-11)
 - 주간 IT 정기 회의: 매주 월요일 10:00, 회의록은 드라이브 Meeting 폴더 (D-23)
 

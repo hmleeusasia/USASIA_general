@@ -13,7 +13,7 @@
 | Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
 | Wed 11/04 | T-587 | Scale + PC move (+ deliver 1 scale picked up 11/03) | GLW |
 | next FW visit | — | Deliver 1 scale picked up at InStore 11/03 (ticket?) | FW |
-| Thu 11/05 AM | M-uw-deli-cable | Review UW Deli cable quote (ITSolution) → store manager; create STWS ticket | UW |
+| Thu 11/05 AM | M-uw-grabgo-cable | Review UW Grab Go (Deli) cable estimate (ITSolution) → store manager; create STWS ticket | UW |
 | Thu 11/05 | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
 | Thu 11/05 | T-639/T-603, T-375 | Install manager PC (arrived 11/03), Wi-Fi dead zone / AP | MW |
 | Any | M-wifi, M-granite, T-295+T-285 | Wi-Fi adapter, Granite account, EGMM internet vendor | office |
@@ -22,12 +22,14 @@
 상태: 할 일 / 진행 / 기다림(대상) / 끝 / 취소 · 움직임 = 마지막 업데이트(STWS 또는 기록) · ⏸ = 30일 넘게 안 움직임
 | ID | 할 일 | 매장 | 분야 | 상태 | 움직임 | 다음 |
 |---|---|---|---|---|---|---|
-| M-uw-deli-cable | UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Quote received 11/04 | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
+| M-uw-grabgo-cable | UW Grab Go estimate = UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Estimate received 11/03 (Outlook) | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
 | T-556 | 잔여 POS 장비 창고로 옮기기 | BV | #pos | 끝 | 2026-11-02 | STWS Closed (다음 동기화 때 목록에서 뺌) |
-| T-619 | POS 시리얼 번호 기록 | BV | #pos | 끝 | 2026-11-03 | Survey today with M-bv-pos-label |
+| T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Survey done 11/03. STWS In progress (11/04, user): parent cannot be set to Resolved while subtask T-640 is open (tried 11/04). Resolve after T-640 |
 | M-bv-pos-label | BV: fix wrong POS label numbers. Requested by user 2026-11-03. Ticket needed? (maybe sub of T-619) | BV | #pos #asset | 끝 | 2026-11-03 | Fixed 11/03 |
-| T-624 | POS 포인트 카드 테스트 (+ 하위 TICKET-635 smart card 스캔 테스트, James Yoo 생성 11/02) | BV | #pos | 끝 | 2026-11-03 | BV 방문 때 함. 가기 전 James Yoo 과장님께 미리 연락. 블록한 스마트 포인트 카드가 POS에서 어떻게 막히고 찍히는지 + 미등록 smart card 스캔 시 POS 반응(11/03 추가) + 간단한 기타 테스트 |
+| T-624 | POS 포인트 카드 테스트 (+ 하위 TICKET-635 smart card 스캔 테스트, James Yoo 생성 11/02) | BV | #pos | 끝 | 2026-11-04 | STWS Resolved 11/04 (user closes). BV 방문 때 함. 가기 전 James Yoo 과장님께 미리 연락. 블록한 스마트 포인트 카드가 POS에서 어떻게 막히고 찍히는지 + 미등록 smart card 스캔 시 POS 반응(11/03 추가) + 간단한 기타 테스트 |
 | M-bv-printer | BV: 1st-floor printer drops connection often — investigate (new request 11/03). Ticket needed? | BV | #hardware #network | 대기 | 2026-11-03 | 11/03: no problem seen on site. Re-check next BV visit (wired/Wi-Fi, IP, sleep, port) |
+| T-640 | BV: send POS manufacturer serial numbers per lane for receipt printer, cashier touch screen, scanner scale (manufacturer request, name TBD). Subtask of T-619, created 11/04 | BV | #pos #asset | 할 일 | 2026-11-04 | Collect on next BV visit if not in T-619 survey, then reply to the manufacturer |
+| T-641 | Ballard: check how smart card #0012 (new H-mart point card, GBK) scans on POS. Created 11/04 | BL | #pos | 할 일 | 2026-11-04 | Requested by user 11/04 |
 | M-bv-acct-pc | BV accounting PC: install remote-support program + attach PC label (new 11/03) | BV | #hardware #support | 끝 | 2026-11-03 | DameWare installed on USWAHBVD02 (11/03). Label was already attached |
 | T-585 | 새 CS 컴퓨터 세팅 | BV | #hardware | 할 일 | 2026-10-15 | |
 | T-565 | PIN Pad Tap 스티커 붙이기 | BV | #pos | 할 일 | 2026-09-20 ⏸ | 진행: BV 방문 때 T-624와 함께 (11/03) |
@@ -71,7 +73,8 @@
 | M-share | 공유 정리 후보 검토 (드라이브 Claude 폴더 30_드라이브 공유 점검) — 비밀번호 문서 외부 공유 등. 추가 후보: Ballard 캐셔 명단(낡은 문서, 비밀번호 포함)이 개인 Gmail 2명에 편집 공유 → 공유 해제·삭제 후보. 정리 후보 표시 문서들(색인 "정리 후보") | 대기 | 사용자 |
 | M-mail | 메일 분류 첫 검토 완료(mail_triage.md 1절 규칙 8개, 2026-11-02). 남은 할 일: Wifi 어댑터 구입, Granite 계정 생성 (log/2026/2026-11-02_hmlee.md). 미확인 조직: KRM·Daifuku·SSP·beOne | 진행 중 | 사용자 |
 | M-collect | 숙제: 기존 드라이브 문서(IT Information, Comcast Information 등)의 계정·회선 정보를 Claude 폴더 20_계정·회선으로 모으기 | 대기 | 사용자와 함께 |
-| M-contact | Add to Drive address book (local session, approved 11/03): Jason Chung (정훈희), GBK, POS contact — email from his mail | 대기 | 로컬 |
+| M-contact | Add to Drive address book (local session, approved 11/03): Jason Chung (정훈희), GBK, POS contact — email from his mail; 박상후 Sanghu Park, 마트지원본부 (EGMM) 차장/팀장 (approved 11/04) — email from M2M Bon Restaurant mail; Granite DIA contacts approved 11/04 (Valentina Castaneda, Daniel Leonard, Brendan Cook, Bill Dehoop, Shantell Campbell, Katie Kemp — Granite; Tae Lee, Lee Seto — Leverage; Ann Jacobson — Lumen; Micheline Lucero — Outsource Inc.) — emails from Gmail Granite threads; Outlook May–Jul contacts approved 11/04 (Coley Levin — Lumen; Christina Starr — Comcast; Mark Head — CP firewall mgmt; Julie Sinecio — 2nd Ave building owner; Danny Kim — GBK network). Gregory Roman (Comcast?) needs confirmation first; Nov–Apr contacts approved 11/04 (Silas Schroeder — Cannon; Robert Dill — Aspiretransforms; Jeremiah Hammett — Zayo; William Horbatt, Shaun Smith — Comcast; Mike Russell — Lumen billing; Yancy Yang — FS.com; Peyton Thiel — Dell; 이재호, 이동훈 — Hana Solution; 맹채윤 — H Mart UW accounting). Not 권오혁 (left the company) | 대기 | 로컬 |
+| M-names | Ask user who these are (intranet sent review 11/04): 이원재, 장상도, 이성수, 심미순, 한승표, 양창우, 문기성, 이태호, 권상우, Jin Kim, Jane Lim, Eunhong Lee, LWADMIN. Also Gregory Roman (Comcast?), POS manufacturer name for T-640 | waiting | user |
 | M-todo | Board docs/users/hmlee/todo.md. Visit plan in "Now": Tue 11/03 BV (call James Yoo first, T-624), Wed 11/04 Lynnwood (T-606 due 11/06), Thu 11/05 MW·DH (T-362 due 11/06, T-639 install). STWS cleaned 11/03 (5 Resolved, 1 Cancelled → user Closes). T-639 description in STWS needs fix ("PC arrived, install 11/05") | in progress | user |
 | M-iq | IQ temp cameras (T-600): reply sent to John Byun 11/03 2PM with 2 Phase-1 quotes (Drive 06_Files/Quotes/IQ). Waiting John: outlets, option. Ask ITSolution Eric: camera models, wired-option recording. Later: John Byun, Kevin Donald → address book? | waiting | user |
 | M-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
