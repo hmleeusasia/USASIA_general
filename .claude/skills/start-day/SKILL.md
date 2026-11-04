@@ -59,5 +59,5 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 
 ## 사용량 메모
 - 이 루틴은 새 세션 첫머리에 돌린다(긴 세션일수록 호출 1번 비용이 큼)
-- 크롬 동작은 가능하면 browser_batch로 묶는다
+- 크롬 동작은 가능하면 browser_batch로 묶는다. Browser rules: docs/kb/browser.md (no `computer scroll`, text before screenshots)
 - Microsoft 365 커넥터가 승인되면 Outlook 단계를 커넥터로 바꾼다

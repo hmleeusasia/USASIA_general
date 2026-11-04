@@ -7,7 +7,7 @@ description: 개인 할 일 보드(docs/users/<id>/todo.md)와 STWS 티켓(보�
 
 원본 = docs/users/<id>/todo.md (<id>는 CLAUDE.md '누구인지' 규칙). STWS 담당자 번호는 profile.md. STWS는 보고용 → 티켓 상태 변경은 사용자가 승인한 목록만 Claude가 반영(5절), 생성·삭제·담당자 변경·댓글은 요청 시에만. 장기 프로젝트는 사용자가 따로 관리(관련 있으면 이름만 적음). D-20261102-18
 
-## 1. STWS 읽기 (크롬, 읽기만)
+## 1. STWS 읽기 (크롬, 읽기만; browser rules: docs/kb/browser.md)
 - get_page_text는 티켓 목록 페이지에만 쓴다. 대시보드·티켓 상세 등 다른 화면은 find·read_page로 필요한 부분만 (대시보드엔 사원 명단·이메일이 나옴, 사용량·민감 정보)
 - `https://stws.seoulgrocery.com/st/dashboard/tickets?page=N&per_page=20&sort=updated_at&direction=desc&assignee=<profile의 STWS 담당자 번호>`
 - browser_batch로 [navigate → wait 2 → get_page_text]를 페이지마다. "x–y of N"으로 끝 확인. 첫 화면은 표가 늦게 뜨므로 wait 필수

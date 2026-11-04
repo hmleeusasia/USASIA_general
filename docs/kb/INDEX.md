@@ -12,3 +12,4 @@
 | subagents.md | 하위 에이전트 활용법 (등급·모델 분담·프롬프트 틀·결과 확인) |
 - pos_tips.md — Toshiba POS on-site fixes (error codes)
 - work_overview.md — Work streams from sent mail Aug–Oct 2026 (Outlook)
+- browser.md — Chrome use with small context (JS first, no computer scroll, output limits)
