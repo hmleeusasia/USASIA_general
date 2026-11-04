@@ -152,7 +152,7 @@ _Rebuilt 2026-11-03 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 78 / 242 KB |
+| Files / size | 78 / 243 KB |
 | Content vs framework | 149 KB vs 94 KB (38% framework) |
 | Log files / entries | 2 / 46 |
 | Users | hmlee |
@@ -196,8 +196,8 @@ _Rebuilt 2026-11-03 by tools/repo_map.py._
 ├── .gitignore                         0.2 KB
 ├── CLAUDE.md                          3.1 KB
 ├── README.md                          0.1 KB
-├── docs/                              50 files, 167.8 KB
-│   ├── CURRENT_STATE.md                   3.6 KB
+├── docs/                              50 files, 168.0 KB
+│   ├── CURRENT_STATE.md                   3.8 KB
 │   ├── archive/                           1 files, 0.0 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   ├── assets/                            1 files, 0.0 KB
