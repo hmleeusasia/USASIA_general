@@ -13,6 +13,7 @@
 | Plans in progress | docs/requests/ |
 | Emails, phones, account numbers | Drive Claude folder → docs/drive-index/claude-folder.md (IDs and column names only) |
 | Users / personal settings | docs/users/INDEX.md |
+| Repo architecture (principles, diagrams, tree) | docs/ARCHITECTURE.md (snapshot: tools/repo_map.py) |
 | Procedures (skills) | .claude/skills/ (descriptions say when to use) |
 | Hooks (supervisor) | tools/hooks/README.md |
 
