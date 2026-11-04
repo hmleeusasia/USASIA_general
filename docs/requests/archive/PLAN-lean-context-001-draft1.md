@@ -1,6 +1,8 @@
 # PLAN-lean-context-001 (draft, 2026-11-03)
 Goal: keep always-loaded md files minimal and keep the working context small. Rules are **enforced by hooks**, not by re-reading md. Related: ai-system-questions Q10, Q14.
 
+**Principle (user, 2026-11-03):** let Claude work freely; a *supervisor* (hooks) watches actions and stops it only when work drifts, telling it the one rule it broke. md says *how to be* (judgment); hooks say *what not to do* (checkable). Hooks see actions (file writes, commands, stop) — not chat replies or judgment, so judgment rules stay in md.
+
 ## 1. Measured now (2026-11-03)
 | Loaded when | Files | Size (chars) |
 |---|---|---|
