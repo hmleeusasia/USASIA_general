@@ -1,93 +1,30 @@
-AI 코딩 에이전트 작업 지침 (공통판)
-어느 저장소에나 넣어 쓸 수 있는 Claude Code 작업 원칙. CLAUDE.md에서 이 파일을 가리키거나 내용을 복사해 쓴다. 저장소마다 다른 것(시험 명령, 빌드 방법, 폴더 구조)은 맨 아래 **[저장소별 채울 칸]**에 적는다.
+# Working principles (this repo)
+Cut to repo-relevant parts 2026-11-03 (PLAN-lean-context-001 step 2; generic version in git history, D-20261102-1). Repo settings: CLAUDE.md.
 
-1. 세션 시작·끝 (기억은 대화가 아니라 저장소에)
-AI는 이전 대화를 기억하지 못한다. 상태는 반드시 파일로 남긴다.
+## 1. State lives in files, not chat
+| File | Rule |
+|---|---|
+| docs/CURRENT_STATE.md | Handover, ≤ 80 lines, fixed sections A–H, overwrite changed sections only |
+| docs/decisions.md | Append only, `D-YYYYMMDD-N`, one line each |
+Start: CLAUDE.md → CURRENT_STATE → announce tasks, grade and owner in one message, get approval → afterwards stop only for exceptions. End: session-end skill.
 
-파일	역할	규칙
-docs/CURRENT_STATE.md	지금 상태 인계	80줄 이하 고정 틀, 매 세션 덮어씀. 옛 상태는 git log -p로
-docs/decisions.md	사용자 결정 기록	덧붙이기만. D-YYYYMMDD-N ID, 한 줄 요약
-docs/project_instructions.md	작업 원칙(이 문서)	바뀔 때만 고침
-CURRENT_STATE 고정 틀 (절 이름 고정, 내용만 교체)
+## 2. Grade the work
+| Grade | Example | Process |
+|---|---|---|
+| Light | one log entry, one file fix, small skill edit | do it → check → commit |
+| Heavy | framework/structure change, many files | PLAN → fresh-agent review → user approval → build → check |
+Same kind of work under the same rules → one PLAN. Unsure → ask the user.
 
-A. 배포 — 마지막 릴리스·시험 빌드·다운로드 위치
-B. 브랜치·진행 중 — 작업 브랜치 이름(작업이 main에 없을 수 있음)
-C. 할 일 — 숙제 ID(H-이름) 표: 내용 · 상태 · 맡길 곳
-D. 확인 안 된 것 — 사용자가 직접 확인해야 하는 항목 위치
-E. 임시값 — 정해지지 않은 수치·문장
-F. 함정 — 최근에 겪은 실수
-G. 새 세션 첫 멘트 — 다음 세션에 붙여 넣을 한 문단
-시작할 때: CLAUDE.md → CURRENT_STATE.md 전부 읽기 → 할 일·등급·맡을 곳을 한 번에 알리고 승인받기 → 이후는 예외만 멈춰서 질문. 끝날 때: 바뀐 절만 고침, 틀 점검(줄 수), 새 결정은 decisions.md에, 커밋·push.
+## 3. Subagents
+Models, prompts, checks: docs/kb/subagents.md. Main session judges, reviews, commits; tell the user which model before delegating; give paths in the prompt; never commit agent output unreviewed; agents must not commit.
 
-팁: SessionStart 훅으로 "가장 최신 작업 브랜치로 맞추기"를 자동화하면 브랜치 혼동이 사라진다.
+## 4. PLAN format
+`docs/requests/PLAN-<topic>-001-draftN.md`: request / decisions / files to change / how to check / risks and questions. Old drafts → `docs/requests/archive/`. Review asks: missing paths, conflicts, checks that pass for the wrong reason; results as must / should / fine with line refs.
 
-2. 작업 등급 — 절차의 무게를 일에 맞춘다
-등급	예	절차
-가벼움	문구·UI·한 파일 안 작은 기능·버그 한 곳	지휘가 직접 고침 → 바뀐 부분 시험 → 커밋. 계획서·재검토·하위 에이전트 없음
-무거움	핵심 계산식 변경, 여러 모듈 구조 변경	조사 → PLAN 문서 → 새 에이전트 재검토 → 사용자 승인 → 구현 → 시험
-같은 규칙을 따르는 같은 종류 작업은 PLAN 하나로 묶어 재검토 1회.
-새로운 위험 유형은 따로 PLAN.
-애매하면 멈추고 사용자에게 등급을 묻는다.
-3. 모델 분담 (사용량 절약의 핵심)
-역할	모델	맡는 일
-지휘 (메인 세션)	가장 강한 모델, 노력량 낮음이 기본	판단·검토·커밋. 직접 대량 탐색 금지
-간단 하위 에이전트	가장 작은 모델	읽기·1차 조사·문서 복사·분류·도구 코드·좌표가 확실한 기계적 수정
-복잡 하위 에이전트	중간 모델, 노력량 중간	여러 모듈 조사, 핵심 로직 구현, 작은 모델이 거절·실패한 일
-재검토	중간 모델, 새로 띄움	무거움 등급 PLAN 검토(앞 단계 맥락에 물들지 않게)
-규칙
+## 5. Checks and research
+- Say "not checked" for anything not verified; keep inference and fact apart.
+- Knowledge order: docs/kb/INDEX.md → topic file → raw files. Search counts first, then narrow; never conclude "none" from cut output; read only needed line ranges.
+- Repeated manual work → a script in tools/.
 
-맡기기 전에 어느 모델·노력량에 맡길지 사용자에게 알린다.
-좌표 먼저: 맡길 때 파일 경로·줄 번호·함수 이름을 프롬프트에 넣는다(에이전트가 다시 검색하지 않게).
-같은 세션에서 앞 단계를 맡았던 에이전트를 이어 쓴다(조사한 맥락 재사용). 재검토만 새 에이전트.
-무거운 단계(설계 규칙표·수치 검토·릴리스 직전)는 지휘가 멈추고 "노력량 보통 이상 추천"을 알린다.
-에이전트 결과는 지휘가 diff 확인 → 시험 → 커밋. 결과를 그대로 믿지 않는다.
-에이전트에게 "커밋 금지, git add -A 금지"를 명시(지휘가 검토 후 커밋).
-사용량 한도·컨테이너 재시작으로 미커밋 변경이 사라질 수 있다 → 받는 즉시 시험·커밋·push.
-4. PLAN → 재검토 형식
-PLAN 문서 (docs/requests/PLAN-주제-001-draftN.md)
-
-요청 원문 / 확정 결정 / 바꿀 곳(파일·함수·줄) / 새 버전 번호
-시험 칸 설계(무엇을 넣으면 무엇이 나와야 하는가)
-위험 / 사용자에게 물을 점
-옛 draft는 archive/로 옮김(폴더를 깨끗하게)
-재검토 지시에 항상 넣을 것
-
-모든 진입 경로를 덮는가(빠진 경로를 줄 번호로)
-저장 데이터 호환(옛 세이브·없는 필드 → NaN/undefined)
-다른 모듈과 충돌·순서
-안전망 공허 통과: 시험이 다른 이유로 저절로 통과하지 않는가(대조군 짝이 있는가)
-결과를 필수 / 권고 / 문제없음으로 나누고 근거 줄 번호
-5. 시험 방식
-평소: 가짜 상태 시험·점검 시험만, 그리고 바뀐 부분만(--changed 같은 선택 실행).
-실제 환경(엔진·브라우저·외부 서비스) 시험은 최대한 삼가고 릴리스 직전에 전체 1회(낡은 기대값은 전체 실행에서만 드러남).
-판정·수치 시험은 관여하는 값들을 낮음·중간·높음으로 나눈 칸 표로, 시작값·끝값을 적는다. 칸당 반복 최소, 실행 전에 칸 구성·총 규모 승인.
-화면 확인은 사용자의 몫 → 콘솔 함수·디버그 명령을 미리 만들어 둔다. 버그 보고가 오면 상태를 덤프하는 콘솔 명령부터 주고 결과로 원인을 확정(추측 수정 반복 금지).
-시험 빌드는 여러 수정을 모아 플레이 전에 한 번. 이전 시험 빌드는 지우고 1개만 유지.
-확인 안 한 것은 "확인 안 함"이라고 쓴다. 추론과 확인을 구분.
-6. 조사 규칙 (토큰 절약)
-지식 문서 순서: docs/kb/INDEX.md → 주제별 요약 → 자동 생성 목차 → 코드.
-질문 유형별 "먼저 볼 곳" 표를 CLAUDE.md에 둔다.
-검색은 파일별 일치 개수부터 보고 좁힌다. 잘린 출력으로 "없음"을 판단하지 않는다.
-큰 파일은 필요한 줄 범위만 읽는다.
-자주 쓰는 검색·점검·빌드는 도구 스크립트로 만들어 한 줄 명령으로(tools/find.mjs, tools/check-state.mjs, tools/test-build.mjs 같은 것). 반복되는 손작업은 스크립트로 옮긴다.
-자동 생성 문서(목차·색인)는 생성기로 만들고 --check로 최신인지 확인.
-7. 소통 원칙
-결론 먼저, 표 활용, 사용자 언어로.
-임시 수치·문장은 "임시값"으로 표시.
-실행 중에도 질문이 필요하면 멈추고 답을 받는다(선택지 2~4개, 추천 표시).
-main 합치기·릴리스는 사용자가 요청할 때만.
-세션 끝에 비효율 평가 표(무엇이 낭비였나 → 고칠 안)를 보고하고, 사용량을 줄이는 안은 바로 지침에 반영.
-8. 흔한 함정
-하위 에이전트 결과를 검토 없이 커밋.
-옛 PLAN draft가 쌓여 어느 것이 기준인지 헷갈림 → 기준 draft만 남기고 archive.
-버전 문자열을 시험에 하드코딩 → 버전 올릴 때마다 손수정. 코드에서 읽게 할 것.
-같은 텍스트·이름 매칭으로 판정(반복 문장, 겹치는 이름) → 상태 기반 판정 우선.
-인계 문서가 길어짐 → 줄 수 상한과 점검 스크립트.
-[저장소별 채울 칸]
-- 시험(평소):        <예: npm test -- --changed>
-- 시험(릴리스 직전): <예: npm run test:all>
-- 빌드/시험 배포:     <예: node tools/build.mjs>
-- 검색 도구:          <예: node tools/find.mjs <정규식>>
-- 지식 문서 시작점:    <예: docs/kb/INDEX.md>
-- 작업 브랜치 규칙:    <예: claude/* 브랜치에서 작업, main 병합은 요청 시>
-- 사용자 언어·말투:    <예: 한국어, 결론 먼저>
+## 6. Communication
+Conclusion first, tables, the user's language. Mark undecided values as "temporary". Ask with 2–4 options, recommendation first. End of session: inefficiency table (waste → fix), apply usage-saving fixes right away.
