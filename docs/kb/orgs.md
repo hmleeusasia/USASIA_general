@@ -15,7 +15,7 @@
 | GFC (Greenfield Foods) | 계열사 | 사용자가 예로 든 계열사, 사무실 VoIP 건 있음 | 확인(설명 추정) |
 | Hana Solutions | 벤더 | HANA POS (하나로/Hoffice support). Staff: 이재호 부장, 이동훈 실장. Federal Way. 파일 전송(sftp) 건 | 추정 |
 | Granite | 벤더 | 회선(DIA)·청구. 담당: Valentina Castaneda (2026-05~, still the contact — July rep change did not happen, user 11/04), 이전 Daniel Leonard. 그 외 Brendan Cook, Bill Dehoop, Shantell Campbell, Katie Kemp (2026-11-04 승인). 드라이브 DIA 시트·계약 PDF에 Granite 쪽 인원 공유(공식 요청) | 확인 2026-11-02 |
-| Comcast | 벤더(통신) | 매장 회선·전화. 우리 담당자 Tae Lee (이태우). Also Christina Starr (staff, IQ circuit 2026-07); William Horbatt, Shaun Smith (2025-11~2026-04); Gregory Roman (BV project 2026-06, role unconfirmed) | 확인 |
+| Comcast | 벤더(통신) | 매장 회선·전화. Our rep Tae Lee (이태우) left Comcast 2026-11-04 → new Comcast rep 미확인. Also Christina Starr (staff, IQ circuit 2026-07); William Horbatt, Shaun Smith (2025-11~2026-04); Gregory Roman (BV project 2026-06, role unconfirmed) | 확인 |
 | Ziply / Lumen / CenturyLink / Verizon / Spectrum | 벤더(통신) | 매장 회선·전화. Lumen: our rep Coley Levin (contract review 2026-06); Mike Russell (billing, presumed); Ann Jacobson (BV groom work 2026-06, 승인 2026-11-04) | 추정 |
 | ITSolution | 벤더 | 사용자와 거래하는 케이블링 업체 (WA·OR Cable Run). 담당 Eric | 확인 |
 | Eigen (Shift4) | 벤더(예전) | 예전 결제 게이트웨이. 새 업체로 옮기는 중인데 여러 매장에 1~2대씩 남음(이전 미완). 새 업체 이름 미확인 | 확인 2026-11-03 |
@@ -26,7 +26,7 @@
 | 대한시스템 (DAE HAN SYSTEM INC.) | 벤더 | CAS 저울 수리 업체 (T-323 Dan Choi 댓글) | 확인 2026-11-03 |
 | InStore Technology (In-Store Technology, LLC) | Vendor | Scale sales (refurbished Ishida Uni-5/7), repair, parts (print heads). Contacts: Todd Boyce (sales/quotes), Kevin Donald (pickup), Tim Kopp (repair) | Confirmed 2026-11-03 |
 | Campeon, DistrictScale | 벤더 | 저울 | 추정 |
-| Leverage Cloud Solutions | 협력 | Granite 협력·중개 업체 (ISP information, Granite DIA 시트 공유). Tae Lee (이태우, also the Comcast contact), Lee Seto (Trusted Advisor) (2026-11-04 승인) | 확인 2026-11-02 |
+| Leverage Cloud Solutions | 협력 | Granite 협력·중개 업체 (ISP information, Granite DIA 시트 공유). Tae Lee (이태우) — contact for Granite matters and new circuits (left Comcast 2026-11-04), Lee Seto (Trusted Advisor) (2026-11-04 승인) | 확인 2026-11-02 |
 | Outsource Inc. | 벤더(외주) | Level 3 측 현장 조사(site survey) 일정 담당. Micheline Lucero (UW, 2026-05) | 확인 2026-11-04 |
 | SSS Camera | 벤더 | CO(Aurora·Westminster) 케이블 시공업체 (jorden) | 확인 2026-11-02 |
 | Cannon Companies | 벤더(추정) | Comcast 2nd-tier cable vendor. Silas Schroeder (IQ fiber 2026-02, likely Cannon) | 확인 2026-11-04 |
