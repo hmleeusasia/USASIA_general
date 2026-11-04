@@ -9,7 +9,7 @@
 | Tue 11/03 | T-565, T-619, T-585 | PIN Pad sticker, POS serial numbers, new CS PC | BV |
 | Tue 11/03 | M-bv-pos-label | Fix wrong POS label numbers (with T-619 serial survey) | BV |
 | Tue 11/03 | T-438, T-500 | Old store scale wiring check; call Lumen to reschedule | BV(old) |
-| Wed 11/04 | T-606 ✔ | 2 repaired scales already picked up 11/03 (InStore) → deliver & set up (due 11/06) | LW |
+| Wed 11/04 | T-606 | 2 repaired scales already picked up 11/03 (InStore) → deliver & set up (due 11/06) | LW |
 | Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
 | Wed 11/04 | T-587 ✔ | Done 11/04 | GLW |
 | next FW visit | — | Deliver 1 scale picked up at InStore 11/03 (ticket?) | FW |
@@ -37,7 +37,7 @@
 | T-368 | bypass PDU/UPS 설치 | BV(구) | #infra | 끝 | 2026-11-03 | Resolved 11/03 |
 | T-323 | 델리 저울 head 이상 | BV(구) | #pos | 취소 | 2026-11-03 | Cancelled 11/03 (구매장, 새 저울 CAS로 바뀜) |
 | T-500 | Lumen 회선 개통 | BV(구) | #network | 진행 | 2026-11-03 | 아직 남음. Lumen 연락 없음 → Lumen에 재스케줄 확인 필요 (11/03) |
-| T-606 | 델리 저울 고장 | LW | #pos | 끝 | 2026-11-04 | Done 11/04: 2 repaired scales delivered & set up (same issue as T-486). Close in STWS |
+| T-606 | 델리 저울 고장 | LW | #pos | 진행 | 2026-11-04 | 11/04: 2 repaired scales delivered & set up; 1 still faulty → send back to InStore for re-repair. Keep open |
 | T-486 | 델리 저울 연결 문제 | LW | #pos | 끝 | 2026-11-04 | Same issue as T-606, resolved 11/04. Close in STWS |
 | T-579 | CS PC 교체 | LW | #hardware | 진행 | 2026-10-22 | |
 | T-515 | 레이블 PC 파일 이상 | LW | #hardware | 할 일 | 2026-09-08 ⏸ | 진행: 이번 주 LW 방문 때 (11/03) |
