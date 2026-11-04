@@ -1,5 +1,5 @@
 # 내 할 일 (todo.md)
-갱신: 2026-11-02 · STWS 동기화: 2026-11-02 (담당 47건, 안 끝난 33건) · 규칙: D-20261102-18, 절차: todo-sync skill
+갱신: 2026-11-04 · STWS 동기화: 2026-11-02 (담당 47건, 안 끝난 33건) · 규칙: D-20261102-18, 절차: todo-sync skill
 <!-- 기한은 요청에 있을 때만 적는다(없으면 기한 없음). 원본은 이 파일. STWS는 보고용(상태 변경은 사용자가 직접). 장기 프로젝트는 따로 관리, 관련 있으면 이름만. 민감 값 금지 -->
 
 ## 1. Now (Claude suggests, user picks) — visit plan set 2026-11-03
@@ -13,6 +13,7 @@
 | Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
 | Wed 11/04 | T-587 | Scale + PC move (+ deliver 1 scale picked up 11/03) | GLW |
 | next FW visit | — | Deliver 1 scale picked up at InStore 11/03 (ticket?) | FW |
+| Thu 11/05 AM | M-uw-deli-cable | Review UW Deli cable-extension quote → forward to store manager | UW |
 | Thu 11/05 | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
 | Thu 11/05 | T-639/T-603, T-375 | Install manager PC (arrived 11/03), Wi-Fi dead zone / AP | MW |
 | Any | M-wifi, M-granite, T-295+T-285 | Wi-Fi adapter, Granite account, EGMM internet vendor | office |
@@ -21,6 +22,7 @@
 상태: 할 일 / 진행 / 기다림(대상) / 끝 / 취소 · 움직임 = 마지막 업데이트(STWS 또는 기록) · ⏸ = 30일 넘게 안 움직임
 | ID | 할 일 | 매장 | 분야 | 상태 | 움직임 | 다음 |
 |---|---|---|---|---|---|---|
+| M-uw-deli-cable | UW Deli (separate building across the street): extend 4 cables. Vendor quote received 11/04. Ticket needed | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager |
 | T-556 | 잔여 POS 장비 창고로 옮기기 | BV | #pos | 끝 | 2026-11-02 | STWS Closed (다음 동기화 때 목록에서 뺌) |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 끝 | 2026-11-03 | Survey today with M-bv-pos-label |
 | M-bv-pos-label | BV: fix wrong POS label numbers. Requested by user 2026-11-03. Ticket needed? (maybe sub of T-619) | BV | #pos #asset | 끝 | 2026-11-03 | Fixed 11/03 |
