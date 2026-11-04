@@ -39,7 +39,7 @@
 | T-500 | Lumen 회선 개통 | BV(구) | #network | 진행 | 2026-11-03 | 아직 남음. Lumen 연락 없음 → Lumen에 재스케줄 확인 필요 (11/03) |
 | T-606 | 델리 저울 고장 | LW | #pos | 진행 | 2026-11-04 | 11/04: 2 repaired scales delivered & set up; 1 still faulty → send back to InStore for re-repair. Keep open |
 | T-486 | 델리 저울 연결 문제 | LW | #pos | 끝 | 2026-11-04 | Same issue as T-606, resolved 11/04. Close in STWS |
-| T-579 | CS PC 교체 | LW | #hardware | 진행 | 2026-10-22 | |
+| T-579 | CS PC 교체 | LW | #hardware | 기다림(매장 구매) | 2026-11-04 | 11/04: store will buy new PCs → set up 2 new PCs, then set up a leftover PC for CS |
 | T-515 | 레이블 PC 파일 이상 | LW | #hardware | 할 일 | 2026-09-08 ⏸ | 진행: 이번 주 LW 방문 때 (11/03) |
 | T-587 | 저울 문제 + PC 이동 지원 | GLW | #pos | 끝 | 2026-11-04 | Done 11/04: PC move + extra PC move/install, repaired scale installed, Soundtrack moved to new PC. Close in STWS |
 | M-glw-scale-repair | GLW: send 1 extra Ishida scale for repair to InStore Technology (new 11/04). Ticket needed | GLW | #pos #vendor | 할 일 | 2026-11-04 | Create STWS ticket; arrange InStore pickup/repair |
