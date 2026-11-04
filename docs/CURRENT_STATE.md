@@ -15,12 +15,13 @@
 | H-mail | 메일 분류 첫 검토 완료(mail_triage.md 1절 규칙 8개, 2026-11-02). 남은 할 일: Wifi 어댑터 구입, Granite 계정 생성 (log/2026/2026-11-02_hmlee.md). 미확인 조직: KRM·Daifuku·SSP·beOne | 진행 중 | 사용자 |
 | H-collect | 숙제: 기존 드라이브 문서(IT Information, Comcast Information 등)의 계정·회선 정보를 Claude 폴더 20_계정·회선으로 모으기 | 대기 | 사용자와 함께 |
 | H-contact | Add to Drive address book (local session, approved 11/03): Jason Chung (정훈희), GBK, POS contact — email from his mail | 대기 | 로컬 |
-| H-sheet | 7묶음 20줄 반영 완료(2026-11-03, 주소록 40명, 묶음 파일 `완료_` 붙임). 남은 1묶음: 90_변경대기_2026-11-03_6(Jeongho Roh, 승인·열 형식 맞춤). _5는 반영하지 말고 '완료_' 대신 '취소_' 붙이기 | 대기 1 | 클라우드 |
+| H-sheet | 8묶음 모두 처리(2026-11-04): _6 Jeongho Roh 주소록 42행, _5 `취소_`. 남은 묶음 없음 | 완료 | — |
 | H-todo | Board docs/users/hmlee/todo.md. Visit plan in "Now": Tue 11/03 BV (call James Yoo first, T-624), Wed 11/04 Lynnwood (T-606 due 11/06), Thu 11/05 MW·DH (T-362 due 11/06, T-639 install). STWS cleaned 11/03 (5 Resolved, 1 Cancelled → user Closes). T-639 description in STWS needs fix ("PC arrived, install 11/05") | in progress | user |
 | H-iq | IQ temp cameras (T-600): reply sent to John Byun 11/03 2PM with 2 Phase-1 quotes (Drive 06_Files/Quotes/IQ). Waiting John: outlets, option. Ask ITSolution Eric: camera models, wired-option recording. Later: John Byun, Kevin Donald → address book? | waiting | user |
 | H-multi | **틀 고민은 docs/projects/ai-system-questions.md에 모았다가 한꺼번에 결정(사용자 요청 2026-11-03, 나올 때마다 추가).** 여러 사용자 1단계 완료(D-20261102-19). 2단계(팀원 합류 때): mail_triage 0절 → users/<id>/mail_rules.md, CURRENT_STATE 개인 할 일 분리, onboarding.md. 미정: 공용 규칙 승인자, 개인 파일 공개 범위. 팀원 합류 전 git 이력 정리(예전 이메일 주소·sharing-review.md, 강제 push 필요) 여부 결정 | 대기 | 사용자 |
 | H-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
-| H-reimb | 10월 경비 청구 시트·노션 반영 완료. 남은 것: 노션 마일 6건, Yi's 금액, 렌트비 Note, Driving 시각 서식 (log 2026-11-02, kb/reimbursement.md) | 진행 중 | 사용자 |
+| H-reimb | 10월 경비 청구 시트·노션 반영 완료. 남은 것: 노션 마일 6건, Yi's 금액, 렌트비 Note, Driving 시각 서식. 11월부터 매일 기록 방식(kb/reimbursement.md "Daily receipt intake"): 영수증은 Drive 스캔 → 말하면 Claude가 노션·시트·링크, 운행은 출발/도착 말하면 노션+Driving 탭 | 진행 중 | 사용자·클라우드 |
+| H-bv | BV 11/03 방문 끝. 대기: GBK 답(B062 500불 근처 오버라이드 안 됨), 1층 프린터 재확인, T-438 저울 4대 유선 설치 일정, T-565·T-585·T-500 | 대기 | 사용자 |
 | H-tracker | 드라이브 Task Tracker를 할 일 화면으로 관리(D-20261102-22). 업무 파악 뒤 시작: 시트 구조 읽기 → 탭 설계 사용자와 → 클라우드 계정이 갱신 | 대기 (업무 파악 후) | 지휘·클라우드 |
 | H-template | 드라이브 Templates(Switchport_and_IP·Network Map) 다듬기 — 매장마다 반복할 기본 문서. Claude가 구성도·포트표 작성을 돕는 방식 함께 설계 | 대기 | 사용자와 함께 |
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
@@ -42,5 +43,5 @@
 /start-day (업무 시작 루틴, D-20261102-13)
 
 ## H. 마지막 업무 시작
-2026-11-03 (re-run same day: new mail only)
+2026-11-03 (re-run same day: new mail only). Next: Wed 11/04 LW·GLW (scales 2+1 in car)
 - 마지막 월초 점검: 없음 (drive-check, 다음 2026-12 초)
