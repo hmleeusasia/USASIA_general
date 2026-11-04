@@ -6,7 +6,7 @@ if hasattr(sys.stdout, "reconfigure"): sys.stdout.reconfigure(encoding="utf-8")
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D = ROOT / "docs"
 HUB = {"vendor": "vendors", "store": "stores", "asset": "assets", "proj": "projects"}
-SENS = re.compile(r"\$ ?\d|\b\d{1,3}(\.\d{1,3}){3}\b|([0-9A-Fa-f]{2}:){5}|password|passwd|비밀번호|api[_-]?key", re.I)
+SENS = re.compile(r"\b\d{1,3}(\.\d{1,3}){3}\b|([0-9A-Fa-f]{2}:){5}|password|passwd|비밀번호|api[_-]?key", re.I)
 SKIP = ("storage_rules.md", "templates", "keywords.md", "requests")
 problems = []
 

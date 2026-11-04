@@ -32,15 +32,15 @@ Reading (save context): for each file call get_file_metadata with snippetVerbosi
 Output: write to the output file named in your prompt, appending as you go (write after each folder so nothing is lost). Korean. Format:
 
 ## <폴더 경로>
-| 문서 | 목적·요약 | 담긴 정보 | 대상 | 공유 | 키워드 | 수정일 | 링크 |
-|---|---|---|---|---|---|---|---|
+| 문서 | 요약 | 키워드·대상 | 링크 |
+|---|---|---|---|
 
-- 목적·요약: what the document is for (1 sentence).
-- 담긴 정보: kinds of information inside (e.g. "매장별 회선 목록, 업체 연락처(이름), 설치 일정").
-- 대상: stores, vendors, systems, projects it concerns (e.g. Bellevue, Granite, Cisco, POS).
-- 공유: call get_file_permissions for every file (and each folder once; if a file has exactly its folder's permissions write "폴더와 같음"). Write who besides the owner has access: display name (or email if no name) + role (편집/댓글/보기). Link sharing: "링크 공개(보기)" etc. Domain-wide: "도메인 전체". Owner only: "비공개". Flag external (non-seoultradingusa.com) people with 🌐.
-- 키워드: 2–5 from: network infra dev pos store-ops security phone software hardware general billing invoice purchase expense contract asset vendor-mgmt paperwork support outage install decision schedule tip meeting — plus free words if useful.
-- 수정일 YYYY-MM-DD. 링크: web viewUrl with `?usp=...`/`&ouid=...` removed. Never G:\ paths.
+One line per document (D-20261103-8: lean index; Drive search covers the rest). Index only documents someone is likely to look for; skip trivial files (one folder row is enough).
+- 문서: name; prefix "⚠ " if it holds sensitive kinds of information (never the values).
+- 요약: what it is for (1 sentence).
+- 키워드·대상: 2–5 keywords from: network infra dev pos store-ops security phone software hardware general billing invoice purchase expense contract asset vendor-mgmt paperwork support outage install decision — then stores/vendors/systems it concerns (e.g. Bellevue, Granite, POS).
+- No sharing or modified-date columns. Only report external (non-seoultradingusa.com) sharing of ⚠ files in your final reply (affiliation + count, no addresses).
+- 링크: web viewUrl with `?usp=...`/`&ouid=...` removed. Never G:\ paths.
 
 SENSITIVE — NEVER COPY VALUES: passwords, accounts/usernames, API/license/Wi-Fi keys, IP addresses/subnets/firewall rules, network diagrams detail, prices/quotes/contract terms/invoice amounts, personal info (phone, address, SSN, salary, employee hours), POS/payment details, HR/legal matters. Instead write in 담긴 정보: "⚠민감: 비밀번호 포함" / "⚠민감: IP 대역" / "⚠민감: 금액" etc. Vendor contacts: name+title only.
 

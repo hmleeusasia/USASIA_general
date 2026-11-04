@@ -1,13 +1,13 @@
 ---
 name: session-end
-description: Session wrap-up and handoff. Every session — check.py, open items to CURRENT_STATE, new facts/decisions, commit and push. Weekly (Monday meeting day, or when asked) — full review incl. framework-change and inefficiency tables. Use for "마무리", "인계", "세션 종료", "세션 닫기", "주간 점검".
+description: Session wrap-up and handoff. Every session — check.py, open items to the todo board, new facts/decisions, commit and push. Weekly (Monday meeting day, or when asked) — full review incl. framework-change and inefficiency tables. Use for "마무리", "인계", "세션 종료", "세션 닫기", "주간 점검".
 ---
 
 # Session end (session-end)
 
 ## A. Every session (light — keep it short)
 1. `python3 tools/check.py` passes (Stop hook already blocks: CURRENT_STATE > 80 lines, open T-IDs missing from the board — tools/hooks/stop.py)
-2. Open items (#open/#waiting) → CURRENT_STATE section C, changed sections only. New lasting fact → kb/facts.md (with date); new hard-to-reverse decision → decisions.md; new org → kb/orgs.md
+2. Open items (#open/#waiting) → docs/users/<id>/todo.md (personal work); CURRENT_STATE C holds repo/framework items only, changed sections only. New lasting fact → kb/facts.md (with date); new hard-to-reverse decision → decisions.md; new org → kb/orgs.md
 3. Report in a few lines: what was done, what is left or unverified. **No framework-change or inefficiency tables here** — note friction as one line in docs/projects/ai-system-questions.md instead
 4. Commit → push by work place: local `git pull --rebase origin main` then `git push origin main`; cloud: push the claude/* branch, then `git fetch origin main && git checkout -B main origin/main && git merge --ff-only <branch> && git push origin main` (stop and tell the user if not fast-forward)
 

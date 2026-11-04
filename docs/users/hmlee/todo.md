@@ -63,7 +63,21 @@
 | T-637 | NWHQs PC 이동: 2층 PC → 1층, 1층 대기 PC 설치, 1층 사용 중 PC → 2층. 새 직원 오기 전. 요청 인신희 HR 팀장 | NWHQs | #hardware #install | 할 일 | 2026-11-03 | 기한 2026-11-30 |
 | T-638 | LW 2층 사무실에 보관된 고장 저울 정리: Tommy Song(송대호) 님과 상의 → 필요한 부품 확보 → 폐기. 요청 Chris Kim 총무 | LW | #pos #hardware #asset | 할 일 | 2026-11-03 | 다음: 송대호 님과 상의 |
 
-## 3. 참고 (내 담당 아님, 내가 올린 티켓)
+## 3. Follow-ups without a ticket (moved from CURRENT_STATE C, 2026-11-03)
+| ID | Item | Status | Who |
+|---|---|---|---|
+| M-share | 공유 정리 후보 검토 (드라이브 Claude 폴더 30_드라이브 공유 점검) — 비밀번호 문서 외부 공유 등. 추가 후보: Ballard 캐셔 명단(낡은 문서, 비밀번호 포함)이 개인 Gmail 2명에 편집 공유 → 공유 해제·삭제 후보. 정리 후보 표시 문서들(색인 "정리 후보") | 대기 | 사용자 |
+| M-mail | 메일 분류 첫 검토 완료(mail_triage.md 1절 규칙 8개, 2026-11-02). 남은 할 일: Wifi 어댑터 구입, Granite 계정 생성 (log/2026/2026-11-02_hmlee.md). 미확인 조직: KRM·Daifuku·SSP·beOne | 진행 중 | 사용자 |
+| M-collect | 숙제: 기존 드라이브 문서(IT Information, Comcast Information 등)의 계정·회선 정보를 Claude 폴더 20_계정·회선으로 모으기 | 대기 | 사용자와 함께 |
+| M-contact | Add to Drive address book (local session, approved 11/03): Jason Chung (정훈희), GBK, POS contact — email from his mail | 대기 | 로컬 |
+| M-todo | Board docs/users/hmlee/todo.md. Visit plan in "Now": Tue 11/03 BV (call James Yoo first, T-624), Wed 11/04 Lynnwood (T-606 due 11/06), Thu 11/05 MW·DH (T-362 due 11/06, T-639 install). STWS cleaned 11/03 (5 Resolved, 1 Cancelled → user Closes). T-639 description in STWS needs fix ("PC arrived, install 11/05") | in progress | user |
+| M-iq | IQ temp cameras (T-600): reply sent to John Byun 11/03 2PM with 2 Phase-1 quotes (Drive 06_Files/Quotes/IQ). Waiting John: outlets, option. Ask ITSolution Eric: camera models, wired-option recording. Later: John Byun, Kevin Donald → address book? | waiting | user |
+| M-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
+| M-reimb | 10월 경비 청구 시트·노션 반영 완료. 남은 것: 노션 마일 6건, Yi's 금액, 렌트비 Note, Driving 시각 서식. 11월부터 매일 기록 방식(kb/reimbursement.md "Daily receipt intake"): 영수증은 Drive 스캔 → 말하면 Claude가 노션·시트·링크, 운행은 출발/도착 말하면 노션+Driving 탭 | 진행 중 | 사용자·클라우드 |
+| M-bv | BV 11/03 방문 끝. 대기: GBK 답(B062 500불 근처 오버라이드 안 됨), 1층 프린터 재확인, T-438 저울 4대 유선 설치 일정, T-565·T-585·T-500 | 대기 | 사용자 |
+| M-overview | Work overview from Outlook sent mail Aug–Oct (kb/work_overview.md). Gmail/intranet sent not read. Ask user: BV Lumen cutover, RM fiber uplink, STI warehouse, GFC VoIP, Smart Point — done? | waiting | user |
+
+## 3a. 참고 (내 담당 아님, 내가 올린 티켓)
 | ID | 할 일 | 담당 | 상태 |
 |---|---|---|---|
 | T-625 | MW POS 문의(임의 생성 상품·가격 변동) | Dan Choi | 할 일 |

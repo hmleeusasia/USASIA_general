@@ -6,28 +6,17 @@
 ## B. 브랜치·진행 중
 - 없음 (claude/wonderful-brahmagupta-5nf6ku main에 합침)
 
-## C. 할 일
+## C. Repo / framework work (personal tasks: docs/users/<id>/todo.md, D-20261103-8)
 | ID | 내용 | 상태 | 맡길 곳 |
 |---|---|---|---|
 | H-local | 로컬 PC 통과. 드라이브 커넥터·크롬(Gmail 텍스트 OK, Outlook 화면만) 확인(2026-11-02). 클라우드 계정 커넥터 동일 여부 미확인 | 거의 완료 | 사용자 |
 | H-drive1 | 내 드라이브 1차 색인 완료. **사용자 리뷰 5/5 끝**(2026-11-03). 정리 후보는 색인에 표시(사용자가 정리). 다음: (질문은 하나씩 창으로). 그 뒤 공유 드라이브·공유 문서함 | 리뷰 중 | 사용자와 함께 |
-| H-share | 공유 정리 후보 검토 (드라이브 Claude 폴더 30_드라이브 공유 점검) — 비밀번호 문서 외부 공유 등. 추가 후보: Ballard 캐셔 명단(낡은 문서, 비밀번호 포함)이 개인 Gmail 2명에 편집 공유 → 공유 해제·삭제 후보. 정리 후보 표시 문서들(색인 "정리 후보") | 대기 | 사용자 |
-| H-mail | 메일 분류 첫 검토 완료(mail_triage.md 1절 규칙 8개, 2026-11-02). 남은 할 일: Wifi 어댑터 구입, Granite 계정 생성 (log/2026/2026-11-02_hmlee.md). 미확인 조직: KRM·Daifuku·SSP·beOne | 진행 중 | 사용자 |
-| H-collect | 숙제: 기존 드라이브 문서(IT Information, Comcast Information 등)의 계정·회선 정보를 Claude 폴더 20_계정·회선으로 모으기 | 대기 | 사용자와 함께 |
-| H-contact | Add to Drive address book (local session, approved 11/03): Jason Chung (정훈희), GBK, POS contact — email from his mail | 대기 | 로컬 |
-| H-sheet | 8묶음 모두 처리(2026-11-04): _6 Jeongho Roh 주소록 42행, _5 `취소_`. 남은 묶음 없음 | 완료 | — |
-| H-todo | Board docs/users/hmlee/todo.md. Visit plan in "Now": Tue 11/03 BV (call James Yoo first, T-624), Wed 11/04 Lynnwood (T-606 due 11/06), Thu 11/05 MW·DH (T-362 due 11/06, T-639 install). STWS cleaned 11/03 (5 Resolved, 1 Cancelled → user Closes). T-639 description in STWS needs fix ("PC arrived, install 11/05") | in progress | user |
-| H-iq | IQ temp cameras (T-600): reply sent to John Byun 11/03 2PM with 2 Phase-1 quotes (Drive 06_Files/Quotes/IQ). Waiting John: outlets, option. Ask ITSolution Eric: camera models, wired-option recording. Later: John Byun, Kevin Donald → address book? | waiting | user |
 | H-multi | **틀 고민은 docs/projects/ai-system-questions.md에 모았다가 한꺼번에 결정(사용자 요청 2026-11-03, 나올 때마다 추가).** 여러 사용자 1단계 완료(D-20261102-19). 2단계(팀원 합류 때): mail_triage 0절 → users/<id>/mail_rules.md, CURRENT_STATE 개인 할 일 분리, onboarding.md. 미정: 공용 규칙 승인자, 개인 파일 공개 범위. 팀원 합류 전 git 이력 정리(예전 이메일 주소·sharing-review.md, 강제 push 필요) 여부 결정 | 대기 | 사용자 |
-| H-m365 | Microsoft 365 커넥터: 관리자 모름 → entra.microsoft.com 전역 관리자 확인 | 대기 | 사용자 |
-| H-reimb | 10월 경비 청구 시트·노션 반영 완료. 남은 것: 노션 마일 6건, Yi's 금액, 렌트비 Note, Driving 시각 서식. 11월부터 매일 기록 방식(kb/reimbursement.md "Daily receipt intake"): 영수증은 Drive 스캔 → 말하면 Claude가 노션·시트·링크, 운행은 출발/도착 말하면 노션+Driving 탭 | 진행 중 | 사용자·클라우드 |
-| H-bv | BV 11/03 방문 끝. 대기: GBK 답(B062 500불 근처 오버라이드 안 됨), 1층 프린터 재확인, T-438 저울 4대 유선 설치 일정, T-565·T-585·T-500 | 대기 | 사용자 |
 | H-tracker | 드라이브 Task Tracker를 할 일 화면으로 관리(D-20261102-22). 업무 파악 뒤 시작: 시트 구조 읽기 → 탭 설계 사용자와 → 클라우드 계정이 갱신 | 대기 (업무 파악 후) | 지휘·클라우드 |
 | H-template | 드라이브 Templates(Switchport_and_IP·Network Map) 다듬기 — 매장마다 반복할 기본 문서. Claude가 구성도·포트표 작성을 돕는 방식 함께 설계 | 대기 | 사용자와 함께 |
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
 | H-hooks | Lean context + supervisor hooks (PLAN-lean-context-001-draft2, D-20261103-6): steps 0–6 done 11/03. Hooks only in hmlee `.claude/settings.local.json`. Next: step 7 ~11/17 — review tools/hooks/hits.log, flip warn rules to block one by one (test_hooks.py green). Unverified: cloud session hooks, digest in a fresh session. Shared settings.json move waits for Q2 | in progress | user + 지휘 |
-| H-slim | Framework slim-down D-20261103-7: bundle A done 11/03; freeze on new skills/decisions to 11/17. Next: bundle B (todo single source + stop.py, Drive index one-liners, minimal start), then C (Q3–Q5, Q12, numbering) | open | hmlee |
-| H-overview | Work overview from Outlook sent mail Aug–Oct (kb/work_overview.md). Gmail/intranet sent not read. Ask user: BV Lumen cutover, RM fiber uplink, STI warehouse, GFC VoIP, Smart Point — done? | waiting | user |
+| H-slim | Framework slim-down D-20261103-7/-8: bundles A and B done 11/03; freeze on new skills/decisions to 11/17. Next: bundle C — decide Q3–Q5 (multi-user, git history), Q12 (language of existing docs), decision numbering | open | hmlee |
 
 ## D. 확인 안 된 것
 - 없음

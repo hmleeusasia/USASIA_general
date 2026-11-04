@@ -8,7 +8,11 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 읽기만 한다. 메일 보내기·지우기·이동, 드라이브 수정·공유 변경은 하지 않는다.
 결론 먼저, 표로 보고한다(한국어).
 
-## 0. 장소 확인
+## 0. Minimal start (D-20261103-8)
+- If the user only wants to pick up work ("짧게", "빠른 시작", a specific task named, or start-day already ran today): use the `[digest]` + docs/users/<id>/todo.md "Now" table only, show today's rows, and stop. No mail, Drive, or STWS.
+- Full routine below: first session of the day, or when asked.
+
+## 0a. 장소 확인
 - 로컬 PC(Windows, 크롬 확장 연결됨) → 아래 전부
 - 클라우드 세션 → 1~3, 6만 (크롬 없음. 드라이브는 커넥터가 있으면 5도). C절 H-sheet가 1건 이상이면 90_변경대기 반영을 오늘 할 일 맨 앞에 (D-20261102-17)
 

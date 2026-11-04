@@ -9,6 +9,7 @@
 | [claude-folder.md](claude-folder.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | 드라이브 Claude 폴더(민감 값 보관소) 파일 ID·열 이름 | 2026-11-02 |
 | [archive-saves.md](archive-saves.md) | hmlee 회사 구글 계정 내 드라이브 (hmlee) | Archive(PLU Ballard, Invoice Analyzing, 매장 사진), Saves | 2026-11-02 |
 
+- 형식: 문서마다 한 줄(문서·요약·키워드·대상·링크). 공유·수정일·담긴 정보 열은 2026-11-03 뺌(D-20261103-8) — 필요하면 드라이브에서 직접 확인
 - 범위: 내 드라이브(hm.lee) 전체. 공유 드라이브·"공유 문서함"은 아직 안 함
 - 방법: Google Drive 커넥터(크롬 불필요). 사진·영상·DB·설정 백업은 제목 기준
 - 공유 정리 후보: 13건 → 드라이브 Claude 폴더 "30_드라이브 공유 점검"으로 옮김(민감 문서 지도라 저장소에서 뺌, D-20261102-19)

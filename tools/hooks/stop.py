@@ -1,7 +1,7 @@
 """Stop hook, narrow (PLAN-lean-context-001-draft2 step 5).
 Only looks at files written this turn (touch.py). Checks:
   stop-state: CURRENT_STATE.md over 80 lines
-  stop-open : a #open/#waiting log heading with a T-ID that is on neither the todo board nor CURRENT_STATE
+  stop-open : a #open/#waiting log heading with a T-ID that is not on any todo board (D-20261103-8)
 Exit 0 when stop_hook_active (never loops). Does NOT check uncommitted work (session-end skill does).
 Does not run when the user interrupts (tested step 0) — pre-commit is the backstop."""
 import json
@@ -33,7 +33,7 @@ def problems(files):
                         "Shorten: overwrite sections, drop closed items, move history to the log."))
     logs = [f for f in files if f.startswith("docs/log/") and f.endswith(".md")]
     if logs:
-        board = rd("docs/CURRENT_STATE.md")
+        board = ""
         users = os.path.join(ROOT, "docs", "users")
         for uid in os.listdir(users) if os.path.isdir(users) else []:
             board += rd(f"docs/users/{uid}/todo.md")
@@ -43,7 +43,7 @@ def problems(files):
                     miss = [t for t in re.findall(r"\bT-\d+\b", line) if t not in board]
                     if miss:
                         out.append(("stop-open", f"{f}: {line[4:90]}",
-                                    f"Add {', '.join(miss)} to the todo board (todo skill) or CURRENT_STATE C."))
+                                    f"Add {', '.join(miss)} to the todo board docs/users/<id>/todo.md (todo skill)."))
     return out
 
 

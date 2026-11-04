@@ -89,7 +89,7 @@ def build():
     ab_s = f"ahead {ab[0]} / behind {ab[1]} vs origin/main (no fetch)" if len(ab) == 2 else ""
     out.append(f"Git: {br} · uncommitted {dirty} · {ab_s}")
 
-    out.append("Open on demand: CURRENT_STATE C (tasks), users/<id>/todo.md, kb/INDEX.md, kb/browser.md (Chrome). "
+    out.append("Open on demand: users/<id>/todo.md (tasks), CURRENT_STATE C (repo work), kb/INDEX.md, kb/browser.md (Chrome). "
                "Run /start-day for mail/STWS/Drive.")
     return "[digest] " + "\n".join(out)
 
