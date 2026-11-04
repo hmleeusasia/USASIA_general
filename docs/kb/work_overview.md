@@ -22,15 +22,15 @@
 ## May–Jul 2026 (Outlook sent, 2026-05-04 ~ 08-04, ~52 items, list previews only, reviewed 2026-11-04)
 | Stream | Period | What I did | Vendors / people | State (as of mail) |
 |---|---|---|---|---|
-| Granite DIA (also in Gmail) | May–Jul | H-Mart Tracker updates, on-site contact for 2nd Ave, Granite calls (6/11), demarc access request to Seattle 2nd Ave building (7/15), FIRN grant packet install invite | Granite (Valentina Castaneda), Leverage (Tae Lee/이태우), building mgmt (Julie Sinecio) | see projects/granite-dia.md |
+| Granite DIA (also in Gmail) | May–Jul | H-Mart Tracker updates, on-site contact for 2nd Ave, Granite calls (6/11), demarc access request to Seattle 2nd Ave building (7/15), FIRN grant packet install invite | Granite (Valentina Castaneda), Leverage (Tae Lee/이태우), building owner side (Julie Sinecio) | see projects/granite-dia.md |
 | Lumen contract review | Jun | Accepted "Usasias Lumen Contract Review" meetings (6/16, 6/17) | Lumen (Coley Levin) | Check result |
-| Comcast BV project / LW account | May–Jun | LW account verification (5/18); BV project follow-up (6/15); Boundary Blvd site (7/15) | Comcast (Tae Lee, Gregory Roman, Mohammed Al-Mezal) | — |
-| BV static route | May | Static route request for BV circuit | AccelNet Support | Check |
-| Colorado stores prep | May–Jul | Cable order in 3 shipments with invoices to 정성아; SSS camera/cabling invoices (7/1–2); last AP shipped to Denver (5/12); data-drop/AP plans (7/29); urgent change notice (7/30) | FS (cable), SSS Camera (Jorden Kadlec), 최병록, 정경모 | Continues in Aug–Sep row above |
+| Comcast BV project / LW account | May–Jun | LW account verification (5/18); BV project follow-up (6/15); Boundary Blvd site (7/15) | Comcast (Tae Lee, Gregory Roman — role unconfirmed, Mohammed Al-Mezal) | — |
+| BV static route | May | Static route request for BV circuit | AccelNet (Comcast 2nd-tier vendor, fixed wireless) | Check |
+| Colorado stores prep | May–Jul | Cable order in 3 shipments with invoices to 정성아; SSS camera/cabling invoices (7/1–2); last AP shipped to Denver (5/12); data-drop/AP plans (7/29); urgent change notice (7/30) | FS.com (cable), SSS Camera (Jorden Kadlec), 최병록, 정경모 | Continues in Aug–Sep row above |
 | Scales / PLU | Jun–Aug | Uni 5/7 print heads for BV and CP (7/20); repair done (7/29); 5-digit price by PLU question; FW barcode price error (7/24, to 박상후·정영훈); tare setting answer to Portland (6/9); refurbished scale inquiry (8/4) | InStore (Todd Boyce, Tim Kopp) | Continues above |
 | HANA (하나로) support | May–Jun | EGMM new accountant PC Hoffice setup (5/21); UW Hanaro import issue (6/4); GFC new PC Hanaro install (6/17) | Hana Solution | Done |
-| Campeon firewall | Jun | Asked read-only admin account on CP firewall (6/2) | Mark Head (firewall vendor?) | Check |
-| Issaquah | Jul | Reply on IQ store circuit timing (7/21) | Christina Starr (carrier?) | — |
+| Campeon firewall | Jun | Asked read-only admin account on CP firewall (6/2) | Mark Head (CP firewall management company) | Check |
+| Issaquah | Jul | Reply on IQ store circuit timing (7/21) | Christina Starr (Comcast) | — |
 | FW network assessment | Jul | Sent Tommy Song's FW Layer-2 network report (7/13) | 송대호 (Tommy Song) | Done |
 | IT invoices | May–Jul | IT Solution invoice format and Tigard invoice → store check (5/20, 7/20) | ITSolution (Eric Kang) | Done |
 | HR record module | Jun | Meeting on HR record card module draft (6/1) | Dan Choi | Check |

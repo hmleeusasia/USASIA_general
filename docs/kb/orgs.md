@@ -11,12 +11,12 @@
 | 마트지원본부 (한아름 서북미 마트본부) | 계열사(EGMM 하위 조직) | 박상후 Sanghu Park 차장(팀장). M2M Bon Restaurant 인터넷 건 (11/03) | 확인 2026-11-04 |
 | NWHQs (NHQs, 서북미마트총괄본부) | 계열사 | 서북미 지역 전체를 관리하는 총괄본부 (EGMM과 다른 조직). HR 팀장 인신희 | 확인 2026-11-02 |
 | H Mart | 계열사(매장) | 사용자가 IT 지원하는 서북미 매장. LW 총무 Chris Kim, Portland(Tigard) 회계·총무 윤수영, Ballard 회계 성미아 대리, MW·DH 점장 이준호(최근까지 Ballard도) | 확인 |
-| GBK | 친척 회사 | 우리 회사와 형제·자매 관계, 기밀 다수 공유. 직원은 hmart.com 메일 사용. 드라이브에 GBK System Menual 폴더 | 확인 |
+| GBK | 친척 회사 | Network contact: Danny Kim (if another Danny Kim appears, ask). 우리 회사와 형제·자매 관계, 기밀 다수 공유. 직원은 hmart.com 메일 사용. 드라이브에 GBK System Menual 폴더 | 확인 |
 | GFC (Greenfield Foods) | 계열사 | 사용자가 예로 든 계열사, 사무실 VoIP 건 있음 | 확인(설명 추정) |
 | Hana Solutions | 벤더 | HANA POS, Federal Way. 파일 전송(sftp) 건 | 추정 |
 | Granite | 벤더 | 회선(DIA)·청구. 담당: Valentina Castaneda (2026-05~, still the contact — July rep change did not happen, user 11/04), 이전 Daniel Leonard. 그 외 Brendan Cook, Bill Dehoop, Shantell Campbell, Katie Kemp (2026-11-04 승인). 드라이브 DIA 시트·계약 PDF에 Granite 쪽 인원 공유(공식 요청) | 확인 2026-11-02 |
-| Comcast | 벤더(통신) | 매장 회선·전화. 우리 담당자 Tae Lee | 확인 |
-| Ziply / Lumen / CenturyLink / Verizon / Spectrum | 벤더(통신) | 매장 회선·전화. Lumen: Ann Jacobson (BV groom work 2026-06, 승인 2026-11-04) | 추정 |
+| Comcast | 벤더(통신) | 매장 회선·전화. 우리 담당자 Tae Lee (이태우). Also Christina Starr (staff, IQ circuit 2026-07); Gregory Roman (BV project 2026-06, role unconfirmed) | 확인 |
+| Ziply / Lumen / CenturyLink / Verizon / Spectrum | 벤더(통신) | 매장 회선·전화. Lumen: our rep Coley Levin (contract review 2026-06); Ann Jacobson (BV groom work 2026-06, 승인 2026-11-04) | 추정 |
 | ITSolution | 벤더 | 사용자와 거래하는 케이블링 업체 (WA·OR Cable Run). 담당 Eric | 확인 |
 | Eigen (Shift4) | 벤더(예전) | 예전 결제 게이트웨이. 새 업체로 옮기는 중인데 여러 매장에 1~2대씩 남음(이전 미완). 새 업체 이름 미확인 | 확인 2026-11-03 |
 | Cloudflare | 벤더 | NewIntra·InfoCenter 회선 상태 알림. 회선 관리는 본사(Andy Han) 쪽 | 확인 2026-11-02 |
@@ -37,3 +37,7 @@
 | STI (stiseattle.com) | 계열사 | 서울트레이딩 계열 회사 중 하나(지역 미확인, 도메인상 시애틀?). 512 Boundary Blvd 냉동창고 네트워크 | 확인 2026-11-02 (지역 추정) |
 | hanbiro | 벤더 | 메일/호스팅 보안 공지 | 추정 |
 | UPS 유지보수 업체 (이름 미확인, 담당 Jeana Smith) | 벤더 | USASIA 장비 UPS 유지보수 계약. Andy Han 담당 | 확인 2026-11-03 (이름 미확인) |
+| AccelNet | 벤더(통신, Comcast 2차 벤더) | Fixed wireless network service for our sites. BV static route request (2026-05) | 확인 2026-11-04 |
+| FS.com | 벤더(구매) | Network cable purchases (Colorado stores, 2026-06) | 확인 2026-11-04 |
+| Campeon firewall management company (name unconfirmed) | 벤더 | Manages the CP store network firewall. Contact: Mark Head — reach him for CP firewall work | 확인 2026-11-04 (company name 미확인) |
+| Seattle 2nd Ave building owner (name unconfirmed) | 건물주 | Building questions and access inside the building (demarc). Contact: Julie Sinecio | 확인 2026-11-04 |
