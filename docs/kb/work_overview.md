@@ -1,4 +1,4 @@
-# Work overview from sent mail (Nov 2025–Oct 2026)
+# Work overview from sent mail (Nov 2025–Nov 2026: Outlook, Gmail Granite, intranet)
 <!-- Source: Outlook Sent Items, 2026-08-01 ~ 2026-11-03, ~50 threads, 37 bodies skimmed (2026-11-03).
      Gmail and intranet sent mail not reviewed yet. No addresses, phones, circuit IDs or amounts here (storage_rules.md). -->
 
@@ -54,12 +54,33 @@
 | LW cable run quote | Apr | Sent floor plans for LW cable-run quote (4/7) | ITSolution (Eric Kang) | Check |
 | Misc | Nov–Apr | Ramada hotel bookings (Tommy Song trips); mail forwarding test (권오혁, then LW admin, now left the company, 4/8) | Ramada (윤택한 대리) | — |
 
+## Intranet (newintra) sent, May–Nov 2026 (2026-05-04 ~ 11-04, 126 items, list only, reviewed 2026-11-04)
+Mostly Korean mail to affiliates, marts and HQ staff.
+| Stream | Period | What I did | People | State (as of mail) |
+|---|---|---|---|---|
+| CO stores Toshiba POS upgrade (Aurora/Westminster) | May–Oct | Long thread: extra equipment purchase/storage, 2nd-store server rack, HVAC question, cable vendor quote visit, IDF equipment, night-work trips, cable balance, follow-ups (to 10/20) | 최병록, 정경모, 문기성, 정성아 | Follow-up 10/20 |
+| OR stores Toshiba POS upgrade (Belmont, Tigard) | May–Aug | Remaining equipment purchase; AP install and network cable work schedule (1st and 2nd round); payment for cable work | 양창우, 한승표, 윤수영 | Payment 8/20 |
+| Granite billing (internal) | Aug–Oct | Notice of new Granite backup network cost (8/5–12); Granite payment handling (9/29); RM vendor registration for Granite (9/28); Granite account creation request (10/19) | 유진, 한영아 | Account creation = M-granite (open) |
+| Backup internet installs | May | New backup modem (권상우), MW LAN extension for backup internet (이준호), new internet cable run (심미순), ISP invoices | 권상우, 이준호, 심미순, 유진, Jane Lim | Done |
+| Server room / UPS | May–Oct | UPS battery replacement (5/6), LW server-room UPS work (5/13), server-rack UPS replacement (8/20–21), EGMM server room fire inspection work + purchase (10/13) | 유진, 권상우, 장상도, 한영아 | Done |
+| QuickBooks support | May–Jun | QB data backup + external drive (5/7–18), QB file attach error, QB license info (6/17–26) | 이태호, 유진 | Check |
+| BV store | Jun–Oct | Building owner contact (6/5–8), construction question (6/12), POS equipment shipping/storage (9/7–18), leftover POS storage (10/13), lumen fiber (9/28) | 이원재, 임주현, 김은희 | Done |
+| Purchases for marts/HQ | May–Oct | Router & rack shelf (BV, 5/11); cable cover for scale wiring (6/30); CAS scale parts (9/1); Uni 5 spare scale group buy (8/6); office desktop quote (8/11); PC purchase (9/1); HQ office supplies (10/8); Wi-Fi adapter (10/22); Microsoft shop / Office 365 renewal | 김은희, 성미아, 임미라, 심미순, 이원재, 이선예, LWADMIN | Wi-Fi adapter = M-wifi (open) |
+| HR / accounts | Jun–Nov | HR record system development (6/17); HQ HR email/phone account (8/17–31); EGMM accounting Hoffice account (8/17); external mail (7/17); IRA notice (11/2) | 인신희, 유진, 박상후 | Check HR system |
+| RM phone lines | Jun–Oct | RM network extension work (6/19); new landline sign-up for RM phone cleanup (10/19) | 장상도, 박상후 | Continues (Comcast) |
+| Out-of-state trip notices | Aug–Oct | IT support plan while away (8/18, 9/21, 10/19) | 이성수 | — |
+| IQ server room | Sep | Store IT server-room requirements | Eunhong Lee | See T-600 |
+| Expense reimbursement | May–Oct | Monthly reimbursement receipts | Jin Kim | Recurring |
+| Scales / PLU | Jun–Jul | BV scale PLU (정영훈), FW barcode price error to HANA | 정영훈, HANA | Done |
+| 2nd-floor office cabling quote | Aug–Sep | Quote for 2nd-floor office cabling with ITSolution | 심미순, 이선예, Eric Kang | Check |
+
 ## Patterns
 - Outlook is used mostly for **outside vendors in English** (SSS, InStore, Comcast, Lumen); Korean mail to marts/affiliates also goes out from here.
 - Purchases: get vendor quote → split invoice per mart → mart manager signs/pays (check) → I confirm the invoice.
 - Big projects need many trips: CO stores (Aug, Sep, Oct trips).
 
 ## Open questions to confirm
+- (Intranet) QuickBooks license result? / HR record system status? / 2nd-floor office cabling done?
 - (Nov–Apr) Ubiquiti controller accounts for OR/CO received? / Issaquah fiber (Silas Schroeder) result? / LW cable-run quote result?
 - (May–Jul) Lumen contract review result? / CP firewall read-only account? / BV static route (AccelNet) done? / HR record module status?
 - BV Lumen cutover done? / Redmond fiber uplink done? / STI warehouse network status? / GFC VoIP result? / H Point→Smart Point done?
