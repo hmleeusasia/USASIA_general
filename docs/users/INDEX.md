@@ -13,3 +13,4 @@
 2. 저장소 폴더에 `CLAUDE.local.md` (git 제외) 한 줄: `@docs/users/<아이디>/CLAUDE.md`
 3. 자기 구글 드라이브에 Claude 폴더(비공개, 상속 권한 끔) 만들고, 그 안에 00_profile 시트(항목·값·비고, 원본)를 만들고, 폴더 ID를 profile.md(사본)에
 4. 개인 skill은 `.claude/skills/<아이디>-<이름>/`, 설명에 "<아이디> 전용"
+5. Once per clone/PC, turn on the pre-commit backstop: `git config core.hooksPath tools/githooks` (tools/hooks/README.md, D-20261103-6)
