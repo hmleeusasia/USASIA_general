@@ -18,6 +18,6 @@ While testing, hooks live in `.claude/settings.local.json` (personal); they move
 | permissions.deny matching | **Prefix only.** `git push --force …` denied; `git push --dry-run --force …` and `git push … +main` NOT denied → deny is a soft net; a real guard needs a PreToolUse Bash regex script |
 | Hooks added mid-session | Active right away (PostToolUse fired on the next Write, settings.local.json) |
 | Hook shell (Claude Code) | Git Bash (MSYSTEM=UCRT64) + `py` → `bash launch.sh` command works. PostToolUse input keys: cwd, tool_input, tool_name, tool_response, session_id, transcript_path, permission_mode … |
-| Stop (normal turn end) | pending: check hits.log next turn |
-| Stop on user interrupt | pending: interrupt a reply in the new session, then check hits.log |
+| Stop (normal turn end) | Fires every turn end, stop_hook_active=False; input has last_assistant_message, background_tasks |
+| Stop on user interrupt | **Does not fire** (Esc during a tool call, no log line) → Stop checks are skipped when the user interrupts; pre-commit stays the backstop |
 | Cloud session | pending |
