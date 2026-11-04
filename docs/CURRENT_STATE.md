@@ -25,6 +25,8 @@
 | H-tracker | 드라이브 Task Tracker를 할 일 화면으로 관리(D-20261102-22). 업무 파악 뒤 시작: 시트 구조 읽기 → 탭 설계 사용자와 → 클라우드 계정이 갱신 | 대기 (업무 파악 후) | 지휘·클라우드 |
 | H-template | 드라이브 Templates(Switchport_and_IP·Network Map) 다듬기 — 매장마다 반복할 기본 문서. Claude가 구성도·포트표 작성을 돕는 방식 함께 설계 | 대기 | 사용자와 함께 |
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
+| H-hooks | Lean context + supervisor hooks (PLAN-lean-context-001-draft2, D-20261103-6): steps 0–6 done 11/03. Hooks only in hmlee `.claude/settings.local.json`. Next: step 7 ~11/17 — review tools/hooks/hits.log, flip warn rules to block one by one (test_hooks.py green). Unverified: cloud session hooks, digest in a fresh session. Shared settings.json move waits for Q2 | in progress | user + 지휘 |
+| H-overview | Work overview from Outlook sent mail Aug–Oct (kb/work_overview.md). Gmail/intranet sent not read. Ask user: BV Lumen cutover, RM fiber uplink, STI warehouse, GFC VoIP, Smart Point — done? | waiting | user |
 
 ## D. 확인 안 된 것
 - 없음
@@ -38,6 +40,7 @@
 - Outlook 웹 get_page_text 불가, Gmail 검색결과 화면도 get_page_text 비어 나옴 → start-day skill 참고
 - 하위 에이전트가 제목만 보고 행을 채움 → 브리프에 "모든 문서 내용 읽기, 제목 기준 금지" 명시
 - 동의어 검색은 짧은 영문(PO 등)이 다른 단어 속에 걸림 → find.py가 단어 단위로 처리. 셸 awk 대신 Python 사용
+- Hooks: settings edits apply after a short delay; permissions.deny is prefix-only (guard.py covers force push); Stop does not run on user interrupt
 
 ## G. 새 세션 첫 멘트
 /start-day (업무 시작 루틴, D-20261102-13)
