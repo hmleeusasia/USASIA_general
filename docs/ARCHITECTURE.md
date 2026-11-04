@@ -148,13 +148,13 @@ sequenceDiagram
 
 <!-- GENERATED:BEGIN (tools/repo_map.py — do not edit by hand) -->
 ## 8. Generated snapshot
-_Rebuilt 2026-11-03 by tools/repo_map.py._
+_Rebuilt 2026-11-04 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 78 / 243 KB |
-| Content vs framework | 149 KB vs 94 KB (38% framework) |
-| Log files / entries | 2 / 46 |
+| Files / size | 79 / 262 KB |
+| Content vs framework | 167 KB vs 94 KB (36% framework) |
+| Log files / entries | 3 / 56 |
 | Users | hmlee |
 | Decisions | 34 |
 | Store codes | 21 |
@@ -181,22 +181,22 @@ _Rebuilt 2026-11-03 by tools/repo_map.py._
 ### Tree (depth 3)
 ```
 .
-├── .claude/                           9 files, 28.2 KB
+├── .claude/                           9 files, 28.6 KB
 │   ├── settings.json                      0.5 KB
-│   ├── skills/                            8 files, 27.6 KB
+│   ├── skills/                            8 files, 28.0 KB
 │   │   ├── drive-check/                       1 files, 2.4 KB
 │   │   ├── drive-index/                       1 files, 4.6 KB
 │   │   ├── mail-triage/                       1 files, 5.0 KB
 │   │   ├── session-end/                       1 files, 3.2 KB
 │   │   ├── start-day/                         1 files, 3.5 KB
 │   │   ├── todo/                              1 files, 3.1 KB
-│   │   ├── todo-sync/                         1 files, 3.7 KB
+│   │   ├── todo-sync/                         1 files, 4.0 KB
 │   │   ├── weekly-meeting/                    1 files, 2.2 KB
 ├── .gitattributes                     0.0 KB
 ├── .gitignore                         0.2 KB
 ├── CLAUDE.md                          3.1 KB
 ├── README.md                          0.1 KB
-├── docs/                              50 files, 168.0 KB
+├── docs/                              51 files, 186.6 KB
 │   ├── CURRENT_STATE.md                   3.8 KB
 │   ├── archive/                           1 files, 0.0 KB
 │   │   ├── .gitkeep                           0.0 KB
@@ -212,24 +212,24 @@ _Rebuilt 2026-11-03 by tools/repo_map.py._
 │   │   ├── meeting-templates-programs.md      13.3 KB
 │   │   ├── ongoing-project.md                 13.9 KB
 │   │   ├── purchase-reimbursement.md          14.0 KB
-│   ├── kb/                                10 files, 26.8 KB
+│   ├── kb/                                10 files, 38.7 KB
 │   │   ├── INDEX.md                           1.8 KB
 │   │   ├── browser.md                         1.6 KB
-│   │   ├── facts.md                           2.2 KB
+│   │   ├── facts.md                           2.3 KB
 │   │   ├── mail_triage.md                     4.3 KB
-│   │   ├── orgs.md                            4.2 KB
+│   │   ├── orgs.md                            6.4 KB
 │   │   ├── pos_tips.md                        0.4 KB
 │   │   ├── reimbursement.md                   2.6 KB
 │   │   ├── store_codes.md                     1.6 KB
 │   │   ├── subagents.md                       4.9 KB
-│   │   ├── work_overview.md                   3.3 KB
-│   ├── keywords.md                        1.3 KB
-│   ├── log/                               3 files, 18.0 KB
-│   │   ├── 2026/                              3 files, 18.0 KB
+│   │   ├── work_overview.md                   12.7 KB
+│   ├── keywords.md                        1.2 KB
+│   ├── log/                               4 files, 21.9 KB
+│   │   ├── 2026/                              4 files, 21.9 KB
 │   ├── project_instructions.md            2.0 KB
-│   ├── projects/                          4 files, 6.5 KB
+│   ├── projects/                          4 files, 7.1 KB
 │   │   ├── INDEX.md                           0.3 KB
-│   │   ├── ai-system-questions.md             3.0 KB
+│   │   ├── ai-system-questions.md             3.6 KB
 │   │   ├── ai-system.md                       0.9 KB
 │   │   ├── granite-dia.md                     2.3 KB
 │   ├── requests/                          5 files, 12.4 KB
@@ -246,9 +246,9 @@ _Rebuilt 2026-11-03 by tools/repo_map.py._
 │   │   ├── project.md                         0.3 KB
 │   │   ├── store.md                           0.4 KB
 │   │   ├── vendor.md                          0.3 KB
-│   ├── users/                             4 files, 13.8 KB
+│   ├── users/                             4 files, 15.9 KB
 │   │   ├── INDEX.md                           1.3 KB
-│   │   ├── hmlee/                             3 files, 12.5 KB
+│   │   ├── hmlee/                             3 files, 14.6 KB
 │   ├── vendors/                           2 files, 0.7 KB
 │   │   ├── INDEX.md                           0.1 KB
 │   │   ├── itsolution.md                      0.5 KB

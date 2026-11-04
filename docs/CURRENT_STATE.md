@@ -4,7 +4,10 @@
 - 릴리스 없음
 
 ## B. 브랜치·진행 중
-- 없음 (claude/wonderful-brahmagupta-5nf6ku main에 합침)
+- Handoff 2026-11-04 local → cloud. For the cloud session (Drive connector):
+  1. Drive address book: ~30 approved contacts queued in docs/users/hmlee/todo.md M-contact (Granite/Leverage/Lumen/Comcast/vendors, 박상후, Jason Chung). Emails must come from the original mail → write a 90_변경대기 batch only for those whose email you can get; list the rest
+  2. Drive 00_profile: add job title 사원 (STWS permission Manager), supervisor Dan Choi (최철룡), Git repository admin (copy is docs/users/hmlee/profile.md)
+  3. Ask user M-names (13 internal names, Gregory Roman, POS manufacturer for T-640) — user had no time 11/04
 
 ## C. Repo / framework work (personal tasks: docs/users/<id>/todo.md, D-20261103-8)
 | ID | 내용 | 상태 | 맡길 곳 |
@@ -27,7 +30,7 @@
 
 ## F. 함정
 - check.py "민감 정보 의심"은 '비밀번호' 같은 단어에도 걸림(색인의 ⚠민감 표시) → 값이 있는지만 눈으로 확인
-- Outlook 웹 get_page_text 불가, Gmail 검색결과 화면도 get_page_text 비어 나옴 → start-day skill 참고
+- Outlook web: no get_page_text. Gmail inbox/sent/search: get_page_text empty → JS on tr.zA (mail-triage skill). Intranet sent list: .message-list .message-item, 100 per page, page box at bottom
 - 하위 에이전트가 제목만 보고 행을 채움 → 브리프에 "모든 문서 내용 읽기, 제목 기준 금지" 명시
 - 동의어 검색은 짧은 영문(PO 등)이 다른 단어 속에 걸림 → find.py가 단어 단위로 처리. 셸 awk 대신 Python 사용
 - Hooks: settings edits apply after a short delay; permissions.deny is prefix-only (guard.py covers force push); Stop does not run on user interrupt
