@@ -10,7 +10,7 @@
 #network #infra #dev #pos #store-ops #security #phone #software #hardware #general
 
 ## 종류
-#billing #invoice #purchase #expense #contract #asset #vendor-mgmt #paperwork #support #outage #install #decision #schedule #tip #meeting #email
+#billing #invoice #purchase #expense #contract #asset #vendor-mgmt #paperwork #support #outage #install #decision #schedule #tip #meeting #email #account
 
 ## 상태
 #open #waiting #done   (닫을 때 원래 건 줄의 #open을 #done으로 고친다)

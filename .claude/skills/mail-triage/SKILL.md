@@ -10,7 +10,7 @@ description: Gmail·Outlook·인트라넷 메일을 크롬으로 읽고(메일�
 
 ## 1. 메일함별 읽는 법
 Gmail — 텍스트 방식(가벼움)
-- 크롬 새 탭에서 `https://mail.google.com/mail/u/0/#inbox` → get_page_text 1번 (검색 결과 화면은 get_page_text가 비어 나옴)
+- Open `https://mail.google.com/mail/u/0/#inbox` in a new tab, wait 3 s. get_page_text returns empty here too (2026-11-04) → use javascript_tool on `tr.zA` rows: unread = class `zE`, date = `td.xW span` title; mask emails/phones/URLs in JS (browser.md rules 5–6)
 - 기준일 이후 줄만 본다. 광고·알림(ChatGPT, Newegg, Claude Team 등)은 빼고 업무 메일만 표로
 
 Outlook — 접근성 목록 방식 (메일을 열지 않음 → 읽음 처리 없음)
