@@ -3,8 +3,9 @@
   python3 tools/find.py <단어|#태그> [...]   모두 포함한 건만 (AND, 대소문자 무시). 결정 기록도 함께 검색
   python3 tools/find.py --open               열린 건(#open/#waiting) + 확인일, 지난 것은 [기한초과]
   python3 tools/find.py --due                앞으로 30일 안의 날짜(확인일·다음·기한) + calendar.md
-동의어는 docs/keywords.md 표에서 자동 확장. 3자 이하 영문은 단어 단위로 찾는다.
-### 없는 파일(월별 요약 등)은 파일 전체를 한 건으로 본다."""
+동의어는 docs/keywords.md 표 + docs/kb/store_codes.md(약어·매장명·별칭)에서 자동 확장. 4자 이하 영문은 단어 단위로 찾는다.
+### 없는 파일(월별 요약 등)은 파일 전체를 한 건으로 본다.
+단어 검색 범위: 기록(log·archive) → 결정 → 그 밖의 docs(kb·todo·허브·드라이브 색인 등, 제목(##/###) 단위 절). 절마다 맞은 줄 하나를 보여준다."""
 import re, sys, pathlib, datetime
 if hasattr(sys.stdout, "reconfigure"): sys.stdout.reconfigure(encoding="utf-8")
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -18,6 +19,11 @@ def synonyms():
         m = re.match(r"\|\s*(#[\w-]+)\s*\|(.*)\|", line)
         if m:
             groups.append([m[1]] + [a.strip() for a in m[2].split(",") if a.strip()])
+    for line in (ROOT/"docs/kb/store_codes.md").read_text(encoding="utf-8").splitlines():
+        c = [x.strip() for x in line.strip().strip("|").split("|")]
+        if line.startswith("| ") and len(c) >= 3 and c[0] not in ("약어",) and not c[0].startswith("-"):
+            names = [n.strip() for n in re.split(r"[/,]", c[0])] + [re.sub(r"\s*\(.*\)", "", c[1]).strip()] + [a.strip() for a in c[2].split(",")]
+            groups.append([n for n in names if n])
     return groups
 
 def pattern(word, groups):
@@ -26,7 +32,10 @@ def pattern(word, groups):
     parts = []
     for a in alts:
         e = re.escape(a)
-        parts.append(rf"(?<![A-Za-z0-9-]){e}(?![A-Za-z0-9-])" if re.fullmatch(r"[A-Za-z0-9]{1,3}", a) else e)
+        if re.fullmatch(r"[A-Za-z0-9]{1,4}", a):
+            b = rf"(?<![A-Za-z0-9_-]){e}(?![A-Za-z0-9_-])"
+            parts.append(f"(?-i:{b})" if a.upper() == a else b)  # codes like IS/BV: exact case
+        else: parts.append(e)
     return re.compile("|".join(parts), re.I)
 
 def entries():
@@ -75,6 +84,19 @@ def main(args):
         if line.startswith("- D-") and all(p.search(line) for p in pats):
             hits.append(1)
             print(("[대체됨] " if re.search(r"→ 대체: D-\d{8}-\d+\s*$", line) else "") + "결정 " + line[2:])
-    if not hits: print("결과 없음")
+    other = [f for f in sorted((ROOT/"docs").rglob("*.md"))
+             if not any(d in f.parents for d in DIRS) and f.name not in ("decisions.md", "keywords.md") and "templates" not in f.parts]
+    shown = 0
+    for f in other:
+        sec, buf, start = None, [], 1
+        lines = f.read_text(encoding="utf-8").splitlines() + ["## "]
+        for i, line in enumerate(lines, 1):
+            if line.startswith(("## ", "### ")):
+                if buf and all(p.search(chr(10).join(buf)) for p in pats):
+                    j, l = next((k, x) for k, x in enumerate(buf) if any(p.search(x) for p in pats))
+                    print(f"{f.relative_to(ROOT)}:{start + j}: [{(sec or '')[:40]}] {l.strip()[:140]}"); shown += 1
+                sec, buf, start = line.lstrip("# ").strip(), [line], i
+            else: buf.append(line)
+    if not hits and not shown: print("결과 없음")
 
 sys.exit(main(sys.argv[1:]))
