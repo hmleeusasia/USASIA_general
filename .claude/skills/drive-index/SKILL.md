@@ -5,6 +5,12 @@ description: 구글 드라이브 폴더를 커넥터로 읽어 문서별 목적�
 
 # 드라이브 색인 (drive-index)
 
+## Chrome fallback (moved from CLAUDE.md, 2026-11-03)
+- Local Drive files .gdoc/.gsheet are shortcuts with no body → open in Chrome. Browser rules: docs/kb/browser.md
+- Text only: change `/edit...` to `/export?format=txt` (sheets `/export?format=csv`); avoid screenshots
+- List from the Drive search screen at once; long docs: first part / contents only; commit every 5–10 docs
+- Index links are web URLs (https://drive.google.com/...), never PC paths (G:\...)
+
 ## 절차
 1. 대상 폴더를 정하고 크기를 본다(search_files `parentId = '<id>'`). 폴더 묶음 3~5개로 나눔
 2. 묶음마다 sonnet 하위 에이전트 1개, 병렬. 아래 브리프를 그대로 주고 출력은 scratchpad의 idx_<묶음>.md

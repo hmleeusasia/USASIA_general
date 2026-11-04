@@ -1,5 +1,23 @@
 # 지식 문서 목차
 
+## Where to look first (moved from CLAUDE.md, 2026-11-03)
+| Question | Look here |
+|---|---|
+| Current state / tasks | docs/CURRENT_STATE.md (repo work), docs/users/<id>/todo.md (personal work, synced with STWS) |
+| Why a past decision | docs/decisions.md |
+| Past vendor work | docs/vendors/INDEX.md → vendor file |
+| Keyword / vendor / item | `python3 tools/find.py Granite demarc` (synonyms, AND) |
+| Open / overdue items | `python3 tools/find.py --open` |
+| Next 30 days | `python3 tools/find.py --due` |
+| Drive documents | docs/drive-index/INDEX.md |
+| Plans in progress | docs/requests/ |
+| Emails, phones, account numbers | Drive Claude folder → docs/drive-index/claude-folder.md (IDs and column names only) |
+| Users / personal settings | docs/users/INDEX.md |
+| Procedures (skills) | docs/skills.md |
+| Hooks (supervisor) | tools/hooks/README.md |
+
+## Documents
+
 주제별 요약 문서를 이 폴더에 추가하고 여기 한 줄씩 적는다.
 
 | 문서 | 내용 |
