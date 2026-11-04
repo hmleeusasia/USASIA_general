@@ -51,6 +51,47 @@ def run(inp):
     return r.returncode, r.stderr.decode("utf-8", "replace")
 
 
+def stop_tests():
+    """touch.py records files, stop.py blocks only on real gaps and never when stop_hook_active."""
+    root = os.path.dirname(os.path.dirname(HERE))
+    tmp_log = os.path.join(root, "docs", "log", "2099", "2099-01-01_test.md")
+    os.makedirs(os.path.dirname(tmp_log), exist_ok=True)
+    open(tmp_log, "w", encoding="utf-8").write("### Fake open item T-99999  #pos #support #open\n")
+    env = dict(os.environ, HOOKS_TEST="1")
+    sid = f"stoptest-{os.getpid()}"
+    py = lambda script, inp: subprocess.run([sys.executable, os.path.join(HERE, script)], env=env, timeout=20,
+                                            input=json.dumps(inp).encode("utf-8"), capture_output=True)
+    touch = lambda rel: py("touch.py", {"session_id": sid, "tool_input": {"file_path": os.path.join(root, rel)}})
+    cfg_txt = open(CFG, encoding="utf-8").read()
+    bad = 0
+    try:
+        cfg = json.loads(cfg_txt); cfg["rules"].update({"stop-state": "block", "stop-open": "block"})
+        json.dump(cfg, open(CFG, "w", encoding="utf-8"))
+        cases = [
+            ("stop: state ok, no log", ["docs/CURRENT_STATE.md"], False, False),
+            ("stop: open T-ID missing from board", ["docs/log/2099/2099-01-01_test.md"], False, True),
+            ("stop: same but stop_hook_active", ["docs/log/2099/2099-01-01_test.md"], True, False),
+            ("stop: real log, all T-IDs on board", ["docs/log/2026/2026-11-03_hmlee.md"], False, False),
+        ]
+        for name, files, active, want_block in cases:
+            for f in files:
+                touch(f)
+            r = py("stop.py", {"session_id": sid, "stop_hook_active": active})
+            out = r.stdout.decode("utf-8", "replace")
+            blocked = '"decision": "block"' in out
+            ok = r.returncode == 0 and blocked == want_block
+            bad += not ok
+            print(f"{'ok ' if ok else 'FAIL'} {name}: block={blocked}")
+    finally:
+        open(CFG, "w", encoding="utf-8").write(cfg_txt)
+        os.remove(tmp_log)
+        try:
+            os.rmdir(os.path.dirname(tmp_log))
+        except OSError:
+            pass
+    return bad
+
+
 def main():
     shutil.copy(CFG, CFG + ".bak")
     try:
@@ -66,11 +107,13 @@ def main():
             print(f"{'ok ' if ok else 'FAIL'} {name}: want {want}, got {got} (exit {code})")
     finally:
         shutil.move(CFG + ".bak", CFG)
+    bad += stop_tests()
     dg = subprocess.run([sys.executable, os.path.join(HERE, "digest.py"), "--print"], capture_output=True, timeout=60)
     dok = dg.returncode == 0 and dg.stdout.decode("utf-8", "replace").startswith("[digest]")
     print(f"{'ok ' if dok else 'FAIL'} digest --print")
     bad += not dok
-    print(f"\n{len(CASES) + 1 - bad}/{len(CASES) + 1} passed")
+    total = len(CASES) + 1 + 4  # guard cases + digest + stop cases
+    print(f"\n{total - bad}/{total} passed")
     sys.exit(1 if bad else 0)
 
 

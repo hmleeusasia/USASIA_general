@@ -12,6 +12,7 @@
     "git-force": "block",
     "rm-docs": "block",
     "budget": "off",
-    "stop-state": "off"
+    "stop-state": "block",
+    "stop-open": "block"
   }
 }
