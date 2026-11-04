@@ -11,7 +11,7 @@
 | Tue 11/03 | T-438, T-500 | Old store scale wiring check; call Lumen to reschedule | BV(old) |
 | Wed 11/04 | T-606 | 2 repaired scales already picked up 11/03 (InStore) → deliver & set up (due 11/06) | LW |
 | Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
-| Wed 11/04 | T-587 | Scale + PC move (+ deliver 1 scale picked up 11/03) | GLW |
+| Wed 11/04 | T-587 ✔ | Done 11/04 | GLW |
 | next FW visit | — | Deliver 1 scale picked up at InStore 11/03 (ticket?) | FW |
 | Thu 11/05 AM | M-uw-grabgo-cable | Review UW Grab Go (Deli) cable estimate (ITSolution) → store manager; create STWS ticket | UW |
 | Thu 11/05 | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
@@ -41,7 +41,8 @@
 | T-486 | 델리 저울 연결 문제 | LW | #pos | 진행 | 2026-08-31 ⏸ | T-606과 같은 건이면 합치고 닫기 — LW 방문 때 확인 (11/03) |
 | T-579 | CS PC 교체 | LW | #hardware | 진행 | 2026-10-22 | |
 | T-515 | 레이블 PC 파일 이상 | LW | #hardware | 할 일 | 2026-09-08 ⏸ | 진행: 이번 주 LW 방문 때 (11/03) |
-| T-587 | 저울 문제 + PC 이동 지원 | GLW | #pos | 진행 | 2026-10-20 | |
+| T-587 | 저울 문제 + PC 이동 지원 | GLW | #pos | 끝 | 2026-11-04 | Done 11/04: PC move + extra PC move/install, repaired scale installed, Soundtrack moved to new PC. Close in STWS |
+| M-glw-scale-repair | GLW: send 1 extra scale for repair (new 11/04). Ticket needed? | GLW | #pos #vendor | 할 일 | 2026-11-04 | Arrange repair (InStore?) |
 | T-386 | 컴퓨터 구입·Laptop 세팅 | GLW | #hardware | 기다림(매장) | 2026-11-03 | Pending 11/03 |
 | T-603 | PC 급격히 느려짐 | MW | #hardware | 진행 | 2026-10-22 | 서브 T-639 |
 | T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-03 | 새 PC가 매장에 도착(11/03). 설치는 목 11/05 MW 방문 때 |
