@@ -23,6 +23,7 @@
 | Ishida | 벤더(예전 저울) | 예전 저울 Uni 5·Uni 7. Toshiba POS 이전 전 모델 | 확인 2026-11-03 |
 | CAS | 벤더(새 저울) | 새 저울 CL5500 (Toshiba POS와 함께 사용) | 확인 2026-11-03 |
 | 대한시스템 (DAE HAN SYSTEM INC.) | 벤더 | CAS 저울 수리 업체 (T-323 Dan Choi 댓글) | 확인 2026-11-03 |
+| InStore Technology (In-Store Technology, LLC) | Vendor | Scale sales (refurbished Ishida Uni-5/7), repair, parts (print heads). Contacts: Todd Boyce (sales/quotes), Kevin Donald (pickup), Tim Kopp (repair) | Confirmed 2026-11-03 |
 | Campeon, DistrictScale | 벤더 | 저울 | 추정 |
 | Leverage Cloud Solutions | 협력 | Granite 협력·중개 업체 (ISP information, Granite DIA 시트 공유) | 확인 2026-11-02 |
 | SSS Camera | 벤더 | CO(Aurora·Westminster) 케이블 시공업체 (jorden) | 확인 2026-11-02 |
