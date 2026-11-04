@@ -6,6 +6,7 @@ Plan: docs/requests/PLAN-lean-context-001-draft2.md. Per-rule mode: config.json 
 | launch.sh | Picks working Python (python3 → py → python), skips the Windows Store stub, fails open |
 | common.py | UTF-8 stdin/stdout, config, log, `context()` (warn), `block()` (exit 2) |
 | probe.py | Step-0 probe: logs event/shell/Python to hits.log (gitignored) |
+| digest.py | SessionStart (startup/resume/compact): ~10-line summary — user ID, local/cloud, last start-day, H-sheet, open/overdue/due ≤7d, traps, git state, pointers. ~730 chars vs ~4,800 for CURRENT_STATE+facts. Manual: `py tools/hooks/digest.py --print` |
 
 Register in settings: `bash "$CLAUDE_PROJECT_DIR/tools/hooks/launch.sh" <script.py>`.
 While testing, hooks live in `.claude/settings.local.json` (personal); they move to shared `.claude/settings.json` only after review (Q2).

@@ -2,7 +2,7 @@
   "_doc": "Per-rule mode: off | warn | block. See docs/requests/PLAN-lean-context-001-draft2.md section 3.",
   "rules": {
     "probe": "warn",
-    "digest": "off",
+    "digest": "warn",
     "sens-email": "off",
     "sens-secret": "off",
     "sens-soft": "off",
