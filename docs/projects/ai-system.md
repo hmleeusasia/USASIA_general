@@ -6,7 +6,7 @@
 - 기간: 2026-11-02 시작, 장기
 - 결정 ID: D-20261102-1~23, D-20261103-1~4 (docs/decisions.md)
 - 고민·결정 대기: [ai-system-questions.md](ai-system-questions.md) — 틀 고민은 바로 정하지 않고 여기 모았다가 한꺼번에 결정
-- 관련: CURRENT_STATE H-multi, docs/users/INDEX.md, docs/storage_rules.md
+- 관련: CURRENT_STATE H-multi, docs/users/INDEX.md, docs/rules/security.md
 
 ## 이력
 `python3 tools/find.py "#proj-ai-system"`

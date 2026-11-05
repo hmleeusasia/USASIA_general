@@ -14,7 +14,7 @@ description: Session wrap-up and handoff. Every session — check.py, open items
 ## B. Weekly (Monday, with weekly-meeting, or when the user asks)
 1. `python3 tools/find.py --open` (overdue) and `--due` (30 days); CURRENT_STATE ≤ 80 lines, kb/facts.md ≤ 50 lines
 2. If structure, data flow or principles changed this week: update the hand-written diagrams in docs/ARCHITECTURE.md. INDEX files match real files (missing entries, dead links); kb docs and skills created this week are in kb/INDEX.md
-3. Tags outside keywords.md or duplicate meanings; anything that must not be in GitHub (storage_rules.md)
+3. Tags outside keywords.md or duplicate meanings; anything that must not be in GitHub (docs/rules/security.md)
 4. Local session only: Drive Claude folder shared with 0 people — get_file_permissions (folder ID: docs/drive-index/claude-folder.md)
    - Cloud session with Sheets connector: apply rows of 90_변경대기_* batch files without the `완료_` prefix to target sheets → copy to 90_변경대기 with status '완료' and date → rename batch with `완료_` → update CURRENT_STATE H-sheet (D-20261102-17)
 5. Review ai-system-questions.md friction lines from the week, then report (one message):

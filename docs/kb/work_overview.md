@@ -1,6 +1,6 @@
 # Work overview from sent mail (Nov 2025–Nov 2026: Outlook, Gmail Granite, intranet)
 <!-- Source: Outlook Sent Items, 2026-08-01 ~ 2026-11-03, ~50 threads, 37 bodies skimmed (2026-11-03).
-     Gmail and intranet sent mail not reviewed yet. No addresses, phones, circuit IDs or amounts here (storage_rules.md). -->
+     Gmail and intranet sent mail not reviewed yet. No addresses, phones, circuit IDs or amounts here (docs/rules/security.md). -->
 
 ## Main work streams
 | Stream | Period | What I did | Vendors / people | State (as of mail) |

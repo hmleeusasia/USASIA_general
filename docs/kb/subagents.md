@@ -35,7 +35,7 @@
 - 드라이브 색인처럼 같은 규칙의 반복 작업은 PLAN 없이 Haiku에 5~10개씩, 지휘가 확인 후 묶음 커밋
 
 ## 4. 맡기는 프롬프트에 꼭 넣을 것
-1. 저장소 경로, "CLAUDE.md·docs/storage_rules.md를 먼저 읽고 따른다", 한국어
+1. 저장소 경로, "rules to read: docs/rules/<area>.md ..." (the area files for this task, from docs/rules/INDEX.md), English
 2. 확정 요구(결정 ID)와 하지 말 것
 3. 좌표: 드라이브 파일 ID·폴더, 저장소 파일·줄, STWS 티켓 번호
 4. 산출물 경로·형식 (예: 색인 표의 열 순서)
@@ -48,7 +48,7 @@
 
 **드라이브 색인 예 (Haiku)**
 ```
-저장소 C:\USASIA Claude\USASIA_general. CLAUDE.md, docs/storage_rules.md, docs/templates/drive_index.md를 읽고 따른다. 한국어.
+저장소 C:\USASIA Claude\USASIA_general. Rules to read: docs/rules/security.md, docs/templates/drive_index.md. Write in English.
 대상: 드라이브 파일 ID <id1>…<id8> (폴더 <이름>). 모든 문서 내용을 읽는다(제목 기준 금지).
 산출: docs/drive-index/<주제>.md 표에 행 추가 (템플릿 열 순서). 민감 값은 쓰지 말고 ⚠민감 표시만.
 금지: 드라이브 수정·공유, 커밋·push, git add -A.

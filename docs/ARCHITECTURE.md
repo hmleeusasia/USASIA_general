@@ -7,7 +7,7 @@
 ## 1. Principles (summary)
 | # | Principle | Source |
 |---|---|---|
-| P1 | **Originals and sensitive values live in Google Drive; GitHub holds secondary records only** (summaries, keywords, links, decisions, dates, tips). Emails, phones, account numbers, circuit IDs → Drive Claude folder. Passwords and keys → nowhere | storage_rules.md, D-20261102-2, -16 |
+| P1 | **Originals and sensitive values live in Google Drive; GitHub holds secondary records only** (summaries, keywords, links, decisions, dates, tips). Emails, phones, account numbers, circuit IDs → Drive Claude folder. Passwords and keys → nowhere | docs/rules/security.md (R-SEC), D-20261102-2, -16 |
 | P2 | **One file, one writer.** Daily logs are one file per person per day; personal state lives in `docs/users/<id>/`. Shared files are few and edited carefully (pull before commit) | D-20261102-19, D-33 |
 | P3 | **Record what happened; status lives in one place.** Ticketed work → STWS ID; personal tasks → `users/<id>/todo.md`. Logs carry `#open/#waiting` only for un-ticketed waits | D-20261102-18, D-20261103-8 |
 | P4 | **Search over hand-made indexes.** Each entry = one `### title  #tags` line + body; `find.py` searches all docs with synonyms and store-code aliases. Hubs are created only when needed; no hand-written history tables | D-20261102-5, -9 |

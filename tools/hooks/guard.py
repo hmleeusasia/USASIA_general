@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import read_input, mode, norm_path, log  # noqa: E402
 
 ROOT = norm_path(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
-SKIP = ("docs/storage_rules.md", "docs/templates/", "docs/keywords.md",
+SKIP = ("docs/storage_rules.md", "docs/rules/", "docs/templates/", "docs/keywords.md",
         "tools/", "docs/requests/")                     # rule docs and code talk ABOUT sensitive values
 SCAN = ("docs/", ".claude/skills/", "CLAUDE.md", "README.md")
 
@@ -85,7 +85,7 @@ def check_file(path, text, session):
         line, m = first_line(SECRET, text)
         if line:
             hits.append(("sens-secret", mask(line),
-                         "Passwords/keys are never stored anywhere (storage_rules.md). Remove it and tell the user."))
+                         "Passwords/keys are never stored anywhere (R-SEC-04, docs/rules/security.md). Remove it and tell the user."))
         line, m = first_line(SOFT, text)
         if line:
             hits.append(("sens-soft", mask(line),
