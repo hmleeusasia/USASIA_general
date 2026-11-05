@@ -58,6 +58,7 @@
 | M-fw-security | ⚠ FW security incident (hacking): DVR/NVR still online; only password and settings changed, no follow-up instruction from Dan Choi. Firewall block in/out said done; Fortinet side unknown | FW | #security | 기다림(Dan Choi) | 2026-11-05 | Tommy Song: block inbound/outbound at the firewall, block monitoring-room access until clear, remove DNS (DDNS?) entry — confirm with Dan Choi. No ticket |
 | M-mw-pos-price | MW POS price-change issue: no answer from the POS vendor to me; Dan Choi may know | MW | #pos | 기다림(Dan Choi) | 2026-11-05 | Ask Dan Choi (Tommy Song asked 11/05). No ticket |
 | M-co-ap-port | Westminster (CO): AP port change still needed (lift, 2 people, guide needed in a tight store; lift is at Aurora, moving it is the issue) + scale setting change (price over $100) | Westminster CO | #network #pos | 할 일 | 2026-11-05 | Tommy Song may do it on the Dec Denver trip. Proj: Seoul Trading Network Upgrade. No ticket |
+| M-egmm-mx | EGMM: Meraki MX lost connection early 11/05 — check whether it is an internet (ISP) problem. Request Andy Han | EGMM | #network #support | 할 일 | 2026-11-05 | Today: check MX uplink status / ISP modem, reply to Andy Han. Related: T-295+T-285 EGMM internet vendor. No ticket |
 | M-tommy-list | Give Tommy Song a work list for his Nov Seattle trip (he is setting the schedule with Dan Choi; Dec = Denver) | — | #general | 할 일 | 2026-11-05 | So far: T-638 scales, meat plant VoIP, RM wired line, M2M POS move. Send when list is ready |
 
 ## 3. Follow-ups without a ticket (moved from CURRENT_STATE C, 2026-11-03)
