@@ -152,11 +152,11 @@ _Rebuilt 2026-11-04 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 91 / 314 KB |
-| Content vs framework | 180 KB vs 134 KB (42% framework) |
-| Log files / entries | 3 / 61 |
+| Files / size | 91 / 318 KB |
+| Content vs framework | 184 KB vs 134 KB (42% framework) |
+| Log files / entries | 3 / 64 |
 | Users | hmlee |
-| Decisions | 38 |
+| Decisions | 39 |
 | Store codes | 21 |
 
 ### Skills (.claude/skills)
@@ -198,7 +198,7 @@ _Rebuilt 2026-11-04 by tools/repo_map.py._
 ├── .gitignore                         0.2 KB
 ├── CLAUDE.md                          2.5 KB
 ├── README.md                          0.1 KB
-├── docs/                              59 files, 214.5 KB
+├── docs/                              59 files, 218.4 KB
 │   ├── CURRENT_STATE.md                   4.5 KB
 │   ├── archive/                           3 files, 1.0 KB
 │   │   ├── .gitkeep                           0.0 KB
@@ -206,7 +206,7 @@ _Rebuilt 2026-11-04 by tools/repo_map.py._
 │   ├── assets/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
 │   ├── calendar.md                        0.6 KB
-│   ├── decisions.md                       15.3 KB
+│   ├── decisions.md                       16.3 KB
 │   ├── drive-index/                       7 files, 64.9 KB
 │   │   ├── INDEX.md                           2.1 KB
 │   │   ├── archive-saves.md                   11.2 KB
@@ -227,8 +227,8 @@ _Rebuilt 2026-11-04 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               4 files, 24.5 KB
-│   │   ├── 2026/                              4 files, 24.5 KB
+│   ├── log/                               4 files, 27.3 KB
+│   │   ├── 2026/                              4 files, 27.3 KB
 │   ├── project_instructions.md            2.0 KB
 │   ├── projects/                          4 files, 7.2 KB
 │   │   ├── INDEX.md                           0.3 KB
