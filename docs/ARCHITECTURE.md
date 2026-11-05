@@ -152,11 +152,11 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 190 / 734 KB |
-| Content vs framework | 191 KB vs 543 KB (73% framework) |
-| Log files / entries | 4 / 68 |
+| Files / size | 196 / 754 KB |
+| Content vs framework | 209 KB vs 545 KB (72% framework) |
+| Log files / entries | 4 / 84 |
 | Users | hmlee |
-| Decisions | 44 |
+| Decisions | 46 |
 | Store codes | 21 |
 
 ### Skills (.claude/skills)
@@ -182,17 +182,17 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 ### Tree (depth 3)
 ```
 .
-├── .claude/                           105 files, 403.4 KB
+├── .claude/                           105 files, 404.0 KB
 │   ├── settings.json                      0.5 KB
-│   ├── skills/                            9 files, 31.2 KB
+│   ├── skills/                            9 files, 31.9 KB
 │   │   ├── drive-check/                       1 files, 2.4 KB
 │   │   ├── drive-index/                       1 files, 4.6 KB
-│   │   ├── mail-triage/                       1 files, 5.1 KB
-│   │   ├── review-loop/                       1 files, 2.6 KB
-│   │   ├── session-end/                       1 files, 3.6 KB
+│   │   ├── mail-triage/                       1 files, 5.5 KB
+│   │   ├── review-loop/                       1 files, 2.7 KB
+│   │   ├── session-end/                       1 files, 3.7 KB
 │   │   ├── start-day/                         1 files, 3.5 KB
 │   │   ├── todo/                              1 files, 3.1 KB
-│   │   ├── todo-sync/                         1 files, 4.1 KB
+│   │   ├── todo-sync/                         1 files, 4.3 KB
 │   │   ├── weekly-meeting/                    1 files, 2.2 KB
 │   ├── worktrees/                         95 files, 371.6 KB
 │   │   ├── compassionate-antonelli-e41a7b/    95 files, 371.6 KB
@@ -200,15 +200,15 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 ├── .gitignore                         0.2 KB
 ├── CLAUDE.md                          2.5 KB
 ├── README.md                          0.1 KB
-├── docs/                              63 files, 263.2 KB
-│   ├── CURRENT_STATE.md                   4.9 KB
+├── docs/                              69 files, 280.8 KB
+│   ├── CURRENT_STATE.md                   5.2 KB
 │   ├── archive/                           3 files, 2.4 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   │   ├── 2026/                              2 files, 2.4 KB
 │   ├── assets/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
 │   ├── calendar.md                        0.6 KB
-│   ├── decisions.md                       19.4 KB
+│   ├── decisions.md                       20.8 KB
 │   ├── drive-index/                       7 files, 64.9 KB
 │   │   ├── INDEX.md                           2.1 KB
 │   │   ├── archive-saves.md                   11.2 KB
@@ -217,11 +217,11 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 │   │   ├── meeting-templates-programs.md      13.3 KB
 │   │   ├── ongoing-project.md                 13.9 KB
 │   │   ├── purchase-reimbursement.md          14.0 KB
-│   ├── kb/                                10 files, 38.0 KB
-│   │   ├── INDEX.md                           1.8 KB
+│   ├── kb/                                10 files, 38.3 KB
+│   │   ├── INDEX.md                           1.9 KB
 │   │   ├── browser.md                         1.6 KB
 │   │   ├── facts.md                           2.4 KB
-│   │   ├── mail_triage.md                     4.3 KB
+│   │   ├── mail_triage.md                     4.5 KB
 │   │   ├── orgs.md                            6.4 KB
 │   │   ├── pos_tips.md                        0.4 KB
 │   │   ├── reimbursement.md                   2.0 KB
@@ -229,8 +229,8 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               5 files, 30.7 KB
-│   │   ├── 2026/                              5 files, 30.7 KB
+│   ├── log/                               5 files, 38.2 KB
+│   │   ├── 2026/                              5 files, 38.2 KB
 │   ├── project_instructions.md            2.0 KB
 │   ├── projects/                          4 files, 7.2 KB
 │   │   ├── INDEX.md                           0.3 KB
@@ -253,6 +253,13 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 │   ├── storage_rules.md                   0.1 KB
 │   ├── stores/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
+│   ├── team/                              6 files, 5.3 KB
+│   │   ├── INDEX.md                           1.5 KB
+│   │   ├── andy-han.md                        1.0 KB
+│   │   ├── dan-choi.md                        1.1 KB
+│   │   ├── fellix-lyu.md                      0.3 KB
+│   │   ├── james-yoo.md                       0.6 KB
+│   │   ├── tommy-song.md                      0.8 KB
 │   ├── templates/                         6 files, 2.9 KB
 │   │   ├── asset.md                           0.5 KB
 │   │   ├── daily_log.md                       1.2 KB
@@ -260,21 +267,21 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 │   │   ├── project.md                         0.3 KB
 │   │   ├── store.md                           0.4 KB
 │   │   ├── vendor.md                          0.3 KB
-│   ├── users/                             4 files, 15.8 KB
+│   ├── users/                             4 files, 18.5 KB
 │   │   ├── INDEX.md                           1.6 KB
-│   │   ├── hmlee/                             3 files, 14.1 KB
+│   │   ├── hmlee/                             3 files, 16.8 KB
 │   ├── vendors/                           2 files, 0.7 KB
 │   │   ├── INDEX.md                           0.1 KB
 │   │   ├── itsolution.md                      0.5 KB
-├── tools/                             18 files, 64.8 KB
+├── tools/                             18 files, 66.1 KB
 │   ├── browser/                           1 files, 2.0 KB
 │   │   ├── outlook_list.js                    2.0 KB
-│   ├── check.py                           5.7 KB
+│   ├── check.py                           6.2 KB
 │   ├── find.py                            5.7 KB
 │   ├── githooks/                          1 files, 0.7 KB
 │   │   ├── pre-commit                         0.7 KB
-│   ├── hooks/                             12 files, 39.8 KB
-│   │   ├── README.md                          3.8 KB
+│   ├── hooks/                             12 files, 40.5 KB
+│   │   ├── README.md                          3.9 KB
 │   │   ├── area.py                            5.0 KB
 │   │   ├── common.py                          1.5 KB
 │   │   ├── config.json                        1.0 KB
@@ -283,8 +290,8 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 │   │   ├── launch.sh                          0.6 KB
 │   │   ├── probe.py                           0.8 KB
 │   │   ├── review_mark.py                     1.0 KB
-│   │   ├── stop.py                            4.1 KB
-│   │   ├── test_hooks.py                      10.0 KB
+│   │   ├── stop.py                            4.3 KB
+│   │   ├── test_hooks.py                      10.5 KB
 │   │   ├── touch.py                           1.6 KB
 │   ├── prune.py                           6.7 KB
 │   ├── repo_map.py                        4.1 KB
