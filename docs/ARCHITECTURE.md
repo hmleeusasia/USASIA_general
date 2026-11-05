@@ -148,15 +148,15 @@ sequenceDiagram
 
 <!-- GENERATED:BEGIN (tools/repo_map.py — do not edit by hand) -->
 ## 8. Generated snapshot
-_Rebuilt 2026-11-05 by tools/repo_map.py._
+_Rebuilt 2026-11-04 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 79 / 265 KB |
-| Content vs framework | 171 KB vs 94 KB (35% framework) |
+| Files / size | 91 / 314 KB |
+| Content vs framework | 180 KB vs 134 KB (42% framework) |
 | Log files / entries | 3 / 61 |
 | Users | hmlee |
-| Decisions | 34 |
+| Decisions | 38 |
 | Store codes | 21 |
 
 ### Skills (.claude/skills)
@@ -165,6 +165,7 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 | drive-check | 매달 초 드라이브 점검. 색인에 있는 파일의 삭제·휴지통·이름·공유 변경을 찾고 Claude 폴더 월 백업을 만든다. start-day가 이번 달 점검이 안 됐으면 부른다. "월초 점검", "드라이 |
 | drive-index | 구글 드라이브 폴더를 커넥터로 읽어 문서별 목적·담긴 정보·대상·공유 상태·링크를 docs/drive-index에 색인. 하위 에이전트 병렬 분담과 재작업 방지 브리프 포함. "드라이브 색인", " |
 | mail-triage | Gmail·Outlook·인트라넷 메일을 크롬으로 읽고(메일을 열지 않음) mail_triage.md 기준으로 할 일/기다림/참고/자동·버림 분류, 업무 기록에 반영. 새 연락처·조직은 즉시 사용자 |
+| review-loop | Post-build review of heavy work by a fresh Sonnet — diff + rule files in, objections citing rule IDs out, acce |
 | session-end | Session wrap-up and handoff. Every session — check.py, open items to the todo board, new facts/decisions, comm |
 | start-day | USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린 건·일정 확인, Gmail·Outlook 새 메일과 드라이브 변경을 훑어 오늘 할 일 표를 만들고 승인받는다. "업무 시작", "아침  |
 | todo | 사용자가 말로 준 새 요청을 할 일 목록에 추가. 메시지가 "Todo", "todo:", "할일:"로 시작하거나 "/todo"일 때 사용. 한 메시지에 여러 건이어도 됨. |
@@ -174,36 +175,38 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 ### Hook rule modes (tools/hooks/config.json)
 | Mode | Rules |
 |---|---|
-| block | sens-email, sens-secret, git-force, rm-docs, stop-state, stop-open |
-| warn | digest, log-path, users-unknown |
+| block | sens-email, sens-secret, git-force, rm-docs, stop-state, stop-open, heavy-review |
+| warn | digest, log-path, users-unknown, area-keyword, area-read |
 | off | probe, sens-soft, english-nudge, budget |
 
 ### Tree (depth 3)
 ```
 .
-├── .claude/                           9 files, 28.5 KB
+├── .claude/                           10 files, 31.8 KB
 │   ├── settings.json                      0.5 KB
-│   ├── skills/                            8 files, 28.0 KB
+│   ├── skills/                            9 files, 31.2 KB
 │   │   ├── drive-check/                       1 files, 2.4 KB
 │   │   ├── drive-index/                       1 files, 4.6 KB
-│   │   ├── mail-triage/                       1 files, 5.0 KB
-│   │   ├── session-end/                       1 files, 3.2 KB
+│   │   ├── mail-triage/                       1 files, 5.1 KB
+│   │   ├── review-loop/                       1 files, 2.6 KB
+│   │   ├── session-end/                       1 files, 3.6 KB
 │   │   ├── start-day/                         1 files, 3.5 KB
-│   │   ├── todo/                              1 files, 3.0 KB
-│   │   ├── todo-sync/                         1 files, 4.0 KB
+│   │   ├── todo/                              1 files, 3.1 KB
+│   │   ├── todo-sync/                         1 files, 4.1 KB
 │   │   ├── weekly-meeting/                    1 files, 2.2 KB
 ├── .gitattributes                     0.0 KB
 ├── .gitignore                         0.2 KB
-├── CLAUDE.md                          3.1 KB
+├── CLAUDE.md                          2.5 KB
 ├── README.md                          0.1 KB
-├── docs/                              51 files, 190.4 KB
-│   ├── CURRENT_STATE.md                   4.4 KB
-│   ├── archive/                           1 files, 0.0 KB
+├── docs/                              59 files, 214.5 KB
+│   ├── CURRENT_STATE.md                   4.5 KB
+│   ├── archive/                           3 files, 1.0 KB
 │   │   ├── .gitkeep                           0.0 KB
+│   │   ├── 2026/                              2 files, 1.0 KB
 │   ├── assets/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
 │   ├── calendar.md                        0.6 KB
-│   ├── decisions.md                       13.3 KB
+│   ├── decisions.md                       15.3 KB
 │   ├── drive-index/                       7 files, 64.9 KB
 │   │   ├── INDEX.md                           2.1 KB
 │   │   ├── archive-saves.md                   11.2 KB
@@ -212,64 +215,73 @@ _Rebuilt 2026-11-05 by tools/repo_map.py._
 │   │   ├── meeting-templates-programs.md      13.3 KB
 │   │   ├── ongoing-project.md                 13.9 KB
 │   │   ├── purchase-reimbursement.md          14.0 KB
-│   ├── kb/                                10 files, 38.4 KB
+│   ├── kb/                                10 files, 38.0 KB
 │   │   ├── INDEX.md                           1.8 KB
 │   │   ├── browser.md                         1.6 KB
-│   │   ├── facts.md                           2.3 KB
+│   │   ├── facts.md                           2.4 KB
 │   │   ├── mail_triage.md                     4.3 KB
 │   │   ├── orgs.md                            6.4 KB
 │   │   ├── pos_tips.md                        0.4 KB
-│   │   ├── reimbursement.md                   2.5 KB
-│   │   ├── store_codes.md                     1.5 KB
+│   │   ├── reimbursement.md                   2.0 KB
+│   │   ├── store_codes.md                     1.6 KB
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               4 files, 24.3 KB
-│   │   ├── 2026/                              4 files, 24.3 KB
+│   ├── log/                               4 files, 24.5 KB
+│   │   ├── 2026/                              4 files, 24.5 KB
 │   ├── project_instructions.md            2.0 KB
-│   ├── projects/                          4 files, 7.1 KB
+│   ├── projects/                          4 files, 7.2 KB
 │   │   ├── INDEX.md                           0.3 KB
-│   │   ├── ai-system-questions.md             3.6 KB
+│   │   ├── ai-system-questions.md             3.7 KB
 │   │   ├── ai-system.md                       0.9 KB
 │   │   ├── granite-dia.md                     2.3 KB
-│   ├── requests/                          5 files, 12.3 KB
+│   ├── requests/                          7 files, 28.8 KB
 │   │   ├── PLAN-lean-context-001-draft2.md    4.9 KB
+│   │   ├── PLAN-rule-routing-001-draft2.md    10.3 KB
 │   │   ├── PLAN-structure-001-draft2.md       1.0 KB
-│   │   ├── archive/                           3 files, 6.4 KB
-│   ├── storage_rules.md                   1.1 KB
+│   │   ├── archive/                           4 files, 12.5 KB
+│   ├── rules/                             4 files, 5.9 KB
+│   │   ├── INDEX.md                           1.3 KB
+│   │   ├── expense.md                         1.5 KB
+│   │   ├── log.md                             1.6 KB
+│   │   ├── security.md                        1.6 KB
+│   ├── storage_rules.md                   0.1 KB
 │   ├── stores/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
-│   ├── templates/                         6 files, 2.8 KB
-│   │   ├── asset.md                           0.4 KB
-│   │   ├── daily_log.md                       1.1 KB
+│   ├── templates/                         6 files, 2.9 KB
+│   │   ├── asset.md                           0.5 KB
+│   │   ├── daily_log.md                       1.2 KB
 │   │   ├── drive_index.md                     0.2 KB
 │   │   ├── project.md                         0.3 KB
 │   │   ├── store.md                           0.4 KB
 │   │   ├── vendor.md                          0.3 KB
-│   ├── users/                             4 files, 17.1 KB
-│   │   ├── INDEX.md                           1.3 KB
-│   │   ├── hmlee/                             3 files, 15.8 KB
+│   ├── users/                             4 files, 16.8 KB
+│   │   ├── INDEX.md                           1.4 KB
+│   │   ├── hmlee/                             3 files, 15.4 KB
 │   ├── vendors/                           2 files, 0.7 KB
 │   │   ├── INDEX.md                           0.1 KB
 │   │   ├── itsolution.md                      0.5 KB
-├── tools/                             15 files, 42.9 KB
+├── tools/                             18 files, 64.8 KB
 │   ├── browser/                           1 files, 2.0 KB
 │   │   ├── outlook_list.js                    2.0 KB
-│   ├── check.py                           3.2 KB
-│   ├── find.py                            5.6 KB
+│   ├── check.py                           5.7 KB
+│   ├── find.py                            5.7 KB
 │   ├── githooks/                          1 files, 0.7 KB
 │   │   ├── pre-commit                         0.7 KB
-│   ├── hooks/                             10 files, 27.2 KB
-│   │   ├── README.md                          3.1 KB
+│   ├── hooks/                             12 files, 39.8 KB
+│   │   ├── README.md                          3.8 KB
+│   │   ├── area.py                            5.0 KB
 │   │   ├── common.py                          1.5 KB
-│   │   ├── config.json                        0.6 KB
+│   │   ├── config.json                        1.0 KB
 │   │   ├── digest.py                          4.1 KB
 │   │   ├── guard.py                           6.3 KB
 │   │   ├── launch.sh                          0.6 KB
 │   │   ├── probe.py                           0.8 KB
-│   │   ├── stop.py                            2.8 KB
-│   │   ├── test_hooks.py                      6.2 KB
-│   │   ├── touch.py                           1.1 KB
+│   │   ├── review_mark.py                     1.0 KB
+│   │   ├── stop.py                            4.1 KB
+│   │   ├── test_hooks.py                      10.0 KB
+│   │   ├── touch.py                           1.6 KB
+│   ├── prune.py                           6.7 KB
 │   ├── repo_map.py                        4.1 KB
 ```
 <!-- GENERATED:END -->
