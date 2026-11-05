@@ -6,6 +6,7 @@
 | Day | ID | Task | Store |
 |---|---|---|---|
 | next FW visit | — | Deliver 1 scale picked up at InStore 11/03 (ticket?) | FW |
+| next BL visit | M-bl-meat-port | Replace RJ45 keystone (Cat6) on Ballard meat dept wall port PP04 D-01, then test | BL |
 | next BV visit | M-label-paper | Pick up 1 box of label printer paper at BV (borrowed from Ballard) → return to Ballard | BV→BL |
 | Thu 11/05 AM | M-uw-grabgo-cable | Review UW Grab Go (Deli) cable estimate (ITSolution) → store manager; create STWS ticket | UW |
 | Thu 11/05 Seattle | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
@@ -18,6 +19,7 @@
 상태: 할 일 / 진행 / 기다림(대상) / 끝 / 취소 · 움직임 = 마지막 업데이트(STWS 또는 기록) · ⏸ = 30일 넘게 안 움직임
 | ID | 할 일 | 매장 | 분야 | 상태 | 움직임 | 다음 |
 |---|---|---|---|---|---|---|
+| M-bl-meat-port | Ballard meat dept wall port PP04 D-01 suspected bad (found 11/05). Replace Cat6 RJ45 keystone and test link | BL | #network | 할 일 | 2026-11-05 | Bring Cat6 keystone + punch tool; replace, then test (cable tester / scale link) |
 | M-label-paper | Return label printer paper (1 box) that BV borrowed from Ballard: pick up at BV, deliver to Ballard | BV·BL | #hardware | 할 일 | 2026-11-05 | Next BV visit → bring to Ballard |
 | M-uw-grabgo-cable | UW Grab Go estimate = UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Estimate received 11/03 (Outlook) | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Survey done 11/03. STWS In progress (11/04, user): parent cannot be set to Resolved while subtask T-640 is open (tried 11/04). Resolve after T-640 |
