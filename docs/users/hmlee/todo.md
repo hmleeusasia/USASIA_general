@@ -7,8 +7,10 @@
 |---|---|---|---|
 | next FW visit | — | Deliver 1 scale picked up at InStore 11/03 (ticket?) | FW |
 | Thu 11/05 AM | M-uw-grabgo-cable | Review UW Grab Go (Deli) cable estimate (ITSolution) → store manager; create STWS ticket | UW |
-| Thu 11/05 | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
-| Thu 11/05 | T-639/T-603, T-375 | Install manager PC (arrived 11/03), Wi-Fi dead zone / AP | MW |
+| Thu 11/05 Seattle | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
+| Thu 11/05 Seattle | T-639/T-603, T-375 | Install manager PC (arrived 11/03), Wi-Fi dead zone / AP | MW |
+| Thu 11/05 Seattle | T-641 | Smart card #0012 scan on POS | BL |
+| Thu 11/05 Seattle | T-647, M-m2m-bon, T-569 | POS move site survey, 2F Bon Restaurant internet, PC no boot | M2M |
 | Any | M-wifi, M-granite, T-295+T-285 | Wi-Fi adapter, Granite account, EGMM internet vendor | office |
 
 ## 2. 전체 목록
