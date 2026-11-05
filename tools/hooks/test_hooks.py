@@ -145,7 +145,10 @@ def area_tests():
     hs = f"test-heavy-{os.getpid()}"
     cases = [("heavy hooks edit → block", hs + "1", ["tools/hooks/x.py"], None, True),
              ("decisions only → pass", hs + "2", ["docs/decisions.md"], None, False),
-             ("heavy with marker → pass", hs + "3", ["CLAUDE.md"], True, False)]
+             ("heavy with marker → pass", hs + "3", ["CLAUDE.md"], True, False),
+             ("skill edit → block", hs + "4", [".claude/skills/mail-triage/SKILL.md"], None, True),
+             ("6 docs files → pass", hs + "5", [f"docs/team/{i}.md" for i in range(6)], None, False),
+             ("tools/check.py → block", hs + "6", ["tools/check.py"], None, True)]
     for name, s, files, marker, want in cases:
         mk = os.path.join(tempfile.gettempdir(), f"usasia_review_{s}")
         if marker:
@@ -189,7 +192,7 @@ def main():
     dok = dg.returncode == 0 and dg.stdout.decode("utf-8", "replace").startswith("[digest]")
     print(f"{'ok ' if dok else 'FAIL'} digest --print")
     bad += not dok
-    total = len(CASES) + 1 + 4 + 6 + 3  # guard cases + digest + stop + area + heavy
+    total = len(CASES) + 1 + 4 + 6 + 6  # guard cases + digest + stop + area + heavy
     print(f"\n{total - bad}/{total} passed")
     sys.exit(1 if bad else 0)
 

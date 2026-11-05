@@ -1,6 +1,6 @@
 ---
 name: review-loop
-description: Post-build review of heavy work by a fresh Sonnet — diff + rule files in, objections citing rule IDs out, accept or rebut, max 2 rounds, then one batched question to the user. Use when the Stop hook says "heavy-review", before committing heavy work (tools/hooks, CLAUDE.md, docs/rules, skills, > 5 files), or when the user says "검토", "리뷰", "review".
+description: Post-build review of heavy work by a fresh Sonnet — diff + rule files in, objections citing rule IDs out, accept or rebut, max 2 rounds, then one batched question to the user. Use when the Stop hook says "heavy-review", before committing heavy work (tools/, CLAUDE.md, docs/rules, skills, settings, > 15 files), or when the user says "검토", "리뷰", "review".
 ---
 # review-loop (D-20261104-2 decision h)
 Pre-build review of a PLAN is a separate gate (docs/kb/subagents.md §3). This one checks what was actually built.

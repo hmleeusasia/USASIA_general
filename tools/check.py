@@ -6,7 +6,7 @@ if hasattr(sys.stdout, "reconfigure"): sys.stdout.reconfigure(encoding="utf-8")
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 D = ROOT / "docs"
 HUB = {"vendor": "vendors", "store": "stores", "asset": "assets", "proj": "projects"}
-SENS = re.compile(r"\b\d{1,3}(\.\d{1,3}){3}\b|([0-9A-Fa-f]{2}:){5}|password|passwd|비밀번호|api[_-]?key", re.I)
+SENS = re.compile(r"\b\d{1,3}(\.\d{1,3}){3}\b|([0-9A-Fa-f]{2}:){5}|(password|passwd|비밀번호|api[_-]?key)\s*[:=]\s*\S+", re.I)  # words only next to a value (2026-11-05)
 SKIP = ("storage_rules.md", "rules", "templates", "keywords.md", "requests")
 problems = []
 
@@ -70,7 +70,11 @@ BUDGET = {"CLAUDE.md": 3000, "docs/rules/*.md": 3000, "docs/users/*/CLAUDE.md": 
 for pat, limit in BUDGET.items():
     for f in ROOT.glob(pat):
         n = len(f.read_text(encoding="utf-8"))
-        if n > limit: problems.append(f"Over char budget: {f.relative_to(ROOT)} {n} > {limit} (prune closed items: tools/prune.py)")
+        if n > limit: problems.append(f"Over char budget: {f.relative_to(ROOT)} {n} > {limit} (prune closed items: tools/prune.py; shorten long rows)")
+for f in ROOT.glob("docs/users/*/todo.md"):  # long open rows grow the board; prune never touches them (2026-11-05)
+    for line in f.read_text(encoding="utf-8").splitlines():
+        if line.startswith("| ") and len(line) > 400:
+            problems.append(f"Over char budget: long todo row {f.relative_to(ROOT)} {line.split('|')[1].strip()} {len(line)} chars > 400 → one line, details to the log")
 
 # --files a b c : only problems about these files (pre-commit). Soft "민감 정보 의심" is shown, not counted.
 if "--files" in sys.argv:

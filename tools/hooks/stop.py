@@ -2,7 +2,7 @@
 Only looks at files written this turn (touch.py). Checks:
   stop-state: CURRENT_STATE.md over 80 lines
   stop-open : a #open/#waiting log heading with a T-ID that is not on any todo board (D-20261103-8)
-  heavy-review: this session touched heavy paths (or > 5 repo files) and no review marker exists
+  heavy-review: this session touched heavy paths (or > 15 repo files, backstop) and no review marker exists
                 (review-loop skill -> review_mark.py). Blocks once per session (D-20261104-2 decision i)
 Exit 0 when stop_hook_active (never loops). Does NOT check uncommitted work (session-end skill does).
 Does not run when the user interrupts (tested step 0) — pre-commit is the backstop."""
@@ -16,7 +16,7 @@ from common import read_input, mode, log  # noqa: E402
 from touch import load, state_file, load_heavy, heavy_file  # noqa: E402
 import tempfile  # noqa: E402
 
-HEAVY = re.compile(r"^(tools/hooks/|docs/rules/|\.claude/skills/review-loop/|CLAUDE\.md$)")
+HEAVY = re.compile(r"^(tools/|docs/rules/|\.claude/skills/|\.claude/settings|CLAUDE\.md$|docs/users/[^/]+/CLAUDE\.md$)")  # by risk (2026-11-05)
 
 
 def review_marker(session):
@@ -27,7 +27,7 @@ def heavy_problem(session):
     h = load_heavy(session)
     files = h.get("files", [])
     hits = [f for f in files if HEAVY.match(f)]
-    if mode("heavy-review") != "block" or h.get("warned") or not (hits or len(files) > 5)             or os.path.exists(review_marker(session)):
+    if mode("heavy-review") != "block" or h.get("warned") or not (hits or len(files) > 15)             or os.path.exists(review_marker(session)):
         return None
     h["warned"] = True
     try:
