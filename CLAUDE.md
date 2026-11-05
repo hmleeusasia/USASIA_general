@@ -7,7 +7,7 @@ USASIA (Washington State, many stores) IT work log and index. ① Google Drive i
 
 ## Users (D-20261102-19)
 - This file is shared. Personal settings `docs/users/<id>/CLAUDE.md` only add; shared rules win; security/storage rules cannot be relaxed.
-- Who: `CLAUDE.local.md` → git user in docs/users → ask once. Per-person values (STWS no., mailboxes, Drive folders) come from `docs/users/<id>/profile.md`, never from skills.
+- Who: `CLAUDE.local.md` → git user in docs/users → ask once. Per-person values (STWS no., mailboxes, Drive folders, time zone) come from `docs/users/<id>/profile.md`, never from skills.
 
 ## Session
 1. `[digest]` in context (SessionStart hook) → use it; open CURRENT_STATE / facts only when needed. No digest → read docs/CURRENT_STATE.md and docs/kb/facts.md in full. Local PC: `/start-day` (D-20261102-13).

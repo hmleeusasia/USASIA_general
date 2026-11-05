@@ -9,7 +9,7 @@
 드라이브 본인 Claude 폴더(원본) → 이 폴더 users/<id>/(커넥터 없을 때 사본, 민감 값 없음) → 사용자에게 묻기. 값이 다르면 드라이브가 맞음
 
 ## 새 팀원 추가 (짧은 안내 — 2단계에서 docs/onboarding.md로)
-1. `docs/users/<아이디>/` 에 CLAUDE.md(개인 설정), profile.md 만들기 (hmlee 폴더를 본뜸)
+1. `docs/users/<아이디>/` 에 CLAUDE.md(개인 설정), profile.md 만들기 (hmlee 폴더를 본뜸). profile.md에 시간대 필수 (WA = America/Los_Angeles, NJ = America/New_York, D-20261105-1)
 2. 저장소 폴더에 `CLAUDE.local.md` (git 제외) 한 줄: `@docs/users/<아이디>/CLAUDE.md`
 3. 자기 구글 드라이브에 Claude 폴더(비공개, 상속 권한 끔) 만들고, 그 안에 00_profile 시트(항목·값·비고, 원본)를 만들고, 폴더 ID를 profile.md(사본)에
 4. 개인 skill은 `.claude/skills/<아이디>-<이름>/`, 설명에 "<아이디> 전용"

@@ -11,6 +11,7 @@
 | 메일 읽는 범위 | 받은편지함 + 보낸편지함. 인트라넷 인보이스 개인메일함 제외 |
 | 드라이브 Claude 폴더 | 1g9q_Povbwi0-7HH2dPqh6zWeMOyz7Fwf (목차: docs/drive-index/claude-folder.md) |
 | 직책 | 사원 (STWS "Department role" 칸에는 Manager로 나옴 — STWS 권한 값, 직책 아님. 2026-11-04) |
+| 시간대 | America/Los_Angeles (Washington State, PT) — dates/times for logs, OT, mileage use this (D-20261105-1) |
 | 상사 | Dan Choi (최철룡), IT 매니저 |
 | 저장소 역할 | Git 저장소 관리자 (USASIA_general, 틀 개발·관리) |
 | 업무 기록 파일 | docs/log/YYYY/YYYY-MM-DD_hmlee.md |
