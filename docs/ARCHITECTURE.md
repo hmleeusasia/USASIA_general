@@ -148,13 +148,13 @@ sequenceDiagram
 
 <!-- GENERATED:BEGIN (tools/repo_map.py — do not edit by hand) -->
 ## 8. Generated snapshot
-_Rebuilt 2026-11-04 by tools/repo_map.py._
+_Rebuilt 2026-11-05 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 79 / 262 KB |
-| Content vs framework | 167 KB vs 94 KB (36% framework) |
-| Log files / entries | 3 / 56 |
+| Files / size | 79 / 265 KB |
+| Content vs framework | 171 KB vs 94 KB (35% framework) |
+| Log files / entries | 3 / 61 |
 | Users | hmlee |
 | Decisions | 34 |
 | Store codes | 21 |
@@ -181,7 +181,7 @@ _Rebuilt 2026-11-04 by tools/repo_map.py._
 ### Tree (depth 3)
 ```
 .
-├── .claude/                           9 files, 28.6 KB
+├── .claude/                           9 files, 28.5 KB
 │   ├── settings.json                      0.5 KB
 │   ├── skills/                            8 files, 28.0 KB
 │   │   ├── drive-check/                       1 files, 2.4 KB
@@ -189,15 +189,15 @@ _Rebuilt 2026-11-04 by tools/repo_map.py._
 │   │   ├── mail-triage/                       1 files, 5.0 KB
 │   │   ├── session-end/                       1 files, 3.2 KB
 │   │   ├── start-day/                         1 files, 3.5 KB
-│   │   ├── todo/                              1 files, 3.1 KB
+│   │   ├── todo/                              1 files, 3.0 KB
 │   │   ├── todo-sync/                         1 files, 4.0 KB
 │   │   ├── weekly-meeting/                    1 files, 2.2 KB
 ├── .gitattributes                     0.0 KB
 ├── .gitignore                         0.2 KB
 ├── CLAUDE.md                          3.1 KB
 ├── README.md                          0.1 KB
-├── docs/                              51 files, 186.6 KB
-│   ├── CURRENT_STATE.md                   3.8 KB
+├── docs/                              51 files, 190.4 KB
+│   ├── CURRENT_STATE.md                   4.4 KB
 │   ├── archive/                           1 files, 0.0 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   ├── assets/                            1 files, 0.0 KB
@@ -212,57 +212,57 @@ _Rebuilt 2026-11-04 by tools/repo_map.py._
 │   │   ├── meeting-templates-programs.md      13.3 KB
 │   │   ├── ongoing-project.md                 13.9 KB
 │   │   ├── purchase-reimbursement.md          14.0 KB
-│   ├── kb/                                10 files, 38.7 KB
+│   ├── kb/                                10 files, 38.4 KB
 │   │   ├── INDEX.md                           1.8 KB
 │   │   ├── browser.md                         1.6 KB
 │   │   ├── facts.md                           2.3 KB
 │   │   ├── mail_triage.md                     4.3 KB
 │   │   ├── orgs.md                            6.4 KB
 │   │   ├── pos_tips.md                        0.4 KB
-│   │   ├── reimbursement.md                   2.6 KB
-│   │   ├── store_codes.md                     1.6 KB
+│   │   ├── reimbursement.md                   2.5 KB
+│   │   ├── store_codes.md                     1.5 KB
 │   │   ├── subagents.md                       4.9 KB
-│   │   ├── work_overview.md                   12.7 KB
+│   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               4 files, 21.9 KB
-│   │   ├── 2026/                              4 files, 21.9 KB
+│   ├── log/                               4 files, 24.3 KB
+│   │   ├── 2026/                              4 files, 24.3 KB
 │   ├── project_instructions.md            2.0 KB
 │   ├── projects/                          4 files, 7.1 KB
 │   │   ├── INDEX.md                           0.3 KB
 │   │   ├── ai-system-questions.md             3.6 KB
 │   │   ├── ai-system.md                       0.9 KB
 │   │   ├── granite-dia.md                     2.3 KB
-│   ├── requests/                          5 files, 12.4 KB
+│   ├── requests/                          5 files, 12.3 KB
 │   │   ├── PLAN-lean-context-001-draft2.md    4.9 KB
 │   │   ├── PLAN-structure-001-draft2.md       1.0 KB
-│   │   ├── archive/                           3 files, 6.5 KB
+│   │   ├── archive/                           3 files, 6.4 KB
 │   ├── storage_rules.md                   1.1 KB
 │   ├── stores/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
-│   ├── templates/                         6 files, 2.9 KB
-│   │   ├── asset.md                           0.5 KB
-│   │   ├── daily_log.md                       1.2 KB
+│   ├── templates/                         6 files, 2.8 KB
+│   │   ├── asset.md                           0.4 KB
+│   │   ├── daily_log.md                       1.1 KB
 │   │   ├── drive_index.md                     0.2 KB
 │   │   ├── project.md                         0.3 KB
 │   │   ├── store.md                           0.4 KB
 │   │   ├── vendor.md                          0.3 KB
-│   ├── users/                             4 files, 15.9 KB
+│   ├── users/                             4 files, 17.1 KB
 │   │   ├── INDEX.md                           1.3 KB
-│   │   ├── hmlee/                             3 files, 14.6 KB
+│   │   ├── hmlee/                             3 files, 15.8 KB
 │   ├── vendors/                           2 files, 0.7 KB
 │   │   ├── INDEX.md                           0.1 KB
 │   │   ├── itsolution.md                      0.5 KB
-├── tools/                             15 files, 43.0 KB
+├── tools/                             15 files, 42.9 KB
 │   ├── browser/                           1 files, 2.0 KB
 │   │   ├── outlook_list.js                    2.0 KB
 │   ├── check.py                           3.2 KB
-│   ├── find.py                            5.7 KB
+│   ├── find.py                            5.6 KB
 │   ├── githooks/                          1 files, 0.7 KB
 │   │   ├── pre-commit                         0.7 KB
 │   ├── hooks/                             10 files, 27.2 KB
 │   │   ├── README.md                          3.1 KB
 │   │   ├── common.py                          1.5 KB
-│   │   ├── config.json                        0.7 KB
+│   │   ├── config.json                        0.6 KB
 │   │   ├── digest.py                          4.1 KB
 │   │   ├── guard.py                           6.3 KB
 │   │   ├── launch.sh                          0.6 KB
