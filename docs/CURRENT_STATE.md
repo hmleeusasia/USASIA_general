@@ -41,5 +41,5 @@
 /start-day (업무 시작 루틴, D-20261102-13)
 
 ## H. 마지막 업무 시작
-2026-11-04. Today: LW·GLW scales (T-606), GitHub 2FA, M2M Bon Restaurant scope, UW Grab Go estimate
+2026-11-05. Today: UW Grab Go estimate, MW visit (T-639, T-375, T-362), T-606 re-repair, GLW tickets
 - 마지막 월초 점검: 없음 (drive-check, 다음 2026-12 초)
