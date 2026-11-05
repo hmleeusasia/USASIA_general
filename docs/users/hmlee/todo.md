@@ -26,6 +26,7 @@
 | T-438 | POS 저울 유선 설치 | BV(구) | #pos | 진행 | 2026-11-03 | 아직 남음 (11/03 확인). Scales needing wired link: seafood FISH70, FISH71; meat MEAT73; produce PROD76 (11/03). Survey done 11/03; install = separate visit, schedule TBD |
 | T-500 | Lumen 회선 개통 | BV(구) | #network | 진행 | 2026-11-03 | 아직 남음. Lumen 연락 없음 → Lumen에 재스케줄 확인 필요 (11/03) |
 | T-606 | 델리 저울 고장 | LW | #pos | 진행 | 2026-11-04 | 11/04: 2 repaired scales delivered & set up; 1 still faulty (label feed fails, gap not detected mid-roll) → send back to InStore for re-repair. Keep open |
+| M-lw-ex99 | LW: EX99 scale (repaired, reinstalled) does not receive PLU price data sent from the program. Visit and inspect. New request 11/05 | LW | #pos #hardware | 할 일 | 2026-11-05 | Related T-606 (repaired scales). Ticket? |
 | T-486 | 델리 저울 연결 문제 | LW | #pos | 끝 | 2026-11-04 | Same issue as T-606, resolved 11/04. Close in STWS |
 | T-579 | CS PC 교체 | LW | #hardware | 기다림(매장 구매) | 2026-11-04 | 11/04: store will buy new PCs → set up 2 new PCs (likely 1 store manager, 1 accounting — to confirm; spec given to store 11/04: Windows 11 Pro, 32GB RAM), then set up a leftover PC for CS |
 | T-515 | 레이블 PC 파일 이상 | LW | #hardware | 할 일 | 2026-09-08 ⏸ | 진행: 이번 주 LW 방문 때 (11/03) |
