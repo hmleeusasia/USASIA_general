@@ -39,7 +39,7 @@
 | T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-03 | 새 PC가 매장에 도착(11/03). 설치는 목 11/05 MW 방문 때 |
 | T-375 | Wifi dead zone 확인·AP 추가 | MW | #network | 진행 | 2026-08-20 ⏸ | 진행: 오늘 MW에서 (11/03 판단) |
 | T-362 | NVR 앱 재설정: DH 카메라를 NVR 앱에서 MW와 함께 보기. 이준호 점장(MW·DH 겸임) 2026-11-03 재촉 | DH·MW | #security | 진행 | 2026-11-03 | 기한 2026-11-06(이번 주, 사용자 추정) |
-| T-600 | Comcast BB 연결 지원·카메라 설치 설계 | IQ | #network #security | 진행 | 2026-11-04 | 11/04 John Byun chose the Wi-Fi option (temporary, full coverage not needed), sent photos of 3 front-wall outlets, says mezzanine outlets work; asks for the next step to install. Next: confirm outlet locations vs. plan, order via ITSolution, find a spare AP, schedule install |
+| T-600 | Comcast BB 연결 지원·카메라 설치 설계 | IQ | #network #security | 진행 | 2026-11-04 | 11/04 John Byun chose the Wi-Fi option (temporary, full coverage not needed), sent photos of 3 front-wall outlets, says mezzanine outlets work; asks for the next step to install. 11/05 plan change: no ceiling power → drop 360° camera; ~2 cameras at the entrance + 1 on 2F; AP near the entrance needs a temp cable from the demarc or a repeater. Next: pick AP link method, ask ITSolution for a new quote (3 cameras), find a spare AP, reply to John Byun |
 | T-461 | 2번 스위치 33번 포트 CRC 에러 | RM | #network | 진행 | 2026-08-13 ⏸ | 미루기: 원격 확인 가능하면 진행 (11/03) |
 | T-340 | 광 네트워크 연장 | RM | #network | 진행 | 2026-07-17 ⏸ | 미루기: 공사 건 (11/03) |
 | T-302 | VoIP/전화 빌링 정리 | RM | #phone | 진행 | 2026-08-03 ⏸ | 미루기: 서류 일 (11/03) |
