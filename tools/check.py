@@ -37,6 +37,41 @@ for name, limit in (("CURRENT_STATE.md", 80), ("kb/facts.md", 50)):
     n = len((D / name).read_text(encoding="utf-8").splitlines())
     if n > limit: problems.append(f"{name} {n}줄 > {limit}")
 
+# Rule IDs (D-20261104-2): defined once in docs/rules, cited IDs exist, INDEX ranges match.
+RID = re.compile(r"\bR-([A-Z]+)-(\d{2})\b")
+RULES = D / "rules"
+defined = {}
+if RULES.exists():
+    for f in RULES.glob("*.md"):
+        if f.name == "INDEX.md": continue
+        for m in re.finditer(r"^## (R-[A-Z]+-\d{2})\s*$", f.read_text(encoding="utf-8"), re.M):
+            if m[1] in defined: problems.append(f"Rule ID defined twice: {m[1]} in docs/rules/{f.name} and {defined[m[1]]}")
+            defined[m[1]] = f"docs/rules/{f.name}"
+    idx = (RULES / "INDEX.md").read_text(encoding="utf-8")
+    for f in RULES.glob("*.md"):
+        if f.name != "INDEX.md" and f.name not in idx: problems.append(f"Rule file not in docs/rules/INDEX.md: {f.name}")
+    for area, a, b in re.findall(r"\bR-([A-Z]+)-(\d{2})\.\.(\d{2})\b", idx):
+        want = {f"R-{area}-{n:02d}" for n in range(int(a), int(b) + 1)}
+        have = {k for k in defined if k.startswith(f"R-{area}-")}
+        if want != have: problems.append(f"docs/rules/INDEX.md range R-{area}-{a}..{b} does not match defined {sorted(have)}")
+    cite_files = [ROOT / "CLAUDE.md", *ROOT.glob(".claude/skills/*/SKILL.md"), *(ROOT / "tools" / "hooks").glob("*.py"),
+                  *RULES.glob("*.md"), *(D / "kb").glob("*.md"), *(D / "templates").glob("*.md"), *(D / "users").rglob("*.md")]
+    for f in cite_files:
+        txt = f.read_text(encoding="utf-8")
+        for m in RID.finditer(txt):
+            rid = f"R-{m[1]}-{m[2]}"
+            if rid not in defined and not txt[m.end():m.end() + 2] == "..":
+                problems.append(f"Unknown rule ID: {rid} in {f.relative_to(ROOT)}")
+
+# Char budgets for always/daily-read docs (D-20261104-3). Soft: shown as (warn), never blocks.
+BUDGET = {"CLAUDE.md": 3000, "docs/rules/*.md": 3000, "docs/users/*/CLAUDE.md": 1000, "docs/users/*/todo.md": 8000,
+          "docs/kb/facts.md": 3000, "docs/kb/INDEX.md": 3000, "docs/CURRENT_STATE.md": 5000,
+          "docs/projects/ai-system-questions.md": 4000}
+for pat, limit in BUDGET.items():
+    for f in ROOT.glob(pat):
+        n = len(f.read_text(encoding="utf-8"))
+        if n > limit: problems.append(f"Over char budget: {f.relative_to(ROOT)} {n} > {limit} (prune closed items: tools/prune.py)")
+
 # --files a b c : only problems about these files (pre-commit). Soft "민감 정보 의심" is shown, not counted.
 if "--files" in sys.argv:
     files = [a.replace("\\", "/") for a in sys.argv[sys.argv.index("--files") + 1:]]
@@ -50,11 +85,14 @@ if "--files" in sys.argv:
             return pr.split(": ")[1].split(" ")[0] in ftags
         return any(a in pr.replace("\\", "/") or a.endswith(pr.split(" ")[0]) for a in files)
     problems = [pr for pr in problems if mine(pr)]
-    soft = [pr for pr in problems if pr.startswith("민감 정보 의심")]
+    soft = [pr for pr in problems if pr.startswith(("민감 정보 의심", "Over char budget"))]
     hard = [pr for pr in problems if pr not in soft]
     if soft: print("(warn) " + "\n(warn) ".join(soft))
     if hard: print("\n".join(hard))
     sys.exit(1 if hard else 0)
 
-print("\n".join(problems) if problems else f"점검 통과 (기록 파일 {len(logs)}개)")
-sys.exit(1 if problems else 0)
+soft = [pr for pr in problems if pr.startswith("Over char budget")]  # budgets never fail (D-20261104-3)
+hard = [pr for pr in problems if pr not in soft]
+if soft: print("(warn) " + "\n(warn) ".join(soft))
+print("\n".join(hard) if hard else f"점검 통과 (기록 파일 {len(logs)}개)")
+sys.exit(1 if hard else 0)

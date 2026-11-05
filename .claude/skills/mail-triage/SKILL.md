@@ -5,7 +5,7 @@ description: Gmail·Outlook·인트라넷 메일을 크롬으로 읽고(메일�
 
 # 메일 점검·분류 (mail-triage)
 
-먼저 읽기: docs/users/<id>/profile.md(메일함·범위) → docs/kb/mail_triage.md(분류 기준) → docs/kb/orgs.md(조직 목록). 아래 메일함 읽는 법은 profile에 있는 메일함만
+먼저 읽기: docs/users/<id>/profile.md(메일함·범위) → docs/kb/mail_triage.md(분류 기준) → docs/kb/orgs.md(조직 목록: 통째로 읽지 말고 발신 조직·도메인을 grep, D-20261104-3). 아래 메일함 읽는 법은 profile에 있는 메일함만
 읽기만 한다: 보내기·지우기·이동·읽음 표시 변경 금지. 기준일 = 사용자가 말한 날짜, 없으면 CURRENT_STATE "마지막 업무 시작".
 
 ## 1. 메일함별 읽는 법

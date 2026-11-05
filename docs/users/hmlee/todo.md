@@ -5,10 +5,6 @@
 ## 1. Now (Claude suggests, user picks) — visit plan set 2026-11-03
 | Day | ID | Task | Store |
 |---|---|---|---|
-| Tue 11/03 | T-624 | POS point card test (call James Yoo first) + TICKET-635 smart card scan | BV |
-| Tue 11/03 | T-565, T-619, T-585 | PIN Pad sticker, POS serial numbers, new CS PC | BV |
-| Tue 11/03 | M-bv-pos-label | Fix wrong POS label numbers (with T-619 serial survey) | BV |
-| Tue 11/03 | T-438, T-500 | Old store scale wiring check; call Lumen to reschedule | BV(old) |
 | Wed 11/04 | T-606 | 2 repaired scales already picked up 11/03 (InStore) → deliver & set up (due 11/06) | LW |
 | Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
 | Wed 11/04 | T-587 ✔ | Done 11/04 | GLW |
@@ -23,7 +19,6 @@
 | ID | 할 일 | 매장 | 분야 | 상태 | 움직임 | 다음 |
 |---|---|---|---|---|---|---|
 | M-uw-grabgo-cable | UW Grab Go estimate = UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Estimate received 11/03 (Outlook) | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
-| T-556 | 잔여 POS 장비 창고로 옮기기 | BV | #pos | 끝 | 2026-11-02 | STWS Closed (다음 동기화 때 목록에서 뺌) |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Survey done 11/03. STWS In progress (11/04, user): parent cannot be set to Resolved while subtask T-640 is open (tried 11/04). Resolve after T-640 |
 | M-bv-pos-label | BV: fix wrong POS label numbers. Requested by user 2026-11-03. Ticket needed? (maybe sub of T-619) | BV | #pos #asset | 끝 | 2026-11-03 | Fixed 11/03 |
 | T-624 | POS 포인트 카드 테스트 (+ 하위 TICKET-635 smart card 스캔 테스트, James Yoo 생성 11/02) | BV | #pos | 끝 | 2026-11-04 | STWS Resolved 11/04 (user closes). BV 방문 때 함. 가기 전 James Yoo 과장님께 미리 연락. 블록한 스마트 포인트 카드가 POS에서 어떻게 막히고 찍히는지 + 미등록 smart card 스캔 시 POS 반응(11/03 추가) + 간단한 기타 테스트 |
