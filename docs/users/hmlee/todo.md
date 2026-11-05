@@ -5,9 +5,6 @@
 ## 1. Now (Claude suggests, user picks) — visit plan set 2026-11-03
 | Day | ID | Task | Store |
 |---|---|---|---|
-| Wed 11/04 | T-606 | 2 repaired scales already picked up 11/03 (InStore) → deliver & set up (due 11/06) | LW |
-| Wed 11/04 | T-486, T-638, T-515, T-579 | Deli scale link (merge w/ 606?), junk scales (ask Tommy Song first), label PC, CS PC | LW |
-| Wed 11/04 | T-587 ✔ | Done 11/04 | GLW |
 | next FW visit | — | Deliver 1 scale picked up at InStore 11/03 (ticket?) | FW |
 | Thu 11/05 AM | M-uw-grabgo-cable | Review UW Grab Go (Deli) cable estimate (ITSolution) → store manager; create STWS ticket | UW |
 | Thu 11/05 | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
@@ -20,17 +17,13 @@
 |---|---|---|---|---|---|---|
 | M-uw-grabgo-cable | UW Grab Go estimate = UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Estimate received 11/03 (Outlook) | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Survey done 11/03. STWS In progress (11/04, user): parent cannot be set to Resolved while subtask T-640 is open (tried 11/04). Resolve after T-640 |
-| M-bv-pos-label | BV: fix wrong POS label numbers. Requested by user 2026-11-03. Ticket needed? (maybe sub of T-619) | BV | #pos #asset | 끝 | 2026-11-03 | Fixed 11/03 |
 | T-624 | POS 포인트 카드 테스트 (+ 하위 TICKET-635 smart card 스캔 테스트, James Yoo 생성 11/02) | BV | #pos | 끝 | 2026-11-04 | STWS Resolved 11/04 (user closes). BV 방문 때 함. 가기 전 James Yoo 과장님께 미리 연락. 블록한 스마트 포인트 카드가 POS에서 어떻게 막히고 찍히는지 + 미등록 smart card 스캔 시 POS 반응(11/03 추가) + 간단한 기타 테스트 |
 | M-bv-printer | BV: 1st-floor printer drops connection often — investigate (new request 11/03). Ticket needed? | BV | #hardware #network | 대기 | 2026-11-03 | 11/03: no problem seen on site. Re-check next BV visit (wired/Wi-Fi, IP, sleep, port) |
 | T-640 | BV: send POS manufacturer serial numbers per lane for receipt printer, cashier touch screen, scanner scale (manufacturer request, name TBD). Subtask of T-619, created 11/04 | BV | #pos #asset | 할 일 | 2026-11-04 | Collect on next BV visit if not in T-619 survey, then reply to the manufacturer |
 | T-641 | Ballard: check how smart card #0012 (new H-mart point card, GBK) scans on POS. Created 11/04 | BL | #pos | 할 일 | 2026-11-04 | Requested by user 11/04 |
-| M-bv-acct-pc | BV accounting PC: install remote-support program + attach PC label (new 11/03) | BV | #hardware #support | 끝 | 2026-11-03 | DameWare installed on USWAHBVD02 (11/03). Label was already attached |
 | T-585 | 새 CS 컴퓨터 세팅 | BV | #hardware | 할 일 | 2026-10-15 | |
 | T-565 | PIN Pad Tap 스티커 붙이기 | BV | #pos | 할 일 | 2026-09-20 ⏸ | 진행: BV 방문 때 T-624와 함께 (11/03) |
 | T-438 | POS 저울 유선 설치 | BV(구) | #pos | 진행 | 2026-11-03 | 아직 남음 (11/03 확인). Scales needing wired link: seafood FISH70, FISH71; meat MEAT73; produce PROD76 (11/03). Survey done 11/03; install = separate visit, schedule TBD |
-| T-368 | bypass PDU/UPS 설치 | BV(구) | #infra | 끝 | 2026-11-03 | Resolved 11/03 |
-| T-323 | 델리 저울 head 이상 | BV(구) | #pos | 취소 | 2026-11-03 | Cancelled 11/03 (구매장, 새 저울 CAS로 바뀜) |
 | T-500 | Lumen 회선 개통 | BV(구) | #network | 진행 | 2026-11-03 | 아직 남음. Lumen 연락 없음 → Lumen에 재스케줄 확인 필요 (11/03) |
 | T-606 | 델리 저울 고장 | LW | #pos | 진행 | 2026-11-04 | 11/04: 2 repaired scales delivered & set up; 1 still faulty (label feed fails, gap not detected mid-roll) → send back to InStore for re-repair. Keep open |
 | T-486 | 델리 저울 연결 문제 | LW | #pos | 끝 | 2026-11-04 | Same issue as T-606, resolved 11/04. Close in STWS |
@@ -47,17 +40,13 @@
 | T-600 | Comcast BB 연결 지원·카메라 설치 설계 | IQ | #network | 진행 | 2026-10-15 | |
 | T-461 | 2번 스위치 33번 포트 CRC 에러 | RM | #network | 진행 | 2026-08-13 ⏸ | 미루기: 원격 확인 가능하면 진행 (11/03) |
 | T-340 | 광 네트워크 연장 | RM | #network | 진행 | 2026-07-17 ⏸ | 미루기: 공사 건 (11/03) |
-| T-437 | 델리 저울 DB 확인 | RM | #pos | 끝 | 2026-11-03 | Resolved 11/03 |
 | T-302 | VoIP/전화 빌링 정리 | RM | #phone | 진행 | 2026-08-03 ⏸ | 미루기: 서류 일 (11/03) |
 | T-392 | PC 이동 지원 | RM | #hardware | 기다림(재요청) | 2026-11-03 | Pending 11/03: 케이블 공사 필요, 보류. 다시 요청 오면 시작 |
-| T-268 | 수산부 저울 2대 동시 이상 | FW | #pos | 끝 | 2026-11-03 | Resolved 11/03 |
 | T-223 | Extra UPS 설치 | FW | #infra | 기다림(?) | 2026-06-16 ⏸ | 미루기 (11/03) |
 | T-569 | PC 부팅/화면 안 나옴 | M2M | #hardware | 할 일 | 2026-10-08 | |
 | T-385 | DHCP 이상 | CP | #network | 진행 | 2026-11-03 | 아직 남음: 네트워크 물리 분리 필요 (11/03 확인) |
 | T-295 | 본부 인터넷 속도 증가 | 본부 | #network | 기다림(?) | 2026-10-22 | 업체 재확인 |
 | T-285 | 본부 인터넷 미지불 비용 | 본부 | #network | 진행 | 2026-06-26 ⏸ | 진행: T-295와 함께 업체 확인 (11/03) |
-| T-493 | 신입 사원 PC 세팅 | NWHQs | #hardware | 끝 | 2026-11-03 | Resolved 11/03 |
-| T-402 | 새 데스크탑 PC 설정 | NWHQs | #hardware | 끝 | 2026-11-03 | Resolved 11/03 |
 | T-439 | 원격 프로그램 권한 추가 | 사업본부 | #software | 진행 | 2026-09-22 ⏸ | 확인 (11/03) |
 | M-wifi | 데스크탑용 Wifi 어댑터 구입 | ? | #hardware | 진행 | 2026-10-22 | 티켓 없음 (log 2026-11-02) |
 | M-granite | Granite 계정 생성 | — | #network | 진행 | 2026-10-19 | 티켓 없음 (log 2026-11-02) |

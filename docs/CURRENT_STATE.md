@@ -4,6 +4,7 @@
 - 릴리스 없음
 
 ## B. 브랜치·진행 중
+- Handoff 2026-11-05 (local, shared account): next session starts usasia_db phase 0 build (H-db). User decisions so far: D-20261105-2..6. Note: this PC's shared Claude account = user team, but until detection is built CLAUDE.local.md still loads hmlee settings
 - Handoff 2026-11-04 local → cloud. For the cloud session (Drive connector):
   1. Drive address book: ~30 approved contacts queued in docs/users/hmlee/todo.md M-contact (Granite/Leverage/Lumen/Comcast/vendors, 박상후, Jason Chung). Emails must come from the original mail → write a 90_변경대기 batch only for those whose email you can get; list the rest
   2. Drive 00_profile: add job title 사원 (STWS permission Manager), supervisor Dan Choi (최철룡), Git repository admin (copy is docs/users/hmlee/profile.md)
