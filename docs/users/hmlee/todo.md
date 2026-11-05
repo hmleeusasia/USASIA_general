@@ -20,7 +20,7 @@
 상태: 할 일 / 진행 / 기다림(대상) / 끝 / 취소 · 움직임 = 마지막 업데이트(STWS 또는 기록) · ⏸ = 30일 넘게 안 움직임
 | ID | 할 일 | 매장 | 분야 | 상태 | 움직임 | 다음 |
 |---|---|---|---|---|---|---|
-| M-dh-deli-scale | DH deli scale under repair. Loaner: spare scale meant for FW, used at DH until repair is done (decided 11/05) | DH·FW | #pos #hardware | 진행 | 2026-11-05 | Set up loaner (PLU/DB, network, label) → when repaired: swap back, deliver spare to FW |
+| M-dh-deli-scale | DH deli scale under repair. Loaner: spare scale meant for FW, used at DH until repair is done (decided 11/05) | DH·FW | #pos #hardware | 진행 | 2026-11-05 | Set up loaner → drop DH scale for repair next week (back ~2 wks later, est.) → swap back, spare to FW. STWS ticket not yet: create on local PC (draft in 11/05 log) |
 | M-bl-meat-port | Ballard meat dept wall port PP04 D-01 suspected bad (found 11/05). Replace Cat6 RJ45 keystone and test link | BL | #network | 할 일 | 2026-11-05 | Bring Cat6 keystone + punch tool; replace, then test (cable tester / scale link) |
 | M-label-paper | Return label printer paper (1 box) that BV borrowed from Ballard: pick up at BV, deliver to Ballard | BV·BL | #hardware | 할 일 | 2026-11-05 | Next BV visit → bring to Ballard |
 | M-uw-grabgo-cable | UW Grab Go estimate = UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Estimate received 11/03 (Outlook) | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
