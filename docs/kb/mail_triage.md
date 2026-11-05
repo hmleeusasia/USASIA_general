@@ -16,6 +16,7 @@
 ## 0. 내 범위 (사용자 확인 후 채움)
 - 담당: 서북미 H Mart IT 전반 — 네트워크, low voltage, 인프라, POS(일부), 필드 엔지니어 (2026-11-02)
 - 담당 아님(참고, 우선 높음): IT 조직 일 — 개발(James Yoo), Help Desk(Fellix Lyu), 네트워크·서버·인프라 본사 쪽(Andy Han)
+- IT team member mail (incl. Dan Choi, Tommy Song): besides the log, add a row to docs/team/<name>.md (context + "Ask when they join"). Summaries only, R-SEC-01..05 still apply (user 2026-11-05, D-20261105-7)
 - 결정권자: Dan Choi 부장 (총괄)
 - 메일함 용도: 미확인 (Gmail=seoultradingusa.com, Outlook=usasia.com, 인트라넷=newintra)
 - 완료 기준: 메일은 진행 상황 파악용. 업무 완료 기준은 앞으로 함께 정함 → 지금은 "어떤 업무와 관련된 건지" 추측만 붙인다

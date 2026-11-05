@@ -10,6 +10,7 @@
 | Open / overdue items | `python3 tools/find.py --open` |
 | Next 30 days | `python3 tools/find.py --due` |
 | Drive documents | docs/drive-index/INDEX.md |
+| IT team member context / questions for them | docs/team/INDEX.md (D-20261105-7) |
 | Plans in progress | docs/requests/ |
 | Emails, phones, account numbers | Drive Claude folder → docs/drive-index/claude-folder.md (IDs and column names only) |
 | Users / personal settings | docs/users/INDEX.md |
