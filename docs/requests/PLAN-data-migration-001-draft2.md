@@ -1,5 +1,5 @@
 # PLAN data-migration-001 draft2 — moving work data from this repo to usasia_db
-Status: draft2 (2026-11-05), approved by the user → D-20261105-3. draft1 written by Sonnet A; reviewed by a fresh Sonnet B in 2 rounds (objections accepted except "logs and drive index stay in git", settled as below). Owner: hmlee + Claude. Follows D-20261104-5, D-20261105-1, D-20261105-2. Sections 1-3 and 6 are the draft1 survey (inventory, dependency map, entities, risks); the section "Agreed scope" below overrides draft1 sections 4 and 5.
+Status: draft2 (2026-11-05), approved by the user → D-20261105-3. draft1 written by Sonnet A; reviewed by a fresh Sonnet B in 2 rounds (objections accepted except "logs and drive index stay in git", settled as below). Owner: hmlee + Claude. Follows D-20261104-5, D-20261105-4, D-20261105-2. Sections 1-3 and 6 are the draft1 survey (inventory, dependency map, entities, risks); the section "Agreed scope" below overrides draft1 sections 4 and 5.
 Sensitive-value scan of all tracked files: no email addresses, phone numbers or IP addresses found (emails were redacted by D-34). See "Findings" at the end.
 
 ## Agreed scope (draft2, overrides sections 4 and 5)

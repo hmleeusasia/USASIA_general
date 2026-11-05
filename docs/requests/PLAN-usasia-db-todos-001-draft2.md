@@ -1,5 +1,5 @@
 # PLAN usasia-db-todos-001 draft2 — todos table and pages in usasia_db
-Status: draft2 (2026-11-05), approved by the user → D-20261105-1. draft1 reviewed by a fresh Sonnet (objections accepted except the is_private rename). Owner: hmlee (requirements) + Claude (code). Follows D-20261104-5. App repo: C:\USASIA Claude\usasia_db.
+Status: draft2 (2026-11-05), approved by the user → D-20261105-4. draft1 reviewed by a fresh Sonnet (objections accepted except the is_private rename). Owner: hmlee (requirements) + Claude (code). Follows D-20261104-5. App repo: C:\USASIA Claude\usasia_db.
 
 ## Table `todos`
 | Column | Type | todo.md source | Notes |

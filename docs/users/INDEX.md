@@ -14,3 +14,4 @@
 3. 자기 구글 드라이브에 Claude 폴더(비공개, 상속 권한 끔) 만들고, 그 안에 00_profile 시트(항목·값·비고, 원본)를 만들고, 폴더 ID를 profile.md(사본)에
 4. 개인 skill은 `.claude/skills/<아이디>-<이름>/`, 설명에 "<아이디> 전용"
 5. Once per clone/PC, turn on the pre-commit backstop: `git config core.hooksPath tools/githooks` (tools/hooks/README.md, D-20261103-6)
+6. Cloud sessions (claude.ai/code): in the cloud environment, Edit → Network access → Allowed domains add `usasia-it.duckdns.org`; the default policy blocks it (403 on CONNECT, tested 2026-11-05, D-20261105-3)
