@@ -51,7 +51,14 @@
 | M-wifi | 데스크탑용 Wifi 어댑터 구입 | ? | #hardware | 진행 | 2026-10-22 | 티켓 없음 (log 2026-11-02) |
 | M-granite | Granite 계정 생성 | — | #network | 진행 | 2026-10-19 | 티켓 없음 (log 2026-11-02) |
 | T-637 | NWHQs PC 이동: 2층 PC → 1층, 1층 대기 PC 설치, 1층 사용 중 PC → 2층. 새 직원 오기 전. 요청 인신희 HR 팀장 | NWHQs | #hardware #install | 할 일 | 2026-11-03 | 기한 2026-11-30 |
-| T-638 | LW 2층 사무실에 보관된 고장 저울 정리: Tommy Song(송대호) 님과 상의 → 필요한 부품 확보 → 폐기. 요청 Chris Kim 총무 | LW | #pos #hardware #asset | 할 일 | 2026-11-03 | 다음: 송대호 님과 상의 |
+| T-638 | LW 2층 사무실에 보관된 고장 저울 정리: Tommy Song(송대호) 님과 상의 → 필요한 부품 확보 → 폐기. 요청 Chris Kim 총무 | LW | #pos #hardware #asset | 진행 | 2026-11-05 | 11/05 chat: Tommy Song saw it; scope = all scrapped scales (incl. BV Ishida scales, already brought to the office): keep useful parts, dispose the rest. Plan with Tommy's Seattle trip (Nov) |
+| M-gfc-voip | Meat plant (정육공장, GFC?) VoIP phones down since the server-rack cleanup; cause = dead AP (wireless), not the rack work | 정육공장 | #phone #network | 할 일 | 2026-11-05 | Urgent (11/05 chat). Tommy Song offers to fix on his Seattle trip; confirm current state first. No ticket |
+| M-rm-wired | Redmond: new wired internet service — modem (coax) installed in 1F mechanical room, but not connected to the demarc/66 block. We must run the line modem → 66 block, then switch over and test | RM | #network #install | 할 일 | 2026-11-05 | Not visited yet. Visit: take a photo for Tommy Song (he asked; unclear if 66 block reaches the server room / if this is the main line). No ticket |
+| M-m2m-pos | M2M POS move: network integration + likely cable run — the parts the POS vendor can't do | M2M | #pos #network | 할 일 | 2026-11-05 | Survey the site first. Candidate for Tommy Song's Nov Seattle schedule. No ticket |
+| M-fw-security | ⚠ FW security incident (hacking): DVR/NVR still online; only password and settings changed, no follow-up instruction from Dan Choi. Firewall block in/out said done; Fortinet side unknown | FW | #security | 기다림(Dan Choi) | 2026-11-05 | Tommy Song: block inbound/outbound at the firewall, block monitoring-room access until clear, remove DNS (DDNS?) entry — confirm with Dan Choi. No ticket |
+| M-mw-pos-price | MW POS price-change issue: no answer from the POS vendor to me; Dan Choi may know | MW | #pos | 기다림(Dan Choi) | 2026-11-05 | Ask Dan Choi (Tommy Song asked 11/05). No ticket |
+| M-co-ap-port | Westminster (CO): AP port change still needed (lift, 2 people, guide needed in a tight store; lift is at Aurora, moving it is the issue) + scale setting change (price over $100) | Westminster CO | #network #pos | 할 일 | 2026-11-05 | Tommy Song may do it on the Dec Denver trip. Proj: Seoul Trading Network Upgrade. No ticket |
+| M-tommy-list | Give Tommy Song a work list for his Nov Seattle trip (he is setting the schedule with Dan Choi; Dec = Denver) | — | #general | 할 일 | 2026-11-05 | So far: T-638 scales, meat plant VoIP, RM wired line, M2M POS move. Send when list is ready |
 
 ## 3. Follow-ups without a ticket (moved from CURRENT_STATE C, 2026-11-03)
 | ID | Item | Status | Who |
