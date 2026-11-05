@@ -179,6 +179,12 @@ def main():
         shutil.move(CFG + ".bak", CFG)
     bad += stop_tests()
     bad += area_tests()
+    import glob, tempfile
+    for f in glob.glob(os.path.join(tempfile.gettempdir(), "usasia_*test*")):  # no test state left behind
+        try:
+            os.remove(f)
+        except OSError:
+            pass
     dg = subprocess.run([sys.executable, os.path.join(HERE, "digest.py"), "--print"], capture_output=True, timeout=60)
     dok = dg.returncode == 0 and dg.stdout.decode("utf-8", "replace").startswith("[digest]")
     print(f"{'ok ' if dok else 'FAIL'} digest --print")

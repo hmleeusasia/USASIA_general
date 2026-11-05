@@ -9,7 +9,8 @@ import tempfile
 if __name__ == "__main__":
     sid = sys.argv[1] if len(sys.argv) > 1 else None
     if not sid:
-        files = glob.glob(os.path.join(tempfile.gettempdir(), "usasia_heavy_*.json"))
+        files = [f for f in glob.glob(os.path.join(tempfile.gettempdir(), "usasia_heavy_*.json"))
+                 if "test" not in os.path.basename(f)]  # test_hooks.py sessions are named test-*/stoptest-*
         if not files:
             sys.exit("No heavy-state file found: nothing to mark (no repo writes this session?)")
         sid = os.path.basename(max(files, key=os.path.getmtime))[len("usasia_heavy_"):-len(".json")]
