@@ -33,3 +33,4 @@
 - pos_tips.md — Toshiba POS on-site fixes (error codes)
 - work_overview.md — Work streams from sent mail Aug–Oct 2026 (Outlook)
 - browser.md — Chrome use with small context (JS first, no computer scroll, output limits)
+- field_media.md — Where chat photos/files go in Drive, naming, linking, shared-drive move plan (D-20261105-9)
