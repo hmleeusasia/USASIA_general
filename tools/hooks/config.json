@@ -1,5 +1,5 @@
 {
-  "_doc": "Per-rule mode: off | warn | block. Plan: docs/requests/PLAN-lean-context-001-draft2.md section 3. Step 7 (~11/17): judge remaining warn rules by false positives in hits.log from real use (tests set HOOKS_TEST and do not log). log-path / users-unknown: decide after a teammate joins (D-20261103-7).",
+  "_doc": "Per-rule mode: off | warn | block. Plan: docs/requests/PLAN-lean-context-001-draft2.md section 3. Step 7 (~11/17): judge remaining warn rules by false positives in hits.log from real use (tests set HOOKS_TEST and do not log). log-path / users-unknown: decide after a teammate joins (D-20261103-7). area-keyword/area-read (warn) and heavy-review (block once per session): PLAN-rule-routing-001-draft2, D-20261104-2. 'ids' maps hook rule names to docs/rules IDs.",
   "rules": {
     "probe": "off",
     "digest": "warn",
@@ -13,6 +13,15 @@
     "rm-docs": "block",
     "budget": "off",
     "stop-state": "block",
-    "stop-open": "block"
+    "stop-open": "block",
+    "area-keyword": "warn",
+    "area-read": "warn",
+    "heavy-review": "block"
+  },
+  "ids": {
+    "sens-email": "R-SEC-03",
+    "sens-secret": "R-SEC-04",
+    "sens-soft": "R-SEC-02",
+    "log-path": "R-LOG-01"
   }
 }

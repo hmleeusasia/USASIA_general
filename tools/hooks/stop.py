@@ -2,6 +2,8 @@
 Only looks at files written this turn (touch.py). Checks:
   stop-state: CURRENT_STATE.md over 80 lines
   stop-open : a #open/#waiting log heading with a T-ID that is not on any todo board (D-20261103-8)
+  heavy-review: this session touched heavy paths (or > 5 repo files) and no review marker exists
+                (review-loop skill -> review_mark.py). Blocks once per session (D-20261104-2 decision i)
 Exit 0 when stop_hook_active (never loops). Does NOT check uncommitted work (session-end skill does).
 Does not run when the user interrupts (tested step 0) — pre-commit is the backstop."""
 import json
@@ -11,7 +13,31 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import read_input, mode, log  # noqa: E402
-from touch import load, state_file  # noqa: E402
+from touch import load, state_file, load_heavy, heavy_file  # noqa: E402
+import tempfile  # noqa: E402
+
+HEAVY = re.compile(r"^(tools/hooks/|docs/rules/|\.claude/skills/review-loop/|CLAUDE\.md$)")
+
+
+def review_marker(session):
+    return os.path.join(tempfile.gettempdir(), f"usasia_review_{session or 'x'}")
+
+
+def heavy_problem(session):
+    h = load_heavy(session)
+    files = h.get("files", [])
+    hits = [f for f in files if HEAVY.match(f)]
+    if mode("heavy-review") != "block" or h.get("warned") or not (hits or len(files) > 5)             or os.path.exists(review_marker(session)):
+        return None
+    h["warned"] = True
+    try:
+        json.dump(h, open(heavy_file(session), "w", encoding="utf-8"))
+    except Exception:
+        pass
+    why = ", ".join(hits[:4]) if hits else f"{len(files)} repo files"
+    return ("heavy-review", f"Heavy work this session without a post-build review ({why})",
+            "If the heavy work is finished, run the review-loop skill (fresh Sonnet, diff + rule files). "
+            "If it is still in progress, continue; this reminder is shown once per session.")
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 
@@ -59,7 +85,8 @@ if __name__ == "__main__":
         if d.get("stop_hook_active"):
             sys.exit(0)
         msgs = []
-        for rule, line, fix in problems(files):
+        hp = heavy_problem(s)
+        for rule, line, fix in problems(files) + ([hp] if hp else []):
             md = mode(rule)
             if md == "off":
                 continue

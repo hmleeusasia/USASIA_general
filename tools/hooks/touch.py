@@ -15,6 +15,18 @@ def state_file(session):
     return os.path.join(tempfile.gettempdir(), f"usasia_touch_{session or 'x'}.json")
 
 
+def heavy_file(session):
+    """Cumulative per-session list (heavy-review in stop.py); never cleared by stop.py."""
+    return os.path.join(tempfile.gettempdir(), f"usasia_heavy_{session or 'x'}.json")
+
+
+def load_heavy(session):
+    try:
+        return json.load(open(heavy_file(session), encoding="utf-8"))
+    except Exception:
+        return {"files": [], "warned": False}
+
+
 def load(session):
     try:
         return json.load(open(state_file(session), encoding="utf-8"))
@@ -33,6 +45,10 @@ if __name__ == "__main__":
             if p not in files:
                 files.append(p)
                 json.dump(files, open(state_file(s), "w", encoding="utf-8"))
+            h = load_heavy(s)
+            if p not in h["files"]:
+                h["files"].append(p)
+                json.dump(h, open(heavy_file(s), "w", encoding="utf-8"))
     except Exception:
         pass
     sys.exit(0)

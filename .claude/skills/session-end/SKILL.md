@@ -8,6 +8,7 @@ description: Session wrap-up and handoff. Every session — check.py, open items
 ## A. Every session (light — keep it short)
 1. `python3 tools/prune.py --apply` (closed todo rows, past Now rows, closed questions → docs/archive; D-20261104-3), `python3 tools/repo_map.py` (refreshes docs/ARCHITECTURE.md snapshot), then `python3 tools/check.py` passes (Stop hook already blocks: CURRENT_STATE > 80 lines, open T-IDs missing from the board — tools/hooks/stop.py)
 2. Open items (#open/#waiting) → docs/users/<id>/todo.md (personal work); CURRENT_STATE C holds repo/framework items only, changed sections only. New lasting fact → kb/facts.md (with date); new hard-to-reverse decision → append to decisions.md (never read it whole: grep the ID, or read the last 5 lines for the next number); new org → kb/orgs.md
+2a. Heavy work this session (tools/hooks, CLAUDE.md, docs/rules, skills, > 5 files) not yet reviewed → review-loop skill before committing (D-20261104-2)
 3. Report in a few lines: what was done, what is left or unverified. **No framework-change or inefficiency tables here** — note friction as one line in docs/projects/ai-system-questions.md instead
 4. Commit → push by work place: local `git pull --rebase origin main` then `git push origin main`; cloud: push the claude/* branch, then `git fetch origin main && git checkout -B main origin/main && git merge --ff-only <branch> && git push origin main` (stop and tell the user if not fast-forward)
 

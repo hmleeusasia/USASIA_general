@@ -6,6 +6,8 @@ import os
 import shutil
 import subprocess
 import sys
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CFG = os.path.join(HERE, "config.json")
@@ -92,6 +94,74 @@ def stop_tests():
     return bad
 
 
+def area_tests():
+    """area.py: keyword pointer once, read clears path warning, unread write warns once; heavy-review."""
+    import tempfile
+    root = os.path.dirname(os.path.dirname(HERE)).replace("\\", "/")
+    env = dict(os.environ, HOOKS_TEST="1")
+    sid = f"test-area-{os.getpid()}"
+
+    def area(inp):
+        r = subprocess.run([sys.executable, os.path.join(HERE, "area.py")],
+                           input=json.dumps(dict(inp, session_id=sid)).encode("utf-8"), capture_output=True, env=env, timeout=20)
+        return r.stdout.decode("utf-8", "replace")
+
+    bad = 0
+    checks = [
+        ("keyword 출발 → expense", {"hook_event_name": "UserPromptSubmit", "prompt": "출발"}, "expense.md"),
+        ("keyword again → silent", {"hook_event_name": "UserPromptSubmit", "prompt": "도착"}, ""),
+        ("no keyword → silent", {"hook_event_name": "UserPromptSubmit", "prompt": "BV 프린터 로그인 확인"}, ""),
+        ("unread log write → warn", {"hook_event_name": "PreToolUse", "tool_name": "Write",
+                                    "tool_input": {"file_path": root + "/docs/log/2026/2026-11-04_hmlee.md"}}, "log.md"),
+        ("second log write → silent", {"hook_event_name": "PreToolUse", "tool_name": "Write",
+                                      "tool_input": {"file_path": root + "/docs/log/2026/2026-11-05_hmlee.md"}}, ""),
+    ]
+    for name, inp, want in checks:
+        out = area(inp)
+        ok = (want in out) if want else (out.strip() == "")
+        bad += not ok
+        print(f"{'ok ' if ok else 'FAIL'} area {name}")
+    sid2 = sid + "b"
+    sid_save = sid
+    sid = sid2
+    area({"hook_event_name": "PostToolUse", "tool_name": "Read", "tool_input": {"file_path": root + "/docs/rules/log.md"}})
+    out = area({"hook_event_name": "PreToolUse", "tool_name": "Edit",
+                "tool_input": {"file_path": root + "/docs/stores/bv.md"}})
+    ok = out.strip() == ""
+    bad += not ok
+    print(f"{'ok ' if ok else 'FAIL'} area read via Read → no warn")
+    for s in (sid_save, sid2):
+        try:
+            os.remove(os.path.join(tempfile.gettempdir(), f"usasia_area_{s}.json"))
+        except OSError:
+            pass
+
+    # heavy-review: hooks edit without marker → block once; decisions.md only → pass; with marker → pass
+    def stop_run(s, files):
+        json.dump({"files": files, "warned": False}, open(os.path.join(tempfile.gettempdir(), f"usasia_heavy_{s}.json"), "w"))
+        r = subprocess.run([sys.executable, os.path.join(HERE, "stop.py")],
+                           input=json.dumps({"session_id": s}).encode("utf-8"), capture_output=True, env=env, timeout=20)
+        return r.stdout.decode("utf-8", "replace")
+    hs = f"test-heavy-{os.getpid()}"
+    cases = [("heavy hooks edit → block", hs + "1", ["tools/hooks/x.py"], None, True),
+             ("decisions only → pass", hs + "2", ["docs/decisions.md"], None, False),
+             ("heavy with marker → pass", hs + "3", ["CLAUDE.md"], True, False)]
+    for name, s, files, marker, want in cases:
+        mk = os.path.join(tempfile.gettempdir(), f"usasia_review_{s}")
+        if marker:
+            open(mk, "w").write("x")
+        out = stop_run(s, files)
+        ok = ("heavy-review" in out) == want
+        bad += not ok
+        print(f"{'ok ' if ok else 'FAIL'} {name}")
+        for f in (mk, os.path.join(tempfile.gettempdir(), f"usasia_heavy_{s}.json")):
+            try:
+                os.remove(f)
+            except OSError:
+                pass
+    return bad
+
+
 def main():
     shutil.copy(CFG, CFG + ".bak")
     try:
@@ -108,11 +178,12 @@ def main():
     finally:
         shutil.move(CFG + ".bak", CFG)
     bad += stop_tests()
+    bad += area_tests()
     dg = subprocess.run([sys.executable, os.path.join(HERE, "digest.py"), "--print"], capture_output=True, timeout=60)
     dok = dg.returncode == 0 and dg.stdout.decode("utf-8", "replace").startswith("[digest]")
     print(f"{'ok ' if dok else 'FAIL'} digest --print")
     bad += not dok
-    total = len(CASES) + 1 + 4  # guard cases + digest + stop cases
+    total = len(CASES) + 1 + 4 + 6 + 3  # guard cases + digest + stop + area + heavy
     print(f"\n{total - bad}/{total} passed")
     sys.exit(1 if bad else 0)
 

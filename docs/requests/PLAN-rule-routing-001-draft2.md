@@ -40,9 +40,9 @@ Rules grow without bloating always-loaded md. Before work, only the rules the ta
 |---|---|---|---|
 | 1 | INDEX + security, log, expense (incl. mileage) area files from existing text; CLAUDE.md trim + pointer; guard/check SKIP for docs/rules; Appendix A filled with fingerprints. **Reviewed by fresh Sonnet manually** (subagents.md §3), since review-loop does not exist yet | heavy | done 2026-11-04 (freeze exception approved for the whole PLAN) |
 | 2 | check.py checks (1)–(5) done 11/04 (fingerprint check (6) still manual) | light | done 2026-11-04 |
-| 3 | review-loop skill + review_mark.py | light | now (freeze exception) |
-| 4 | area.py (keyword + path) warn, local settings only; 1 week hits.log | light | now (freeze exception) |
-| 5 | stop.py heavy-review (block once) | light | after 3 |
+| 3 | review-loop skill + review_mark.py | light | done 2026-11-04 |
+| 4 | area.py (keyword + path) warn, local settings only; 1 week hits.log | light | done 2026-11-04 (measure until ~11/11) |
+| 5 | stop.py heavy-review (block once) | light | done 2026-11-04 |
 | 6 | Move remaining rules as files are edited | ongoing | by 2026-12-31 |
 | 7 | Evaluate: misses, false warnings, chars read per task | light | ~2 weeks after 4 |
 
