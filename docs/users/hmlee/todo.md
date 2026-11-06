@@ -9,7 +9,8 @@
 | 11/06 | T-644 | EGMM Meraki MX drop: check uplink / ISP modem, reply to Andy Han | EGMM |
 | next BL visit | M-bl-meat-port | Replace Cat6 keystone on meat dept port PP04 D-01, test | BL |
 | next BV visit | M-label-paper | Pick up label paper at BV → return to Ballard | BV→BL |
-| after DH repair | M-dh-deli-scale | Spare scale back from DH → deliver to FW | FW |
+| after DH repair | M-lw-pc2 | LW: buy 2 new PCs, set up on 11/11 visit; check deli scales same day | LW | #hardware #pos | 할 일 | 2026-11-06 | Buy 2 PCs; create STWS ticket (local session) |
+| M-dh-deli-scale | Spare scale back from DH → deliver to FW | FW |
 | Any | M-wifi, M-granite, T-295+T-285 | Wi-Fi adapter, Granite account, EGMM internet vendor | office |
 
 ## 2. 전체 목록
