@@ -15,10 +15,10 @@
 상태: 할 일 / 진행 / 기다림(대상) / 끝 / 취소 · 움직임 = 마지막 업데이트(STWS 또는 기록) · ⏸ = 30일 넘게 안 움직임
 | ID | 할 일 | 매장 | 분야 | 상태 | 움직임 | 다음 |
 |---|---|---|---|---|---|---|
-| M-dh-deli-scale | DH deli scale under repair. Loaner: spare scale meant for FW, used at DH until repair is done (decided 11/05) | DH·FW | #pos #hardware | 진행 | 2026-11-05 | Set up loaner → drop DH scale for repair next week (back ~2 wks later, est.) → swap back, spare to FW. STWS ticket not yet: create on local PC (draft in 11/05 log) |
+| M-dh-deli-scale | DH deli scale under repair. Loaner: spare scale meant for FW, used at DH until repair is done (decided 11/05) | DH·FW | #pos #hardware | 진행 | 2026-11-05 | 11/05 loaner in, old scale unplugged beside it (log 11-06). Watch a few days → send old scale for repair → swap back, spare to FW. STWS ticket not yet (draft in 11/05 log) |
 | M-bl-meat-port | Ballard meat dept wall port PP04 D-01 suspected bad (found 11/05). Replace Cat6 RJ45 keystone and test link | BL | #network | 할 일 | 2026-11-05 | Bring Cat6 keystone + punch tool; replace, then test (cable tester / scale link) |
 | M-label-paper | Return label printer paper (1 box) that BV borrowed from Ballard: pick up at BV, deliver to Ballard | BV·BL | #hardware | 할 일 | 2026-11-05 | Next BV visit → bring to Ballard |
-| M-uw-grabgo-cable | UW Grab Go estimate = UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Estimate received 11/03 (Outlook) | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
+| M-uw-grabgo-cable | UW Grab Go estimate = UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Estimate received 11/03 (Outlook) | UW | #network #vendor | 할 일 | 2026-11-04 | Not done 11/05 (checked 11/06). Review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Survey done 11/03. STWS In progress (11/04, user): parent cannot be set to Resolved while subtask T-640 is open (tried 11/04). Resolve after T-640 |
 | M-bv-printer | BV: 1st-floor printer drops connection often — investigate (new request 11/03). Ticket needed? | BV | #hardware #network | 대기 | 2026-11-03 | 11/03: no problem seen on site. Re-check next BV visit (wired/Wi-Fi, IP, sleep, port) |
 | T-640 | BV: send POS manufacturer serial numbers per lane for receipt printer, cashier touch screen, scanner scale (manufacturer request, name TBD). Subtask of T-619, created 11/04 | BV | #pos #asset | 할 일 | 2026-11-04 | Collect on next BV visit if not in T-619 survey, then reply to the manufacturer |
@@ -28,18 +28,18 @@
 | T-438 | POS 저울 유선 설치 | BV(구) | #pos | 진행 | 2026-11-03 | 아직 남음 (11/03 확인). Scales needing wired link: seafood FISH70, FISH71; meat MEAT73; produce PROD76 (11/03). Survey done 11/03; install = separate visit, schedule TBD |
 | T-500 | Lumen 회선 개통 | BV(구) | #network | 진행 | 2026-11-03 | 아직 남음. Lumen 연락 없음 → Lumen에 재스케줄 확인 필요 (11/03) |
 | T-606 | 델리 저울 고장 | LW | #pos | 진행 | 2026-11-04 | 11/04: 2 repaired scales delivered & set up; 1 still faulty (label feed fails, gap not detected mid-roll) → send back to InStore for re-repair. Keep open |
-| T-652 | LW: EX99 scale (repaired, reinstalled) does not receive PLU price data sent from the program. Visit and inspect. Subtask of T-606, created 11/05 | LW | #pos #hardware | 할 일 | 2026-11-05 | Visit LW |
-| T-653 | LW: other repaired scale — label feed still fails (gap not detected mid-roll, 11/04). Send back to InStore for re-repair. Subtask of T-606, created 11/05 | LW | #pos #hardware #vendor | 할 일 | 2026-11-05 | Arrange InStore pickup |
+| T-652 | LW: EX99 scale (repaired, reinstalled) does not receive PLU price data sent from the program. Visit and inspect. Subtask of T-606, created 11/05 | LW | #pos #hardware | 할 일 | 2026-11-05 | 11/05: asked LW to swap back to the old scale for now. Next LW visit: inspect; send for repair if needed |
+| T-653 | LW: other repaired scale — label feed still fails (gap not detected mid-roll, 11/04). Send back to InStore for re-repair. Subtask of T-606, created 11/05 | LW | #pos #hardware #vendor | 진행 | 2026-11-05 | 11/05: scale brought back from LW (with hmlee), not yet handed to InStore for repair. Next: hand to InStore |
 | T-579 | CS PC 교체 | LW | #hardware | 기다림(매장 구매) | 2026-11-04 | 11/04: store will buy new PCs → set up 2 new PCs (likely 1 store manager, 1 accounting — to confirm; spec given to store 11/04: Windows 11 Pro, 32GB RAM), then set up a leftover PC for CS |
 | T-515 | 레이블 PC 파일 이상 | LW | #hardware | 할 일 | 2026-09-08 ⏸ | 진행: 이번 주 LW 방문 때 (11/03) |
 | M-glw-scale-repair | GLW: send 1 extra Ishida scale for repair to InStore Technology (new 11/04). Ticket needed | GLW | #pos #vendor | 할 일 | 2026-11-04 | Create STWS ticket; arrange InStore pickup/repair |
 | M-glw-touch | GLW: PC touchscreen phantom touches (ripple marks, random clicks, lost control) 11/04. Cause: touchscreen fault | GLW | #hardware | 할 일 | 2026-11-04 | Confirm fix (disable touch / replace monitor?) |
 | T-386 | 컴퓨터 구입·Laptop 세팅 | GLW | #hardware | 기다림(매장) | 2026-11-03 | Pending 11/03 |
 | T-603 | PC 급격히 느려짐 | MW | #hardware | 진행 | 2026-10-22 | 서브 T-639 |
-| T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-05 | 11/05 MW에서 설치 시작, 아직 안 끝남 → 남은 작업 마무리 |
-| T-375 | Wifi dead zone 확인·AP 추가 | MW | #network | 진행 | 2026-08-20 ⏸ | 진행: 오늘 MW에서 (11/03 판단) |
-| T-362 | NVR 앱 재설정: DH 카메라를 NVR 앱에서 MW와 함께 보기. 이준호 점장(MW·DH 겸임) 2026-11-03 재촉 | DH·MW | #security | 진행 | 2026-11-03 | 기한 2026-11-06(이번 주, 사용자 추정) |
-| T-600 | IQ temp cameras (Comcast BB, camera design) | IQ | #network #security | 기다림(ITSolution) | 2026-11-05 | New plan (2 entrance + 1 on 2F, AP link) sent to ITSolution 11/05; then reply to John Byun. Details: log 11-05 |
+| T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-05 | 11/05: basic setup done at MW. Left: POS program install, security software install, account setup |
+| T-375 | Wifi dead zone 확인·AP 추가 | MW | #network | 진행 | 2026-08-20 ⏸ | Not done at MW 11/05 (checked 11/06). Next MW visit |
+| T-362 | NVR 앱 재설정: DH 카메라를 NVR 앱에서 MW와 함께 보기. 이준호 점장(MW·DH 겸임) 2026-11-03 재촉 | DH·MW | #security | 진행 | 2026-11-05 | 기한 2026-11-06(사용자 추정). 11/05: DH NVR serial not found. Next: get the app name the store manager uses → test on own phone → if it works, set up again |
+| T-600 | IQ temp cameras (Comcast BB, camera design) | IQ | #network #security | 할 일 | 2026-11-06 | 11/06: ITSolution (Eric Kang) sent revised estimate (8MP camera price corrected; Wi-Fi mesh + 3 cameras) → review, reply to John Byun. Before: new plan (2 entrance + 1 on 2F, AP link) sent to ITSolution 11/05; then reply to John Byun. Details: log 11-05 |
 | T-461 | 2번 스위치 33번 포트 CRC 에러 | RM | #network | 진행 | 2026-08-13 ⏸ | 미루기: 원격 확인 가능하면 진행 (11/03) |
 | T-340 | 광 네트워크 연장 | RM | #network | 진행 | 2026-07-17 ⏸ | 미루기: 공사 건 (11/03) |
 | T-302 | VoIP/전화 빌링 정리 | RM | #phone | 진행 | 2026-08-03 ⏸ | 미루기: 서류 일 (11/03) |
