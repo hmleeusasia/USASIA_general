@@ -9,11 +9,6 @@
 | after DH repair | — | Spare scale back from DH → deliver to FW (was: picked up at InStore 11/03) | FW |
 | next BL visit | M-bl-meat-port | Replace RJ45 keystone (Cat6) on Ballard meat dept wall port PP04 D-01, then test | BL |
 | next BV visit | M-label-paper | Pick up 1 box of label printer paper at BV (borrowed from Ballard) → return to Ballard | BV→BL |
-| Thu 11/05 AM | M-uw-grabgo-cable | Review UW Grab Go (Deli) cable estimate (ITSolution) → store manager; create STWS ticket | UW |
-| Thu 11/05 Seattle | T-362 | NVR app: view DH cameras with MW (due 11/06) | DH·MW |
-| Thu 11/05 Seattle | T-639/T-603, T-375 | Install manager PC (arrived 11/03), Wi-Fi dead zone / AP | MW |
-| Thu 11/05 Seattle | T-641 | Smart card #0012 scan on POS | BL |
-| Thu 11/05 Seattle | T-647, M-m2m-bon, T-569 | POS move site survey, 2F Bon Restaurant internet, PC no boot | M2M |
 | Any | M-wifi, M-granite, T-295+T-285 | Wi-Fi adapter, Granite account, EGMM internet vendor | office |
 
 ## 2. 전체 목록
@@ -25,7 +20,6 @@
 | M-label-paper | Return label printer paper (1 box) that BV borrowed from Ballard: pick up at BV, deliver to Ballard | BV·BL | #hardware | 할 일 | 2026-11-05 | Next BV visit → bring to Ballard |
 | M-uw-grabgo-cable | UW Grab Go estimate = UW Deli (separate building across the street): extend 4 cables. Vendor: ITSolution (Eric Kang). Estimate received 11/03 (Outlook) | UW | #network #vendor | 할 일 | 2026-11-04 | Thu 11/05 AM: review quote → forward to store manager; create STWS ticket (UW- Deli cable 4 extension) |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Survey done 11/03. STWS In progress (11/04, user): parent cannot be set to Resolved while subtask T-640 is open (tried 11/04). Resolve after T-640 |
-| T-624 | POS 포인트 카드 테스트 (+ 하위 TICKET-635 smart card 스캔 테스트, James Yoo 생성 11/02) | BV | #pos | 끝 | 2026-11-04 | STWS Resolved 11/04 (user closes). BV 방문 때 함. 가기 전 James Yoo 과장님께 미리 연락. 블록한 스마트 포인트 카드가 POS에서 어떻게 막히고 찍히는지 + 미등록 smart card 스캔 시 POS 반응(11/03 추가) + 간단한 기타 테스트 |
 | M-bv-printer | BV: 1st-floor printer drops connection often — investigate (new request 11/03). Ticket needed? | BV | #hardware #network | 대기 | 2026-11-03 | 11/03: no problem seen on site. Re-check next BV visit (wired/Wi-Fi, IP, sleep, port) |
 | T-640 | BV: send POS manufacturer serial numbers per lane for receipt printer, cashier touch screen, scanner scale (manufacturer request, name TBD). Subtask of T-619, created 11/04 | BV | #pos #asset | 할 일 | 2026-11-04 | Collect on next BV visit if not in T-619 survey, then reply to the manufacturer |
 | T-641 | Ballard: check how smart card #0012 (new H-mart point card, GBK) scans on POS. Created 11/04 | BL | #pos | 할 일 | 2026-11-04 | Requested by user 11/04 |
@@ -36,10 +30,8 @@
 | T-606 | 델리 저울 고장 | LW | #pos | 진행 | 2026-11-04 | 11/04: 2 repaired scales delivered & set up; 1 still faulty (label feed fails, gap not detected mid-roll) → send back to InStore for re-repair. Keep open |
 | T-652 | LW: EX99 scale (repaired, reinstalled) does not receive PLU price data sent from the program. Visit and inspect. Subtask of T-606, created 11/05 | LW | #pos #hardware | 할 일 | 2026-11-05 | Visit LW |
 | T-653 | LW: other repaired scale — label feed still fails (gap not detected mid-roll, 11/04). Send back to InStore for re-repair. Subtask of T-606, created 11/05 | LW | #pos #hardware #vendor | 할 일 | 2026-11-05 | Arrange InStore pickup |
-| T-486 | 델리 저울 연결 문제 | LW | #pos | 끝 | 2026-11-04 | Same issue as T-606, resolved 11/04. Close in STWS |
 | T-579 | CS PC 교체 | LW | #hardware | 기다림(매장 구매) | 2026-11-04 | 11/04: store will buy new PCs → set up 2 new PCs (likely 1 store manager, 1 accounting — to confirm; spec given to store 11/04: Windows 11 Pro, 32GB RAM), then set up a leftover PC for CS |
 | T-515 | 레이블 PC 파일 이상 | LW | #hardware | 할 일 | 2026-09-08 ⏸ | 진행: 이번 주 LW 방문 때 (11/03) |
-| T-587 | 저울 문제 + PC 이동 지원 | GLW | #pos | 끝 | 2026-11-04 | Done 11/04: PC move + extra PC move/install, repaired scale installed, Soundtrack moved to new PC. Close in STWS |
 | M-glw-scale-repair | GLW: send 1 extra Ishida scale for repair to InStore Technology (new 11/04). Ticket needed | GLW | #pos #vendor | 할 일 | 2026-11-04 | Create STWS ticket; arrange InStore pickup/repair |
 | M-glw-touch | GLW: PC touchscreen phantom touches (ripple marks, random clicks, lost control) 11/04. Cause: touchscreen fault | GLW | #hardware | 할 일 | 2026-11-04 | Confirm fix (disable touch / replace monitor?) |
 | T-386 | 컴퓨터 구입·Laptop 세팅 | GLW | #hardware | 기다림(매장) | 2026-11-03 | Pending 11/03 |

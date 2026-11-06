@@ -4,6 +4,7 @@
 - 릴리스 없음
 
 ## B. 브랜치·진행 중
+- Handoff 2026-11-06 (local): framework session done — lookup rules (D-20261105-10), GLPI/master data (-11), account detection built but off (-12), tools per person (D-20261106-1). Next: user picks — onboarding PLAN approval, usasia_db phase 0, or field work (T-362, T-606 due 11/06)
 - Handoff 2026-11-05 (local, shared account): next session starts usasia_db phase 0 build (H-db). User decisions so far: D-20261105-2..6. Note: this PC's shared Claude account = user team, but until detection is built CLAUDE.local.md still loads hmlee settings
 - Handoff 2026-11-04 local → cloud. For the cloud session (Drive connector):
   1. Drive address book: ~30 approved contacts queued in docs/users/hmlee/todo.md M-contact (Granite/Leverage/Lumen/Comcast/vendors, 박상후, Jason Chung). Emails must come from the original mail → write a 90_변경대기 batch only for those whose email you can get; list the rest
@@ -22,6 +23,7 @@
 | H-hooks | Lean context + supervisor hooks (PLAN-lean-context-001-draft2, D-20261103-6): steps 0–6 done 11/03. Hooks only in hmlee `.claude/settings.local.json`. Next: step 7 ~11/17 — review tools/hooks/hits.log, flip warn rules to block one by one (test_hooks.py green). Unverified: cloud session hooks, digest in a fresh session. Shared settings.json move waits for Q2 | in progress | user + 지휘 |
 | H-slim | Framework slim-down D-20261103-7/-8, D-33, D-34 done 11/03; design step 0 done (find.py all docs + store aliases); docs/ARCHITECTURE.md added (snapshot via tools/repo_map.py). Freeze on new skills/decisions to 11/17. 11/17 review agenda: hooks step 7 (real false positives), store registry + optional field line, binary-file block, equipment synonyms (저울=scale), status marking, friction lines in ai-system-questions. Delete local backup USASIA_general_backup_20261103.git ~11/10 | open | hmlee |
 | H-db | Work data to a DB (D-20261104-5): usasia_db Rails app live at usasia-it.duckdns.org with HTTPS + Google login (2026-11-04). Daily Drive backup done 2026-11-04 (usasia_db ops/backup.sh). Todo board live 2026-11-05 (D-20261105-4). Migration plan D-20261105-3 (PLAN-data-migration-001-draft2): next = phase 0 (cloud reach test first, API token, versions, CLI), then phase 1 todos; also (no delete), invite developer, Dependabot PRs #1-#3. Server history: Claude memory oracle-server-setup | open | hmlee + Claude |
+| H-onboard | Onboarding tutorial PLAN-onboarding-001-draft2 (day-1 core, tools tiers). Built: account detection (off, D-20261105-12), tools per person (D-20261106-1). Next: user approval → skill + docs/onboarding/<n>.md + kb/tools.md | 승인 대기 | 사용자 |
 
 ## D. 확인 안 된 것
 - 없음
