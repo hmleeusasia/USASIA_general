@@ -4,7 +4,8 @@
 - 릴리스 없음
 
 ## B. 브랜치·진행 중
-- Handoff 2026-11-06 (local): framework session done — lookup rules (D-20261105-10), GLPI/master data (-11), account detection built but off (-12), tools per person (D-20261106-1). Next: user picks — onboarding PLAN approval, usasia_db phase 0, or field work (T-362, T-606 due 11/06)
+- Handoff 2026-11-06 #2: dev design doc done (log 11-06). Next: GLPI section?, share with developer, KO typos; delete ARCHITECTURE.ko.md later (D-20261106-2)
+- Handoff 2026-11-06 (local): framework session done — lookup rules (D-20261105-10), GLPI/master data (-11), account detection built but off (-12), tools per person (D-20261106-1). Next: onboarding PLAN approval or usasia_db phase 0
 - Handoff 2026-11-05 (local, shared account): next session starts usasia_db phase 0 build (H-db). User decisions so far: D-20261105-2..6. Note: this PC's shared Claude account = user team, but until detection is built CLAUDE.local.md still loads hmlee settings
 - Handoff 2026-11-04 local → cloud. For the cloud session (Drive connector):
   1. Drive address book: ~30 approved contacts queued in docs/users/hmlee/todo.md M-contact (Granite/Leverage/Lumen/Comcast/vendors, 박상후, Jason Chung). Emails must come from the original mail → write a 90_변경대기 batch only for those whose email you can get; list the rest

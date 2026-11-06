@@ -152,9 +152,9 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 202 / 799 KB |
-| Content vs framework | 225 KB vs 574 KB (71% framework) |
-| Log files / entries | 4 / 98 |
+| Files / size | 204 / 819 KB |
+| Content vs framework | 245 KB vs 574 KB (70% framework) |
+| Log files / entries | 5 / 103 |
 | Users | hmlee |
 | Decisions | 51 |
 | Store codes | 21 |
@@ -200,8 +200,9 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ├── .gitignore                         0.3 KB
 ├── CLAUDE.md                          2.7 KB
 ├── README.md                          0.1 KB
-├── docs/                              75 files, 315.5 KB
-│   ├── CURRENT_STATE.md                   5.3 KB
+├── docs/                              77 files, 335.6 KB
+│   ├── ARCHITECTURE.ko.md                 17.7 KB
+│   ├── CURRENT_STATE.md                   5.8 KB
 │   ├── archive/                           3 files, 4.2 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   │   ├── 2026/                              2 files, 4.2 KB
@@ -230,8 +231,8 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               5 files, 43.2 KB
-│   │   ├── 2026/                              5 files, 43.2 KB
+│   ├── log/                               6 files, 45.1 KB
+│   │   ├── 2026/                              6 files, 45.1 KB
 │   ├── project_instructions.md            2.0 KB
 │   ├── projects/                          4 files, 7.4 KB
 │   │   ├── INDEX.md                           0.3 KB
