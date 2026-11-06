@@ -9,7 +9,7 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 결론 먼저, 표로 보고한다(한국어).
 
 ## 0. Minimal start (D-20261103-8)
-- If the user only wants to pick up work ("짧게", "빠른 시작", a specific task named, or start-day already ran today): use the `[digest]` + docs/users/<id>/todo.md "Now" table only, show today's rows, and stop. No mail, Drive, or STWS.
+- If the user only wants to pick up work ("짧게", "빠른 시작", a specific task named, or start-day already ran today): use the `[digest]` + docs/users/<id>/todo.md "Now" table only, show today's rows, and stop. No mail, Drive changes, or STWS — but still run step 5-1 (05_Inbox) when the Drive connector is available (D-20261106-4).
 - Full routine below: first session of the day, or when asked.
 
 ## 0a. 장소 확인
@@ -44,6 +44,10 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 - 드라이브 커넥터 search_files: `modifiedTime > '<기준일>T00:00:00Z'`, excludeContentSnippets true
 - docs/drive-index에 없는 새 문서·바뀐 문서를 표로 (색인 갱신 후보)
 
+## 5-1. 05_Inbox (D-20261106-4)
+- Folder ID: docs/drive-index/claude-folder.md (05_Inbox row). search_files `parentId = '<05_Inbox ID>'` — all files, no date filter (anything there is unfiled).
+- Read each file, say what it is and which todo row it belongs to, propose a 06_Files/<Type>/<target> location (D-20261103-4). Move only after the user approves; then add the row to claude-folder.md "06_Files 내용" and the location to the todo row. No amounts or contacts in the repo.
+
 ## 6. 보고·승인
 한 번에 보고:
 
@@ -56,6 +60,7 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 | 새 업무 메일 (할 일/기다림/참고) | | | 기록·답장 초안 등 |
 | 새 연락처·조직 후보 | | | 승인 시 주소록·orgs.md |
 | 드라이브 변경 | | | 색인 갱신 여부 |
+| 05_Inbox | 파일 수·종류 | | 06_Files 분류 위치 |
 | 월초 점검 | 이번 달 했는지 | | 안 했으면 drive-check |
 
 그다음 오늘 계획(할 일·등급 가벼움/무거움·맡을 곳)을 제안하고 승인을 받는다.
