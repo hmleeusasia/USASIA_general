@@ -17,6 +17,15 @@ A newcomer signs in and Claude walks them through the system, one short module p
 3. Unknown uuid → digest line "new user? /onboarding". No file / no oauthAccount (cloud, other versions) → fall back: CLAUDE.local.md → git user → ask once, and only then the line "treating you as <id>, say otherwise". Fail open.
 4. Test: the team account no longer sees hmlee's personal file.
 
+## Tools: assumed vs optional (user 2026-11-05, added after draft2)
+Not everyone has the same tools (Notion is hmlee-only today). Guide each person only within the tools they have.
+| Tier | Tools | Meaning |
+|---|---|---|
+| Assumed (company gives everyone) | Claude Code, GitHub repo access, Google Workspace account (Gmail, Drive exist even if unused), STWS | Skills may rely on them; onboarding sets them up |
+| Common, may be missing | Outlook (M365), intranet mail, Chrome extension, Drive/Gmail connectors, usasia_db login | Ask once; skills check and use another path or skip |
+| Optional (personal) | Notion, personal trackers (OT sheet), others | Never required. Onboarding says once "if you have X, you can also do Y"; never asks to install, never repeats |
+Mechanics: one `Tools` table in `docs/users/<id>/profile.md` (tool · have y/n · how: connector / Chrome / none · verified date). A catalog `docs/kb/tools.md` lists each tool: tier, what it unlocks, fallback. Skills read the profile row before a tool step: have → use; no → fallback (e.g. expenses: Sheet only, no Notion) or skip with one line; unknown → ask once and record. Rules that name a personal tool get reworded to "the user's targets (profile)": R-EXP-01/02 now say Notion. Tool rows found wrong in use (e.g. profile says no connector but tools appear, Q15) are corrected in the profile, not worked around.
+
 ## Before you arrive (hmlee / admin, ~10 min) — not a module
 Repo collaborator access; usasia_db ALLOWED_EMAILS + redeploy; STWS account and permission (Dan Choi approves); cloud environment allowed domain (if cloud); `git config core.hooksPath tools/githooks` on their PC; stub `docs/users/<id>/` from templates; pre-fill profile rows from docs/team/<name>.md. Claude drafts the request texts; people approve.
 
