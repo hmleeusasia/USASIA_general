@@ -6,7 +6,7 @@
 |---|---|---|---|
 | Q1 | 결정을 공용/개인으로 나눌까? 개인 결정 파일(`users/<id>/decisions.md`)과 번호(`D-<id>-날짜-n`) | 2026-11-03 | 오늘 결정 D-20261103-1·4는 공용 규칙+hmlee 사정이 섞임. D-2·3은 공용 |
 | Q2 | 공용 결정은 누가 승인? (hmlee 개발자 / Dan Choi 부장 / 팀 합의) | 2026-11-02 | H-multi 미정 항목 |
-| Q6 | 팀 공용 민감 값·주소록·90_변경대기를 공유 드라이브로? (D-16·17 개정) | 2026-11-03 | 각자 Claude 폴더만으로는 팀원이 서로 못 봄 |
+| Q6 | 팀 공용 민감 값·주소록·90_변경대기를 공유 드라이브로? (D-16·17 개정) | 2026-11-03 | 각자 Claude 폴더만으로는 팀원이 서로 못 봄. User 2026-11-06: address book should be shared (team), with per-person notes attachable (e.g. shared sheet + personal note column/tab, or personal notes in own Drive keyed by name) |
 | Q7 | 사람별 git 사용자·커밋 작성자 표시 (클라우드 커밋이 "Claude"로만 남음) | 2026-11-03 | |
 | Q8 | mail_triage.md 0절(hmlee 담당 범위)을 users/hmlee/mail_rules.md로 옮기기 | 2026-11-02 | H-multi 2단계 |
 | Q9 | 공동 편집 파일(vendors/·calendar.md) 정리·archive 때 남의 내용 보호 규칙 | 2026-11-03 | |
