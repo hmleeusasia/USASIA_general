@@ -9,7 +9,7 @@
 - Handoff 2026-11-06 (local): framework session done — lookup rules (D-20261105-10), GLPI/master data (-11), account detection built but off (-12), tools per person (D-20261106-1). Next: onboarding PLAN approval or usasia_db phase 0
 - Handoff 2026-11-05 (local, shared account): next session starts usasia_db phase 0 build (H-db). User decisions so far: D-20261105-2..6. Note: this PC's shared Claude account = user team, but until detection is built CLAUDE.local.md still loads hmlee settings
 - Handoff 2026-11-04 local → cloud. For the cloud session (Drive connector):
-  1. Drive address book: batch 90_변경대기_2026-11-06_1 written 11/06 (local; 21 new rows + 8 existing rows fixed, 167 cell lines) → **H-sheet 1 pending**: cloud applies it to 10_주소록, then renames it 완료_. No email found: Jason Chung, 이재호; 이동훈 unchanged
+  1. Drive address book: batch 90_변경대기_2026-11-06_1 written 11/06 (local; 21 new rows + 8 existing rows fixed, 167 cell lines) → **H-sheet 2 pending** (also batch 90_변경대기_2026-11-06_2: 심미순 UW manager, 6 cells): cloud applies them to 10_주소록, then renames each 완료_. No email found: Jason Chung, 이재호; 이동훈 unchanged
   2. Drive 00_profile: add job title 사원 (STWS permission Manager), supervisor Dan Choi (최철룡), Git repository admin (copy is docs/users/hmlee/profile.md)
   3. Ask user M-names (13 internal names, Gregory Roman, POS manufacturer for T-640) — user had no time 11/04
 
