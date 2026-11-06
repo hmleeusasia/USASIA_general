@@ -11,6 +11,7 @@ For a developer who has never seen this repo. Korean: [README.ko.md](README.ko.m
 - `code-map.md` / `code-map.ko.md` are **generated** by `tools/handbook.py` from the code. Never edit them by hand.
 - Meanings (en + ko) for modules, functions and skills: `docs/handbook/meta.json`. English falls back to the docstring.
 - The git pre-commit hook (`tools/githooks/pre-commit`) runs `tools/handbook.py --check` whenever a commit touches tools/, .claude/skills/, docs/rules/ or docs/handbook/. It fails when a page is stale, a meaning is missing, or a page holds an email/IP address.
+- Tests that each check really fires: `py tools/test_handbook.py` (pre-commit runs it when the generator changes).
 - After changing code: `py tools/handbook.py`, fill what it reports, stage, commit.
 
 Not read by the generator (personal or machine-specific): docs/users/**, CLAUDE.local.md, .claude/settings*.json.

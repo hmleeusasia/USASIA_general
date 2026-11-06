@@ -56,6 +56,10 @@
   "tools/hooks/test_hooks.py": {
    "en": "Test suite for the hooks and for find.py. It forces every rule to block in a temporary config and runs hit and no-hit example inputs through guard, stop, area, digest account detection and find, then prints how many passed. Run it before changing any rule mode.",
    "ko": "hook과 find.py의 시험 모음. 임시로 모든 규칙을 block으로 바꾸고 걸려야 하는 예와 걸리면 안 되는 예를 guard, stop, area, digest 계정 감지, find에 넣어 결과를 세어 보여줌. 규칙 모드를 바꾸기 전에 실행"
+  },
+  "tools/test_handbook.py": {
+   "en": "Tests for tools/handbook.py: copies the repo parts it reads into a temp folder, breaks one thing per test (missing meaning, orphan key, stale page, email/host) and checks the generator fails with the right message.",
+   "ko": "tools/handbook.py 시험. 생성기가 읽는 부분을 임시 폴더에 복사하고, 시험마다 하나씩 망가뜨린 뒤(설명 누락, 남은 키, 낡은 문서, 이메일·호스트) 생성기가 알맞은 메시지로 실패하는지 확인함."
   }
  },
  "functions": {

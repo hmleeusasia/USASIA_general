@@ -214,6 +214,13 @@ docs/ARCHITECTURE.md의 자동 생성 구간(파일 수·크기, 내용 대 틀 
 | `build` | 35 | — | 자동 생성 구간 전체 글을 만듦: 합계, 틀 대 내용 비율, 기록·결정 수, skill 표, hook 규칙 모드, 폴더 트리 | (same file) |
 | `main` | 65 | — | 시작 지점. ARCHITECTURE.md의 자동 생성 구간을 새로 바꿔 쓰거나, --check이면 낡았는지만 알려줌. 종료 코드를 돌려줌 | (same file) |
 
+### `tools/test_handbook.py`
+
+tools/handbook.py 시험. 생성기가 읽는 부분을 임시 폴더에 복사하고, 시험마다 하나씩 망가뜨린 뒤(설명 누락, 남은 키, 낡은 문서, 이메일·호스트) 생성기가 알맞은 메시지로 실패하는지 확인함.
+
+- 가져오는 내부 모듈: —
+- 언급하거나 실행하는 스크립트: `tools/find.py`, `tools/handbook.py`, `tools/prune.py`, `tools/repo_map.py`
+
 ## Hook 규칙 모드 (tools/hooks/config.json)
 
 | 규칙 | 모드 | 규칙 ID |

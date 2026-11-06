@@ -18,6 +18,11 @@ for p in python3 py python; do
       rc=$?
       [ $rc -ne 0 ] && echo "pre-commit: run '$p tools/handbook.py', fill what it reports in docs/handbook/meta.json, stage, commit again." >&2
     fi
+    # The generator itself changed: its checks must still fire.
+    if [ $rc -eq 0 ] && echo "$ALL" | grep -qE '^tools/(test_)?handbook\.py$'; then
+      "$p" "$ROOT/tools/test_handbook.py"
+      rc=$?
+    fi
     exit $rc
   fi
 done

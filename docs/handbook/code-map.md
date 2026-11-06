@@ -214,6 +214,13 @@ Rebuilds the generated snapshot section of docs/ARCHITECTURE.md: file counts and
 | `build` | 35 | — | Computes the whole generated snapshot text: totals, framework versus content share, log and decision counts, skill table, hook rule modes and the folder tree. | (same file) |
 | `main` | 65 | — | Entry point. Replaces the generated block in docs/ARCHITECTURE.md with a fresh one, or with --check only reports whether it is out of date. Returns an exit code. | (same file) |
 
+### `tools/test_handbook.py`
+
+Tests for tools/handbook.py: copies the repo parts it reads into a temp folder, breaks one thing per test (missing meaning, orphan key, stale page, email/host) and checks the generator fails with the right message.
+
+- Imports local modules: —
+- Mentions/runs scripts: `tools/find.py`, `tools/handbook.py`, `tools/prune.py`, `tools/repo_map.py`
+
 ## Hook rule modes (tools/hooks/config.json)
 
 | Rule | Mode | Rule ID |
