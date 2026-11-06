@@ -193,7 +193,7 @@ def main():
     print(f"{'ok ' if dok else 'FAIL'} digest --print")
     bad += not dok
     fp = os.path.join(HERE, "..", "find.py")  # R-LOOK-03: AND hit / partial OR / no match (exit 1)
-    for name, args, want, code in [("find AND hit", ["Granite", "demarc"], "kb\INDEX.md:" if os.name == "nt" else "kb/INDEX.md:", 0),
+    for name, args, want, code in [("find AND hit", ["Granite", "demarc"], os.path.join("kb", "INDEX.md:"), 0),
                                    ("find single no match", ["zzqqxx"], "NO INTERNAL MATCH", 1),
                                    ("find OR fallback", ["Granite", "zzqqxx"], "PARTIAL matches", 0),
                                    ("find no match", ["zzqqxx", "yyqqww"], "NO INTERNAL MATCH", 1)]:
