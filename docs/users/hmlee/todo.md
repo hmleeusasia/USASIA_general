@@ -20,7 +20,7 @@
 | M-dh-deli-scale | DH deli scale repair; FW spare used as loaner | DH·FW | #pos #hardware | 진행 | 2026-11-05 | Watch loaner → old scale to repair; STWS ticket not yet |
 | M-bl-meat-port | Ballard meat port PP04 D-01 suspected bad | BL | #network | 할 일 | 2026-11-05 | Replace Cat6 keystone, test link |
 | M-label-paper | Return BV's borrowed label paper (1 box) to Ballard | BV·BL | #hardware | 할 일 | 2026-11-05 | Next BV visit → bring to Ballard |
-| M-uw-grabgo-cable | UW Grab Go (UW Deli): extend 4 cables, ITSolution quote 11/03 | UW | #network #vendor-itsolution | 할 일 | 2026-11-04 | Review quote → store manager; STWS ticket |
+| M-uw-grabgo-cable | UW Grab Go (UW Deli): extend 4 cables, ITSolution quote 11/03 | UW | #network #vendor-itsolution | 할 일 | 2026-11-06 | Quote 11/06 in Drive 06_Files/Quotes/UW → review → store manager; STWS ticket |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Resolve after subtask T-640 |
 | M-bv-printer | BV 1st-floor printer drops connection | BV | #hardware #network | 대기 | 2026-11-03 | Re-check next BV visit (wired/Wi-Fi, IP, sleep) |
 | T-640 | BV per-lane serials for POS manufacturer (sub of T-619) | BV | #pos #asset | 할 일 | 2026-11-04 | Collect next BV visit → reply to manufacturer |
@@ -41,7 +41,7 @@
 | T-639 | MW store manager new PC | MW | #hardware #install | 진행 | 2026-11-05 | POS program, security software, account setup |
 | T-375 | Wifi dead zone 확인·AP 추가 | MW | #network | 진행 | 2026-08-20 ⏸ | Next MW visit |
 | T-362 | DH cameras in the NVR app with MW (이준호 점장) | DH·MW | #security | 진행 | 2026-11-05 | 기한 2026-11-06. Get app name, test on own phone |
-| T-600 | IQ temp cameras (Comcast BB, camera design) | IQ | #network #security | 할 일 | 2026-11-06 | Review revised estimate → reply to John Byun |
+| T-600 | IQ temp cameras (Comcast BB, camera design) | IQ | #network #security | 할 일 | 2026-11-06 | Revised estimate 11/06 in Drive 06_Files/Quotes/IQ → review → reply to John Byun |
 | T-461 | 2번 스위치 33번 포트 CRC 에러 | RM | #network | 진행 | 2026-08-13 ⏸ | 미루기: 원격 확인 가능하면 |
 | T-340 | 광 네트워크 연장 | RM | #network | 진행 | 2026-07-17 ⏸ | 미루기: 공사 건 |
 | T-302 | VoIP/전화 빌링 정리 | RM | #phone | 진행 | 2026-08-03 ⏸ | 미루기: 서류 일 |
