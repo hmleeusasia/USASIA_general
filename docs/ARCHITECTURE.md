@@ -146,6 +146,19 @@ sequenceDiagram
 - Drive file naming: `YYYY-MM-DD_<store>_<what>.ext`; block binary files in git
 - At teammate join: CODEOWNERS, identity import test, weekly promote (KCS evolve loop)
 
+## 7a. Open question: per-account isolation (2026-11-06, draft — docs/projects/ai-system-questions.md Q19)
+Problem: in a shared repo one person's work and private notes mix with everyone's, and Git cannot restrict reads per user — anyone who can clone sees all files and all history. Goal: one DB, but each account runs on its own and never exposes another person's private info, work or confidential items.
+
+| Layer | Holds | Who reads | Enforced by |
+|---|---|---|---|
+| Shared repo | rules, skills, tools, general kb, orgs, shared decisions | whole team | server-side check (CI); shared docs never link into personal space |
+| Personal space (own Google Drive, synced folder via Drive for Desktop, never shared; separate from the Claude folder) | logs, todo, mail-triage results, notes about others | owner only (Workspace admins can still read) | Drive sharing off; hook/skill paths point here |
+| usasia_db (SQLite) | tickets, todos, records as rows | per row: owner_id + visibility (private default / team / manager), explicit share | one Rails scoping layer, per-user API token, no shared admin key, no direct DB-file access; manager sees only rows shared to manager; backup folder sharing limited |
+
+Review findings (Sonnet, 2026-11-06): SQLite has no RLS; git history already holds personal content; D-20261105-7 (docs/team work context) conflicts with the goal; hooks/skills hard-code docs/log and docs/users paths; the shared Claude account exposes one person's memory and CLAUDE.local.md. Audit log and confidential tags: later.
+
+Order: (1) confirm DB engine (2) check GitHub visibility/collaborators (3) stop D-20261105-7, move its rows (4) move personal files out, then rewrite git history before inviting anyone (5) update hook/skill paths (6) retire the shared Claude account for real work, turn on account detection (7) onboard teammates.
+
 <!-- GENERATED:BEGIN (tools/repo_map.py — do not edit by hand) -->
 ## 8. Generated snapshot
 _Rebuilt 2026-11-06 by tools/repo_map.py._
