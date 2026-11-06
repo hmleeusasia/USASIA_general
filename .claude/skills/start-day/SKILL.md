@@ -5,7 +5,7 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 
 # 업무 시작 루틴 (start-day)
 
-읽기만 한다. 메일 보내기·지우기·이동, 드라이브 수정·공유 변경은 하지 않는다.
+읽기만 한다. 메일 보내기·지우기·이동, 드라이브 수정·공유 변경은 하지 않는다. Exception: the approved 05_Inbox → 06_Files move in step 5-1 (D-20261106-4).
 결론 먼저, 표로 보고한다(한국어).
 
 ## 0. Minimal start (D-20261103-8)
@@ -14,7 +14,7 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 
 ## 0a. 장소 확인
 - 로컬 PC(Windows, 크롬 확장 연결됨) → 아래 전부
-- 클라우드 세션 → 1~3, 6만 (크롬 없음. 드라이브는 커넥터가 있으면 5도). C절 H-sheet가 1건 이상이면 90_변경대기 반영을 오늘 할 일 맨 앞에 (D-20261102-17)
+- 클라우드 세션 → 1~3, 6만 (크롬 없음. 드라이브는 커넥터가 있으면 5·5-1도). C절 H-sheet가 1건 이상이면 90_변경대기 반영을 오늘 할 일 맨 앞에 (D-20261102-17)
 
 ## 1. 동기화
 - 로컬: `git pull origin main` (충돌·미커밋 변경 있으면 멈추고 보고)
@@ -46,7 +46,8 @@ description: USASIA IT 업무 시작 루틴. 저장소 동기화, 상태·열린
 
 ## 5-1. 05_Inbox (D-20261106-4)
 - Folder ID: docs/drive-index/claude-folder.md (05_Inbox row). search_files `parentId = '<05_Inbox ID>'` — all files, no date filter (anything there is unfiled).
-- Read each file, say what it is and which todo row it belongs to, propose a 06_Files/<Type>/<target> location (D-20261103-4). Move only after the user approves; then add the row to claude-folder.md "06_Files 내용" and the location to the todo row. No amounts or contacts in the repo.
+- Search fails or no connector → say so in one line and skip.
+- Read each file, say what it is (ask the user if unclear) and which todo row it belongs to, propose a 06_Files/<Type>/<target> location (D-20261103-4). Move only after the user approves; then add the row to claude-folder.md "06_Files 내용" and the location to the todo row. No amounts or contacts in the repo.
 
 ## 6. 보고·승인
 한 번에 보고:

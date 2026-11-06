@@ -22,4 +22,4 @@
 | Quotes/IQ | 2026 1028 H Mart Issaquah 1.pdf | ITSolution(Eric) 견적: IQ 임시 카메라 **Wifi 안**(어안+일반 카메라, SD 카드, 위쪽 전원 필요). 1단계 검수 후 2단계 조건 | https://drive.google.com/file/d/1h71hkn-BjK5DKB72JG3HyswmZ-fbSSUn/view |
 | Quotes/IQ | 2026 1028 H Mart Issaquah 2.pdf | ITSolution(Eric) 견적: IQ 임시 카메라 **유선 안**(어안+IP 카메라, Cat6). 같은 조건 | https://drive.google.com/file/d/122Rf5hOkznq27NQ_bVNhB5riBkp1qXW0/view |
 | Quotes/IQ | 2026 1106 H Mart Issaquah.pdf | ITSolution(Eric) revised quote 11/06 (T-600): temp cameras via Wi-Fi mesh + 3 IP dome cameras (SD card) + PoE switches. Phase 2 only after Phase 1 sign-off | https://drive.google.com/file/d/1W5wLwcR1evdwNwagr08T-ht3O448wSOB/view |
-| Quotes/UW | 2026 1106 H Mart UW Grab & Go.pdf | ITSolution(Eric) quote 11/06 (M-uw-grabgo-cable): 4 Cat6 runs for POS, night work, 50% deposit, 15-day lead | https://drive.google.com/file/d/1kAqpAGdVi9R0Q_FT5Q95Uh187o4Cw0JO/view |
+| Quotes/UW | 2026 1106 H Mart UW Grab & Go.pdf | ITSolution(Eric) quote 11/06 (M-uw-grabgo-cable): 4 Cat6 runs for POS, night work | https://drive.google.com/file/d/1kAqpAGdVi9R0Q_FT5Q95Uh187o4Cw0JO/view |
