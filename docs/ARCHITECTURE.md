@@ -165,11 +165,11 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 206 / 841 KB |
-| Content vs framework | 263 KB vs 578 KB (68% framework) |
-| Log files / entries | 5 / 106 |
+| Files / size | 206 / 845 KB |
+| Content vs framework | 267 KB vs 578 KB (68% framework) |
+| Log files / entries | 5 / 108 |
 | Users | hmlee |
-| Decisions | 53 |
+| Decisions | 54 |
 | Store codes | 21 |
 
 ### Skills (.claude/skills)
@@ -195,15 +195,15 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ### Tree (depth 3)
 ```
 .
-├── .claude/                           105 files, 404.6 KB
+├── .claude/                           105 files, 405.4 KB
 │   ├── settings.json                      0.5 KB
-│   ├── skills/                            9 files, 32.5 KB
+│   ├── skills/                            9 files, 33.3 KB
 │   │   ├── drive-check/                       1 files, 2.4 KB
 │   │   ├── drive-index/                       1 files, 4.6 KB
 │   │   ├── mail-triage/                       1 files, 5.5 KB
 │   │   ├── review-loop/                       1 files, 2.7 KB
 │   │   ├── session-end/                       1 files, 3.8 KB
-│   │   ├── start-day/                         1 files, 3.5 KB
+│   │   ├── start-day/                         1 files, 4.3 KB
 │   │   ├── todo/                              1 files, 3.4 KB
 │   │   ├── todo-sync/                         1 files, 4.4 KB
 │   │   ├── weekly-meeting/                    1 files, 2.2 KB
@@ -213,20 +213,20 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ├── .gitignore                         0.3 KB
 ├── CLAUDE.md                          2.7 KB
 ├── README.md                          0.1 KB
-├── docs/                              79 files, 354.9 KB
+├── docs/                              79 files, 358.2 KB
 │   ├── ARCHITECTURE.ko.md                 17.7 KB
-│   ├── CURRENT_STATE.md                   5.9 KB
+│   ├── CURRENT_STATE.md                   6.3 KB
 │   ├── archive/                           4 files, 19.4 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   │   ├── 2026/                              3 files, 19.4 KB
 │   ├── assets/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
 │   ├── calendar.md                        0.6 KB
-│   ├── decisions.md                       25.9 KB
-│   ├── drive-index/                       7 files, 64.9 KB
+│   ├── decisions.md                       26.2 KB
+│   ├── drive-index/                       7 files, 65.4 KB
 │   │   ├── INDEX.md                           2.1 KB
 │   │   ├── archive-saves.md                   11.2 KB
-│   │   ├── claude-folder.md                   3.2 KB
+│   │   ├── claude-folder.md                   3.7 KB
 │   │   ├── claudework-itil-root.md            7.2 KB
 │   │   ├── meeting-templates-programs.md      13.3 KB
 │   │   ├── ongoing-project.md                 13.9 KB
@@ -244,8 +244,8 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               6 files, 49.7 KB
-│   │   ├── 2026/                              6 files, 49.7 KB
+│   ├── log/                               6 files, 51.6 KB
+│   │   ├── 2026/                              6 files, 51.6 KB
 │   ├── project_instructions.md            2.0 KB
 │   ├── projects/                          4 files, 10.0 KB
 │   │   ├── INDEX.md                           0.3 KB
@@ -287,9 +287,9 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── todo.md                            1.0 KB
 │   │   ├── user_profile.md                    1.0 KB
 │   │   ├── vendor.md                          0.3 KB
-│   ├── users/                             4 files, 13.4 KB
+│   ├── users/                             4 files, 13.5 KB
 │   │   ├── INDEX.md                           1.6 KB
-│   │   ├── hmlee/                             3 files, 11.8 KB
+│   │   ├── hmlee/                             3 files, 11.9 KB
 │   ├── vendors/                           2 files, 0.7 KB
 │   │   ├── INDEX.md                           0.1 KB
 │   │   ├── itsolution.md                      0.5 KB

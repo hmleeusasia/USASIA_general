@@ -7,7 +7,6 @@
 |---|---|---|---|
 | 11/06 | T-362 | DH NVR: get the store manager's app name, test on own phone | DH·MW |
 | 11/06 | T-644 | EGMM Meraki MX drop: check uplink / ISP modem, reply to Andy Han | EGMM |
-| 11/06 | T-600 | Replied to John Byun with revised quote (done) | IQ |
 | next BL visit | M-bl-meat-port | Replace Cat6 keystone on meat dept port PP04 D-01, test | BL |
 | next BV visit | M-label-paper | Pick up label paper at BV → return to Ballard | BV→BL |
 | after DH repair | M-dh-deli-scale | Spare scale back from DH → deliver to FW | FW |
@@ -20,7 +19,7 @@
 | M-dh-deli-scale | DH deli scale repair; FW spare used as loaner | DH·FW | #pos #hardware | 진행 | 2026-11-05 | Watch loaner → old scale to repair; STWS ticket not yet |
 | M-bl-meat-port | Ballard meat port PP04 D-01 suspected bad | BL | #network | 할 일 | 2026-11-05 | Replace Cat6 keystone, test link |
 | M-label-paper | Return BV's borrowed label paper (1 box) to Ballard | BV·BL | #hardware | 할 일 | 2026-11-05 | Next BV visit → bring to Ballard |
-| M-uw-grabgo-cable | UW Grab Go (UW Deli): extend 4 cables, ITSolution quote 11/03 | UW | #network #vendor-itsolution | 기다림(심미순) | 2026-11-06 | Quote sent to UW manager 11/06 (TICKET-656) → on OK, schedule night work |
+| M-uw-grabgo-cable | UW Grab Go (UW Deli): 4 cable runs (ITSolution) | UW | #network #vendor-itsolution | 기다림(심미순) | 2026-11-06 | TICKET-656; on OK, schedule night work |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Resolve after subtask T-640 |
 | M-bv-printer | BV 1st-floor printer drops connection | BV | #hardware #network | 대기 | 2026-11-03 | Re-check next BV visit (wired/Wi-Fi, IP, sleep) |
 | T-640 | BV per-lane serials for POS manufacturer (sub of T-619) | BV | #pos #asset | 할 일 | 2026-11-04 | Collect next BV visit → reply to manufacturer |
@@ -41,7 +40,7 @@
 | T-639 | MW store manager new PC | MW | #hardware #install | 진행 | 2026-11-05 | POS program, security software, account setup |
 | T-375 | Wifi dead zone 확인·AP 추가 | MW | #network | 진행 | 2026-08-20 ⏸ | Next MW visit |
 | T-362 | DH cameras in the NVR app with MW (이준호 점장) | DH·MW | #security | 진행 | 2026-11-05 | 기한 2026-11-06. Get app name, test on own phone |
-| T-600 | IQ temp cameras (Comcast BB, camera design) | IQ | #network #security | 기다림(John Byun) | 2026-11-06 | Revised quote sent to John 11/06 → on OK, order via ITSolution, schedule install |
+| T-600 | IQ temp cameras (Comcast BB, camera design) | IQ | #network #security | 기다림(John Byun) | 2026-11-06 | Quote sent 11/06; on OK, order + schedule |
 | T-461 | 2번 스위치 33번 포트 CRC 에러 | RM | #network | 진행 | 2026-08-13 ⏸ | 미루기: 원격 확인 가능하면 |
 | T-340 | 광 네트워크 연장 | RM | #network | 진행 | 2026-07-17 ⏸ | 미루기: 공사 건 |
 | T-302 | VoIP/전화 빌링 정리 | RM | #phone | 진행 | 2026-08-03 ⏸ | 미루기: 서류 일 |
