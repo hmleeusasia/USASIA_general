@@ -14,5 +14,6 @@
 | 시간대 | America/Los_Angeles (Washington State, PT) — dates/times for logs, OT, mileage use this (D-20261105-1) |
 | 상사 | Dan Choi (최철룡), IT 매니저 |
 | 저장소 역할 | Git 저장소 관리자 (USASIA_general, 틀 개발·관리) |
+| OT 기록 | Google Sheet "OT Tracer" https://docs.google.com/spreadsheets/d/1CaeBnIJ2InMqUYwDn4OxBJl-S30weXpZjgFfZYxpKHc — Sheet1: A Date (M/D/YY), B Use (h), C Add (h), D balance (formula, do not write), E note. Append on the first empty A row; read back first |
 | 업무 기록 파일 | docs/log/YYYY/YYYY-MM-DD_hmlee.md |
 | Claude 계정 | 로컬 = 임시 팀 공유 테스터 계정(커넥터 없음), 클라우드 = 개인 계정 (D-20261103-1) |
