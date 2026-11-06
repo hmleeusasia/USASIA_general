@@ -17,3 +17,15 @@
 | OT 기록 | Google Sheet "OT Tracer" https://docs.google.com/spreadsheets/d/1CaeBnIJ2InMqUYwDn4OxBJl-S30weXpZjgFfZYxpKHc — Sheet1: A Date (M/D/YY), B Use (h), C Add (h), D balance (formula, do not write), E note. Append on the first empty A row; read back first |
 | 업무 기록 파일 | docs/log/YYYY/YYYY-MM-DD_hmlee.md |
 | Claude 계정 | 로컬 = 임시 팀 공유 테스터 계정(커넥터 없음), 클라우드 = 개인 계정 (D-20261103-1) |
+
+## Tools (have = this person has the account; how Claude reaches it is checked per session, never recorded here — D-20261106-1)
+| Tool | Have | Note |
+|---|---|---|
+| Gmail | y | company Workspace |
+| Outlook | y | usasia.com, M365 |
+| Intranet mail | y | newintra groupware |
+| Drive | y | |
+| Google Sheets | y | expense Sheet, OT Tracer |
+| Chrome extension | y | local PC |
+| Notion | y | expense DB (optional tool) |
+| OT Tracer sheet | y | row above in this file (optional) |

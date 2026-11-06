@@ -235,6 +235,14 @@ def main():
     dok = dg.returncode == 0 and dg.stdout.decode("utf-8", "replace").startswith("[digest]")
     print(f"{'ok ' if dok else 'FAIL'} digest --print")
     bad += not dok
+    sys.path.insert(0, HERE)
+    import digest as _dg  # D-20261106-1: '## Tools' rows with Have=y only
+    fx = ("| Item | Value |\n|---|---|\n| Notion | y |\n\n## Tools (x)\n| Tool | Have | Note |\n|---|---|---|\n"
+          "| Gmail | y | |\n| Outlook | n | |\n| Drive | Y | |\n| Sheets | yes | |\n| Notion | | |\n\n## Other\n| Chrome | y |\n")
+    tok = (_dg.parse_tools(fx) == "Gmail, Drive, Sheets" and _dg.parse_tools("no tools here") == ""
+           and "Notion" in _dg.claimed_tools("hmlee") and _dg.claimed_tools("nosuchuser") == "")
+    print(f"{'ok ' if tok else 'FAIL'} digest tools claimed")
+    bad += not tok
     fp = os.path.join(HERE, "..", "find.py")  # R-LOOK-03: AND hit / partial OR / no match (exit 1)
     for name, args, want, code in [("find AND hit", ["Granite", "demarc"], os.path.join("kb", "INDEX.md:"), 0),
                                    ("find single no match", ["zzqqxx"], "NO INTERNAL MATCH", 1),
@@ -244,7 +252,7 @@ def main():
         fok = r.returncode == code and want in r.stdout.decode("utf-8", "replace")
         print(f"{'ok ' if fok else 'FAIL'} {name}")
         bad += not fok
-    total = len(CASES) + 1 + 4 + 6 + 6 + 4 + 7  # guard cases + digest + stop + area + heavy + find + account
+    total = len(CASES) + 1 + 4 + 6 + 6 + 4 + 7 + 1  # guard cases + digest + stop + area + heavy + find + account + tools
     print(f"\n{total - bad}/{total} passed")
     sys.exit(1 if bad else 0)
 

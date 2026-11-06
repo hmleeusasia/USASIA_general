@@ -109,6 +109,19 @@ def user_id():
     return None, f"git user '{name}' not in docs/users → ask once"
 
 
+def parse_tools(text):
+    """Tool names with Have = y/yes (any case) from the '## Tools' table only; other sections ignored."""
+    m = re.search(r"^## Tools.*?$(.*?)(?=^## |\Z)", text, re.S | re.M)
+    if not m:
+        return ""
+    rows = re.findall(r"^\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|", m.group(1), re.M)
+    return ", ".join(t for t, h in rows if h.lower() in ("y", "yes"))
+
+
+def claimed_tools(uid):
+    return parse_tools(rd(f"docs/users/{uid}/profile.md"))
+
+
 def section(text, letter):
     m = re.search(rf"^## {letter}\..*?$(.*?)(?=^## [A-Z]\.|\Z)", text, re.S | re.M)
     return m.group(1).strip() if m else ""
@@ -131,6 +144,9 @@ def build():
         pr = personal_rules(uid)
         if pr:
             out.append(pr)
+    tools = claimed_tools(uid) if uid else ""
+    if tools:
+        out.append(f"[tools claimed] {tools} — profile claim, not checked; the session tool list wins (D-20261106-1)")
     if where == "cloud":
         out.append("Cloud: no Drive, no Chrome - do not try them; note 'needs local check' (R-LOOK-03)")
 
