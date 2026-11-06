@@ -192,7 +192,16 @@ def main():
     dok = dg.returncode == 0 and dg.stdout.decode("utf-8", "replace").startswith("[digest]")
     print(f"{'ok ' if dok else 'FAIL'} digest --print")
     bad += not dok
-    total = len(CASES) + 1 + 4 + 6 + 6  # guard cases + digest + stop + area + heavy
+    fp = os.path.join(HERE, "..", "find.py")  # R-LOOK-03: AND hit / partial OR / no match (exit 1)
+    for name, args, want, code in [("find AND hit", ["Granite", "demarc"], "kb\INDEX.md:" if os.name == "nt" else "kb/INDEX.md:", 0),
+                                   ("find single no match", ["zzqqxx"], "NO INTERNAL MATCH", 1),
+                                   ("find OR fallback", ["Granite", "zzqqxx"], "PARTIAL matches", 0),
+                                   ("find no match", ["zzqqxx", "yyqqww"], "NO INTERNAL MATCH", 1)]:
+        r = subprocess.run([sys.executable, fp] + args, capture_output=True, timeout=60)
+        fok = r.returncode == code and want in r.stdout.decode("utf-8", "replace")
+        print(f"{'ok ' if fok else 'FAIL'} {name}")
+        bad += not fok
+    total = len(CASES) + 1 + 4 + 6 + 6 + 4  # guard cases + digest + stop + area + heavy + find
     print(f"\n{total - bad}/{total} passed")
     sys.exit(1 if bad else 0)
 

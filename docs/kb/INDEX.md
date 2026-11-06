@@ -1,12 +1,14 @@
 # 지식 문서 목차
 
 ## Where to look first (moved from CLAUDE.md, 2026-11-03)
+Search order, budget and when to stop or go to the web: docs/rules/lookup.md.
+
 | Question | Look here |
 |---|---|
 | Current state / tasks | docs/CURRENT_STATE.md (repo work), docs/users/<id>/todo.md (personal work, synced with STWS) |
 | Why a past decision | docs/decisions.md |
 | Past vendor work | docs/vendors/INDEX.md → vendor file |
-| Keyword / vendor / item | `python3 tools/find.py Granite demarc` (synonyms, AND) |
+| Keyword / vendor / item | `python3 tools/find.py Granite demarc` (synonyms, AND; 0 hits → partial OR matches, then NO INTERNAL MATCH) |
 | Open / overdue items | `python3 tools/find.py --open` |
 | Next 30 days | `python3 tools/find.py --due` |
 | Drive documents | docs/drive-index/INDEX.md |

@@ -18,6 +18,7 @@ USASIA (Washington State, many stores) IT work log and index: ① Google Drive i
 - **New contact or organization → ask the user right away**; add to address book / orgs.md only after approval.
 - Logs: `docs/log/YYYY/YYYY-MM-DD_<id>.md`, entry rules R-LOG-*. "Today" = user's time zone, never the machine clock.
 - 출발/도착 (depart/arrive) or receipts → docs/rules/expense.md first.
+- Answering a question (repo / web / ask, budget, stop) → docs/rules/lookup.md.
 - Bulk reading → smaller-model subagents (docs/kb/subagents.md). Chrome → docs/kb/browser.md.
 - Repo text in **English** (D-20261103-5); chat in the user's language (Korean: conclusion first, tables).
 

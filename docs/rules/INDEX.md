@@ -5,6 +5,7 @@ Read this at the task announcement (CLAUDE.md Session 2), then read only the are
 |---|---|---|---|---|---|
 | security | security.md | What may be stored where; sensitive values; what to do on finding one | password, phone number, account number, circuit ID, IP address, 비밀번호, 계정, 전화번호 | — | R-SEC-01..05 |
 | log | log.md | Daily work log files and entries, hubs, dates, tips | work log, 업무 기록, 업무 로그, tip, 팁 | docs/log/**, docs/{vendors,stores,assets,projects}/** | R-LOG-01..08 |
+| lookup | lookup.md | Answering a question: triage repo / web / ask, search budget, stop, write-back | 모르겠, 검색, look up | — | R-LOOK-01..05 |
 | expense | expense.md | Receipts and mileage into Notion + Sheet | 출발, 도착, depart, arrive, receipt, 영수증, mileage, 경비 | (connectors only) | R-EXP-01..07 |
 
 Rules: one `## R-<AREA>-NN` heading per rule; IDs are never reused; each file ≤ 3,000 chars; personal values (mailboxes, URLs, STWS numbers) stay in docs/users/<id>/profile.md. Not yet moved: rules still inside skills and kb files (moved when those files are edited, by 2026-12-31).

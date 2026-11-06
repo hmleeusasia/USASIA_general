@@ -53,6 +53,16 @@ def entries():
                     head, body = (i, line), [line]
                 elif head: body.append(line)
 
+def sections(files):
+    """(file, start line, heading, lines) per ##/### section of docs outside the log."""
+    for f in files:
+        sec, buf, start = None, [], 1
+        for i, line in enumerate(f.read_text(encoding="utf-8").splitlines() + ["## "], 1):
+            if line.startswith(("## ", "### ")):
+                if buf: yield f, start, sec, buf
+                sec, buf, start = line.lstrip("# ").strip(), [line], i
+            else: buf.append(line)
+
 def dates(body):
     return [(k, datetime.date.fromisoformat(d)) for k, d in DATE.findall(body)]
 
@@ -86,17 +96,23 @@ def main(args):
             print(("[대체됨] " if re.search(r"→ 대체: D-\d{8}-\d+\s*$", line) else "") + "결정 " + line[2:])
     other = [f for f in sorted((ROOT/"docs").rglob("*.md"))
              if not any(d in f.parents for d in DIRS) and f.name not in ("decisions.md", "keywords.md") and "templates" not in f.parts]
-    shown = 0
-    for f in other:
-        sec, buf, start = None, [], 1
-        lines = f.read_text(encoding="utf-8").splitlines() + ["## "]
-        for i, line in enumerate(lines, 1):
-            if line.startswith(("## ", "### ")):
-                if buf and all(p.search(chr(10).join(buf)) for p in pats):
-                    j, l = next((k, x) for k, x in enumerate(buf) if any(p.search(x) for p in pats))
-                    print(f"{f.relative_to(ROOT)}:{start + j}: [{(sec or '')[:40]}] {l.strip()[:140]}"); shown += 1
-                sec, buf, start = line.lstrip("# ").strip(), [line], i
-            else: buf.append(line)
-    if not hits and not shown: print("결과 없음")
+    secs = list(sections(other)); shown = 0
+    for f, start, sec, buf in secs:
+        if all(p.search(chr(10).join(buf)) for p in pats):
+            j, l = next((k, x) for k, x in enumerate(buf) if any(p.search(x) for p in pats))
+            print(f"{f.relative_to(ROOT)}:{start + j}: [{(sec or '')[:40]}] {l.strip()[:140]}"); shown += 1
+    if hits or shown: return 0
+    if len(pats) > 1:  # D-20261105-10 (R-LOOK-03): AND found nothing -> partial matches, ranked
+        cand = [(sum(bool(p.search(b)) for p in pats), f"{f}:{n}: {h[4:]}") for f, n, h, b in entries()]
+        cand += [(sum(bool(p.search(chr(10).join(buf))) for p in pats), f"{f.relative_to(ROOT)}:{start}: [{(sec or '')[:40]}]")
+                 for f, start, sec, buf in secs]
+        cand = sorted((c for c in cand if c[0]), key=lambda c: -c[0])[:8]
+        if cand:
+            print(f"0 AND hits. PARTIAL matches (OR, terms matched of {len(pats)}) - not a full answer:")
+            for k, t in cand: print(f"  {k}/{len(pats)} {t}")
+            return 0
+    print("결과 없음\nNO INTERNAL MATCH - stop searching the repo (docs/rules/lookup.md R-LOOK-03): "
+          "general knowledge -> web (generic terms only); person knowledge -> ask the user; Drive document -> docs/drive-index (cloud: local check)")
+    return 1
 
 sys.exit(main(sys.argv[1:]))

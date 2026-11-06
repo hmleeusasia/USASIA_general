@@ -58,6 +58,8 @@ def build():
     uid, how = user_id()
     where = "cloud" if os.environ.get("CLAUDE_CODE_REMOTE") else "local"
     out.append(f"User: {uid or 'UNKNOWN'} ({how}) · {where} · today {TODAY}")
+    if where == "cloud":
+        out.append("Cloud: no Drive, no Chrome - do not try them; note 'needs local check' (R-LOOK-03)")
 
     st = rd("docs/CURRENT_STATE.md")
     h = section(st, "H").splitlines()
