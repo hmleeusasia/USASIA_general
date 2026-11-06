@@ -5,6 +5,7 @@
 
 ## B. 브랜치·진행 중
 - Handoff 2026-11-06 #2: dev design doc done (log 11-06). Next: GLPI section?, share with developer, KO typos; delete ARCHITECTURE.ko.md later (D-20261106-2)
+- Handoff 2026-11-06 #3 (local): design questions Q19 (per-account isolation, in ARCHITECTURE 7a + Drive design overview v2) and Q20 (concurrent sessions) open; todo one-line board D-20261106-3 done; address-book batch waits for cloud. Work continues in another session
 - Handoff 2026-11-06 (local): framework session done — lookup rules (D-20261105-10), GLPI/master data (-11), account detection built but off (-12), tools per person (D-20261106-1). Next: onboarding PLAN approval or usasia_db phase 0
 - Handoff 2026-11-05 (local, shared account): next session starts usasia_db phase 0 build (H-db). User decisions so far: D-20261105-2..6. Note: this PC's shared Claude account = user team, but until detection is built CLAUDE.local.md still loads hmlee settings
 - Handoff 2026-11-04 local → cloud. For the cloud session (Drive connector):
@@ -44,5 +45,5 @@
 /start-day (업무 시작 루틴, D-20261102-13)
 
 ## H. 마지막 업무 시작
-2026-11-05. Today: UW Grab Go estimate, MW visit (T-639, T-375, T-362), T-606 re-repair, GLW tickets
+2026-11-06. Today: T-362 DH NVR app, T-644 EGMM MX, T-600 IQ estimate reply; intranet mail and STWS sync not checked 11/06. November drive-check not done yet
 - 마지막 월초 점검: 없음 (drive-check, 다음 2026-12 초)
