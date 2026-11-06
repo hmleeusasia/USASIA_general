@@ -20,7 +20,7 @@
 | M-dh-deli-scale | DH deli scale repair; FW spare used as loaner | DH·FW | #pos #hardware | 진행 | 2026-11-05 | Watch loaner → old scale to repair; STWS ticket not yet |
 | M-bl-meat-port | Ballard meat port PP04 D-01 suspected bad | BL | #network | 할 일 | 2026-11-05 | Replace Cat6 keystone, test link |
 | M-label-paper | Return BV's borrowed label paper (1 box) to Ballard | BV·BL | #hardware | 할 일 | 2026-11-05 | Next BV visit → bring to Ballard |
-| M-uw-grabgo-cable | UW Grab Go (UW Deli): extend 4 cables, ITSolution quote 11/03 | UW | #network #vendor-itsolution | 기다림(심미순) | 2026-11-06 | Quote sent to UW manager 11/06 → STWS ticket; on OK, schedule night work |
+| M-uw-grabgo-cable | UW Grab Go (UW Deli): extend 4 cables, ITSolution quote 11/03 | UW | #network #vendor-itsolution | 기다림(심미순) | 2026-11-06 | Quote sent to UW manager 11/06 (TICKET-656) → on OK, schedule night work |
 | T-619 | POS 시리얼 번호 기록 | BV | #pos | 진행 | 2026-11-04 | Resolve after subtask T-640 |
 | M-bv-printer | BV 1st-floor printer drops connection | BV | #hardware #network | 대기 | 2026-11-03 | Re-check next BV visit (wired/Wi-Fi, IP, sleep) |
 | T-640 | BV per-lane serials for POS manufacturer (sub of T-619) | BV | #pos #asset | 할 일 | 2026-11-04 | Collect next BV visit → reply to manufacturer |
