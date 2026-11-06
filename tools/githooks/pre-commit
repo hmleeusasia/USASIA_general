@@ -11,6 +11,13 @@ for p in python3 py python; do
     "$p" "$ROOT/tools/check.py" --files $FILES
     rc=$?
     [ $rc -ne 0 ] && echo "pre-commit: fix the lines above (tools/check.py), then commit again." >&2
+    # Handbook (docs/handbook, D-20261106-6): code map must match the code when code, skills or rules change.
+    ALL=$(git diff --cached --name-only --diff-filter=ACMRD)  # deletions/renames also make the code map stale
+    if [ $rc -eq 0 ] && echo "$ALL" | grep -qE '^(tools/|\.claude/skills/|docs/rules/|docs/handbook/)'; then
+      "$p" "$ROOT/tools/handbook.py" --check
+      rc=$?
+      [ $rc -ne 0 ] && echo "pre-commit: run '$p tools/handbook.py', fill what it reports in docs/handbook/meta.json, stage, commit again." >&2
+    fi
     exit $rc
   fi
 done
