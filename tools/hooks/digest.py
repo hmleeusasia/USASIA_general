@@ -3,6 +3,7 @@
 Manual run: py tools/hooks/digest.py --print   (prints the plain text)
 Fails open: any error -> short note, exit 0."""
 import datetime
+import json
 import os
 import re
 import subprocess
@@ -31,7 +32,72 @@ def run(cmd):
         return ""
 
 
+_TEST = os.environ.get("HOOKS_TEST") == "1"  # path overrides only in tests: the real map stays git-ignored
+ACCOUNTS = (_TEST and os.environ.get("USASIA_ACCOUNTS")) or os.path.join(ROOT, ".claude", "accounts.local.json")
+CLAUDE_JSON = (_TEST and os.environ.get("USASIA_CLAUDE_JSON")) or os.path.expanduser("~/.claude.json")
+ID_RE = re.compile(r"[a-z0-9_-]+")
+
+
+def account_uuid():
+    """Signed-in Claude account id from ~/.claude.json, or None. Treated like an account number:
+    never printed, logged or written to the repo (PLAN-onboarding-001-draft2, D-20261105-12)."""
+    try:
+        with open(CLAUDE_JSON, encoding="utf-8") as f:
+            u = (json.load(f).get("oauthAccount") or {}).get("accountUuid")
+        return u if isinstance(u, str) and u else None
+    except Exception:
+        return None
+
+
+def account_user(force=False):
+    """(id, how) from the account map, (None, how) for an unknown account, or None to fall back.
+    Rule account-detect (config.json) is off until the user turns it on; force=True for tests."""
+    if not force and mode("account-detect") == "off":
+        return None
+    u = account_uuid()
+    if not u:
+        return None
+    try:
+        with open(ACCOUNTS, encoding="utf-8") as f:
+            uid = json.load(f).get(u)
+    except Exception:
+        uid = None
+    if isinstance(uid, str) and ID_RE.fullmatch(uid) and os.path.isdir(os.path.join(ROOT, "docs", "users", uid)):
+        return uid, "Claude account"
+    return None, "new Claude account → run /onboarding"
+
+
+def register(uid):
+    """Map the signed-in account to <uid> in the git-excluded accounts file (used by onboarding)."""
+    u = account_uuid()
+    if not u or not ID_RE.fullmatch(uid or "") or not os.path.isdir(os.path.join(ROOT, "docs", "users", uid)):
+        return "not registered (no account, bad id, or docs/users/<id> missing)"
+    m = {}
+    if os.path.exists(ACCOUNTS):
+        try:
+            with open(ACCOUNTS, encoding="utf-8") as f:
+                m = json.load(f)
+            assert isinstance(m, dict)
+        except Exception:
+            return "not registered: accounts file unreadable; fix or remove it first (other mappings kept)"
+    m[u] = uid
+    tmp = ACCOUNTS + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(m, f, indent=1)
+    os.replace(tmp, ACCOUNTS)
+    return f"registered this Claude account as {uid}"
+
+
+def personal_rules(uid):
+    """Personal CLAUDE.md text to inject when the account was detected (replaces the static @ import later)."""
+    t = rd(f"docs/users/{uid}/CLAUDE.md").strip()
+    return f"[personal rules: docs/users/{uid}/CLAUDE.md]\n{t}" if t else ""
+
+
 def user_id():
+    acc = account_user()
+    if acc:
+        return acc
     m = re.search(r"@docs/users/([^/]+)/CLAUDE\.md", rd("CLAUDE.local.md"))
     if m:
         return m.group(1), "CLAUDE.local.md"
@@ -58,6 +124,13 @@ def build():
     uid, how = user_id()
     where = "cloud" if os.environ.get("CLAUDE_CODE_REMOTE") else "local"
     out.append(f"User: {uid or 'UNKNOWN'} ({how}) · {where} · today {TODAY}")
+    if how == "Claude account" and uid:
+        local = re.search(r"@docs/users/([^/]+)/CLAUDE\.md", rd("CLAUDE.local.md"))
+        if local and local.group(1) != uid:
+            out.append(f"CLAUDE.local.md loads {local.group(1)}'s personal file: ignore it; this session is {uid}")
+        pr = personal_rules(uid)
+        if pr:
+            out.append(pr)
     if where == "cloud":
         out.append("Cloud: no Drive, no Chrome - do not try them; note 'needs local check' (R-LOOK-03)")
 
@@ -97,6 +170,10 @@ def build():
 
 
 if __name__ == "__main__":
+    if "--register" in sys.argv:
+        i = sys.argv.index("--register")
+        print(register(sys.argv[i + 1] if len(sys.argv) > i + 1 else ""))
+        sys.exit(0)
     if "--print" in sys.argv:
         print(build())
         sys.exit(0)

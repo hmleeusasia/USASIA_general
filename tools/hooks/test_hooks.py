@@ -165,11 +165,53 @@ def area_tests():
     return bad
 
 
+def account_tests():
+    """account-detect (D-20261105-12): off by default; map hit / unknown / missing file; register hides the uuid."""
+    import tempfile
+    d = tempfile.mkdtemp(prefix="usasia_acct_test")
+    cj, acc = os.path.join(d, "claude.json"), os.path.join(d, "accounts.json")
+    uuid = "00000000-test-uuid-0000"
+    with open(cj, "w", encoding="utf-8") as f:
+        json.dump({"oauthAccount": {"accountUuid": uuid}}, f)
+    code = r"""
+import json, os, sys
+sys.path.insert(0, sys.argv[1]); import digest
+r = {"off": digest.account_user(), "nomap": digest.account_user(force=True)}
+print(digest.register("hmlee")); r["hit"] = digest.account_user(force=True)
+r["rules"] = bool(digest.personal_rules("hmlee"))
+r["badid"] = digest.register("../x"); r["noid"] = digest.register("nosuchuser")
+json.dump({json.load(open(digest.CLAUDE_JSON))["oauthAccount"]["accountUuid"]: "../docs"}, open(digest.ACCOUNTS, "w")); r["evil"] = digest.account_user(force=True)
+open(digest.ACCOUNTS, "w").write("{broken"); r["corrupt"] = digest.register("hmlee"); r["corruptkept"] = open(digest.ACCOUNTS).read() == "{broken"
+digest.CLAUDE_JSON = os.path.join(sys.argv[2], "missing.json"); r["nofile"] = digest.account_user(force=True)
+print(json.dumps(r))
+"""
+    env = dict(os.environ, HOOKS_TEST="1", USASIA_CLAUDE_JSON=cj, USASIA_ACCOUNTS=acc)
+    out = subprocess.run([sys.executable, "-c", code, HERE, d], capture_output=True, env=env, timeout=30).stdout.decode("utf-8", "replace")
+    lines = out.strip().splitlines()
+    try:
+        r = json.loads(lines[-1])
+    except Exception:
+        r = {}
+    checks = [("account off by default", r.get("off") is None),
+              ("account unknown → onboarding", (r.get("nomap") or [None, ""])[0] is None and "onboarding" in (r.get("nomap") or ["", ""])[1]),
+              ("account mapped → id", r.get("hit") == ["hmlee", "Claude account"] and r.get("rules") is True),
+              ("account no file → fall back", "nofile" in r and r.get("nofile") is None),
+              ("account bad ids refused", "not registered" in r.get("badid", "") and "not registered" in r.get("noid", "")
+               and (r.get("evil") or [1])[0] is None),
+              ("account corrupt map kept", "unreadable" in r.get("corrupt", "") and r.get("corruptkept") is True),
+              ("register hides uuid", bool(lines) and uuid not in out and "registered" in lines[0])]
+    shutil.rmtree(d, ignore_errors=True)
+    for name, ok in checks:
+        print(f"{'ok ' if ok else 'FAIL'} {name}")
+    return sum(not ok for _, ok in checks)
+
+
 def main():
     shutil.copy(CFG, CFG + ".bak")
     try:
         cfg = json.load(open(CFG, encoding="utf-8"))
         cfg["rules"] = {k: "block" for k in list(cfg["rules"]) + ["git-force", "rm-docs"]}
+        cfg["rules"]["account-detect"] = "off"  # not a guard rule; tested in account_tests()
         json.dump(cfg, open(CFG, "w", encoding="utf-8"))
         bad = 0
         for name, inp, want in CASES:
@@ -182,6 +224,7 @@ def main():
         shutil.move(CFG + ".bak", CFG)
     bad += stop_tests()
     bad += area_tests()
+    bad += account_tests()
     import glob, tempfile
     for f in glob.glob(os.path.join(tempfile.gettempdir(), "usasia_*test*")):  # no test state left behind
         try:
@@ -201,7 +244,7 @@ def main():
         fok = r.returncode == code and want in r.stdout.decode("utf-8", "replace")
         print(f"{'ok ' if fok else 'FAIL'} {name}")
         bad += not fok
-    total = len(CASES) + 1 + 4 + 6 + 6 + 4  # guard cases + digest + stop + area + heavy + find
+    total = len(CASES) + 1 + 4 + 6 + 6 + 4 + 7  # guard cases + digest + stop + area + heavy + find + account
     print(f"\n{total - bad}/{total} passed")
     sys.exit(1 if bad else 0)
 

@@ -1,5 +1,5 @@
 # PLAN onboarding-001 draft2 — guided tutorial for a new teammate
-Status: draft2 (2026-11-05). draft1 (Opus) reviewed by a fresh Sonnet in 2 rounds; all must-fix accepted, account detection replaced by Opus proposal (agreed). **Not approved by the user yet.** Owner: hmlee (requirements) + Claude. Builds on D-20261102-19, D-20261105-6, D-20261105-7, ai-system-questions Q13/Q15/Q16. draft1: docs/requests/archive/.
+Status: draft2 (2026-11-05). draft1 (Opus) reviewed by a fresh Sonnet in 2 rounds; all must-fix accepted, account detection replaced by Opus proposal (agreed). **Account detection built but switched off (D-20261105-12); the rest not approved yet.** Owner: hmlee (requirements) + Claude. Builds on D-20261102-19, D-20261105-6, D-20261105-7, ai-system-questions Q13/Q15/Q16. draft1: docs/requests/archive/.
 
 ## Goal
 A newcomer signs in and Claude walks them through the system, one short module per message: what it can do, what is ready, what Claude needs. Day 1 is a short core (target ≤ 45 min); the rest unlocks on first use.

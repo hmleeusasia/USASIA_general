@@ -12,3 +12,6 @@ CLAUDE.local.md
 
 # 개인 권한 설정 (팀 공용은 .claude/settings.json, 읽기만)
 .claude/settings.local.json
+
+# Claude account → user id map (account detection, D-20261105-12)
+.claude/accounts.local.json

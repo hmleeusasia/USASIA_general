@@ -6,14 +6,14 @@ Plan: docs/requests/PLAN-lean-context-001-draft2.md. Per-rule mode: config.json 
 | launch.sh | Picks working Python (python3 → py → python), skips the Windows Store stub, fails open |
 | common.py | UTF-8 stdin/stdout, config, log, `context()` (warn), `block()` (exit 2) |
 | probe.py | Step-0 probe: logs event/shell/Python to hits.log (gitignored) |
-| digest.py | SessionStart (startup/resume/compact): ~10-line summary — user ID, local/cloud, last start-day, H-sheet, open/overdue/due ≤7d, traps, git state, pointers. ~730 chars vs ~4,800 for CURRENT_STATE+facts. Manual: `py tools/hooks/digest.py --print` |
+| digest.py | SessionStart (startup/resume/compact): ~10-line summary — user ID, local/cloud, last start-day, H-sheet, open/overdue/due ≤7d, traps, git state, pointers. ~730 chars vs ~4,800 for CURRENT_STATE+facts. Manual: `py tools/hooks/digest.py --print`. Account detection (rule account-detect, **off**, D-20261105-12): user from `~/.claude.json` oauthAccount via git-excluded `.claude/accounts.local.json`; `--register <id>` maps the signed-in account; when on, injects that user's personal CLAUDE.md |
 
 | guard.py | PreToolUse Write/Edit/MultiEdit/Bash: scans **new text only**. Rules: sens-email, sens-secret, sens-soft, log-path, users-unknown, english-nudge (once per file per session), git-force (-f, --force, --force-with-lease, `+` refspec), rm-docs. Warn → additionalContext; block → exit 2 with rule ID + line + fix |
 | touch.py | PostToolUse Write/Edit: records repo files written this turn (temp dir, per session) |
 | stop.py | Stop, narrow: only touched files. heavy-review: session touched tools/, docs/rules, .claude/skills, .claude/settings, CLAUDE.md, a user CLAUDE.md, or > 15 repo files (backstop) (cumulative state from touch.py) and no review marker → block once per session. stop-state (CURRENT_STATE > 80 lines), stop-open (#open/#waiting T-ID not on todo board / CURRENT_STATE). Exit 0 when stop_hook_active. No uncommitted check. Not run on user interrupt |
 | area.py | Rule areas (D-20261104-2): UserPromptSubmit trigger words → "read docs/rules/<area>.md" once per area; PostToolUse Read/Bash records rule files read; PreToolUse Write/Edit warns once when a path's area file was not read; SessionStart compact forgets reads. Reads docs/rules/INDEX.md trigger columns. Rules area-keyword, area-read (warn) |
 | review_mark.py | Last step of the review-loop skill: marks this session reviewed so stop.py heavy-review stops reminding |
-| test_hooks.py | 23 hit/no-hit twin fixtures + digest smoke. Run `py tools/hooks/test_hooks.py` before changing any rule mode |
+| test_hooks.py | Guard hit/no-hit twin fixtures, stop/area/heavy, find.py, account detection, digest smoke. Run `py tools/hooks/test_hooks.py` before changing any rule mode |
 | ../githooks/pre-commit | Backstop on staged files via `check.py --files` (emails, tags, hubs, INDEX, budgets; soft sensitive = warn). Enable per clone: `git config core.hooksPath tools/githooks` |
 
 Settings edits take effect after a short delay (the very next tool call may still run without the new hook).
