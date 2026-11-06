@@ -4,6 +4,7 @@
 - 릴리스 없음
 
 ## B. 브랜치·진행 중
+- Handoff 2026-11-06 #5 (cloud): LW visit 11/11 scheduled (Calendar + Notion Job DB + todo M-lw-pc2); address-book batches _1/_2 and 00_profile done. Next: (1) local PC: STWS ticket for M-lw-pc2, buy 2 PCs; (2) ask user: Tae Lee org (Comcast vs Leverage), M-names, T-640 POS maker; emails for Jason Chung, 이재호, 심미순; (3) H-db phase 0 so Drive batches stop (user wants this soon)
 - Handoff 2026-11-06 #2: dev design doc done (log 11-06). Next: GLPI section?, share with developer, KO typos; delete ARCHITECTURE.ko.md later (D-20261106-2)
 - Handoff 2026-11-06 #3 (local): design questions Q19 (per-account isolation, in ARCHITECTURE 7a + Drive design overview v2) and Q20 (concurrent sessions) open; todo one-line board D-20261106-3 done; address-book batch waits for cloud. Work continues in another session
 - Handoff 2026-11-06 (local): framework session done — lookup rules (D-20261105-10), GLPI/master data (-11), account detection built but off (-12), tools per person (D-20261106-1). Next: onboarding PLAN approval or usasia_db phase 0
