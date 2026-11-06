@@ -44,7 +44,7 @@
 | M-glw-touch | GLW: PC touchscreen phantom touches (ripple marks, random clicks, lost control) 11/04. Cause: touchscreen fault | GLW | #hardware | 할 일 | 2026-11-04 | Confirm fix (disable touch / replace monitor?) |
 | T-386 | 컴퓨터 구입·Laptop 세팅 | GLW | #hardware | 기다림(매장) | 2026-11-03 | Pending 11/03 |
 | T-603 | PC 급격히 느려짐 | MW | #hardware | 진행 | 2026-10-22 | 서브 T-639 |
-| T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-03 | 새 PC가 매장에 도착(11/03). 설치는 목 11/05 MW 방문 때 |
+| T-639 | MW 점장 PC 느려짐 → 새 PC 구입, 매장에서 설치. T-603 연장. 서브 티켓 TICKET-639 | MW | #hardware #install | 진행 | 2026-11-05 | 11/05 MW에서 설치 시작, 아직 안 끝남 → 남은 작업 마무리 |
 | T-375 | Wifi dead zone 확인·AP 추가 | MW | #network | 진행 | 2026-08-20 ⏸ | 진행: 오늘 MW에서 (11/03 판단) |
 | T-362 | NVR 앱 재설정: DH 카메라를 NVR 앱에서 MW와 함께 보기. 이준호 점장(MW·DH 겸임) 2026-11-03 재촉 | DH·MW | #security | 진행 | 2026-11-03 | 기한 2026-11-06(이번 주, 사용자 추정) |
 | T-600 | IQ temp cameras (Comcast BB, camera design) | IQ | #network #security | 기다림(ITSolution) | 2026-11-05 | New plan (2 entrance + 1 on 2F, AP link) sent to ITSolution 11/05; then reply to John Byun. Details: log 11-05 |
