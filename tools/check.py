@@ -71,10 +71,17 @@ for pat, limit in BUDGET.items():
     for f in ROOT.glob(pat):
         n = len(f.read_text(encoding="utf-8"))
         if n > limit: problems.append(f"Over char budget: {f.relative_to(ROOT)} {n} > {limit} (prune closed items: tools/prune.py; shorten long rows)")
-for f in ROOT.glob("docs/users/*/todo.md"):  # long open rows grow the board; prune never touches them (2026-11-05)
+for f in ROOT.glob("docs/users/*/todo.md"):  # one-line board, hard (D-20261106-3): history goes to the log, not the row
+    sec = ""
     for line in f.read_text(encoding="utf-8").splitlines():
-        if line.startswith("| ") and len(line) > 400:
-            problems.append(f"Over char budget: long todo row {f.relative_to(ROOT)} {line.split('|')[1].strip()} {len(line)} chars > 400 → one line, details to the log")
+        if line.startswith("## "): sec = line
+        if not line.startswith("| ") or line.startswith("| ID") or line.startswith("| Day"): continue
+        rid = line.split("|")[1].strip()
+        if len(line) > 220:
+            problems.append(f"Todo row too long: {f.relative_to(ROOT)} {rid} {len(line)} chars > 220 → one line, history to the day's log")
+        c = [x.strip() for x in line.strip().strip("|").split("|")]
+        if sec.startswith("## 2.") and len(c) >= 7 and len(c[6]) > 80:
+            problems.append(f"Todo next action too long: {f.relative_to(ROOT)} {rid} {len(c[6])} chars > 80 → next action only")
 
 # --files a b c : only problems about these files (pre-commit). Soft "민감 정보 의심" is shown, not counted.
 if "--files" in sys.argv:

@@ -3,6 +3,7 @@
   python3 tools/find.py <단어|#태그> [...]   모두 포함한 건만 (AND, 대소문자 무시). 결정 기록도 함께 검색
   python3 tools/find.py --open               열린 건(#open/#waiting) + 확인일, 지난 것은 [기한초과]
   python3 tools/find.py --due                앞으로 30일 안의 날짜(확인일·다음·기한) + calendar.md
+  python3 tools/find.py --id T-653           한 건의 경과: 그 ID가 나온 줄 전부(기록·archive·todo), 최근 파일 먼저
 동의어는 docs/keywords.md 표 + docs/kb/store_codes.md(약어·매장명·별칭)에서 자동 확장. 4자 이하 영문은 단어 단위로 찾는다.
 ### 없는 파일(월별 요약 등)은 파일 전체를 한 건으로 본다.
 단어 검색 범위: 기록(log·archive) → 결정 → 그 밖의 docs(kb·todo·허브·드라이브 색인 등, 제목(##/###) 단위 절). 절마다 맞은 줄 하나를 보여준다."""
@@ -11,6 +12,7 @@ if hasattr(sys.stdout, "reconfigure"): sys.stdout.reconfigure(encoding="utf-8")
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DIRS = [ROOT/"docs/log", ROOT/"docs/archive"]
 TODAY = datetime.date.today()
+ID = re.compile(r"(?:[TM]|TICKET)-[0-9A-Za-z][\w-]*")
 DATE = re.compile(r"(확인일|다음|기한)[^\n]*?(\d{4}-\d{2}-\d{2})")
 
 def synonyms():
@@ -32,7 +34,9 @@ def pattern(word, groups):
     parts = []
     for a in alts:
         e = re.escape(a)
-        if re.fullmatch(r"[A-Za-z0-9]{1,4}", a):
+        if ID.fullmatch(a):  # T-653 / M-dh-deli-scale: whole ID only (T-65 must not hit T-653), D-20261106-3
+            parts.append(rf"(?<![\w-]){e}(?![\w-])")
+        elif re.fullmatch(r"[A-Za-z0-9]{1,4}", a):
             b = rf"(?<![A-Za-z0-9_-]){e}(?![A-Za-z0-9_-])"
             parts.append(f"(?-i:{b})" if a.upper() == a else b)  # codes like IS/BV: exact case
         else: parts.append(e)
@@ -87,6 +91,14 @@ def main(args):
         for d, t in sorted(out): print(f"{'[지남] ' if d < TODAY else ''}{d} {t}")
         if not out: print("30일 안 일정 없음")
         return
+    if len(args) == 2 and args[0] == "--id":  # one item's history: every line that names the ID, newest file first
+        p = re.compile(rf"(?<![\w-]){re.escape(args[1])}(?![\w-])", re.I); n = 0
+        files = [f for d in DIRS for f in d.rglob("*.md")] + sorted((ROOT/"docs/users").glob("*/todo.md"))
+        for f in sorted(files, key=lambda f: f.name, reverse=True):
+            for i, line in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
+                if p.search(line): print(f"{f.relative_to(ROOT)}:{i}: {line.strip()[:200]}"); n += 1
+        if not n: print("결과 없음")
+        return 0 if n else 1
     g = synonyms(); pats = [pattern(a, g) for a in args]
     hits = [(f, n, h) for f, n, h, b in entries() if all(p.search(b) for p in pats)]
     for f, n, h in hits: print(f"{f}:{n}: {h[4:]}")

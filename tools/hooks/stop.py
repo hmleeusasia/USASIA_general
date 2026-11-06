@@ -63,10 +63,14 @@ def problems(files):
         users = os.path.join(ROOT, "docs", "users")
         for uid in os.listdir(users) if os.path.isdir(users) else []:
             board += rd(f"docs/users/{uid}/todo.md")
+            arch = os.path.join(ROOT, "docs", "archive")
+            for dp, _, fs in os.walk(arch) if os.path.isdir(arch) else []:  # prune-archived rows count as known (not snapshots)
+                board += "".join(rd(os.path.relpath(os.path.join(dp, n), ROOT)) for n in fs if n == f"todo_{uid}_closed.md")
+        known = set(re.findall(r"(?<![\w-])T-\d+(?![\w-])", board))  # whole IDs: T-65 is not T-653 (D-20261106-3)
         for f in logs:
             for line in rd(f).splitlines():
                 if line.startswith("### ") and re.search(r"#(open|waiting)\b", line):
-                    miss = [t for t in re.findall(r"\bT-\d+\b", line) if t not in board]
+                    miss = [t for t in re.findall(r"(?<![\w-])T-\d+(?![\w-])", line) if t not in known]
                     if miss:
                         out.append(("stop-open", f"{f}: {line[4:90]}",
                                     f"Add {', '.join(miss)} to the todo board docs/users/<id>/todo.md (todo skill)."))

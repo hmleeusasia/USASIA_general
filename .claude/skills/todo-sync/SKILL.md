@@ -17,7 +17,7 @@ description: 개인 할 일 보드(docs/users/<id>/todo.md)와 STWS 티켓(보�
 - New ticket → add to section 2 with its T-number. STWS Resolved/Cancelled → status 끝/취소; `python3 tools/prune.py --apply` moves the row to archive 2 days later (history stays in the log, D-20261104-3). STWS "Closed" is not tracked — Resolved is the end (user, 2026-11-04)
 - 메일·업무 기록의 #open 중 todo.md에 없는 것 → M-<짧은이름>으로 추가 (티켓 없음 표시)
 - 움직임 = 둘 중 최근 날짜. 30일 넘으면 ⏸
-- Row ≤ 400 chars: state + next step only; history and details go to the day log (check.py warns per long row, 2026-11-05)
+- 줄 고칠 때: 경과는 그날 업무 기록으로, 보드 "다음"은 다음 할 행동 하나로 덮어쓰기(≤ 80자, 행 ≤ 220자). 경과 보기 `py tools/find.py --id <ID>` (D-20261106-3)
 - 매장 약어: BV Bellevue, BV(구) Bellevue Legacy, LW Lynnwood, GLW GMart Lynnwood, MW Mellowway, IS Issaquah, RM Redmond, FW Federalway, UW, BL Ballard, CP Campeon, M2M, 본부 EGMM/NWHQ
 
 ## 3. "지금" 제안 (3~7건)

@@ -247,12 +247,20 @@ def main():
     for name, args, want, code in [("find AND hit", ["Granite", "demarc"], os.path.join("kb", "INDEX.md:"), 0),
                                    ("find single no match", ["zzqqxx"], "NO INTERNAL MATCH", 1),
                                    ("find OR fallback", ["Granite", "zzqqxx"], "PARTIAL matches", 0),
-                                   ("find no match", ["zzqqxx", "yyqqww"], "NO INTERNAL MATCH", 1)]:
+                                   ("find no match", ["zzqqxx", "yyqqww"], "NO INTERNAL MATCH", 1),
+                                   ("find --id whole ID", ["--id", "T-606"], "T-606", 0),  # D-20261106-3
+                                   ("find --id no prefix hit", ["--id", "T-60"], "결과 없음", 1)]:
         r = subprocess.run([sys.executable, fp] + args, capture_output=True, timeout=60)
         fok = r.returncode == code and want in r.stdout.decode("utf-8", "replace")
         print(f"{'ok ' if fok else 'FAIL'} {name}")
         bad += not fok
-    total = len(CASES) + 1 + 4 + 6 + 6 + 4 + 7 + 1  # guard cases + digest + stop + area + heavy + find + account + tools
+    sys.path.insert(0, os.path.dirname(HERE))
+    import re as _re  # stop-open whole-ID rule (D-20261106-3): T-65 is not known because T-653 is on a board
+    wid = _re.compile(r"(?<![\w-])T-\d+(?![\w-])")
+    sok = set(wid.findall("| T-653 | x |")) == {"T-653"} and "T-65" not in set(wid.findall("| T-653 | x |"))
+    print(f"{'ok ' if sok else 'FAIL'} stop-open whole-ID")
+    bad += not sok
+    total = len(CASES) + 1 + 4 + 6 + 6 + 6 + 7 + 1 + 1  # guard cases + digest + stop + area + heavy + find + account + tools
     print(f"\n{total - bad}/{total} passed")
     sys.exit(1 if bad else 0)
 
