@@ -77,5 +77,5 @@ Pass = (a) artifacts exist: profile rows, onboarding.md core checked, one log fi
 `.claude/skills/onboarding/SKILL.md` (≤ 3,000 chars), `docs/onboarding/0.md…` (one per module), `docs/templates/user_profile.md`, digest.py + a SessionStart change for detection and personal-file injection, `.gitignore` for accounts.local.json, test_hooks cases. docs/users/INDEX.md short list → pointer.
 
 ## Open for the user
-1. Showing docs/team/<name>.md to its subject: default = confirm list only; Dan or hmlee approves once for all team files.
+1. Showing docs/team/<name>.md to its subject: default = confirm list only; hmlee approves once for all team files (user 2026-11-06: permissions are not being adjusted yet, hmlee handles it).
 2. Build order: account detection first (also fixes today's shared-PC issue), then the skill and core modules?
