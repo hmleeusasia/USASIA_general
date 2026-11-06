@@ -1,5 +1,5 @@
 # PLAN master-data-glpi-001 draft1 — master tables in usasia_db, GLPI for assets
-Status: draft1 (2026-11-05), agreed by Opus + fresh Sonnet (2 rounds) after web research. **Not approved by the user yet.** Source: ai-system-questions Q19. Input to the phase 2 PLAN of PLAN-data-migration-001 (D-20261105-3), not a parallel track.
+Status: draft1 (2026-11-05), agreed by Opus + fresh Sonnet (2 rounds) after web research. Approved by the user → D-20261105-11. Source: ai-system-questions Q19. Input to the phase 2 PLAN of PLAN-data-migration-001 (D-20261105-3), not a parallel track.
 
 ## Verdict
 Right direction for small, non-sensitive reference data; wrong order and scope as first written. Adopt a thin slice now; defer GLPI sync and anything sensitive.
