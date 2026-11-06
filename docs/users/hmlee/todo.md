@@ -65,7 +65,7 @@
 | T-651 | Westminster CO: scale PLU barcode format ($999.99) | Westminster CO | #pos | 할 일 | 2026-11-05 | Change scale format; POS side later |
 | T-644 | EGMM Meraki MX drop 11/05 (Andy Han) | EGMM | #network #support | 할 일 | 2026-11-05 | Check uplink / ISP modem, reply to Andy Han |
 | M-tommy-list | Work list for Tommy Song's Nov Seattle trip | — | #general | 할 일 | 2026-11-05 | First items passed on 11/05; add more as found |
-| M-contact | Approved contacts → Drive address book | — | #general | 진행 | 2026-11-06 | Collect Outlook emails → batch sheet |
+| M-contact | Approved contacts → Drive address book | — | #general | 진행 | 2026-11-06 | Batch 90_변경대기_2026-11-06_1 written; cloud applies it |
 
 ## 3. Follow-ups without a ticket (moved from CURRENT_STATE C, 2026-11-03)
 | ID | Item | Status | Who |
