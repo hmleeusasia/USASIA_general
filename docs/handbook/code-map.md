@@ -221,6 +221,49 @@ Tests for tools/handbook.py: copies the repo parts it reads into a temp folder, 
 - Imports local modules: —
 - Mentions/runs scripts: `tools/find.py`, `tools/handbook.py`, `tools/prune.py`, `tools/repo_map.py`
 
+### `tools/test_usasia.py`
+
+Tests for tools/usasia.py against a fake local server; no network.
+
+- Imports local modules: `tools/usasia.py`
+- Mentions/runs scripts: —
+
+### `tools/usasia.py`
+
+usasia_db command-line client (PLAN-usasia-db-phase0-001-draft3 §4, R7, S4, S9; D-20261106-7 §6.5).
+
+- Imports local modules: —
+- Mentions/runs scripts: —
+
+| Function | Line | Arguments | Meaning | Called from |
+|---|---|---|---|---|
+| `file_digest` | 67 | path | SHA-256 of a file with CRLF read as LF (same result on Windows and Linux checkouts). | (same file) |
+| `check_pin` | 73 | — | Exit 5 unless this file matches the pinned digest (the pin changes only through review). | (same file) |
+| `base_url` | 86 | — | Base URL from env or default; https only (http allowed only for a local test server in tests). | (same file) |
+| `claude_account` | 97 | — | accountUuid of the signed-in Claude account, or None. | (same file) |
+| `read_token_file` | 106 | path | Token text from a file (first non-empty line), or None. | (same file) |
+| `find_token` | 116 | token_file | Token per the lookup order in the module docstring. Never printed. | (same file) |
+| `request` | 148 | method, path, token, query, body | JSON request; returns (status, parsed body). Raises CliError for unreachable/5xx/429/401/403. | (same file) |
+| `parse` | 177 | raw | Parsed JSON body, or {} when empty or not JSON. | (same file) |
+| `refused` | 185 | status, payload | CliError for a 4xx answer other than 401/403. | (same file) |
+| `envelope` | 197 | text | Text inside an UNTRUSTED DATA envelope with a per-run marker (content cannot fake the end line). | (same file) |
+| `todo_line` | 204 | todo | One list row: code status store planned due owner title. | (same file) |
+| `show_json` | 211 | obj | Pretty JSON inside the envelope. | (same file) |
+| `cmd_me` | 218 | args, token | Prints who the token belongs to. | — |
+| `cmd_activity` | 228 | args, token | Prints refused and token events of the last 24 hours. | — |
+| `cmd_list` | 241 | args, token | Lists items, following every page, inside the envelope. | — |
+| `get_todo` | 260 | code, token | Current row (dict) or CliError. | (same file) |
+| `cmd_get` | 268 | args, token | Prints one item as JSON inside the envelope. | — |
+| `fields_from` | 273 | args | API fields from the options that were given. | (same file) |
+| `cmd_add` | 278 | args, token | Creates an item; a repeat with the same values is fine, different values exit 1. | — |
+| `cmd_update` | 290 | args, token | Reads lock_version (unless --lock), then saves the given fields; a conflict shows the current row. | — |
+| `cmd_history` | 308 | args, token | Prints the change history of one of my items. | — |
+| `cmd_export` | 320 | args, token | Writes all visible items and own history (export token) to a file outside any git repo, or prints them. | — |
+| `inside_git_tree` | 348 | path | True if the file would land in a folder with a .git above it. | (same file) |
+| `cmd_selfcheck` | 360 | args, token | Only checks the pinned checksum (done before every command anyway). | — |
+| `build_parser` | 365 | — | Command-line options. | (same file) |
+| `main` | 407 | argv | Runs one command; returns the exit code. | tools/test_usasia.py, (same file) |
+
 ## Hook rule modes (tools/hooks/config.json)
 
 | Rule | Mode | Rule ID |
@@ -281,7 +324,7 @@ Tests for tools/handbook.py: copies the repo parts it reads into a temp folder, 
 | R-LOOK-03 (docs/rules/lookup.md) | Budget for repo search. Stop when two searches in a row bring no new file. Hard cap: 4 `find.py` runs and 5 file opens per question. No subagents for lookups (docs/kb/subagents.md). `find.py` output decides the next step: | tools/find.py, tools/hooks/digest.py, tools/hooks/test_hooks.py |
 | R-LOOK-04 (docs/rules/lookup.md) | Answer format when sources mix: `Repo: … (file) / Web: … (source) / Unknown: …`. | — |
 | R-LOOK-05 (docs/rules/lookup.md) | Write-back (KCS): an answer that came from the web or the user and is likely to recur gets one line, with keywords, the source and the date, in the matching kb file (error codes → kb/pos_tips.md; lasting facts → kb/facts.md, 50-line cap). Run `find.py` first to avoid duplicates. No new files. No sensitive values (R-SEC-02). Personal preferences go to docs/users/<id>/. A search that missed but was answered later → one friction line in docs/projects/ai-system-questions.md (skill:session-end step 3; write-back itself is step 2b), which feeds keywords.md synonyms at the weekly review. | .claude/skills/session-end/SKILL.md |
-| R-SEC-01 (docs/rules/security.md) | GitHub holds secondary docs only: index, summaries, keywords, links, decision summaries, dates, tips. Originals and refined data live in the company Google Drive. When unsure, send it to Drive. | — |
+| R-SEC-01 (docs/rules/security.md) | GitHub holds secondary docs only: index, summaries, keywords, links, decision summaries, dates, tips. Originals and refined data live in the company Google Drive. When unsure, send it to Drive. | tools/test_usasia.py, tools/usasia.py |
 | R-SEC-02 (docs/rules/security.md) | Never in the repo (Drive only, link from the repo): | .claude/skills/session-end/SKILL.md, .claude/skills/todo/SKILL.md, tools/hooks/config.json |
 | R-SEC-03 (docs/rules/security.md) | Sensitive values (emails, phones, account numbers, circuit IDs) go only to the Drive "Claude" folder (private, inherited sharing off). The repo keeps IDs and column names only: docs/drive-index/claude-folder.md. The folder is never shared; writes only from approved local sessions. | tools/hooks/config.json |
 | R-SEC-04 (docs/rules/security.md) | Passwords and secret keys are stored nowhere: not in the repo, not in the Drive Claude folder, not in memory files. | tools/hooks/config.json, tools/hooks/guard.py |

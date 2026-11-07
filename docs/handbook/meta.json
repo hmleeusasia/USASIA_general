@@ -1,413 +1,498 @@
 {
- "_doc": "Meanings for tools/handbook.py. en + ko for every module, top-level function and skill.",
- "modules": {
-  "tools/check.py": {
-   "en": "Document health check run by hand, by the session-end skill and by the git pre-commit hook. It scans the docs folder for unregistered tags, tags without a hub page, sensitive-looking text, email addresses, missing INDEX entries, unknown or duplicate rule IDs, and files that are too long; with --files it reports only problems in the given files. Exits 1 on hard problems.",
-   "ko": "문서 점검 스크립트(직접 실행, session-end, git pre-commit에서 사용). 미등록 태그, 허브 없는 태그, 민감 정보 의심, 이메일 주소, INDEX 누락, 규칙 ID 오류, 길이 초과를 찾음. --files를 주면 해당 파일 문제만 보고하고, 심각한 문제가 있으면 종료 코드 1"
+  "_doc": "Meanings for tools/handbook.py. en + ko for every module, top-level function and skill.",
+  "modules": {
+    "tools/check.py": {
+      "en": "Document health check run by hand, by the session-end skill and by the git pre-commit hook. It scans the docs folder for unregistered tags, tags without a hub page, sensitive-looking text, email addresses, missing INDEX entries, unknown or duplicate rule IDs, and files that are too long; with --files it reports only problems in the given files. Exits 1 on hard problems.",
+      "ko": "문서 점검 스크립트(직접 실행, session-end, git pre-commit에서 사용). 미등록 태그, 허브 없는 태그, 민감 정보 의심, 이메일 주소, INDEX 누락, 규칙 ID 오류, 길이 초과를 찾음. --files를 주면 해당 파일 문제만 보고하고, 심각한 문제가 있으면 종료 코드 1"
+    },
+    "tools/find.py": {
+      "en": "Search tool for the work log. Finds entries containing all given words or tags (with synonyms from keywords.md and store_codes.md), lists open and waiting items (--open), upcoming dates (--due) and the full history of one ticket or item ID (--id). Also searches decisions and other docs, and tells the user to stop searching the repo when nothing matches.",
+      "ko": "업무 기록 검색 도구. 단어·태그를 모두 포함한 기록을 찾고(동의어 자동 확장), --open은 열린 건, --due는 30일 안 일정, --id는 한 건의 경과를 보여줌. 결정 기록과 다른 docs도 검색하며, 내부에 결과가 없으면 저장소 검색을 멈추라고 안내"
+    },
+    "tools/prune.py": {
+      "en": "Housekeeping script that moves closed rows out of always-read files so they do not keep growing: finished rows, past 'Now' rows and old sync notes from a user's todo board, and answered questions from the AI-system questions file. Dry run by default; --apply moves rows into docs/archive.",
+      "ko": "항상 읽는 파일이 커지지 않게 끝난 줄을 보관함으로 옮기는 정리 스크립트. 할 일 보드의 끝난 건·지난 '지금' 줄·오래된 동기화 메모와 해결된 질문을 docs/archive로 옮김. 기본은 미리보기, --apply를 주면 실제로 옮김"
+    },
+    "tools/repo_map.py": {
+      "en": "Rebuilds the generated snapshot section of docs/ARCHITECTURE.md: file counts and sizes, content versus framework share, log and decision counts, skill list, hook rule modes and a depth-3 folder tree. With --check it only reports whether the section is stale.",
+      "ko": "docs/ARCHITECTURE.md의 자동 생성 구간(파일 수·크기, 내용 대 틀 비율, 기록·결정 수, skill 목록, hook 규칙 모드, 폴더 트리)을 다시 만듦. --check는 낡았는지만 알려줌"
+    },
+    "tools/handbook.py": {
+      "en": "This generator. It reads the Python tools, the skills, the hook config and the rule files, combines them with the meanings in docs/handbook/meta.json, and writes the English and Korean code maps. With --check it fails if a page is stale or a meaning is missing, and it refuses text that looks like an email or IP address.",
+      "ko": "이 코드 지도를 만드는 생성기. Python 도구, skill, hook 설정, 규칙 파일을 읽고 meta.json의 설명과 합쳐 영어·한국어 코드 지도를 씀. --check는 낡았거나 설명이 빠졌으면 실패하고, 이메일·IP처럼 보이는 글은 거부"
+    },
+    "tools/hooks/common.py": {
+      "en": "Shared helper library imported by every hook script. It reads the hook input as UTF-8 JSON, looks up each rule's mode (off, warn or block) in config.json, writes a local gitignored log, and sends messages back to Claude either as a warning or as a block. All helpers fail open so a hook bug never stops work.",
+      "ko": "모든 hook 스크립트가 가져다 쓰는 공통 도구. hook 입력(UTF-8 JSON) 읽기, config.json에서 규칙 모드(off/warn/block) 조회, 로컬 로그 기록, Claude에게 경고 또는 차단 메시지 보내기를 맡음. 오류가 나도 작업을 막지 않게 설계"
+    },
+    "tools/hooks/probe.py": {
+      "en": "Diagnostic hook for any event (used in the first setup test). When its rule is on, it logs which event fired, which shell and Python ran it and which input fields arrived, and at SessionStart shows the same line to Claude. It never blocks.",
+      "ko": "hook 설치 초기 점검용 진단 hook. 규칙이 켜져 있으면 어떤 이벤트가 왔고 어떤 셸·Python으로 실행됐는지, 입력에 어떤 항목이 있었는지 로그에 남김(SessionStart에서는 Claude에게도 보여줌). 차단은 하지 않음"
+    },
+    "tools/hooks/digest.py": {
+      "en": "SessionStart hook. At session start it puts a short summary in front of Claude: who the user is, local or cloud, last start-day, open and overdue items, traps, and git state, so Claude does not have to read the long state files. It can also detect the signed-in Claude account and register it for a user. Run by hand with --print.",
+      "ko": "SessionStart hook. 세션 시작 때 사용자, 로컬/클라우드, 마지막 start-day, 열린·기한초과 건, 주의점, git 상태를 짧게 요약해 Claude에게 넣어 긴 상태 파일을 읽지 않게 함. 로그인한 Claude 계정으로 사용자를 알아내는 기능도 있음. 직접 실행은 --print"
+    },
+    "tools/hooks/guard.py": {
+      "en": "PreToolUse hook for Write, Edit, MultiEdit and Bash. Before a change is made it scans only the new text for emails, secrets, amounts or IPs, wrong log file names, another person's folder, mostly-Korean text in English-only areas, force pushes and recursive deletes of docs. Each rule is off, warn or block. Protects the repo from sensitive data and destructive commands.",
+      "ko": "PreToolUse hook(Write·Edit·MultiEdit·Bash 실행 전). 새로 쓰는 글만 검사해 이메일, 비밀값, 금액·IP, 잘못된 기록 파일 이름, 남의 폴더, 영어 전용 영역의 한글 글, 강제 push, docs 삭제를 잡음. 규칙마다 off/warn/block. 민감 정보와 위험한 명령으로부터 저장소를 지킴"
+    },
+    "tools/hooks/touch.py": {
+      "en": "PostToolUse hook for Write and Edit. It records which repo files were written this turn and, cumulatively, this session in temporary files outside the repo. stop.py reads these records. It never blocks.",
+      "ko": "PostToolUse hook(Write·Edit 실행 후). 이번 턴과 이번 세션에 저장소에서 어떤 파일을 썼는지 저장소 밖 임시 파일에 기록함. stop.py가 이 기록을 읽음. 차단하지 않음"
+    },
+    "tools/hooks/stop.py": {
+      "en": "Stop hook, run when Claude finishes a turn. Looking only at files touched this turn, it blocks the end of the turn if CURRENT_STATE is too long, if an open log item has a ticket ID missing from the todo board, or (once per session) if heavy work such as tools, rules or skills was done without a review. Never loops and fails open.",
+      "ko": "Stop hook(Claude가 턴을 끝낼 때). 이번에 건드린 파일만 보고, CURRENT_STATE가 너무 길거나, 열린 기록의 티켓 번호가 할 일 보드에 없거나, 무거운 작업(도구·규칙·skill 수정)을 검토 없이 했으면(세션당 한 번) 턴 종료를 막음. 반복 차단은 없고 오류 시 통과"
+    },
+    "tools/hooks/area.py": {
+      "en": "Rule-area supervisor with several events: UserPromptSubmit points Claude to the rule file whose trigger words appear in the request, PostToolUse records which rule files were read, PreToolUse warns once when a write touches an area whose rule file was not read, SessionStart (compact) forgets the reads. Warns only, never blocks.",
+      "ko": "규칙 영역 감독 hook. UserPromptSubmit에서는 요청에 트리거 단어가 있으면 읽어야 할 규칙 파일을 알려주고, PostToolUse에서는 읽은 규칙 파일을 기록하고, PreToolUse에서는 안 읽은 영역의 파일을 쓰려 하면 한 번 경고하고, SessionStart(compact)에서는 읽은 기록을 지움. 경고만 하고 차단하지 않음"
+    },
+    "tools/hooks/review_mark.py": {
+      "en": "Small command run as the last step of the review-loop skill. It writes a marker file saying this session's heavy work was reviewed, so the Stop hook stops reminding. Takes an optional session ID, otherwise picks the most recently changed session.",
+      "ko": "review-loop skill의 마지막 단계에서 실행하는 작은 명령. 이 세션의 무거운 작업을 검토했다는 표시 파일을 만들어 Stop hook의 검토 알림을 끔. 세션 ID를 주지 않으면 가장 최근 세션을 선택"
+    },
+    "tools/hooks/test_hooks.py": {
+      "en": "Test suite for the hooks and for find.py. It forces every rule to block in a temporary config and runs hit and no-hit example inputs through guard, stop, area, digest account detection and find, then prints how many passed. Run it before changing any rule mode.",
+      "ko": "hook과 find.py의 시험 모음. 임시로 모든 규칙을 block으로 바꾸고 걸려야 하는 예와 걸리면 안 되는 예를 guard, stop, area, digest 계정 감지, find에 넣어 결과를 세어 보여줌. 규칙 모드를 바꾸기 전에 실행"
+    },
+    "tools/test_handbook.py": {
+      "en": "Tests for tools/handbook.py: copies the repo parts it reads into a temp folder, breaks one thing per test (missing meaning, orphan key, stale page, email/host) and checks the generator fails with the right message.",
+      "ko": "tools/handbook.py 시험. 생성기가 읽는 부분을 임시 폴더에 복사하고, 시험마다 하나씩 망가뜨린 뒤(설명 누락, 남은 키, 낡은 문서, 이메일·호스트) 생성기가 알맞은 메시지로 실패하는지 확인함."
+    },
+    "tools/usasia.py": {
+      "ko": "usasia_db 명령줄 도구(표준 라이브러리만). 할 일 목록·조회·추가·수정·이력, 내보내기, 토큰 확인. 항목 글은 UNTRUSTED DATA 틀 안에 출력. 실행 전 체크섬 확인. exit 3 = 서버 안 됨(건너뜀), 4 = 토큰 거절, 5 = 체크섬 불일치."
+    },
+    "tools/test_usasia.py": {
+      "en": "Tests for tools/usasia.py against a fake local server; no network.",
+      "ko": "tools/usasia.py 시험. 가짜 로컬 서버로, 네트워크 안 씀."
+    }
   },
-  "tools/find.py": {
-   "en": "Search tool for the work log. Finds entries containing all given words or tags (with synonyms from keywords.md and store_codes.md), lists open and waiting items (--open), upcoming dates (--due) and the full history of one ticket or item ID (--id). Also searches decisions and other docs, and tells the user to stop searching the repo when nothing matches.",
-   "ko": "업무 기록 검색 도구. 단어·태그를 모두 포함한 기록을 찾고(동의어 자동 확장), --open은 열린 건, --due는 30일 안 일정, --id는 한 건의 경과를 보여줌. 결정 기록과 다른 docs도 검색하며, 내부에 결과가 없으면 저장소 검색을 멈추라고 안내"
+  "functions": {
+    "tools/find.py#synonyms": {
+      "en": "Builds groups of words that mean the same thing from the tag table in keywords.md and the store abbreviations table in store_codes.md, so a search for one name also finds the others.",
+      "ko": "keywords.md의 태그 표와 store_codes.md의 매장 약어 표에서 같은 뜻의 단어 묶음을 만들어, 한 이름으로 검색해도 나머지 이름까지 찾게 함"
+    },
+    "tools/find.py#pattern": {
+      "en": "Turns one search word into a regular expression covering its synonyms. Ticket IDs must match whole, short codes match as whole words, and all-caps codes are case sensitive.",
+      "ko": "검색어 하나를 동의어까지 포함하는 정규식으로 바꿈. 티켓 ID는 통째로, 짧은 코드는 단어 단위로, 대문자 코드는 대소문자 구분해서 맞춤"
+    },
+    "tools/find.py#entries": {
+      "en": "Goes through every log and archive file and yields each entry (a heading starting with three hash marks plus its body) with file and line; a file with no such headings counts as one entry.",
+      "ko": "기록·보관 파일을 훑어 항목(### 제목과 본문)을 파일·줄 번호와 함께 하나씩 내줌. ### 제목이 없는 파일은 파일 전체를 한 항목으로 봄"
+    },
+    "tools/find.py#sections": {
+      "en": "Splits docs outside the log into sections at second- and third-level headings and yields each with its file, start line and lines, so searches can show which section matched.",
+      "ko": "기록 밖의 docs를 ##·### 제목 단위 절로 나눠 파일·시작 줄·내용과 함께 내줌. 검색 결과에 어느 절이 맞았는지 보여주기 위함"
+    },
+    "tools/find.py#dates": {
+      "en": "Extracts check, next and due dates (labelled with the Korean words for those) from an entry body and returns them as label and date pairs.",
+      "ko": "항목 본문에서 확인일·다음·기한 표시가 붙은 날짜를 찾아 (이름, 날짜) 목록으로 돌려줌"
+    },
+    "tools/find.py#main": {
+      "en": "Entry point. Reads the command line and runs one mode: --open, --due, --id, or a normal search over logs, decisions and other docs. If an AND search finds nothing it shows partial matches, and if still nothing it prints a stop-searching message. Returns a shell exit code.",
+      "ko": "시작 지점. 명령줄을 읽어 --open, --due, --id 또는 일반 검색(기록·결정·기타 docs)을 실행. AND 검색 결과가 없으면 부분 일치를 보여주고, 그래도 없으면 검색 중단 안내를 출력. 종료 코드를 돌려줌"
+    },
+    "tools/prune.py#arg": {
+      "en": "Returns the value that follows a given option name on the command line, or a default if the option is absent.",
+      "ko": "명령줄에서 옵션 이름 다음에 오는 값을 돌려줌. 옵션이 없으면 기본값"
+    },
+    "tools/prune.py#user_id": {
+      "en": "Works out whose todo board to prune: the --user option, otherwise the user named in the local personal settings file; stops with a message if neither exists.",
+      "ko": "어느 사용자의 할 일 보드를 정리할지 정함. --user 옵션, 없으면 개인 설정 파일에 적힌 사용자. 둘 다 없으면 메시지를 내고 멈춤"
+    },
+    "tools/prune.py#today": {
+      "en": "Returns today's date: from --today if given, otherwise in the time zone written in the user's profile, falling back to the machine clock if the time zone data is unavailable.",
+      "ko": "오늘 날짜를 돌려줌. --today가 있으면 그 값, 없으면 사용자 프로필의 시간대 기준, 시간대 정보가 없으면 PC 시계"
+    },
+    "tools/prune.py#cells": {
+      "en": "Splits one markdown table row into a list of trimmed cell texts.",
+      "ko": "마크다운 표 한 줄을 칸별 글자 목록으로 나눔"
+    },
+    "tools/prune.py#sections": {
+      "en": "Finds each second-level heading section in a list of lines and yields its heading with start and end line numbers.",
+      "ko": "줄 목록에서 ## 절을 찾아 제목과 시작·끝 줄 번호를 내줌"
+    },
+    "tools/prune.py#prune_todo": {
+      "en": "Decides which todo board lines to remove: finished or cancelled rows old enough, past-dated rows in the Now section, and sync notes beyond the newest five. Returns the new lines plus the removed rows grouped by reason; writes nothing itself.",
+      "ko": "할 일 보드에서 뺄 줄을 정함: 끝나거나 취소된 지 충분히 지난 줄, '지금' 절의 지난 날짜 줄, 최신 5개를 넘는 동기화 메모. 남길 줄과 뺄 줄(이유별)을 돌려주며 파일은 직접 고치지 않음"
+    },
+    "tools/prune.py#prune_questions": {
+      "en": "Splits the AI-system questions file into rows to keep and rows already answered by a decision (and not still open), which are to be moved out.",
+      "ko": "AI 시스템 질문 파일을 남길 줄과 결정으로 해결되어(아직 열림이 아닌) 옮길 줄로 나눔"
+    },
+    "tools/prune.py#archive": {
+      "en": "Appends rows under a dated heading to the matching archive file in docs/archive for the year (creating it if needed), but only when applying; returns the archive path either way.",
+      "ko": "옮길 줄을 docs/archive의 해당 연도 파일에 날짜 제목 아래로 덧붙임(없으면 새로 만듦). --apply일 때만 쓰고, 어느 경우든 보관 파일 경로를 돌려줌"
+    },
+    "tools/prune.py#main": {
+      "en": "Entry point. Prunes the user's todo board and the questions file, then prints a report of what moved (or would move in a dry run).",
+      "ko": "시작 지점. 사용자의 할 일 보드와 질문 파일을 정리하고, 옮긴 줄(미리보기에서는 옮길 줄)을 보고로 출력"
+    },
+    "tools/repo_map.py#files": {
+      "en": "Lists every repo file with its size, skipping git internals, caches, logs, local personal files and the architecture doc itself.",
+      "ko": "저장소의 모든 파일과 크기를 나열. git 내부, 캐시, 로그, 개인 로컬 파일, ARCHITECTURE.md 자체는 제외"
+    },
+    "tools/repo_map.py#tree": {
+      "en": "Draws a folder tree down to a given depth, showing file counts and sizes for folders and size for files.",
+      "ko": "정해진 깊이까지 폴더 트리를 그림. 폴더는 파일 수와 크기, 파일은 크기를 표시"
+    },
+    "tools/repo_map.py#build": {
+      "en": "Computes the whole generated snapshot text: totals, framework versus content share, log and decision counts, skill table, hook rule modes and the folder tree.",
+      "ko": "자동 생성 구간 전체 글을 만듦: 합계, 틀 대 내용 비율, 기록·결정 수, skill 표, hook 규칙 모드, 폴더 트리"
+    },
+    "tools/repo_map.py#main": {
+      "en": "Entry point. Replaces the generated block in docs/ARCHITECTURE.md with a fresh one, or with --check only reports whether it is out of date. Returns an exit code.",
+      "ko": "시작 지점. ARCHITECTURE.md의 자동 생성 구간을 새로 바꿔 쓰거나, --check이면 낡았는지만 알려줌. 종료 코드를 돌려줌"
+    },
+    "tools/handbook.py#rel": {
+      "en": "Converts a file path into a repo-relative path with forward slashes, used as the key in the maps.",
+      "ko": "파일 경로를 저장소 기준 상대 경로(슬래시)로 바꿈. 지도의 키로 사용"
+    },
+    "tools/handbook.py#py_files": {
+      "en": "Lists all Python files under tools, sorted, skipping cache folders.",
+      "ko": "tools 아래의 모든 Python 파일을 정렬해 나열(캐시 폴더 제외)"
+    },
+    "tools/handbook.py#first_line": {
+      "en": "Returns the first line of a docstring, or empty text if there is none.",
+      "ko": "docstring의 첫 줄을 돌려줌. 없으면 빈 글"
+    },
+    "tools/handbook.py#parse_modules": {
+      "en": "Reads every Python tool and records its docstring, top-level functions (name, line, arguments), imports, calls and which other local scripts it imports or mentions.",
+      "ko": "모든 Python 도구를 읽어 docstring, 최상위 함수(이름·줄·인자), import, 호출, 가져오거나 언급하는 다른 내부 스크립트를 기록"
+    },
+    "tools/handbook.py#callers": {
+      "en": "Finds where a given function is used: in its own file or in other modules that import it or call it by module name. Returns a list of places.",
+      "ko": "어떤 함수가 어디서 쓰이는지 찾음(같은 파일, 또는 그 모듈을 가져오거나 모듈 이름으로 부르는 다른 파일). 위치 목록을 돌려줌"
+    },
+    "tools/handbook.py#parse_skills": {
+      "en": "Reads each skill's SKILL.md and extracts its name, description, tools and rule or kb files it mentions, other skills it calls and rule IDs cited.",
+      "ko": "각 skill의 SKILL.md에서 이름, 설명, 언급한 도구·규칙·kb 파일, 부르는 다른 skill, 인용한 규칙 ID를 뽑음"
+    },
+    "tools/handbook.py#parse_rules": {
+      "en": "Reads the rule files in docs/rules and returns each rule ID with its file and title.",
+      "ko": "docs/rules의 규칙 파일에서 규칙 ID별로 파일과 제목을 모아 돌려줌"
+    },
+    "tools/handbook.py#rule_citations": {
+      "en": "Lists the tool, config and skill files that mention a given rule ID, showing where the rule is enforced or cited.",
+      "ko": "특정 규칙 ID를 언급하는 도구·설정·skill 파일을 나열해, 그 규칙을 어디서 지키거나 인용하는지 보여줌"
+    },
+    "tools/handbook.py#meaning": {
+      "en": "Picks the meaning text for a language from meta.json, falling back to the docstring for English, or a visible 'missing' marker.",
+      "ko": "meta.json에서 해당 언어의 설명을 고름. 영어는 없으면 docstring을 쓰고, 그래도 없으면 '없음' 표시"
+    },
+    "tools/handbook.py#render": {
+      "en": "Builds one full code-map page (English or Korean) as text: module sections with function tables, hook rule modes, skills table and rules table.",
+      "ko": "코드 지도 한 쪽(영어 또는 한국어) 전체 글을 만듦: 모듈별 절과 함수 표, hook 규칙 모드, skill 표, 규칙 표"
+    },
+    "tools/handbook.py#check_meta": {
+      "en": "Checks that every module, function and skill has the needed meaning in meta.json (Korean always, English unless a docstring exists). Returns a list of error messages.",
+      "ko": "모든 모듈·함수·skill에 meta.json 설명이 있는지 점검(한국어는 필수, 영어는 docstring이 없을 때 필수). 오류 메시지 목록을 돌려줌"
+    },
+    "tools/handbook.py#main": {
+      "en": "Entry point. Writes both code-map pages, or with --check verifies they are current. Also rejects text that looks like an email or IP address and prints any problems with a handbook prefix, exiting 1 if there are any.",
+      "ko": "시작 지점. 코드 지도 두 쪽을 쓰거나, --check이면 최신인지 확인. 이메일·IP처럼 보이는 글도 거부하고, 문제는 handbook: 접두어로 출력하며 있으면 종료 코드 1"
+    },
+    "tools/hooks/area.py#state_file": {
+      "en": "Returns the temporary file path that holds this session's rule-area state (which areas were read, warned or pointed out).",
+      "ko": "이 세션의 규칙 영역 상태(읽음·경고·안내한 영역)를 담는 임시 파일 경로를 돌려줌"
+    },
+    "tools/hooks/area.py#load": {
+      "en": "Loads the session state from its temporary file, or empty lists if it does not exist or is unreadable.",
+      "ko": "임시 파일에서 세션 상태를 읽음. 파일이 없거나 읽을 수 없으면 빈 목록"
+    },
+    "tools/hooks/area.py#save": {
+      "en": "Writes the session state to its temporary file, ignoring any write error.",
+      "ko": "세션 상태를 임시 파일에 저장. 저장 오류는 무시"
+    },
+    "tools/hooks/area.py#areas": {
+      "en": "Reads the table in docs/rules/INDEX.md and returns each rule area with its file, trigger words and trigger path patterns.",
+      "ko": "docs/rules/INDEX.md 표를 읽어 규칙 영역별 파일, 트리거 단어, 트리거 경로 패턴을 돌려줌"
+    },
+    "tools/hooks/area.py#word_hit": {
+      "en": "Tells whether a trigger word appears in the text; plain English words must match as whole words ignoring case, other words match as substrings.",
+      "ko": "트리거 단어가 글에 있는지 판단. 영문 단어는 대소문자 무시하고 단어 단위, 그 밖은 부분 문자열로 맞춤"
+    },
+    "tools/hooks/area.py#rel": {
+      "en": "Turns an absolute path into a path relative to the repo root with forward slashes.",
+      "ko": "절대 경로를 저장소 기준 상대 경로(슬래시)로 바꿈"
+    },
+    "tools/hooks/area.py#main": {
+      "en": "Entry point. Looks at the hook event type and does the matching job: forget reads on compact, record rule files read, point to rule files for prompt keywords, or warn once about unread rules before a write.",
+      "ko": "시작 지점. hook 이벤트 종류를 보고 알맞은 일을 함: compact 때 읽은 기록 삭제, 읽은 규칙 파일 기록, 요청 키워드에 맞는 규칙 파일 안내, 쓰기 전 안 읽은 규칙 한 번 경고"
+    },
+    "tools/hooks/common.py#read_input": {
+      "en": "Reads the JSON that Claude Code sends to the hook on standard input as UTF-8; returns an empty dictionary if it is empty or broken.",
+      "ko": "Claude Code가 표준 입력으로 보내는 JSON을 UTF-8로 읽음. 비었거나 깨졌으면 빈 사전"
+    },
+    "tools/hooks/common.py#mode": {
+      "en": "Looks up a rule's mode (off, warn or block) in config.json; returns off if the rule or file is missing.",
+      "ko": "config.json에서 규칙의 모드(off/warn/block)를 찾음. 규칙이나 파일이 없으면 off"
+    },
+    "tools/hooks/common.py#norm_path": {
+      "en": "Replaces backslashes with forward slashes so Windows and Unix paths compare the same.",
+      "ko": "역슬래시를 슬래시로 바꿔 Windows와 Unix 경로를 같게 비교하도록 함"
+    },
+    "tools/hooks/common.py#log": {
+      "en": "Appends a timestamped line to the local hits.log (not committed) unless running tests. Callers must never pass secret values.",
+      "ko": "시간과 함께 로컬 hits.log(커밋 안 됨)에 한 줄 추가. 테스트 중에는 기록 안 함. 비밀값을 넘기면 안 됨"
+    },
+    "tools/hooks/common.py#context": {
+      "en": "Prints a JSON message that shows the given text to Claude as extra context without blocking; used for warnings.",
+      "ko": "차단 없이 Claude에게 추가 안내 글을 보여주는 JSON을 출력. 경고에 사용"
+    },
+    "tools/hooks/common.py#block": {
+      "en": "Blocks the action: writes the rule ID, the offending line and a fix hint to the error stream and exits with code 2.",
+      "ko": "동작을 차단: 규칙 ID, 문제 줄, 해결 방법을 오류 출력에 쓰고 종료 코드 2로 끝냄"
+    },
+    "tools/hooks/digest.py#rd": {
+      "en": "Reads a repo file as text, returning empty text if it cannot be read.",
+      "ko": "저장소 파일을 글로 읽음. 못 읽으면 빈 글"
+    },
+    "tools/hooks/digest.py#run": {
+      "en": "Runs a command in the repo folder with a 20-second limit and returns its output text, or empty text on any failure.",
+      "ko": "저장소 폴더에서 명령을 20초 제한으로 실행해 출력 글을 돌려줌. 실패하면 빈 글"
+    },
+    "tools/hooks/digest.py#account_uuid": {
+      "en": "Reads the signed-in Claude account ID from the user's Claude config file, or nothing if absent. The ID is treated like an account number and never printed or stored in the repo.",
+      "ko": "사용자의 Claude 설정 파일에서 로그인한 계정 ID를 읽음. 없으면 없음. 계정 번호처럼 취급해 출력하거나 저장소에 쓰지 않음"
+    },
+    "tools/hooks/digest.py#account_user": {
+      "en": "Maps the signed-in Claude account to a user ID using a git-ignored map file. Returns the user, an 'unknown account' note, or nothing to fall back to other methods. Off unless the account-detect rule is on.",
+      "ko": "git에서 제외된 대응 파일로 로그인한 Claude 계정을 사용자 ID에 연결. 사용자, '새 계정' 안내, 또는 다른 방법으로 넘어가라는 없음을 돌려줌. account-detect 규칙이 켜져야 동작"
+    },
+    "tools/hooks/digest.py#register": {
+      "en": "Saves a mapping from the signed-in Claude account to a given user ID in the git-ignored map file (used by onboarding). Validates the ID and keeps existing mappings; returns a status message that hides the account ID.",
+      "ko": "로그인한 Claude 계정을 지정한 사용자 ID에 연결해 git 제외 파일에 저장(온보딩용). ID를 검사하고 기존 연결은 유지하며, 계정 ID가 안 보이는 결과 메시지를 돌려줌"
+    },
+    "tools/hooks/digest.py#personal_rules": {
+      "en": "Returns the text of the user's personal CLAUDE.md with a heading, so it can be injected when the account was detected; empty if none.",
+      "ko": "사용자의 개인 CLAUDE.md 내용을 제목과 함께 돌려줌(계정이 감지됐을 때 넣기 위함). 없으면 빈 글"
+    },
+    "tools/hooks/digest.py#user_id": {
+      "en": "Finds who the user is, in order: detected Claude account, the user named in the local personal settings file, then the git user name matched against profiles. Returns the ID and how it was found, or none with an instruction to ask.",
+      "ko": "사용자가 누구인지 순서대로 찾음: 감지된 Claude 계정, 개인 설정 파일에 적힌 사용자, git 사용자 이름과 프로필 대조. ID와 찾은 방법을 돌려주고, 못 찾으면 물어보라는 안내"
+    },
+    "tools/hooks/digest.py#parse_tools": {
+      "en": "Reads the Tools table of a profile and returns the names of tools marked as available (yes), ignoring other sections.",
+      "ko": "프로필의 Tools 표에서 사용 가능(yes)으로 표시된 도구 이름만 돌려줌. 다른 절은 무시"
+    },
+    "tools/hooks/digest.py#claimed_tools": {
+      "en": "Returns the tools a user says they have, taken from their profile file.",
+      "ko": "사용자가 쓸 수 있다고 적은 도구를 프로필 파일에서 가져와 돌려줌"
+    },
+    "tools/hooks/digest.py#section": {
+      "en": "Returns the body of the lettered section (for example section H) of the CURRENT_STATE document.",
+      "ko": "CURRENT_STATE 문서에서 알파벳으로 된 절(예: H절)의 내용을 돌려줌"
+    },
+    "tools/hooks/digest.py#short": {
+      "en": "Strips markdown marks from a line and cuts it to a maximum length with an ellipsis.",
+      "ko": "한 줄에서 마크다운 기호를 지우고 최대 길이에서 말줄임표로 자름"
+    },
+    "tools/hooks/digest.py#build": {
+      "en": "Builds the whole digest text: user and place, last start-day, open and overdue counts, items due within 7 days, traps, git branch and sync state, and pointers to further reading.",
+      "ko": "요약 전체 글을 만듦: 사용자·장소, 마지막 start-day, 열린·기한초과 건수, 7일 안 기한, 주의점, git 브랜치·동기화 상태, 더 읽을 곳 안내"
+    },
+    "tools/hooks/guard.py#rel": {
+      "en": "Turns an absolute path into a repo-relative path with forward slashes.",
+      "ko": "절대 경로를 저장소 기준 상대 경로(슬래시)로 바꿈"
+    },
+    "tools/hooks/guard.py#new_text": {
+      "en": "Extracts only the text being added by a Write, Edit or MultiEdit call, so old content is not scanned.",
+      "ko": "Write·Edit·MultiEdit 호출에서 새로 들어가는 글만 뽑음. 기존 내용은 검사하지 않기 위함"
+    },
+    "tools/hooks/guard.py#first_line": {
+      "en": "Finds the first line matching a pattern and returns a shortened copy of it with the match; returns nothing if none match.",
+      "ko": "패턴과 맞는 첫 줄을 찾아 줄여서 맞은 부분과 함께 돌려줌. 없으면 없음"
+    },
+    "tools/hooks/guard.py#mask": {
+      "en": "Replaces emails and secrets in a line with placeholders so warnings never repeat the sensitive value.",
+      "ko": "줄 안의 이메일과 비밀값을 자리표시로 바꿔 경고 글에 민감 값이 다시 나오지 않게 함"
+    },
+    "tools/hooks/guard.py#seen_once": {
+      "en": "Remembers in a temporary file whether a key was already seen this session; returns true if so, otherwise records it and returns false. Used to show the English nudge once per file.",
+      "ko": "임시 파일에 이 세션에서 이미 본 키인지 기억함. 봤으면 참, 아니면 기록하고 거짓. 영어 안내를 파일당 한 번만 보여주기 위함"
+    },
+    "tools/hooks/guard.py#check_file": {
+      "en": "Applies the file rules to a path and its new text: email, secret and soft-sensitive checks in scanned folders, log file naming, other person's folder, and too much Korean in English-only areas. Adds findings to the hit list.",
+      "ko": "경로와 새 글에 파일 규칙을 적용: 검사 대상 폴더의 이메일·비밀값·약한 민감 값, 기록 파일 이름, 다른 사람 폴더, 영어 전용 영역의 한글 과다. 발견한 것을 목록에 추가"
+    },
+    "tools/hooks/guard.py#check_bash": {
+      "en": "Checks a shell command for a force push or a recursive delete of the docs folder and adds findings to the hit list.",
+      "ko": "셸 명령에 강제 push나 docs 폴더 재귀 삭제가 있는지 보고 발견하면 목록에 추가"
+    },
+    "tools/hooks/guard.py#main": {
+      "en": "Entry point. Reads the tool call, runs the file or shell checks, then for each finding looks up its mode: block exits with code 2, warn prints a warning to Claude, off is skipped.",
+      "ko": "시작 지점. 도구 호출을 읽고 파일·셸 검사를 한 뒤 발견마다 모드를 확인: block이면 종료 코드 2, warn이면 Claude에게 경고, off이면 건너뜀"
+    },
+    "tools/hooks/stop.py#review_marker": {
+      "en": "Returns the path of the marker file that means this session's heavy work was reviewed.",
+      "ko": "이 세션의 무거운 작업을 검토했다는 표시 파일 경로를 돌려줌"
+    },
+    "tools/hooks/stop.py#heavy_problem": {
+      "en": "Checks whether this session changed heavy paths (tools, rules, skills, settings, CLAUDE.md) or more than 15 files without a review marker. If so, returns a one-time reminder to run the review-loop skill; otherwise nothing.",
+      "ko": "이 세션이 무거운 경로(도구·규칙·skill·설정·CLAUDE.md)나 15개 넘는 파일을 검토 표시 없이 바꿨는지 확인. 그렇다면 review-loop skill을 실행하라는 알림을 한 번 돌려주고, 아니면 없음"
+    },
+    "tools/hooks/stop.py#rd": {
+      "en": "Reads a repo file as text, returning empty text if it cannot be read.",
+      "ko": "저장소 파일을 글로 읽음. 못 읽으면 빈 글"
+    },
+    "tools/hooks/stop.py#problems": {
+      "en": "Given the files touched this turn, finds problems: CURRENT_STATE over 80 lines, and open or waiting log items whose ticket ID is not on any user's todo board or its archive. Returns rule, message and fix triples.",
+      "ko": "이번 턴에 건드린 파일을 보고 문제를 찾음: CURRENT_STATE 80줄 초과, 열림·기다림 기록의 티켓 번호가 어떤 사용자 할 일 보드나 보관함에도 없음. (규칙, 메시지, 해결책) 묶음을 돌려줌"
+    },
+    "tools/hooks/touch.py#state_file": {
+      "en": "Returns the temporary file path that lists files written this turn for a session.",
+      "ko": "세션별로 이번 턴에 쓴 파일 목록을 담는 임시 파일 경로를 돌려줌"
+    },
+    "tools/hooks/touch.py#heavy_file": {
+      "en": "Returns the temporary file path for the cumulative per-session list of files written, used by the heavy-review check and never cleared by stop.py.",
+      "ko": "세션 전체에 걸쳐 쓴 파일을 누적하는 임시 파일 경로를 돌려줌. heavy-review 점검용이며 stop.py가 지우지 않음"
+    },
+    "tools/hooks/touch.py#load_heavy": {
+      "en": "Loads the cumulative session record (files list and whether a warning was already given), or an empty record if none.",
+      "ko": "세션 누적 기록(파일 목록과 경고 여부)을 읽음. 없으면 빈 기록"
+    },
+    "tools/hooks/touch.py#load": {
+      "en": "Loads the list of files written this turn, or an empty list if none.",
+      "ko": "이번 턴에 쓴 파일 목록을 읽음. 없으면 빈 목록"
+    },
+    "tools/hooks/test_hooks.py#run": {
+      "en": "Runs guard.py once with a test input in test mode and returns its exit code and error output.",
+      "ko": "시험 입력으로 guard.py를 시험 모드에서 한 번 실행해 종료 코드와 오류 출력을 돌려줌"
+    },
+    "tools/hooks/test_hooks.py#stop_tests": {
+      "en": "Tests touch.py and stop.py with a fake open log item: it must block when a ticket ID is missing from the board, not when stop_hook_active is set, and not for a real log. Restores the config and removes the fake file. Returns the failure count.",
+      "ko": "가짜 열린 기록으로 touch.py와 stop.py 시험: 티켓 번호가 보드에 없으면 막고, stop_hook_active이거나 실제 기록이면 막지 않아야 함. 설정을 되돌리고 가짜 파일을 지움. 실패 수를 돌려줌"
+    },
+    "tools/hooks/test_hooks.py#area_tests": {
+      "en": "Tests area.py (keyword pointer once, unread-rule warning once, no warning after reading) and the heavy-review block in stop.py with and without a review marker. Returns the failure count.",
+      "ko": "area.py(키워드 안내 한 번, 안 읽은 규칙 경고 한 번, 읽은 뒤 경고 없음)와 stop.py의 heavy-review 차단(검토 표시 유무)을 시험. 실패 수를 돌려줌"
+    },
+    "tools/hooks/test_hooks.py#account_tests": {
+      "en": "Tests account detection in digest.py with temporary fake files: off by default, unknown account, mapped account, bad IDs refused, corrupt map kept, and the account ID never printed. Returns the failure count.",
+      "ko": "임시 가짜 파일로 digest.py의 계정 감지를 시험: 기본 꺼짐, 모르는 계정, 연결된 계정, 잘못된 ID 거부, 깨진 대응 파일 유지, 계정 ID 미출력. 실패 수를 돌려줌"
+    },
+    "tools/hooks/test_hooks.py#main": {
+      "en": "Entry point. Forces all rules to block in a temporary config, runs every guard case plus the stop, area, account, digest and find tests, restores the config, cleans temp state and prints the pass count; exits 1 if any failed.",
+      "ko": "시작 지점. 임시 설정으로 모든 규칙을 block으로 바꾸고 guard 사례와 stop·area·계정·digest·find 시험을 모두 실행한 뒤 설정을 되돌리고 임시 상태를 지우고 통과 수를 출력. 하나라도 실패하면 종료 코드 1"
+    },
+    "tools/usasia.py#file_digest": {
+      "ko": "파일의 SHA-256(CRLF는 LF로 보고 계산)."
+    },
+    "tools/usasia.py#check_pin": {
+      "ko": "이 파일이 고정된 체크섬과 다르면 exit 5."
+    },
+    "tools/usasia.py#base_url": {
+      "ko": "서버 주소. https만(시험 때만 로컬 http)."
+    },
+    "tools/usasia.py#claude_account": {
+      "ko": "로그인한 Claude 계정 ID(~/.claude.json)."
+    },
+    "tools/usasia.py#read_token_file": {
+      "ko": "토큰 파일의 내용."
+    },
+    "tools/usasia.py#find_token": {
+      "ko": "토큰 찾기: 환경변수 → 계정별 파일 → ~/.usasia/token. 출력하지 않음."
+    },
+    "tools/usasia.py#request": {
+      "ko": "JSON 요청. 서버 안 됨·5xx·429는 exit 3, 401·403은 exit 4."
+    },
+    "tools/usasia.py#parse": {
+      "ko": "응답 JSON 읽기(비었거나 JSON이 아니면 {})."
+    },
+    "tools/usasia.py#refused": {
+      "ko": "4xx 거절을 사용자 메시지로."
+    },
+    "tools/usasia.py#envelope": {
+      "ko": "글을 UNTRUSTED DATA 틀로 감쌈(실행마다 다른 표시)."
+    },
+    "tools/usasia.py#todo_line": {
+      "ko": "목록 한 줄."
+    },
+    "tools/usasia.py#show_json": {
+      "ko": "JSON을 틀 안에 출력."
+    },
+    "tools/usasia.py#cmd_me": {
+      "ko": "토큰 주인 출력."
+    },
+    "tools/usasia.py#cmd_activity": {
+      "ko": "최근 24시간 거절·토큰 기록."
+    },
+    "tools/usasia.py#cmd_list": {
+      "ko": "모든 쪽을 따라가며 목록 출력."
+    },
+    "tools/usasia.py#get_todo": {
+      "ko": "항목 하나 읽기."
+    },
+    "tools/usasia.py#cmd_get": {
+      "ko": "항목 하나를 JSON으로."
+    },
+    "tools/usasia.py#fields_from": {
+      "ko": "준 옵션만 API 필드로."
+    },
+    "tools/usasia.py#cmd_add": {
+      "ko": "항목 추가. 같은 값이면 그대로, 다르면 exit 1."
+    },
+    "tools/usasia.py#cmd_update": {
+      "ko": "lock_version을 읽고 저장. 충돌이면 지금 행을 보여 줌."
+    },
+    "tools/usasia.py#cmd_history": {
+      "ko": "내 항목의 변경 이력."
+    },
+    "tools/usasia.py#cmd_export": {
+      "ko": "내보내기(export 토큰). git 저장소 안에는 쓰지 않음."
+    },
+    "tools/usasia.py#inside_git_tree": {
+      "ko": "경로 위에 .git이 있는지."
+    },
+    "tools/usasia.py#cmd_selfcheck": {
+      "ko": "체크섬만 확인."
+    },
+    "tools/usasia.py#build_parser": {
+      "ko": "명령줄 옵션."
+    },
+    "tools/usasia.py#main": {
+      "ko": "명령 하나 실행, exit 코드 반환."
+    }
   },
-  "tools/prune.py": {
-   "en": "Housekeeping script that moves closed rows out of always-read files so they do not keep growing: finished rows, past 'Now' rows and old sync notes from a user's todo board, and answered questions from the AI-system questions file. Dry run by default; --apply moves rows into docs/archive.",
-   "ko": "항상 읽는 파일이 커지지 않게 끝난 줄을 보관함으로 옮기는 정리 스크립트. 할 일 보드의 끝난 건·지난 '지금' 줄·오래된 동기화 메모와 해결된 질문을 docs/archive로 옮김. 기본은 미리보기, --apply를 주면 실제로 옮김"
-  },
-  "tools/repo_map.py": {
-   "en": "Rebuilds the generated snapshot section of docs/ARCHITECTURE.md: file counts and sizes, content versus framework share, log and decision counts, skill list, hook rule modes and a depth-3 folder tree. With --check it only reports whether the section is stale.",
-   "ko": "docs/ARCHITECTURE.md의 자동 생성 구간(파일 수·크기, 내용 대 틀 비율, 기록·결정 수, skill 목록, hook 규칙 모드, 폴더 트리)을 다시 만듦. --check는 낡았는지만 알려줌"
-  },
-  "tools/handbook.py": {
-   "en": "This generator. It reads the Python tools, the skills, the hook config and the rule files, combines them with the meanings in docs/handbook/meta.json, and writes the English and Korean code maps. With --check it fails if a page is stale or a meaning is missing, and it refuses text that looks like an email or IP address.",
-   "ko": "이 코드 지도를 만드는 생성기. Python 도구, skill, hook 설정, 규칙 파일을 읽고 meta.json의 설명과 합쳐 영어·한국어 코드 지도를 씀. --check는 낡았거나 설명이 빠졌으면 실패하고, 이메일·IP처럼 보이는 글은 거부"
-  },
-  "tools/hooks/common.py": {
-   "en": "Shared helper library imported by every hook script. It reads the hook input as UTF-8 JSON, looks up each rule's mode (off, warn or block) in config.json, writes a local gitignored log, and sends messages back to Claude either as a warning or as a block. All helpers fail open so a hook bug never stops work.",
-   "ko": "모든 hook 스크립트가 가져다 쓰는 공통 도구. hook 입력(UTF-8 JSON) 읽기, config.json에서 규칙 모드(off/warn/block) 조회, 로컬 로그 기록, Claude에게 경고 또는 차단 메시지 보내기를 맡음. 오류가 나도 작업을 막지 않게 설계"
-  },
-  "tools/hooks/probe.py": {
-   "en": "Diagnostic hook for any event (used in the first setup test). When its rule is on, it logs which event fired, which shell and Python ran it and which input fields arrived, and at SessionStart shows the same line to Claude. It never blocks.",
-   "ko": "hook 설치 초기 점검용 진단 hook. 규칙이 켜져 있으면 어떤 이벤트가 왔고 어떤 셸·Python으로 실행됐는지, 입력에 어떤 항목이 있었는지 로그에 남김(SessionStart에서는 Claude에게도 보여줌). 차단은 하지 않음"
-  },
-  "tools/hooks/digest.py": {
-   "en": "SessionStart hook. At session start it puts a short summary in front of Claude: who the user is, local or cloud, last start-day, open and overdue items, traps, and git state, so Claude does not have to read the long state files. It can also detect the signed-in Claude account and register it for a user. Run by hand with --print.",
-   "ko": "SessionStart hook. 세션 시작 때 사용자, 로컬/클라우드, 마지막 start-day, 열린·기한초과 건, 주의점, git 상태를 짧게 요약해 Claude에게 넣어 긴 상태 파일을 읽지 않게 함. 로그인한 Claude 계정으로 사용자를 알아내는 기능도 있음. 직접 실행은 --print"
-  },
-  "tools/hooks/guard.py": {
-   "en": "PreToolUse hook for Write, Edit, MultiEdit and Bash. Before a change is made it scans only the new text for emails, secrets, amounts or IPs, wrong log file names, another person's folder, mostly-Korean text in English-only areas, force pushes and recursive deletes of docs. Each rule is off, warn or block. Protects the repo from sensitive data and destructive commands.",
-   "ko": "PreToolUse hook(Write·Edit·MultiEdit·Bash 실행 전). 새로 쓰는 글만 검사해 이메일, 비밀값, 금액·IP, 잘못된 기록 파일 이름, 남의 폴더, 영어 전용 영역의 한글 글, 강제 push, docs 삭제를 잡음. 규칙마다 off/warn/block. 민감 정보와 위험한 명령으로부터 저장소를 지킴"
-  },
-  "tools/hooks/touch.py": {
-   "en": "PostToolUse hook for Write and Edit. It records which repo files were written this turn and, cumulatively, this session in temporary files outside the repo. stop.py reads these records. It never blocks.",
-   "ko": "PostToolUse hook(Write·Edit 실행 후). 이번 턴과 이번 세션에 저장소에서 어떤 파일을 썼는지 저장소 밖 임시 파일에 기록함. stop.py가 이 기록을 읽음. 차단하지 않음"
-  },
-  "tools/hooks/stop.py": {
-   "en": "Stop hook, run when Claude finishes a turn. Looking only at files touched this turn, it blocks the end of the turn if CURRENT_STATE is too long, if an open log item has a ticket ID missing from the todo board, or (once per session) if heavy work such as tools, rules or skills was done without a review. Never loops and fails open.",
-   "ko": "Stop hook(Claude가 턴을 끝낼 때). 이번에 건드린 파일만 보고, CURRENT_STATE가 너무 길거나, 열린 기록의 티켓 번호가 할 일 보드에 없거나, 무거운 작업(도구·규칙·skill 수정)을 검토 없이 했으면(세션당 한 번) 턴 종료를 막음. 반복 차단은 없고 오류 시 통과"
-  },
-  "tools/hooks/area.py": {
-   "en": "Rule-area supervisor with several events: UserPromptSubmit points Claude to the rule file whose trigger words appear in the request, PostToolUse records which rule files were read, PreToolUse warns once when a write touches an area whose rule file was not read, SessionStart (compact) forgets the reads. Warns only, never blocks.",
-   "ko": "규칙 영역 감독 hook. UserPromptSubmit에서는 요청에 트리거 단어가 있으면 읽어야 할 규칙 파일을 알려주고, PostToolUse에서는 읽은 규칙 파일을 기록하고, PreToolUse에서는 안 읽은 영역의 파일을 쓰려 하면 한 번 경고하고, SessionStart(compact)에서는 읽은 기록을 지움. 경고만 하고 차단하지 않음"
-  },
-  "tools/hooks/review_mark.py": {
-   "en": "Small command run as the last step of the review-loop skill. It writes a marker file saying this session's heavy work was reviewed, so the Stop hook stops reminding. Takes an optional session ID, otherwise picks the most recently changed session.",
-   "ko": "review-loop skill의 마지막 단계에서 실행하는 작은 명령. 이 세션의 무거운 작업을 검토했다는 표시 파일을 만들어 Stop hook의 검토 알림을 끔. 세션 ID를 주지 않으면 가장 최근 세션을 선택"
-  },
-  "tools/hooks/test_hooks.py": {
-   "en": "Test suite for the hooks and for find.py. It forces every rule to block in a temporary config and runs hit and no-hit example inputs through guard, stop, area, digest account detection and find, then prints how many passed. Run it before changing any rule mode.",
-   "ko": "hook과 find.py의 시험 모음. 임시로 모든 규칙을 block으로 바꾸고 걸려야 하는 예와 걸리면 안 되는 예를 guard, stop, area, digest 계정 감지, find에 넣어 결과를 세어 보여줌. 규칙 모드를 바꾸기 전에 실행"
-  },
-  "tools/test_handbook.py": {
-   "en": "Tests for tools/handbook.py: copies the repo parts it reads into a temp folder, breaks one thing per test (missing meaning, orphan key, stale page, email/host) and checks the generator fails with the right message.",
-   "ko": "tools/handbook.py 시험. 생성기가 읽는 부분을 임시 폴더에 복사하고, 시험마다 하나씩 망가뜨린 뒤(설명 누락, 남은 키, 낡은 문서, 이메일·호스트) 생성기가 알맞은 메시지로 실패하는지 확인함."
+  "skills": {
+    "start-day": {
+      "en": "Morning routine: syncs the repo, reads state, open items and the 30-day calendar, scans mail and Drive changes, checks the 05_Inbox folder, and presents one table of what to do today for approval. Read-only except the approved inbox move.",
+      "ko": "업무 시작 루틴: 저장소 동기화, 상태·열린 건·30일 일정 확인, 메일·드라이브 변경 점검, 05_Inbox 확인 후 오늘 할 일 표 하나로 보고하고 승인받음. 승인된 inbox 이동 외에는 읽기만 함"
+    },
+    "session-end": {
+      "en": "Session wrap-up: prunes closed rows, refreshes the architecture snapshot, runs the doc check, moves open items to the todo board, records new facts and decisions, and commits and pushes. On Mondays or on request it adds a weekly review.",
+      "ko": "세션 마무리: 끝난 줄 정리, 구조 스냅샷 갱신, 문서 점검, 열린 건을 할 일 보드로 이동, 새 사실·결정 기록, 커밋·push. 월요일이나 요청 시 주간 점검도 함"
+    },
+    "todo": {
+      "en": "Adds new requests the user gives in words to the todo board and the day's log, splitting requester, store and due date, checking for duplicates, and optionally preparing a support-ticket draft for approval.",
+      "ko": "사용자가 말로 준 새 요청을 요청자·매장·기한으로 나눠 할 일 보드와 그날 기록에 추가. 중복 확인을 하고, 요청 시 티켓 초안을 만들어 승인받음"
+    },
+    "todo-sync": {
+      "en": "Keeps the personal todo board and the support-ticket system in step: reads tickets, updates the board, suggests what to do now, and applies status changes only from a list the user approved.",
+      "ko": "개인 할 일 보드와 지원 티켓 시스템을 맞춤: 티켓을 읽고 보드를 갱신하고 '지금' 할 일을 제안하며, 사용자가 승인한 목록의 상태 변경만 반영"
+    },
+    "mail-triage": {
+      "en": "Reads Gmail, Outlook and the intranet mailbox in the browser without opening mails, sorts them into to-do, waiting, reference and ignore, logs the results, and asks right away about new contacts or organizations. Reads only, never sends.",
+      "ko": "크롬으로 Gmail·Outlook·인트라넷 메일을 열지 않고 읽어 할 일/기다림/참고/버림으로 분류하고 기록에 반영. 새 연락처·조직은 바로 물음. 읽기만 하고 보내지 않음"
+    },
+    "review-loop": {
+      "en": "After heavy work, has a fresh reviewer agent check the diff against the rule files, answers or accepts its objections (at most two rounds), asks the user one batched question if still unresolved, then marks the session as reviewed.",
+      "ko": "무거운 작업 뒤에 새 검토 에이전트가 변경분을 규칙 파일 기준으로 검토하게 하고, 지적을 받아들이거나 반박(최대 2회). 해결 안 되면 사용자에게 한 번에 질문하고, 끝나면 세션을 검토 완료로 표시"
+    },
+    "weekly-meeting": {
+      "en": "Prepares and wraps up the weekly IT meeting: before it, creates the week's minutes document from the latest one in Drive; after it, turns the user's noted decisions and to-dos into log entries and todo rows.",
+      "ko": "주간 IT 회의 준비·정리: 회의 전에는 드라이브의 가장 최근 회의록을 복사해 이번 주 틀을 만들고, 회의 뒤에는 사용자가 적은 결정·To-do를 기록과 할 일로 정리"
+    },
+    "drive-check": {
+      "en": "Monthly Drive check: looks for deleted, trashed, renamed or re-shared files among those in the Drive index, updates the index, and makes monthly backup copies of the Claude folder's key sheets. Does not delete or change sharing itself.",
+      "ko": "월초 드라이브 점검: 색인에 있는 파일 중 삭제·휴지통·이름·공유가 바뀐 것을 찾아 색인을 고치고, Claude 폴더 핵심 시트의 월 백업 사본을 만듦. 삭제나 공유 변경은 직접 하지 않음"
+    },
+    "drive-index": {
+      "en": "Builds the Drive index in docs/drive-index: reader agents go through assigned Drive folders in parallel and write purpose, keywords and link per document, never copying sensitive values; the main session checks the results and commits.",
+      "ko": "docs/drive-index에 드라이브 색인을 만듦: 하위 에이전트가 맡은 폴더를 병렬로 읽어 문서별 용도·키워드·링크를 적고(민감 값은 복사 안 함), 메인 세션이 결과를 점검해 커밋"
+    }
   }
- },
- "functions": {
-  "tools/find.py#synonyms": {
-   "en": "Builds groups of words that mean the same thing from the tag table in keywords.md and the store abbreviations table in store_codes.md, so a search for one name also finds the others.",
-   "ko": "keywords.md의 태그 표와 store_codes.md의 매장 약어 표에서 같은 뜻의 단어 묶음을 만들어, 한 이름으로 검색해도 나머지 이름까지 찾게 함"
-  },
-  "tools/find.py#pattern": {
-   "en": "Turns one search word into a regular expression covering its synonyms. Ticket IDs must match whole, short codes match as whole words, and all-caps codes are case sensitive.",
-   "ko": "검색어 하나를 동의어까지 포함하는 정규식으로 바꿈. 티켓 ID는 통째로, 짧은 코드는 단어 단위로, 대문자 코드는 대소문자 구분해서 맞춤"
-  },
-  "tools/find.py#entries": {
-   "en": "Goes through every log and archive file and yields each entry (a heading starting with three hash marks plus its body) with file and line; a file with no such headings counts as one entry.",
-   "ko": "기록·보관 파일을 훑어 항목(### 제목과 본문)을 파일·줄 번호와 함께 하나씩 내줌. ### 제목이 없는 파일은 파일 전체를 한 항목으로 봄"
-  },
-  "tools/find.py#sections": {
-   "en": "Splits docs outside the log into sections at second- and third-level headings and yields each with its file, start line and lines, so searches can show which section matched.",
-   "ko": "기록 밖의 docs를 ##·### 제목 단위 절로 나눠 파일·시작 줄·내용과 함께 내줌. 검색 결과에 어느 절이 맞았는지 보여주기 위함"
-  },
-  "tools/find.py#dates": {
-   "en": "Extracts check, next and due dates (labelled with the Korean words for those) from an entry body and returns them as label and date pairs.",
-   "ko": "항목 본문에서 확인일·다음·기한 표시가 붙은 날짜를 찾아 (이름, 날짜) 목록으로 돌려줌"
-  },
-  "tools/find.py#main": {
-   "en": "Entry point. Reads the command line and runs one mode: --open, --due, --id, or a normal search over logs, decisions and other docs. If an AND search finds nothing it shows partial matches, and if still nothing it prints a stop-searching message. Returns a shell exit code.",
-   "ko": "시작 지점. 명령줄을 읽어 --open, --due, --id 또는 일반 검색(기록·결정·기타 docs)을 실행. AND 검색 결과가 없으면 부분 일치를 보여주고, 그래도 없으면 검색 중단 안내를 출력. 종료 코드를 돌려줌"
-  },
-  "tools/prune.py#arg": {
-   "en": "Returns the value that follows a given option name on the command line, or a default if the option is absent.",
-   "ko": "명령줄에서 옵션 이름 다음에 오는 값을 돌려줌. 옵션이 없으면 기본값"
-  },
-  "tools/prune.py#user_id": {
-   "en": "Works out whose todo board to prune: the --user option, otherwise the user named in the local personal settings file; stops with a message if neither exists.",
-   "ko": "어느 사용자의 할 일 보드를 정리할지 정함. --user 옵션, 없으면 개인 설정 파일에 적힌 사용자. 둘 다 없으면 메시지를 내고 멈춤"
-  },
-  "tools/prune.py#today": {
-   "en": "Returns today's date: from --today if given, otherwise in the time zone written in the user's profile, falling back to the machine clock if the time zone data is unavailable.",
-   "ko": "오늘 날짜를 돌려줌. --today가 있으면 그 값, 없으면 사용자 프로필의 시간대 기준, 시간대 정보가 없으면 PC 시계"
-  },
-  "tools/prune.py#cells": {
-   "en": "Splits one markdown table row into a list of trimmed cell texts.",
-   "ko": "마크다운 표 한 줄을 칸별 글자 목록으로 나눔"
-  },
-  "tools/prune.py#sections": {
-   "en": "Finds each second-level heading section in a list of lines and yields its heading with start and end line numbers.",
-   "ko": "줄 목록에서 ## 절을 찾아 제목과 시작·끝 줄 번호를 내줌"
-  },
-  "tools/prune.py#prune_todo": {
-   "en": "Decides which todo board lines to remove: finished or cancelled rows old enough, past-dated rows in the Now section, and sync notes beyond the newest five. Returns the new lines plus the removed rows grouped by reason; writes nothing itself.",
-   "ko": "할 일 보드에서 뺄 줄을 정함: 끝나거나 취소된 지 충분히 지난 줄, '지금' 절의 지난 날짜 줄, 최신 5개를 넘는 동기화 메모. 남길 줄과 뺄 줄(이유별)을 돌려주며 파일은 직접 고치지 않음"
-  },
-  "tools/prune.py#prune_questions": {
-   "en": "Splits the AI-system questions file into rows to keep and rows already answered by a decision (and not still open), which are to be moved out.",
-   "ko": "AI 시스템 질문 파일을 남길 줄과 결정으로 해결되어(아직 열림이 아닌) 옮길 줄로 나눔"
-  },
-  "tools/prune.py#archive": {
-   "en": "Appends rows under a dated heading to the matching archive file in docs/archive for the year (creating it if needed), but only when applying; returns the archive path either way.",
-   "ko": "옮길 줄을 docs/archive의 해당 연도 파일에 날짜 제목 아래로 덧붙임(없으면 새로 만듦). --apply일 때만 쓰고, 어느 경우든 보관 파일 경로를 돌려줌"
-  },
-  "tools/prune.py#main": {
-   "en": "Entry point. Prunes the user's todo board and the questions file, then prints a report of what moved (or would move in a dry run).",
-   "ko": "시작 지점. 사용자의 할 일 보드와 질문 파일을 정리하고, 옮긴 줄(미리보기에서는 옮길 줄)을 보고로 출력"
-  },
-  "tools/repo_map.py#files": {
-   "en": "Lists every repo file with its size, skipping git internals, caches, logs, local personal files and the architecture doc itself.",
-   "ko": "저장소의 모든 파일과 크기를 나열. git 내부, 캐시, 로그, 개인 로컬 파일, ARCHITECTURE.md 자체는 제외"
-  },
-  "tools/repo_map.py#tree": {
-   "en": "Draws a folder tree down to a given depth, showing file counts and sizes for folders and size for files.",
-   "ko": "정해진 깊이까지 폴더 트리를 그림. 폴더는 파일 수와 크기, 파일은 크기를 표시"
-  },
-  "tools/repo_map.py#build": {
-   "en": "Computes the whole generated snapshot text: totals, framework versus content share, log and decision counts, skill table, hook rule modes and the folder tree.",
-   "ko": "자동 생성 구간 전체 글을 만듦: 합계, 틀 대 내용 비율, 기록·결정 수, skill 표, hook 규칙 모드, 폴더 트리"
-  },
-  "tools/repo_map.py#main": {
-   "en": "Entry point. Replaces the generated block in docs/ARCHITECTURE.md with a fresh one, or with --check only reports whether it is out of date. Returns an exit code.",
-   "ko": "시작 지점. ARCHITECTURE.md의 자동 생성 구간을 새로 바꿔 쓰거나, --check이면 낡았는지만 알려줌. 종료 코드를 돌려줌"
-  },
-  "tools/handbook.py#rel": {
-   "en": "Converts a file path into a repo-relative path with forward slashes, used as the key in the maps.",
-   "ko": "파일 경로를 저장소 기준 상대 경로(슬래시)로 바꿈. 지도의 키로 사용"
-  },
-  "tools/handbook.py#py_files": {
-   "en": "Lists all Python files under tools, sorted, skipping cache folders.",
-   "ko": "tools 아래의 모든 Python 파일을 정렬해 나열(캐시 폴더 제외)"
-  },
-  "tools/handbook.py#first_line": {
-   "en": "Returns the first line of a docstring, or empty text if there is none.",
-   "ko": "docstring의 첫 줄을 돌려줌. 없으면 빈 글"
-  },
-  "tools/handbook.py#parse_modules": {
-   "en": "Reads every Python tool and records its docstring, top-level functions (name, line, arguments), imports, calls and which other local scripts it imports or mentions.",
-   "ko": "모든 Python 도구를 읽어 docstring, 최상위 함수(이름·줄·인자), import, 호출, 가져오거나 언급하는 다른 내부 스크립트를 기록"
-  },
-  "tools/handbook.py#callers": {
-   "en": "Finds where a given function is used: in its own file or in other modules that import it or call it by module name. Returns a list of places.",
-   "ko": "어떤 함수가 어디서 쓰이는지 찾음(같은 파일, 또는 그 모듈을 가져오거나 모듈 이름으로 부르는 다른 파일). 위치 목록을 돌려줌"
-  },
-  "tools/handbook.py#parse_skills": {
-   "en": "Reads each skill's SKILL.md and extracts its name, description, tools and rule or kb files it mentions, other skills it calls and rule IDs cited.",
-   "ko": "각 skill의 SKILL.md에서 이름, 설명, 언급한 도구·규칙·kb 파일, 부르는 다른 skill, 인용한 규칙 ID를 뽑음"
-  },
-  "tools/handbook.py#parse_rules": {
-   "en": "Reads the rule files in docs/rules and returns each rule ID with its file and title.",
-   "ko": "docs/rules의 규칙 파일에서 규칙 ID별로 파일과 제목을 모아 돌려줌"
-  },
-  "tools/handbook.py#rule_citations": {
-   "en": "Lists the tool, config and skill files that mention a given rule ID, showing where the rule is enforced or cited.",
-   "ko": "특정 규칙 ID를 언급하는 도구·설정·skill 파일을 나열해, 그 규칙을 어디서 지키거나 인용하는지 보여줌"
-  },
-  "tools/handbook.py#meaning": {
-   "en": "Picks the meaning text for a language from meta.json, falling back to the docstring for English, or a visible 'missing' marker.",
-   "ko": "meta.json에서 해당 언어의 설명을 고름. 영어는 없으면 docstring을 쓰고, 그래도 없으면 '없음' 표시"
-  },
-  "tools/handbook.py#render": {
-   "en": "Builds one full code-map page (English or Korean) as text: module sections with function tables, hook rule modes, skills table and rules table.",
-   "ko": "코드 지도 한 쪽(영어 또는 한국어) 전체 글을 만듦: 모듈별 절과 함수 표, hook 규칙 모드, skill 표, 규칙 표"
-  },
-  "tools/handbook.py#check_meta": {
-   "en": "Checks that every module, function and skill has the needed meaning in meta.json (Korean always, English unless a docstring exists). Returns a list of error messages.",
-   "ko": "모든 모듈·함수·skill에 meta.json 설명이 있는지 점검(한국어는 필수, 영어는 docstring이 없을 때 필수). 오류 메시지 목록을 돌려줌"
-  },
-  "tools/handbook.py#main": {
-   "en": "Entry point. Writes both code-map pages, or with --check verifies they are current. Also rejects text that looks like an email or IP address and prints any problems with a handbook prefix, exiting 1 if there are any.",
-   "ko": "시작 지점. 코드 지도 두 쪽을 쓰거나, --check이면 최신인지 확인. 이메일·IP처럼 보이는 글도 거부하고, 문제는 handbook: 접두어로 출력하며 있으면 종료 코드 1"
-  },
-  "tools/hooks/area.py#state_file": {
-   "en": "Returns the temporary file path that holds this session's rule-area state (which areas were read, warned or pointed out).",
-   "ko": "이 세션의 규칙 영역 상태(읽음·경고·안내한 영역)를 담는 임시 파일 경로를 돌려줌"
-  },
-  "tools/hooks/area.py#load": {
-   "en": "Loads the session state from its temporary file, or empty lists if it does not exist or is unreadable.",
-   "ko": "임시 파일에서 세션 상태를 읽음. 파일이 없거나 읽을 수 없으면 빈 목록"
-  },
-  "tools/hooks/area.py#save": {
-   "en": "Writes the session state to its temporary file, ignoring any write error.",
-   "ko": "세션 상태를 임시 파일에 저장. 저장 오류는 무시"
-  },
-  "tools/hooks/area.py#areas": {
-   "en": "Reads the table in docs/rules/INDEX.md and returns each rule area with its file, trigger words and trigger path patterns.",
-   "ko": "docs/rules/INDEX.md 표를 읽어 규칙 영역별 파일, 트리거 단어, 트리거 경로 패턴을 돌려줌"
-  },
-  "tools/hooks/area.py#word_hit": {
-   "en": "Tells whether a trigger word appears in the text; plain English words must match as whole words ignoring case, other words match as substrings.",
-   "ko": "트리거 단어가 글에 있는지 판단. 영문 단어는 대소문자 무시하고 단어 단위, 그 밖은 부분 문자열로 맞춤"
-  },
-  "tools/hooks/area.py#rel": {
-   "en": "Turns an absolute path into a path relative to the repo root with forward slashes.",
-   "ko": "절대 경로를 저장소 기준 상대 경로(슬래시)로 바꿈"
-  },
-  "tools/hooks/area.py#main": {
-   "en": "Entry point. Looks at the hook event type and does the matching job: forget reads on compact, record rule files read, point to rule files for prompt keywords, or warn once about unread rules before a write.",
-   "ko": "시작 지점. hook 이벤트 종류를 보고 알맞은 일을 함: compact 때 읽은 기록 삭제, 읽은 규칙 파일 기록, 요청 키워드에 맞는 규칙 파일 안내, 쓰기 전 안 읽은 규칙 한 번 경고"
-  },
-  "tools/hooks/common.py#read_input": {
-   "en": "Reads the JSON that Claude Code sends to the hook on standard input as UTF-8; returns an empty dictionary if it is empty or broken.",
-   "ko": "Claude Code가 표준 입력으로 보내는 JSON을 UTF-8로 읽음. 비었거나 깨졌으면 빈 사전"
-  },
-  "tools/hooks/common.py#mode": {
-   "en": "Looks up a rule's mode (off, warn or block) in config.json; returns off if the rule or file is missing.",
-   "ko": "config.json에서 규칙의 모드(off/warn/block)를 찾음. 규칙이나 파일이 없으면 off"
-  },
-  "tools/hooks/common.py#norm_path": {
-   "en": "Replaces backslashes with forward slashes so Windows and Unix paths compare the same.",
-   "ko": "역슬래시를 슬래시로 바꿔 Windows와 Unix 경로를 같게 비교하도록 함"
-  },
-  "tools/hooks/common.py#log": {
-   "en": "Appends a timestamped line to the local hits.log (not committed) unless running tests. Callers must never pass secret values.",
-   "ko": "시간과 함께 로컬 hits.log(커밋 안 됨)에 한 줄 추가. 테스트 중에는 기록 안 함. 비밀값을 넘기면 안 됨"
-  },
-  "tools/hooks/common.py#context": {
-   "en": "Prints a JSON message that shows the given text to Claude as extra context without blocking; used for warnings.",
-   "ko": "차단 없이 Claude에게 추가 안내 글을 보여주는 JSON을 출력. 경고에 사용"
-  },
-  "tools/hooks/common.py#block": {
-   "en": "Blocks the action: writes the rule ID, the offending line and a fix hint to the error stream and exits with code 2.",
-   "ko": "동작을 차단: 규칙 ID, 문제 줄, 해결 방법을 오류 출력에 쓰고 종료 코드 2로 끝냄"
-  },
-  "tools/hooks/digest.py#rd": {
-   "en": "Reads a repo file as text, returning empty text if it cannot be read.",
-   "ko": "저장소 파일을 글로 읽음. 못 읽으면 빈 글"
-  },
-  "tools/hooks/digest.py#run": {
-   "en": "Runs a command in the repo folder with a 20-second limit and returns its output text, or empty text on any failure.",
-   "ko": "저장소 폴더에서 명령을 20초 제한으로 실행해 출력 글을 돌려줌. 실패하면 빈 글"
-  },
-  "tools/hooks/digest.py#account_uuid": {
-   "en": "Reads the signed-in Claude account ID from the user's Claude config file, or nothing if absent. The ID is treated like an account number and never printed or stored in the repo.",
-   "ko": "사용자의 Claude 설정 파일에서 로그인한 계정 ID를 읽음. 없으면 없음. 계정 번호처럼 취급해 출력하거나 저장소에 쓰지 않음"
-  },
-  "tools/hooks/digest.py#account_user": {
-   "en": "Maps the signed-in Claude account to a user ID using a git-ignored map file. Returns the user, an 'unknown account' note, or nothing to fall back to other methods. Off unless the account-detect rule is on.",
-   "ko": "git에서 제외된 대응 파일로 로그인한 Claude 계정을 사용자 ID에 연결. 사용자, '새 계정' 안내, 또는 다른 방법으로 넘어가라는 없음을 돌려줌. account-detect 규칙이 켜져야 동작"
-  },
-  "tools/hooks/digest.py#register": {
-   "en": "Saves a mapping from the signed-in Claude account to a given user ID in the git-ignored map file (used by onboarding). Validates the ID and keeps existing mappings; returns a status message that hides the account ID.",
-   "ko": "로그인한 Claude 계정을 지정한 사용자 ID에 연결해 git 제외 파일에 저장(온보딩용). ID를 검사하고 기존 연결은 유지하며, 계정 ID가 안 보이는 결과 메시지를 돌려줌"
-  },
-  "tools/hooks/digest.py#personal_rules": {
-   "en": "Returns the text of the user's personal CLAUDE.md with a heading, so it can be injected when the account was detected; empty if none.",
-   "ko": "사용자의 개인 CLAUDE.md 내용을 제목과 함께 돌려줌(계정이 감지됐을 때 넣기 위함). 없으면 빈 글"
-  },
-  "tools/hooks/digest.py#user_id": {
-   "en": "Finds who the user is, in order: detected Claude account, the user named in the local personal settings file, then the git user name matched against profiles. Returns the ID and how it was found, or none with an instruction to ask.",
-   "ko": "사용자가 누구인지 순서대로 찾음: 감지된 Claude 계정, 개인 설정 파일에 적힌 사용자, git 사용자 이름과 프로필 대조. ID와 찾은 방법을 돌려주고, 못 찾으면 물어보라는 안내"
-  },
-  "tools/hooks/digest.py#parse_tools": {
-   "en": "Reads the Tools table of a profile and returns the names of tools marked as available (yes), ignoring other sections.",
-   "ko": "프로필의 Tools 표에서 사용 가능(yes)으로 표시된 도구 이름만 돌려줌. 다른 절은 무시"
-  },
-  "tools/hooks/digest.py#claimed_tools": {
-   "en": "Returns the tools a user says they have, taken from their profile file.",
-   "ko": "사용자가 쓸 수 있다고 적은 도구를 프로필 파일에서 가져와 돌려줌"
-  },
-  "tools/hooks/digest.py#section": {
-   "en": "Returns the body of the lettered section (for example section H) of the CURRENT_STATE document.",
-   "ko": "CURRENT_STATE 문서에서 알파벳으로 된 절(예: H절)의 내용을 돌려줌"
-  },
-  "tools/hooks/digest.py#short": {
-   "en": "Strips markdown marks from a line and cuts it to a maximum length with an ellipsis.",
-   "ko": "한 줄에서 마크다운 기호를 지우고 최대 길이에서 말줄임표로 자름"
-  },
-  "tools/hooks/digest.py#build": {
-   "en": "Builds the whole digest text: user and place, last start-day, open and overdue counts, items due within 7 days, traps, git branch and sync state, and pointers to further reading.",
-   "ko": "요약 전체 글을 만듦: 사용자·장소, 마지막 start-day, 열린·기한초과 건수, 7일 안 기한, 주의점, git 브랜치·동기화 상태, 더 읽을 곳 안내"
-  },
-  "tools/hooks/guard.py#rel": {
-   "en": "Turns an absolute path into a repo-relative path with forward slashes.",
-   "ko": "절대 경로를 저장소 기준 상대 경로(슬래시)로 바꿈"
-  },
-  "tools/hooks/guard.py#new_text": {
-   "en": "Extracts only the text being added by a Write, Edit or MultiEdit call, so old content is not scanned.",
-   "ko": "Write·Edit·MultiEdit 호출에서 새로 들어가는 글만 뽑음. 기존 내용은 검사하지 않기 위함"
-  },
-  "tools/hooks/guard.py#first_line": {
-   "en": "Finds the first line matching a pattern and returns a shortened copy of it with the match; returns nothing if none match.",
-   "ko": "패턴과 맞는 첫 줄을 찾아 줄여서 맞은 부분과 함께 돌려줌. 없으면 없음"
-  },
-  "tools/hooks/guard.py#mask": {
-   "en": "Replaces emails and secrets in a line with placeholders so warnings never repeat the sensitive value.",
-   "ko": "줄 안의 이메일과 비밀값을 자리표시로 바꿔 경고 글에 민감 값이 다시 나오지 않게 함"
-  },
-  "tools/hooks/guard.py#seen_once": {
-   "en": "Remembers in a temporary file whether a key was already seen this session; returns true if so, otherwise records it and returns false. Used to show the English nudge once per file.",
-   "ko": "임시 파일에 이 세션에서 이미 본 키인지 기억함. 봤으면 참, 아니면 기록하고 거짓. 영어 안내를 파일당 한 번만 보여주기 위함"
-  },
-  "tools/hooks/guard.py#check_file": {
-   "en": "Applies the file rules to a path and its new text: email, secret and soft-sensitive checks in scanned folders, log file naming, other person's folder, and too much Korean in English-only areas. Adds findings to the hit list.",
-   "ko": "경로와 새 글에 파일 규칙을 적용: 검사 대상 폴더의 이메일·비밀값·약한 민감 값, 기록 파일 이름, 다른 사람 폴더, 영어 전용 영역의 한글 과다. 발견한 것을 목록에 추가"
-  },
-  "tools/hooks/guard.py#check_bash": {
-   "en": "Checks a shell command for a force push or a recursive delete of the docs folder and adds findings to the hit list.",
-   "ko": "셸 명령에 강제 push나 docs 폴더 재귀 삭제가 있는지 보고 발견하면 목록에 추가"
-  },
-  "tools/hooks/guard.py#main": {
-   "en": "Entry point. Reads the tool call, runs the file or shell checks, then for each finding looks up its mode: block exits with code 2, warn prints a warning to Claude, off is skipped.",
-   "ko": "시작 지점. 도구 호출을 읽고 파일·셸 검사를 한 뒤 발견마다 모드를 확인: block이면 종료 코드 2, warn이면 Claude에게 경고, off이면 건너뜀"
-  },
-  "tools/hooks/stop.py#review_marker": {
-   "en": "Returns the path of the marker file that means this session's heavy work was reviewed.",
-   "ko": "이 세션의 무거운 작업을 검토했다는 표시 파일 경로를 돌려줌"
-  },
-  "tools/hooks/stop.py#heavy_problem": {
-   "en": "Checks whether this session changed heavy paths (tools, rules, skills, settings, CLAUDE.md) or more than 15 files without a review marker. If so, returns a one-time reminder to run the review-loop skill; otherwise nothing.",
-   "ko": "이 세션이 무거운 경로(도구·규칙·skill·설정·CLAUDE.md)나 15개 넘는 파일을 검토 표시 없이 바꿨는지 확인. 그렇다면 review-loop skill을 실행하라는 알림을 한 번 돌려주고, 아니면 없음"
-  },
-  "tools/hooks/stop.py#rd": {
-   "en": "Reads a repo file as text, returning empty text if it cannot be read.",
-   "ko": "저장소 파일을 글로 읽음. 못 읽으면 빈 글"
-  },
-  "tools/hooks/stop.py#problems": {
-   "en": "Given the files touched this turn, finds problems: CURRENT_STATE over 80 lines, and open or waiting log items whose ticket ID is not on any user's todo board or its archive. Returns rule, message and fix triples.",
-   "ko": "이번 턴에 건드린 파일을 보고 문제를 찾음: CURRENT_STATE 80줄 초과, 열림·기다림 기록의 티켓 번호가 어떤 사용자 할 일 보드나 보관함에도 없음. (규칙, 메시지, 해결책) 묶음을 돌려줌"
-  },
-  "tools/hooks/touch.py#state_file": {
-   "en": "Returns the temporary file path that lists files written this turn for a session.",
-   "ko": "세션별로 이번 턴에 쓴 파일 목록을 담는 임시 파일 경로를 돌려줌"
-  },
-  "tools/hooks/touch.py#heavy_file": {
-   "en": "Returns the temporary file path for the cumulative per-session list of files written, used by the heavy-review check and never cleared by stop.py.",
-   "ko": "세션 전체에 걸쳐 쓴 파일을 누적하는 임시 파일 경로를 돌려줌. heavy-review 점검용이며 stop.py가 지우지 않음"
-  },
-  "tools/hooks/touch.py#load_heavy": {
-   "en": "Loads the cumulative session record (files list and whether a warning was already given), or an empty record if none.",
-   "ko": "세션 누적 기록(파일 목록과 경고 여부)을 읽음. 없으면 빈 기록"
-  },
-  "tools/hooks/touch.py#load": {
-   "en": "Loads the list of files written this turn, or an empty list if none.",
-   "ko": "이번 턴에 쓴 파일 목록을 읽음. 없으면 빈 목록"
-  },
-  "tools/hooks/test_hooks.py#run": {
-   "en": "Runs guard.py once with a test input in test mode and returns its exit code and error output.",
-   "ko": "시험 입력으로 guard.py를 시험 모드에서 한 번 실행해 종료 코드와 오류 출력을 돌려줌"
-  },
-  "tools/hooks/test_hooks.py#stop_tests": {
-   "en": "Tests touch.py and stop.py with a fake open log item: it must block when a ticket ID is missing from the board, not when stop_hook_active is set, and not for a real log. Restores the config and removes the fake file. Returns the failure count.",
-   "ko": "가짜 열린 기록으로 touch.py와 stop.py 시험: 티켓 번호가 보드에 없으면 막고, stop_hook_active이거나 실제 기록이면 막지 않아야 함. 설정을 되돌리고 가짜 파일을 지움. 실패 수를 돌려줌"
-  },
-  "tools/hooks/test_hooks.py#area_tests": {
-   "en": "Tests area.py (keyword pointer once, unread-rule warning once, no warning after reading) and the heavy-review block in stop.py with and without a review marker. Returns the failure count.",
-   "ko": "area.py(키워드 안내 한 번, 안 읽은 규칙 경고 한 번, 읽은 뒤 경고 없음)와 stop.py의 heavy-review 차단(검토 표시 유무)을 시험. 실패 수를 돌려줌"
-  },
-  "tools/hooks/test_hooks.py#account_tests": {
-   "en": "Tests account detection in digest.py with temporary fake files: off by default, unknown account, mapped account, bad IDs refused, corrupt map kept, and the account ID never printed. Returns the failure count.",
-   "ko": "임시 가짜 파일로 digest.py의 계정 감지를 시험: 기본 꺼짐, 모르는 계정, 연결된 계정, 잘못된 ID 거부, 깨진 대응 파일 유지, 계정 ID 미출력. 실패 수를 돌려줌"
-  },
-  "tools/hooks/test_hooks.py#main": {
-   "en": "Entry point. Forces all rules to block in a temporary config, runs every guard case plus the stop, area, account, digest and find tests, restores the config, cleans temp state and prints the pass count; exits 1 if any failed.",
-   "ko": "시작 지점. 임시 설정으로 모든 규칙을 block으로 바꾸고 guard 사례와 stop·area·계정·digest·find 시험을 모두 실행한 뒤 설정을 되돌리고 임시 상태를 지우고 통과 수를 출력. 하나라도 실패하면 종료 코드 1"
-  }
- },
- "skills": {
-  "start-day": {
-   "en": "Morning routine: syncs the repo, reads state, open items and the 30-day calendar, scans mail and Drive changes, checks the 05_Inbox folder, and presents one table of what to do today for approval. Read-only except the approved inbox move.",
-   "ko": "업무 시작 루틴: 저장소 동기화, 상태·열린 건·30일 일정 확인, 메일·드라이브 변경 점검, 05_Inbox 확인 후 오늘 할 일 표 하나로 보고하고 승인받음. 승인된 inbox 이동 외에는 읽기만 함"
-  },
-  "session-end": {
-   "en": "Session wrap-up: prunes closed rows, refreshes the architecture snapshot, runs the doc check, moves open items to the todo board, records new facts and decisions, and commits and pushes. On Mondays or on request it adds a weekly review.",
-   "ko": "세션 마무리: 끝난 줄 정리, 구조 스냅샷 갱신, 문서 점검, 열린 건을 할 일 보드로 이동, 새 사실·결정 기록, 커밋·push. 월요일이나 요청 시 주간 점검도 함"
-  },
-  "todo": {
-   "en": "Adds new requests the user gives in words to the todo board and the day's log, splitting requester, store and due date, checking for duplicates, and optionally preparing a support-ticket draft for approval.",
-   "ko": "사용자가 말로 준 새 요청을 요청자·매장·기한으로 나눠 할 일 보드와 그날 기록에 추가. 중복 확인을 하고, 요청 시 티켓 초안을 만들어 승인받음"
-  },
-  "todo-sync": {
-   "en": "Keeps the personal todo board and the support-ticket system in step: reads tickets, updates the board, suggests what to do now, and applies status changes only from a list the user approved.",
-   "ko": "개인 할 일 보드와 지원 티켓 시스템을 맞춤: 티켓을 읽고 보드를 갱신하고 '지금' 할 일을 제안하며, 사용자가 승인한 목록의 상태 변경만 반영"
-  },
-  "mail-triage": {
-   "en": "Reads Gmail, Outlook and the intranet mailbox in the browser without opening mails, sorts them into to-do, waiting, reference and ignore, logs the results, and asks right away about new contacts or organizations. Reads only, never sends.",
-   "ko": "크롬으로 Gmail·Outlook·인트라넷 메일을 열지 않고 읽어 할 일/기다림/참고/버림으로 분류하고 기록에 반영. 새 연락처·조직은 바로 물음. 읽기만 하고 보내지 않음"
-  },
-  "review-loop": {
-   "en": "After heavy work, has a fresh reviewer agent check the diff against the rule files, answers or accepts its objections (at most two rounds), asks the user one batched question if still unresolved, then marks the session as reviewed.",
-   "ko": "무거운 작업 뒤에 새 검토 에이전트가 변경분을 규칙 파일 기준으로 검토하게 하고, 지적을 받아들이거나 반박(최대 2회). 해결 안 되면 사용자에게 한 번에 질문하고, 끝나면 세션을 검토 완료로 표시"
-  },
-  "weekly-meeting": {
-   "en": "Prepares and wraps up the weekly IT meeting: before it, creates the week's minutes document from the latest one in Drive; after it, turns the user's noted decisions and to-dos into log entries and todo rows.",
-   "ko": "주간 IT 회의 준비·정리: 회의 전에는 드라이브의 가장 최근 회의록을 복사해 이번 주 틀을 만들고, 회의 뒤에는 사용자가 적은 결정·To-do를 기록과 할 일로 정리"
-  },
-  "drive-check": {
-   "en": "Monthly Drive check: looks for deleted, trashed, renamed or re-shared files among those in the Drive index, updates the index, and makes monthly backup copies of the Claude folder's key sheets. Does not delete or change sharing itself.",
-   "ko": "월초 드라이브 점검: 색인에 있는 파일 중 삭제·휴지통·이름·공유가 바뀐 것을 찾아 색인을 고치고, Claude 폴더 핵심 시트의 월 백업 사본을 만듦. 삭제나 공유 변경은 직접 하지 않음"
-  },
-  "drive-index": {
-   "en": "Builds the Drive index in docs/drive-index: reader agents go through assigned Drive folders in parallel and write purpose, keywords and link per document, never copying sensitive values; the main session checks the results and commits.",
-   "ko": "docs/drive-index에 드라이브 색인을 만듦: 하위 에이전트가 맡은 폴더를 병렬로 읽어 문서별 용도·키워드·링크를 적고(민감 값은 복사 안 함), 메인 세션이 결과를 점검해 커밋"
-  }
- }
 }
