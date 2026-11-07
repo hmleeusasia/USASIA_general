@@ -45,6 +45,7 @@
 3. Phase 3 (when a dev repo is active): repo-onboard with secret-scan hooks and CI, ADR in code repos, optional trailers, scoped-token ingest, ast index if needed.
 
 ## Open for the user
+- **On hold**: network field design from real Drive docs (network tables, ISP sheets, Tacoma request form, survey sample). Cloud session 2026-11-07 could not open work Drive files (connector account has no access, even by direct link) → retry from a local PC session; read structure (tabs, headers) only, no values (R-SEC)
 - DB-down fallback method
 - Migration order of existing Markdown records
 - Who may set `validated` besides the owner?
