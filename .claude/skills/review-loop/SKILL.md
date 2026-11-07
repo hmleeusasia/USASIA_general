@@ -21,7 +21,7 @@ Pre-build review of a PLAN is a separate gate (docs/kb/subagents.md §3). This o
 - Accept → fix. Rebut → one line why, with evidence (file:line, test output).
 - Round 2 only if something was rebutted or a fix was large: send the rebuttals and the new diff to the **same** reviewer (SendMessage). No round 3.
 - Still disagreed after round 2 → one batched question to the user: a table (point, reviewer, me, options), 2–4 options, recommendation first.
-- An accepted rebuttal means a rule is unclear → one friction line in docs/projects/ai-system-questions.md.
+- An accepted rebuttal means a rule is unclear → one friction line in docs/projects/friction-log.md (D-20261106-8).
 
 ## 4. Close
 1. `py tools/hooks/review_mark.py [session_id]` (marks this session as reviewed; the Stop hook stops reminding). Without an ID it takes the newest heavy-state file — pass the ID when two sessions run at once.

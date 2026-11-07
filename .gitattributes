@@ -1,2 +1,4 @@
 *.sh text eol=lf
 tools/githooks/* text eol=lf
+# Append-only log: concurrent appends from several accounts merge without conflict (D-20261106-8)
+docs/projects/friction-log.md merge=union

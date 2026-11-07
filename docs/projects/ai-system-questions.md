@@ -1,4 +1,4 @@
-﻿# AI 시스템 만들기 — 모아 둔 고민 (나중에 한꺼번에 결정)  #proj-ai-system
+# AI 시스템 만들기 — 모아 둔 고민 (나중에 한꺼번에 결정)  #proj-ai-system
 <!-- 2026-11-03 사용자 요청: 공용/개인 구분 같은 틀 고민은 바로 정하지 말고 여기에 모은다. 새 고민이 나오면 Claude가 한 줄 추가하고 사용자에게 "숙제에 추가함"이라고만 알린다.
      결정되면 decisions.md(공용) 또는 users/<id>/(개인)에 쓰고 여기서는 "→ D-..."로 표시. 관련: D-20261102-19, CURRENT_STATE H-multi -->
 
@@ -19,4 +19,5 @@
 | Q17 | Cloud session friction 11/04: (1) cloud clone was behind main (local pushed after clone) → todo added on stale base, merge needed; start should `git pull` first. (2) "depart/arrive" mileage rule (D-20261104-1) missed on first "출발" — needs a trigger (hook or start-day reminder). (3) Container clock is UTC: "today/yesterday" for OT got shifted one day — use the user's time zone (→ D-20261105-1). | 2026-11-04 | (3) → D-20261105-1; (1)(2) open |
 | Q20 | **Concurrent sessions / teammates committing at once** (user 2026-11-06). Today's rules assume one person in one place (CLAUDE.md "Where to work"). Gaps: same-day ID collisions (D-YYYYMMDD-n, M- names, 90_변경대기 _n); shared files edited at once (decisions, CURRENT_STATE, orgs, keywords, kb) → rebase conflicts where Claude may drop others' lines; cloud fast-forward fails when main moved; claude/* branches pile up; pre-commit only where hooksPath is set; one person's local + cloud session on the same todo. Ideas: per-person IDs (D-…-<id>-n) or numbering at commit; merge=union for append-only files; shared files via PR + CI + main protection; auto-delete merged branches; digest warns about uncommitted work elsewhere; long term, high-churn data to usasia_db | 2026-11-06 | Open; decide with Q19 |
 | Q18 | area.py keyword hook (11/04): first live run fired on a subagent report (matched 로그 in 로그인, depart) → agent/system messages skipped, 로그 → 업무 로그. Watch hits.log until ~11/11 for other false hits | 2026-11-04 | open (measure) |
-- Friction 2026-11-05: STWS ticket creation takes ~10–12 browser calls per ticket (10 tickets today). Candidate: one browser script like tools/browser/outlook_list.js; needs live testing. Deferred in D-20261105-8.
+
+Friction lines (inefficiencies) live in [friction-log.md](friction-log.md) (D-20261106-8).
