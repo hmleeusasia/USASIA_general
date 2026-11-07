@@ -4,15 +4,9 @@
 - 릴리스 없음
 
 ## B. 브랜치·진행 중
-- Handoff 2026-11-06 #6 (local): DB design session done (D-20261106-5..7), phase 0 step 1 deployed. Next DB session: step 2. User to-dos: branch protection, weekly-meeting agenda (VM reclaim, company-owned accounts, single-person risk)
-- Handoff 2026-11-06 #5 (cloud): LW visit 11/11 scheduled (Calendar + Notion Job DB + todo M-lw-pc2); address-book batches _1/_2 and 00_profile done. Next: (1) local PC: STWS ticket for M-lw-pc2, buy 2 PCs; (2) ask user: Tae Lee org (Comcast vs Leverage), M-names, T-640 POS maker; emails for Jason Chung, 이재호, 심미순; (3) H-db phase 0 so Drive batches stop (user wants this soon)
-- Handoff 2026-11-06 #2: dev design doc done (log 11-06). Next: GLPI section?, share with developer, KO typos; delete ARCHITECTURE.ko.md later (D-20261106-2)
-- Handoff 2026-11-06 #3 (local): design questions Q19 (per-account isolation, in ARCHITECTURE 7a + Drive design overview v2) and Q20 (concurrent sessions) open; todo one-line board D-20261106-3 done; address-book batch waits for cloud. Work continues in another session
-- Handoff 2026-11-06 (local): framework session done — lookup rules (D-20261105-10), GLPI/master data (-11), account detection built but off (-12), tools per person (D-20261106-1). Next: onboarding PLAN approval or usasia_db phase 0
-- Handoff 2026-11-04 local → cloud. For the cloud session (Drive connector):
-  1. DONE 2026-11-06 (cloud): both batches applied to 10_주소록 (22 new rows, 7 rows fixed), renamed 완료_. Still no email: Jason Chung, 이재호, 심미순
-  2. DONE 2026-11-06 (cloud): 00_profile has title, supervisor, Git admin
-  3. Ask user M-names (13 internal names, Gregory Roman, POS manufacturer for T-640) — user had no time 11/04
+- Handoff 2026-11-06 #7 (local): usasia_db phase 0 steps 2a + 2b live (users, owner_id, layer, Visible, 404 tests). Next DB session: step 3 in a fresh session (same flow: branch → CI → fresh-Sonnet review → user-approved deploy). User to-dos: branch protection, weekly-meeting agenda (VM reclaim, company-owned accounts, single-person risk)
+- Handoff 2026-11-06 #5 (cloud): LW visit 11/11 scheduled (todo M-lw-pc2). Next: (1) local PC: STWS ticket for M-lw-pc2, buy 2 PCs; (2) ask user: Tae Lee org (Comcast vs Leverage), M-names (13 internal names, Gregory Roman), T-640 POS maker; emails for Jason Chung, 이재호, 심미순
+- Handoff 2026-11-06 #2/#3: dev design doc done; next GLPI section?, share with developer, KO typos, delete ARCHITECTURE.ko.md later (D-20261106-2). Open design questions Q20 (concurrent sessions)
 
 ## C. Repo / framework work (personal tasks: docs/users/<id>/todo.md, D-20261103-8)
 | ID | 내용 | 상태 | 맡길 곳 |
@@ -25,7 +19,7 @@
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
 | H-hooks | Lean context + supervisor hooks (PLAN-lean-context-001-draft2, D-20261103-6): steps 0–6 done 11/03. Hooks only in hmlee `.claude/settings.local.json`. Next: step 7 ~11/17 — review tools/hooks/hits.log, flip warn rules to block one by one (test_hooks.py green). Unverified: cloud session hooks, digest in a fresh session. Shared settings.json move waits for Q2 | in progress | user + 지휘 |
 | H-slim | Framework slim-down D-20261103-7/-8, D-33, D-34 done 11/03; design step 0 done (find.py all docs + store aliases); docs/ARCHITECTURE.md added (snapshot via tools/repo_map.py). Freeze on new skills/decisions to 11/17. 11/17 review agenda: hooks step 7 (real false positives), store registry + optional field line, binary-file block, equipment synonyms (저울=scale), status marking, friction lines in ai-system-questions. Delete local backup USASIA_general_backup_20261103.git ~11/10 | open | hmlee |
-| H-db | usasia_db (D-20261104-5): access layers D-20261106-5, handbooks D-20261106-6, phase 0 = PLAN-usasia-db-phase0-001-draft5 / D-20261106-7. Step 1 live 11/06 (Postgres CI, code spelling, pre-deploy snapshot). Step 2a live 11/06 (users table, owner_id backfill, layer + provenance + lock_version, code unique per owner; fresh-Sonnet review). Step 2b live 11/06 (Visible, 404, contract + allow-list tests, owner-only writes). Next: step 3 (provenance on writes, lock_version checks, deny list, guard on all text, log filter, read-only mode). Build notes: usasia_db docs/build-journal. Server history: memory oracle-server-setup | open | hmlee + Claude |
+| H-db | usasia_db (D-20261104-5): phase 0 = PLAN-usasia-db-phase0-001-draft5 / D-20261106-7 (access layers D-20261106-5, handbooks -6). Steps 1, 2a, 2b live 11/06. Next: step 3 (provenance on writes, lock_version checks, deny list, guard on all text, log filter, read-only mode). Notes: usasia_db docs/build-journal | open | hmlee + Claude |
 | H-onboard | Onboarding tutorial PLAN-onboarding-001-draft2 (day-1 core, tools tiers). Built: account detection (off, D-20261105-12), tools per person (D-20261106-1). Next: user approval → skill + docs/onboarding/<n>.md + kb/tools.md | 승인 대기 | 사용자 |
 
 ## D. 확인 안 된 것

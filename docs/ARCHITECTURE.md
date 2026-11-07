@@ -165,9 +165,9 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 215 / 989 KB |
-| Content vs framework | 376 KB vs 614 KB (62% framework) |
-| Log files / entries | 5 / 109 |
+| Files / size | 215 / 993 KB |
+| Content vs framework | 379 KB vs 614 KB (61% framework) |
+| Log files / entries | 5 / 112 |
 | Users | hmlee |
 | Decisions | 58 |
 | Store codes | 21 |
@@ -213,9 +213,9 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ├── .gitignore                         0.3 KB
 ├── CLAUDE.md                          2.7 KB
 ├── README.md                          0.1 KB
-├── docs/                              86 files, 485.6 KB
+├── docs/                              86 files, 489.1 KB
 │   ├── ARCHITECTURE.ko.md                 17.7 KB
-│   ├── CURRENT_STATE.md                   6.4 KB
+│   ├── CURRENT_STATE.md                   6.5 KB
 │   ├── archive/                           4 files, 21.1 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   │   ├── 2026/                              3 files, 21.1 KB
@@ -237,10 +237,10 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── code-map.ko.md                     31.2 KB
 │   │   ├── code-map.md                        31.2 KB
 │   │   ├── meta.json                          39.6 KB
-│   ├── kb/                                11 files, 40.3 KB
+│   ├── kb/                                11 files, 40.7 KB
 │   │   ├── INDEX.md                           2.2 KB
 │   │   ├── browser.md                         1.6 KB
-│   │   ├── facts.md                           2.4 KB
+│   │   ├── facts.md                           2.8 KB
 │   │   ├── field_media.md                     1.6 KB
 │   │   ├── mail_triage.md                     4.5 KB
 │   │   ├── orgs.md                            6.4 KB
@@ -250,8 +250,8 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               6 files, 52.1 KB
-│   │   ├── 2026/                              6 files, 52.1 KB
+│   ├── log/                               6 files, 55.2 KB
+│   │   ├── 2026/                              6 files, 55.2 KB
 │   ├── project_instructions.md            2.0 KB
 │   ├── projects/                          4 files, 8.4 KB
 │   │   ├── INDEX.md                           0.3 KB
