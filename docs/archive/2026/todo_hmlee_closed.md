@@ -37,3 +37,8 @@ Past Now rows (dropped from section 1):
 | Thu 11/05 Seattle | T-639/T-603, T-375 | Install manager PC (arrived 11/03), Wi-Fi dead zone / AP | MW |
 | Thu 11/05 Seattle | T-641 | Smart card #0012 scan on POS | BL |
 | Thu 11/05 Seattle | T-647, M-m2m-bon, T-569 | POS move site survey, 2F Bon Restaurant internet, PC no boot | M2M |
+
+## 2026-11-07
+Past Now rows (dropped from section 1):
+| 11/06 | T-362 | DH NVR: get the store manager's app name, test on own phone | DH·MW |
+| 11/06 | T-644 | EGMM Meraki MX drop: check uplink / ISP modem, reply to Andy Han | EGMM |

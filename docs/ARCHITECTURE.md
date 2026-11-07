@@ -161,15 +161,15 @@ Order: (1) confirm DB engine (2) check GitHub visibility/collaborators (3) stop 
 
 <!-- GENERATED:BEGIN (tools/repo_map.py — do not edit by hand) -->
 ## 8. Generated snapshot
-_Rebuilt 2026-11-06 by tools/repo_map.py._
+_Rebuilt 2026-11-07 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 219 / 1041 KB |
-| Content vs framework | 396 KB vs 645 KB (61% framework) |
-| Log files / entries | 5 / 114 |
+| Files / size | 220 / 1051 KB |
+| Content vs framework | 404 KB vs 646 KB (61% framework) |
+| Log files / entries | 6 / 118 |
 | Users | hmlee |
-| Decisions | 59 |
+| Decisions | 60 |
 | Store codes | 21 |
 
 ### Skills (.claude/skills)
@@ -213,16 +213,16 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ├── .gitignore                         0.3 KB
 ├── CLAUDE.md                          2.7 KB
 ├── README.md                          0.1 KB
-├── docs/                              87 files, 506.0 KB
+├── docs/                              88 files, 514.1 KB
 │   ├── ARCHITECTURE.ko.md                 17.7 KB
-│   ├── CURRENT_STATE.md                   5.6 KB
-│   ├── archive/                           4 files, 21.1 KB
+│   ├── CURRENT_STATE.md                   5.9 KB
+│   ├── archive/                           4 files, 21.3 KB
 │   │   ├── .gitkeep                           0.0 KB
-│   │   ├── 2026/                              3 files, 21.1 KB
+│   │   ├── 2026/                              3 files, 21.3 KB
 │   ├── assets/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
 │   ├── calendar.md                        0.6 KB
-│   ├── decisions.md                       30.2 KB
+│   ├── decisions.md                       30.7 KB
 │   ├── drive-index/                       7 files, 65.4 KB
 │   │   ├── INDEX.md                           2.1 KB
 │   │   ├── archive-saves.md                   11.2 KB
@@ -250,14 +250,14 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               6 files, 57.7 KB
-│   │   ├── 2026/                              6 files, 57.7 KB
+│   ├── log/                               7 files, 63.4 KB
+│   │   ├── 2026/                              7 files, 63.4 KB
 │   ├── project_instructions.md            2.0 KB
-│   ├── projects/                          5 files, 12.6 KB
+│   ├── projects/                          5 files, 14.2 KB
 │   │   ├── INDEX.md                           0.4 KB
 │   │   ├── ai-system-questions.md             4.8 KB
 │   │   ├── ai-system.md                       0.9 KB
-│   │   ├── friction-log.md                    4.2 KB
+│   │   ├── friction-log.md                    5.7 KB
 │   │   ├── granite-dia.md                     2.3 KB
 │   ├── requests/                          15 files, 102.1 KB
 │   │   ├── PLAN-access-layers-001-draft3.md   6.8 KB
@@ -296,13 +296,13 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── todo.md                            1.0 KB
 │   │   ├── user_profile.md                    1.0 KB
 │   │   ├── vendor.md                          0.3 KB
-│   ├── users/                             4 files, 13.6 KB
+│   ├── users/                             4 files, 13.3 KB
 │   │   ├── INDEX.md                           1.6 KB
-│   │   ├── hmlee/                             3 files, 12.0 KB
+│   │   ├── hmlee/                             3 files, 11.7 KB
 │   ├── vendors/                           2 files, 0.7 KB
 │   │   ├── INDEX.md                           0.1 KB
 │   │   ├── itsolution.md                      0.5 KB
-├── tools/                             23 files, 125.8 KB
+├── tools/                             23 files, 126.8 KB
 │   ├── browser/                           1 files, 2.0 KB
 │   │   ├── outlook_list.js                    2.0 KB
 │   ├── check.py                           6.6 KB
@@ -326,8 +326,8 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   ├── prune.py                           6.9 KB
 │   ├── repo_map.py                        4.1 KB
 │   ├── test_handbook.py                   3.8 KB
-│   ├── test_usasia.py                     12.3 KB
-│   ├── usasia.py                          18.3 KB
+│   ├── test_usasia.py                     12.9 KB
+│   ├── usasia.py                          18.8 KB
 │   ├── usasia.py.sha256                   0.1 KB
 ```
 <!-- GENERATED:END -->
