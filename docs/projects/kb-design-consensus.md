@@ -20,7 +20,7 @@
 ## Accepted from review
 | # | Change | Severity |
 |---|---|---|
-| 1 | One home per record type: wiki = project README (goal, status, milestones, Drive links) + log tags; lessons, risks, ADR, KB records live **only in usasia_db**. Wiki gets a generated one-line index, no lessons.md/risks.md | high |
+| 1 | One home per record: every record (project status, lessons, risks, ADR, KB) only in usasia_db; the wiki keeps no record copies (lessons.md/risks.md dropped) | high |
 | 3 | Collision-free IDs across repos and sessions (Q20): `<prefix>-<yyyymmdd>-<user>-<n>` or script-generated; duplicate check in CI | high |
 | 4 | Define the read path first: generated INDEX (id, title, type, scope, state, keywords), store hub pages that only link, skill `kb-find` (validated first); task announcement step "search KB for scope + keywords" | high |
 | 5 | Security in code repos is enforced by repo mechanisms, not CLAUDE.md text: secret scan (pre-commit + CI), push protection, CODEOWNERS, main protection. repo-onboard installs these | high |
