@@ -28,7 +28,7 @@ Status: draft5 (2026-11-06), agreed after 2 fresh-Sonnet rounds (round 1: 3 bloc
 
 ## 2. Migration readiness (DB will move: company server, likely PostgreSQL)
 1. CI runs the suite on **SQLite and PostgreSQL** (service container); Postgres failure blocks merge.
-2. Portable SQL only: no triggers, SQLite JSON/FTS5; ordering via `nulls_last`; search via Arel `matches` with `sanitize_sql_like` (case-insensitive on both, % and _ literal); `code`, `previous_code`, `parent_code` normalised to upper case before save **and on every lookup** (web, API, CLI).
+2. Portable SQL only: no triggers, SQLite JSON/FTS5; ordering via `nulls_last`; search via Arel `matches` with `sanitize_sql_like` (case-insensitive on both, % and _ literal); `code`, `previous_code`, `parent_code` normalised to one spelling before save **and on every lookup** (web, API, CLI): prefix T-/M- upper case, rest lower case (amended at build, D-20261106-7 note: M-names are lower case across the repos and find.py).
 3. Timestamps UTC; business dates as `date` (America/Los_Angeles); emails lowercased; enum-like strings with check constraints.
 4. No internal id outside the app: API/CLI/links use `code` (todos) or `uuid` (users now; each new table gets its own uuid when created). UUIDv7 via `SecureRandom.uuid_v7` (Ruby ≥ 3.3, check .ruby-version), string(36), unique index.
 5. **Export/import rake tasks** = migration format (schema-versioned JSON, every table, through Visible for API callers; full export only as an admin rake task on the server under the SSH alert). Round-trip into fresh SQLite and fresh PostgreSQL with counts + per-row checksums: once at phase-0 exit and before any cut-over (not monthly).
