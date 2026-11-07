@@ -1,5 +1,5 @@
 # PLAN usasia-db-phase0-001 draft5 — phase 0 + access layers stage 1 + migration readiness
-Status: draft5 (2026-11-06), agreed after 2 fresh-Sonnet rounds (round 1: 3 blockers, 7 majors; round 2: no blockers, 2 majors fixed; record in section 8); awaiting user approval. Base: draft3 (D-20261105-5) sections 1-8 apply **except section 0 below**; this file wins on any conflict. Implements stage 1-2 of PLAN-access-layers-001-draft3 (D-20261106-5) and the handbook rule (D-20261106-6). App: usasia_db (Rails 8.1, SQLite, 1 GB VM).
+Status: draft5 (2026-11-06), agreed after 2 fresh-Sonnet rounds (round 1: 3 blockers, 7 majors; round 2: no blockers, 2 majors fixed; record in section 8); approved by the user → D-20261106-7. Base: draft3 (D-20261105-5) sections 1-8 apply **except section 0 below**; this file wins on any conflict. Implements stage 1-2 of PLAN-access-layers-001-draft3 (D-20261106-5) and the handbook rule (D-20261106-6). App: usasia_db (Rails 8.1, SQLite, 1 GB VM).
 
 ## 0. Overrides of draft3
 | draft3 item | Now |
