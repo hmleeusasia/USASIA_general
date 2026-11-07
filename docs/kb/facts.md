@@ -5,6 +5,7 @@
 ## 회사·환경
 - USASIA 마트, 미국 워싱턴주, 여러 매장. 사용자는 IT 부서 담당
 - 원본·민감 문서는 회사 구글 드라이브, GitHub(비공개)엔 2차 문서
+- (2026-11-06) Company PCs: Windows root auto-update is off by policy (DisableRootAutoUpdate=1), so tools using the Windows cert store (winget, gh, Python) fail on GitHub ("unknown authority", 0x80072f0d); git (own OpenSSL bundle) and browsers work. Fix per user: export "Sectigo Public Server Authentication Root E46" from Chrome on github.com, check SHA-256 starts C9:0F:26:F0, `certutil -user -addstore Root <file>`. Done on hmlee's PC; tell IT for the rest
 
 ## 조직 (확인: 2026-11)
 - 사용자 소속 USASIA: Seoul Trading 뉴저지 지점에서 독립한 회사, 사무실은 여전히 NJ에 섞여 있음. 사실상 한 회사. 사용자는 워싱턴주 사무실에서 따로 근무
