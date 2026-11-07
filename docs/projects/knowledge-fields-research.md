@@ -1,6 +1,6 @@
 # Knowledge fields per project type — research (Q21/Q22 brainstorm)
 
-Status: brainstorm only (user 2026-11-07: "반영은 나중에"). Source: general knowledge of the systems below, no web check yet. Asset/ticket data stays in GLPI (or the chosen asset system); this note covers **knowledge** fields that link to it.
+Status: brainstorm only (user 2026-11-07: "반영은 나중에"). Source: general knowledge of the systems below, no web check yet. Asset/ticket raw data stays in GLPI; the knowledge base is in usasia_db (user 2026-11-07); this note covers **knowledge** fields that link to it.
 
 ## 1. Systems looked at
 
@@ -52,6 +52,6 @@ Status: brainstorm only (user 2026-11-07: "반영은 나중에"). Source: genera
 6. **Generated reuse report** at weekly review: most-used, never-used, overdue review.
 
 ## 5. Questions for later
-- Asset system: GLPI confirmed? Will it also hold the KB, or only assets/tickets? (GLPI KB vs usasia_db)
+- ~~Asset system / KB location~~ → decided (user 2026-11-07): **knowledge base lives in usasia_db; GLPI holds raw data only** (assets, tickets, inventory). KB records link to GLPI by ID; GLPI KB module unused.
 - Who validates a record (KCS "validated")?
 - Same fields in Markdown front matter first, DB later?
