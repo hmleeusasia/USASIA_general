@@ -28,3 +28,4 @@ Keep Open short: the weekly review empties it. A session with nothing found adds
 - 2026-11-06 · hmlee · local · a Python heredoc replace failed silently-matched on "
 " text and stopped the whole patch → redone with Edit · backslash escapes in heredoc replacements (repeat of an earlier line) · use Edit for lines containing 
  or regexes
+- 2026-11-06 · hmlee · local · usasia_db step 6 pushed straight to main; Deploy runs on green main CI, so it deployed without the chat approval used in steps 4-5 · deploy gate lives only in habit, not in the workflow · push to a claude/* branch first, ask, then fast-forward main (or add a protected environment)
