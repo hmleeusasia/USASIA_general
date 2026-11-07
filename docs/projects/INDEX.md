@@ -7,3 +7,4 @@
 | [ai-system.md](ai-system.md) | GitHub 저장소 기반 AI 업무 시스템 만들기 (장기, 고민 모음: ai-system-questions.md) |
 | [dev-knowledge-research.md](dev-knowledge-research.md) | Research: dev knowledge record frame (Q22, with Q21 project framework) |
 | [knowledge-fields-research.md](knowledge-fields-research.md) | Research: knowledge fields per project type (KCS, GLPI, IT Glue, NetBox …) |
+| [kb-design-consensus.md](kb-design-consensus.md) | Consensus draft (Claude + Sonnet review) for Q21/Q22, not adopted |
