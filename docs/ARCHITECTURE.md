@@ -165,11 +165,11 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 215 / 993 KB |
-| Content vs framework | 379 KB vs 614 KB (61% framework) |
-| Log files / entries | 5 / 112 |
+| Files / size | 216 / 997 KB |
+| Content vs framework | 382 KB vs 614 KB (61% framework) |
+| Log files / entries | 5 / 113 |
 | Users | hmlee |
-| Decisions | 58 |
+| Decisions | 59 |
 | Store codes | 21 |
 
 ### Skills (.claude/skills)
@@ -195,34 +195,34 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ### Tree (depth 3)
 ```
 .
-├── .claude/                           105 files, 405.4 KB
+├── .claude/                           105 files, 406.3 KB
 │   ├── settings.json                      0.5 KB
-│   ├── skills/                            9 files, 33.3 KB
+│   ├── skills/                            9 files, 34.1 KB
 │   │   ├── drive-check/                       1 files, 2.4 KB
 │   │   ├── drive-index/                       1 files, 4.6 KB
 │   │   ├── mail-triage/                       1 files, 5.5 KB
 │   │   ├── review-loop/                       1 files, 2.7 KB
-│   │   ├── session-end/                       1 files, 3.8 KB
+│   │   ├── session-end/                       1 files, 4.7 KB
 │   │   ├── start-day/                         1 files, 4.3 KB
 │   │   ├── todo/                              1 files, 3.4 KB
 │   │   ├── todo-sync/                         1 files, 4.4 KB
 │   │   ├── weekly-meeting/                    1 files, 2.2 KB
 │   ├── worktrees/                         95 files, 371.6 KB
 │   │   ├── compassionate-antonelli-e41a7b/    95 files, 371.6 KB
-├── .gitattributes                     0.0 KB
+├── .gitattributes                     0.2 KB
 ├── .gitignore                         0.3 KB
 ├── CLAUDE.md                          2.7 KB
 ├── README.md                          0.1 KB
-├── docs/                              86 files, 489.1 KB
+├── docs/                              87 files, 492.1 KB
 │   ├── ARCHITECTURE.ko.md                 17.7 KB
-│   ├── CURRENT_STATE.md                   6.5 KB
+│   ├── CURRENT_STATE.md                   5.3 KB
 │   ├── archive/                           4 files, 21.1 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   │   ├── 2026/                              3 files, 21.1 KB
 │   ├── assets/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
 │   ├── calendar.md                        0.6 KB
-│   ├── decisions.md                       29.5 KB
+│   ├── decisions.md                       30.2 KB
 │   ├── drive-index/                       7 files, 65.4 KB
 │   │   ├── INDEX.md                           2.1 KB
 │   │   ├── archive-saves.md                   11.2 KB
@@ -231,7 +231,7 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── meeting-templates-programs.md      13.3 KB
 │   │   ├── ongoing-project.md                 13.9 KB
 │   │   ├── purchase-reimbursement.md          14.0 KB
-│   ├── handbook/                          5 files, 104.9 KB
+│   ├── handbook/                          5 files, 105.0 KB
 │   │   ├── README.ko.md                       1.6 KB
 │   │   ├── README.md                          1.4 KB
 │   │   ├── code-map.ko.md                     31.2 KB
@@ -250,13 +250,14 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               6 files, 55.2 KB
-│   │   ├── 2026/                              6 files, 55.2 KB
+│   ├── log/                               6 files, 56.2 KB
+│   │   ├── 2026/                              6 files, 56.2 KB
 │   ├── project_instructions.md            2.0 KB
-│   ├── projects/                          4 files, 8.4 KB
-│   │   ├── INDEX.md                           0.3 KB
-│   │   ├── ai-system-questions.md             4.9 KB
+│   ├── projects/                          5 files, 10.7 KB
+│   │   ├── INDEX.md                           0.4 KB
+│   │   ├── ai-system-questions.md             4.8 KB
 │   │   ├── ai-system.md                       0.9 KB
+│   │   ├── friction-log.md                    2.3 KB
 │   │   ├── granite-dia.md                     2.3 KB
 │   ├── requests/                          15 files, 102.1 KB
 │   │   ├── PLAN-access-layers-001-draft3.md   6.8 KB
