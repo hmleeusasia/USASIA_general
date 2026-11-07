@@ -41,6 +41,12 @@ class Fake(BaseHTTPRequestHandler):
         length = int(self.headers.get("Content-Length") or 0)
         body = json.loads(self.rfile.read(length)) if length else None
         Fake.seen.append((method, self.path, self.headers.get("Authorization"), body))
+        if Fake.status_override == 302:
+            self.send_response(302)
+            self.send_header("Location", "/api/v1/me?followed=1")
+            self.send_header("Content-Length", "0")
+            self.end_headers()
+            return None
         if Fake.status_override:
             return self.reply(Fake.status_override, {"error": "x", "message": "override"})
         if self.headers.get("Authorization") != f"Bearer {TOKEN}":
@@ -183,6 +189,13 @@ class CliTest(unittest.TestCase):
         for status in (500, 503, 429):
             Fake.status_override = status
             self.assertEqual(self.run_cli("me")[0], 3, status)
+
+    def test_redirect_is_not_followed_and_exits_3(self):
+        Fake.status_override = 302
+        code, _, err = self.run_cli("me")
+        self.assertEqual(code, 3)
+        self.assertIn("redirect", err)
+        self.assertEqual(len(Fake.seen), 1, "the token must not be sent to the redirect target")
 
     def test_unreachable_exits_3(self):
         os.environ["USASIA_DB_URL"] = "http://127.0.0.1:1"

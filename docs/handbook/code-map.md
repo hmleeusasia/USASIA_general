@@ -243,26 +243,26 @@ usasia_db command-line client (PLAN-usasia-db-phase0-001-draft3 §4, R7, S4, S9;
 | `claude_account` | 97 | — | accountUuid of the signed-in Claude account, or None. | (same file) |
 | `read_token_file` | 106 | path | Token text from a file (first non-empty line), or None. | (same file) |
 | `find_token` | 116 | token_file | Token per the lookup order in the module docstring. Never printed. | (same file) |
-| `request` | 148 | method, path, token, query, body | JSON request; returns (status, parsed body). Raises CliError for unreachable/5xx/429/401/403. | (same file) |
-| `parse` | 177 | raw | Parsed JSON body, or {} when empty or not JSON. | (same file) |
-| `refused` | 185 | status, payload | CliError for a 4xx answer other than 401/403. | (same file) |
-| `envelope` | 197 | text | Text inside an UNTRUSTED DATA envelope with a per-run marker (content cannot fake the end line). | (same file) |
-| `todo_line` | 204 | todo | One list row: code status store planned due owner title. | (same file) |
-| `show_json` | 211 | obj | Pretty JSON inside the envelope. | (same file) |
-| `cmd_me` | 218 | args, token | Prints who the token belongs to. | — |
-| `cmd_activity` | 228 | args, token | Prints refused and token events of the last 24 hours. | — |
-| `cmd_list` | 241 | args, token | Lists items, following every page, inside the envelope. | — |
-| `get_todo` | 260 | code, token | Current row (dict) or CliError. | (same file) |
-| `cmd_get` | 268 | args, token | Prints one item as JSON inside the envelope. | — |
-| `fields_from` | 273 | args | API fields from the options that were given. | (same file) |
-| `cmd_add` | 278 | args, token | Creates an item; a repeat with the same values is fine, different values exit 1. | — |
-| `cmd_update` | 290 | args, token | Reads lock_version (unless --lock), then saves the given fields; a conflict shows the current row. | — |
-| `cmd_history` | 308 | args, token | Prints the change history of one of my items. | — |
-| `cmd_export` | 320 | args, token | Writes all visible items and own history (export token) to a file outside any git repo, or prints them. | — |
-| `inside_git_tree` | 348 | path | True if the file would land in a folder with a .git above it. | (same file) |
-| `cmd_selfcheck` | 360 | args, token | Only checks the pinned checksum (done before every command anyway). | — |
-| `build_parser` | 365 | — | Command-line options. | (same file) |
-| `main` | 407 | argv | Runs one command; returns the exit code. | tools/test_usasia.py, (same file) |
+| `request` | 155 | method, path, token, query, body | JSON request; returns (status, parsed body). Raises CliError for unreachable/5xx/429/401/403. | (same file) |
+| `parse` | 187 | raw | Parsed JSON body, or {} when empty or not JSON. | (same file) |
+| `refused` | 195 | status, payload | CliError for a 4xx answer other than 401/403. | (same file) |
+| `envelope` | 207 | text | Text inside an UNTRUSTED DATA envelope with a per-run marker (content cannot fake the end line). | (same file) |
+| `todo_line` | 214 | todo | One list row: code status store planned due owner title. | (same file) |
+| `show_json` | 221 | obj | Pretty JSON inside the envelope. | (same file) |
+| `cmd_me` | 228 | args, token | Prints who the token belongs to. | — |
+| `cmd_activity` | 238 | args, token | Prints refused and token events of the last 24 hours. | — |
+| `cmd_list` | 251 | args, token | Lists items, following every page, inside the envelope. | — |
+| `get_todo` | 270 | code, token | Current row (dict) or CliError. | (same file) |
+| `cmd_get` | 278 | args, token | Prints one item as JSON inside the envelope. | — |
+| `fields_from` | 283 | args | API fields from the options that were given. | (same file) |
+| `cmd_add` | 288 | args, token | Creates an item; a repeat with the same values is fine, different values exit 1. | — |
+| `cmd_update` | 300 | args, token | Reads lock_version (unless --lock), then saves the given fields; a conflict shows the current row. | — |
+| `cmd_history` | 318 | args, token | Prints the change history of one of my items. | — |
+| `cmd_export` | 330 | args, token | Writes all visible items and own history (export token) to a file outside any git repo, or prints them. | — |
+| `inside_git_tree` | 358 | path | True if the file would land in a folder with a .git above it. | (same file) |
+| `cmd_selfcheck` | 370 | args, token | Only checks the pinned checksum (done before every command anyway). | — |
+| `build_parser` | 375 | — | Command-line options. | (same file) |
+| `main` | 417 | argv | Runs one command; returns the exit code. | tools/test_usasia.py, (same file) |
 
 ## Hook rule modes (tools/hooks/config.json)
 

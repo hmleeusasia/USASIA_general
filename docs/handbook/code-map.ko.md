@@ -243,26 +243,26 @@ usasia_db 명령줄 도구(표준 라이브러리만). 할 일 목록·조회·�
 | `claude_account` | 97 | — | 로그인한 Claude 계정 ID(~/.claude.json). | (same file) |
 | `read_token_file` | 106 | path | 토큰 파일의 내용. | (same file) |
 | `find_token` | 116 | token_file | 토큰 찾기: 환경변수 → 계정별 파일 → ~/.usasia/token. 출력하지 않음. | (same file) |
-| `request` | 148 | method, path, token, query, body | JSON 요청. 서버 안 됨·5xx·429는 exit 3, 401·403은 exit 4. | (same file) |
-| `parse` | 177 | raw | 응답 JSON 읽기(비었거나 JSON이 아니면 {}). | (same file) |
-| `refused` | 185 | status, payload | 4xx 거절을 사용자 메시지로. | (same file) |
-| `envelope` | 197 | text | 글을 UNTRUSTED DATA 틀로 감쌈(실행마다 다른 표시). | (same file) |
-| `todo_line` | 204 | todo | 목록 한 줄. | (same file) |
-| `show_json` | 211 | obj | JSON을 틀 안에 출력. | (same file) |
-| `cmd_me` | 218 | args, token | 토큰 주인 출력. | — |
-| `cmd_activity` | 228 | args, token | 최근 24시간 거절·토큰 기록. | — |
-| `cmd_list` | 241 | args, token | 모든 쪽을 따라가며 목록 출력. | — |
-| `get_todo` | 260 | code, token | 항목 하나 읽기. | (same file) |
-| `cmd_get` | 268 | args, token | 항목 하나를 JSON으로. | — |
-| `fields_from` | 273 | args | 준 옵션만 API 필드로. | (same file) |
-| `cmd_add` | 278 | args, token | 항목 추가. 같은 값이면 그대로, 다르면 exit 1. | — |
-| `cmd_update` | 290 | args, token | lock_version을 읽고 저장. 충돌이면 지금 행을 보여 줌. | — |
-| `cmd_history` | 308 | args, token | 내 항목의 변경 이력. | — |
-| `cmd_export` | 320 | args, token | 내보내기(export 토큰). git 저장소 안에는 쓰지 않음. | — |
-| `inside_git_tree` | 348 | path | 경로 위에 .git이 있는지. | (same file) |
-| `cmd_selfcheck` | 360 | args, token | 체크섬만 확인. | — |
-| `build_parser` | 365 | — | 명령줄 옵션. | (same file) |
-| `main` | 407 | argv | 명령 하나 실행, exit 코드 반환. | tools/test_usasia.py, (same file) |
+| `request` | 155 | method, path, token, query, body | JSON 요청. 서버 안 됨·5xx·429는 exit 3, 401·403은 exit 4. | (same file) |
+| `parse` | 187 | raw | 응답 JSON 읽기(비었거나 JSON이 아니면 {}). | (same file) |
+| `refused` | 195 | status, payload | 4xx 거절을 사용자 메시지로. | (same file) |
+| `envelope` | 207 | text | 글을 UNTRUSTED DATA 틀로 감쌈(실행마다 다른 표시). | (same file) |
+| `todo_line` | 214 | todo | 목록 한 줄. | (same file) |
+| `show_json` | 221 | obj | JSON을 틀 안에 출력. | (same file) |
+| `cmd_me` | 228 | args, token | 토큰 주인 출력. | — |
+| `cmd_activity` | 238 | args, token | 최근 24시간 거절·토큰 기록. | — |
+| `cmd_list` | 251 | args, token | 모든 쪽을 따라가며 목록 출력. | — |
+| `get_todo` | 270 | code, token | 항목 하나 읽기. | (same file) |
+| `cmd_get` | 278 | args, token | 항목 하나를 JSON으로. | — |
+| `fields_from` | 283 | args | 준 옵션만 API 필드로. | (same file) |
+| `cmd_add` | 288 | args, token | 항목 추가. 같은 값이면 그대로, 다르면 exit 1. | — |
+| `cmd_update` | 300 | args, token | lock_version을 읽고 저장. 충돌이면 지금 행을 보여 줌. | — |
+| `cmd_history` | 318 | args, token | 내 항목의 변경 이력. | — |
+| `cmd_export` | 330 | args, token | 내보내기(export 토큰). git 저장소 안에는 쓰지 않음. | — |
+| `inside_git_tree` | 358 | path | 경로 위에 .git이 있는지. | (same file) |
+| `cmd_selfcheck` | 370 | args, token | 체크섬만 확인. | — |
+| `build_parser` | 375 | — | 명령줄 옵션. | (same file) |
+| `main` | 417 | argv | 명령 하나 실행, exit 코드 반환. | tools/test_usasia.py, (same file) |
 
 ## Hook 규칙 모드 (tools/hooks/config.json)
 

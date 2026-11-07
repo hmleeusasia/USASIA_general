@@ -145,6 +145,13 @@ def find_token(token_file=None):
 
 # --- HTTP ---
 
+class NoRedirect(urllib.request.HTTPRedirectHandler):
+    """urllib would follow a 3xx and resend the Authorization header, also to another host. Never follow."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
 def request(method, path, token, query=None, body=None):
     """JSON request; returns (status, parsed body). Raises CliError for unreachable/5xx/429/401/403."""
     url = base_url() + path
@@ -157,7 +164,8 @@ def request(method, path, token, query=None, body=None):
     })
     # Certificate checks stay on; SSL_CERT_FILE lets a proxy's CA be trusted. HTTPS_PROXY/NO_PROXY come from env.
     context = ssl.create_default_context(cafile=os.environ.get("SSL_CERT_FILE") or None)
-    opener = urllib.request.build_opener(urllib.request.ProxyHandler(), urllib.request.HTTPSHandler(context=context))
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler(), urllib.request.HTTPSHandler(context=context),
+                                         NoRedirect())
     try:
         with opener.open(req, timeout=TIMEOUT) as resp:
             return resp.status, parse(resp.read())
@@ -167,6 +175,8 @@ def request(method, path, token, query=None, body=None):
         reason = getattr(err, "reason", err)
         raise CliError(f"usasia_db unreachable ({type(reason).__name__}); skipped.", EXIT_UNREACHABLE)
     message = payload.get("message") if isinstance(payload, dict) else None
+    if 300 <= status < 400:
+        raise CliError(f"usasia_db answered with a redirect ({status}); not followed, so the token went nowhere else. Check USASIA_DB_URL; skipped.", EXIT_UNREACHABLE)
     if status in (401, 403):
         raise CliError(f"Token refused ({status}): {message or 'check the token on the /tokens page'}", EXIT_AUTH)
     if status == 429 or status >= 500:

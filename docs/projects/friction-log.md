@@ -29,3 +29,4 @@ Keep Open short: the weekly review empties it. A session with nothing found adds
 " text and stopped the whole patch → redone with Edit · backslash escapes in heredoc replacements (repeat of an earlier line) · use Edit for lines containing 
  or regexes
 - 2026-11-06 · hmlee · local · usasia_db step 6 pushed straight to main; Deploy runs on green main CI, so it deployed without the chat approval used in steps 4-5 · deploy gate lives only in habit, not in the workflow · push to a claude/* branch first, ask, then fast-forward main (or add a protected environment)
+- 2026-11-07 review_mark.py with no session id picks the newest heavy-state file, which was another session's (784ba25a), and marked it reviewed. Suggest: require the id when more than one heavy-state file is open. (hmlee session 34c3404a)
