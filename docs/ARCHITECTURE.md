@@ -165,8 +165,8 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 216 / 999 KB |
-| Content vs framework | 385 KB vs 614 KB (61% framework) |
+| Files / size | 219 / 1041 KB |
+| Content vs framework | 396 KB vs 645 KB (61% framework) |
 | Log files / entries | 5 / 114 |
 | Users | hmlee |
 | Decisions | 59 |
@@ -213,9 +213,9 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ├── .gitignore                         0.3 KB
 ├── CLAUDE.md                          2.7 KB
 ├── README.md                          0.1 KB
-├── docs/                              87 files, 494.6 KB
+├── docs/                              87 files, 506.0 KB
 │   ├── ARCHITECTURE.ko.md                 17.7 KB
-│   ├── CURRENT_STATE.md                   5.4 KB
+│   ├── CURRENT_STATE.md                   5.6 KB
 │   ├── archive/                           4 files, 21.1 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   │   ├── 2026/                              3 files, 21.1 KB
@@ -231,12 +231,12 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── meeting-templates-programs.md      13.3 KB
 │   │   ├── ongoing-project.md                 13.9 KB
 │   │   ├── purchase-reimbursement.md          14.0 KB
-│   ├── handbook/                          5 files, 105.0 KB
+│   ├── handbook/                          5 files, 115.2 KB
 │   │   ├── README.ko.md                       1.6 KB
 │   │   ├── README.md                          1.4 KB
-│   │   ├── code-map.ko.md                     31.2 KB
-│   │   ├── code-map.md                        31.2 KB
-│   │   ├── meta.json                          39.6 KB
+│   │   ├── code-map.ko.md                     34.2 KB
+│   │   ├── code-map.md                        34.4 KB
+│   │   ├── meta.json                          43.6 KB
 │   ├── kb/                                11 files, 40.7 KB
 │   │   ├── INDEX.md                           2.2 KB
 │   │   ├── browser.md                         1.6 KB
@@ -253,11 +253,11 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   ├── log/                               6 files, 57.7 KB
 │   │   ├── 2026/                              6 files, 57.7 KB
 │   ├── project_instructions.md            2.0 KB
-│   ├── projects/                          5 files, 11.7 KB
+│   ├── projects/                          5 files, 12.6 KB
 │   │   ├── INDEX.md                           0.4 KB
 │   │   ├── ai-system-questions.md             4.8 KB
 │   │   ├── ai-system.md                       0.9 KB
-│   │   ├── friction-log.md                    3.2 KB
+│   │   ├── friction-log.md                    4.2 KB
 │   │   ├── granite-dia.md                     2.3 KB
 │   ├── requests/                          15 files, 102.1 KB
 │   │   ├── PLAN-access-layers-001-draft3.md   6.8 KB
@@ -302,7 +302,7 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   ├── vendors/                           2 files, 0.7 KB
 │   │   ├── INDEX.md                           0.1 KB
 │   │   ├── itsolution.md                      0.5 KB
-├── tools/                             20 files, 95.1 KB
+├── tools/                             23 files, 125.8 KB
 │   ├── browser/                           1 files, 2.0 KB
 │   │   ├── outlook_list.js                    2.0 KB
 │   ├── check.py                           6.6 KB
@@ -326,5 +326,8 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   ├── prune.py                           6.9 KB
 │   ├── repo_map.py                        4.1 KB
 │   ├── test_handbook.py                   3.8 KB
+│   ├── test_usasia.py                     12.3 KB
+│   ├── usasia.py                          18.3 KB
+│   ├── usasia.py.sha256                   0.1 KB
 ```
 <!-- GENERATED:END -->

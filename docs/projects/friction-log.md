@@ -22,3 +22,9 @@ Keep Open short: the weekly review empties it. A session with nothing found adds
 - 2026-11-06 · hmlee · local · a long Bash heredoc with mixed quotes failed (unexpected EOF) → rewrote it as a scratchpad script · heredoc quoting in Git Bash · write multi-line scripts to the scratchpad with Write, then run them
 - 2026-11-06 · hmlee · local · gave the user a Git Bash curl command; in Windows PowerShell curl is an Invoke-WebRequest alias → error, one extra round trip · user shell not checked · give PowerShell commands (curl.exe) to this user by default
 - 2026-11-06 · hmlee · local · usasia_db page text "your own todos. Keep" failed the query allow-list scan → one extra CI cycle · the scan reads view prose as code · avoid "todos." in view text, or have the scan skip ERB text outside tags
+- 2026-11-06 · hmlee · local · test helpers took keyword args next to a token: keyword → 13 CI errors and one extra CI cycle (~5 min) · no local Ruby, Ruby 3 keyword rules missed · same as earlier line: local Ruby/container or a quick syntax/test run before push
+- 2026-11-06 · hmlee · local · wrote 2026-11-07 (UTC from CI logs) as today in the study note and CURRENT_STATE; caught only at session end · machine/UTC dates leaked in · take "today" from the digest line before writing any date
+- 2026-11-06 · hmlee · local · USASIA_general handbook pre-commit (meta.json for new tools/*.py) found only at commit time → second pass of docstrings + re-pin · check not run before commit · run py tools/handbook.py right after adding a tools/ file
+- 2026-11-06 · hmlee · local · a Python heredoc replace failed silently-matched on "
+" text and stopped the whole patch → redone with Edit · backslash escapes in heredoc replacements (repeat of an earlier line) · use Edit for lines containing 
+ or regexes
