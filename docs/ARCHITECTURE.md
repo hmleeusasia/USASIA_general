@@ -165,9 +165,9 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 216 / 997 KB |
-| Content vs framework | 382 KB vs 614 KB (61% framework) |
-| Log files / entries | 5 / 113 |
+| Files / size | 216 / 999 KB |
+| Content vs framework | 385 KB vs 614 KB (61% framework) |
+| Log files / entries | 5 / 114 |
 | Users | hmlee |
 | Decisions | 59 |
 | Store codes | 21 |
@@ -213,9 +213,9 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ├── .gitignore                         0.3 KB
 ├── CLAUDE.md                          2.7 KB
 ├── README.md                          0.1 KB
-├── docs/                              87 files, 492.1 KB
+├── docs/                              87 files, 494.6 KB
 │   ├── ARCHITECTURE.ko.md                 17.7 KB
-│   ├── CURRENT_STATE.md                   5.3 KB
+│   ├── CURRENT_STATE.md                   5.4 KB
 │   ├── archive/                           4 files, 21.1 KB
 │   │   ├── .gitkeep                           0.0 KB
 │   │   ├── 2026/                              3 files, 21.1 KB
@@ -250,14 +250,14 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               6 files, 56.2 KB
-│   │   ├── 2026/                              6 files, 56.2 KB
+│   ├── log/                               6 files, 57.7 KB
+│   │   ├── 2026/                              6 files, 57.7 KB
 │   ├── project_instructions.md            2.0 KB
-│   ├── projects/                          5 files, 10.7 KB
+│   ├── projects/                          5 files, 11.7 KB
 │   │   ├── INDEX.md                           0.4 KB
 │   │   ├── ai-system-questions.md             4.8 KB
 │   │   ├── ai-system.md                       0.9 KB
-│   │   ├── friction-log.md                    2.3 KB
+│   │   ├── friction-log.md                    3.2 KB
 │   │   ├── granite-dia.md                     2.3 KB
 │   ├── requests/                          15 files, 102.1 KB
 │   │   ├── PLAN-access-layers-001-draft3.md   6.8 KB
