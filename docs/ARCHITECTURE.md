@@ -165,11 +165,11 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 
 | Metric | Value |
 |---|---|
-| Files / size | 206 / 845 KB |
-| Content vs framework | 267 KB vs 578 KB (68% framework) |
-| Log files / entries | 5 / 108 |
+| Files / size | 215 / 989 KB |
+| Content vs framework | 376 KB vs 614 KB (62% framework) |
+| Log files / entries | 5 / 109 |
 | Users | hmlee |
-| Decisions | 54 |
+| Decisions | 58 |
 | Store codes | 21 |
 
 ### Skills (.claude/skills)
@@ -213,16 +213,16 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 ├── .gitignore                         0.3 KB
 ├── CLAUDE.md                          2.7 KB
 ├── README.md                          0.1 KB
-├── docs/                              79 files, 358.2 KB
+├── docs/                              86 files, 485.6 KB
 │   ├── ARCHITECTURE.ko.md                 17.7 KB
-│   ├── CURRENT_STATE.md                   6.3 KB
-│   ├── archive/                           4 files, 19.4 KB
+│   ├── CURRENT_STATE.md                   6.4 KB
+│   ├── archive/                           4 files, 21.1 KB
 │   │   ├── .gitkeep                           0.0 KB
-│   │   ├── 2026/                              3 files, 19.4 KB
+│   │   ├── 2026/                              3 files, 21.1 KB
 │   ├── assets/                            1 files, 0.0 KB
 │   │   ├── INDEX.md                           0.0 KB
 │   ├── calendar.md                        0.6 KB
-│   ├── decisions.md                       26.2 KB
+│   ├── decisions.md                       29.5 KB
 │   ├── drive-index/                       7 files, 65.4 KB
 │   │   ├── INDEX.md                           2.1 KB
 │   │   ├── archive-saves.md                   11.2 KB
@@ -231,6 +231,12 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── meeting-templates-programs.md      13.3 KB
 │   │   ├── ongoing-project.md                 13.9 KB
 │   │   ├── purchase-reimbursement.md          14.0 KB
+│   ├── handbook/                          5 files, 104.9 KB
+│   │   ├── README.ko.md                       1.6 KB
+│   │   ├── README.md                          1.4 KB
+│   │   ├── code-map.ko.md                     31.2 KB
+│   │   ├── code-map.md                        31.2 KB
+│   │   ├── meta.json                          39.6 KB
 │   ├── kb/                                11 files, 40.3 KB
 │   │   ├── INDEX.md                           2.2 KB
 │   │   ├── browser.md                         1.6 KB
@@ -244,15 +250,16 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── subagents.md                       4.9 KB
 │   │   ├── work_overview.md                   12.6 KB
 │   ├── keywords.md                        1.2 KB
-│   ├── log/                               6 files, 51.6 KB
-│   │   ├── 2026/                              6 files, 51.6 KB
+│   ├── log/                               6 files, 52.1 KB
+│   │   ├── 2026/                              6 files, 52.1 KB
 │   ├── project_instructions.md            2.0 KB
-│   ├── projects/                          4 files, 10.0 KB
+│   ├── projects/                          4 files, 8.4 KB
 │   │   ├── INDEX.md                           0.3 KB
-│   │   ├── ai-system-questions.md             6.5 KB
+│   │   ├── ai-system-questions.md             4.9 KB
 │   │   ├── ai-system.md                       0.9 KB
 │   │   ├── granite-dia.md                     2.3 KB
-│   ├── requests/                          13 files, 83.7 KB
+│   ├── requests/                          15 files, 102.1 KB
+│   │   ├── PLAN-access-layers-001-draft3.md   6.8 KB
 │   │   ├── PLAN-data-migration-001-draft2.md  26.7 KB
 │   │   ├── PLAN-lean-context-001-draft2.md    4.9 KB
 │   │   ├── PLAN-master-data-glpi-001-draft1.md 3.6 KB
@@ -260,6 +267,7 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── PLAN-rule-routing-001-draft2.md    10.3 KB
 │   │   ├── PLAN-structure-001-draft2.md       1.0 KB
 │   │   ├── PLAN-usasia-db-phase0-001-draft3.md 8.0 KB
+│   │   ├── PLAN-usasia-db-phase0-001-draft5.md 11.5 KB
 │   │   ├── PLAN-usasia-db-todos-001-draft2.md 3.0 KB
 │   │   ├── archive/                           5 files, 17.6 KB
 │   ├── rules/                             5 files, 9.1 KB
@@ -287,19 +295,20 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── todo.md                            1.0 KB
 │   │   ├── user_profile.md                    1.0 KB
 │   │   ├── vendor.md                          0.3 KB
-│   ├── users/                             4 files, 13.5 KB
+│   ├── users/                             4 files, 13.6 KB
 │   │   ├── INDEX.md                           1.6 KB
-│   │   ├── hmlee/                             3 files, 11.9 KB
+│   │   ├── hmlee/                             3 files, 12.0 KB
 │   ├── vendors/                           2 files, 0.7 KB
 │   │   ├── INDEX.md                           0.1 KB
 │   │   ├── itsolution.md                      0.5 KB
-├── tools/                             18 files, 78.3 KB
+├── tools/                             20 files, 95.1 KB
 │   ├── browser/                           1 files, 2.0 KB
 │   │   ├── outlook_list.js                    2.0 KB
 │   ├── check.py                           6.6 KB
 │   ├── find.py                            7.8 KB
-│   ├── githooks/                          1 files, 0.7 KB
-│   │   ├── pre-commit                         0.7 KB
+│   ├── githooks/                          1 files, 1.5 KB
+│   │   ├── pre-commit                         1.5 KB
+│   ├── handbook.py                        12.3 KB
 │   ├── hooks/                             12 files, 50.2 KB
 │   │   ├── README.md                          4.1 KB
 │   │   ├── area.py                            5.0 KB
@@ -315,5 +324,6 @@ _Rebuilt 2026-11-06 by tools/repo_map.py._
 │   │   ├── touch.py                           1.6 KB
 │   ├── prune.py                           6.9 KB
 │   ├── repo_map.py                        4.1 KB
+│   ├── test_handbook.py                   3.8 KB
 ```
 <!-- GENERATED:END -->
