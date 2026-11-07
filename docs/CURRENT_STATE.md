@@ -4,7 +4,7 @@
 - 릴리스 없음
 
 ## B. 브랜치·진행 중
-- Handoff 2026-11-06 #7 (local): usasia_db phase 0 steps 2a, 2b, 3 live (users, owner_id, layer, Visible, 404 tests, write rules). Next DB session: step 4 in a fresh session (same flow: branch → CI → fresh-Sonnet review → user-approved deploy). User to-dos: branch protection, weekly-meeting agenda (VM reclaim, company-owned accounts, single-person risk)
+- Handoff 2026-11-06 #9 (local): usasia_db phase 0 steps 2a, 2b, 3, 4 live (step 4 = API tokens, auth_events, rate limits). Next DB session: step 5 (todos API + versions + CLI) in a fresh session, same flow. User checks: read token → /api/v1/me; spoofed X-Forwarded-For test. User to-dos: branch protection, weekly-meeting agenda (VM reclaim, company-owned accounts, single-person risk)
 - Handoff 2026-11-06 #5 (cloud): LW visit 11/11 scheduled (todo M-lw-pc2). Next: (1) local PC: STWS ticket for M-lw-pc2, buy 2 PCs; (2) ask user: Tae Lee org (Comcast vs Leverage), M-names (13 internal names, Gregory Roman), T-640 POS maker; emails for Jason Chung, 이재호, 심미순
 - Handoff 2026-11-06 #2/#3: dev design doc done; next GLPI section?, share with developer, KO typos, delete ARCHITECTURE.ko.md later (D-20261106-2). Open design questions Q20 (concurrent sessions)
 
@@ -19,7 +19,7 @@
 | H-vendors | 주요 업체 파일 생성 (업무 기록하며 생길 때마다) | 대기 | 지휘 |
 | H-hooks | Lean context + supervisor hooks (PLAN-lean-context-001-draft2, D-20261103-6): steps 0–6 done 11/03. Hooks only in hmlee `.claude/settings.local.json`. Next: step 7 ~11/17 — review tools/hooks/hits.log, flip warn rules to block one by one (test_hooks.py green). Unverified: cloud session hooks, digest in a fresh session. Shared settings.json move waits for Q2 | in progress | user + 지휘 |
 | H-slim | Framework slim-down D-20261103-7/-8, D-33, D-34 done 11/03; design step 0 done (find.py all docs + store aliases); docs/ARCHITECTURE.md added (snapshot via tools/repo_map.py). Freeze on new skills/decisions to 11/17. 11/17 review agenda: hooks step 7 (real false positives), store registry + optional field line, binary-file block, equipment synonyms (저울=scale), status marking, friction lines in ai-system-questions. Delete local backup USASIA_general_backup_20261103.git ~11/10 | open | hmlee |
-| H-db | usasia_db (D-20261104-5): phase 0 = PLAN-usasia-db-phase0-001-draft5 / D-20261106-7 (access layers D-20261106-5, handbooks -6). Steps 1, 2a, 2b, 3 live 11/06. Next: step 4 (API tokens + auth_events + rate limits; skip auth_events/last_used_at writes in read-only mode). Notes: usasia_db docs/build-journal | open | hmlee + Claude |
+| H-db | usasia_db (D-20261104-5): phase 0 = PLAN-usasia-db-phase0-001-draft5 / D-20261106-7 (access layers D-20261106-5, handbooks -6). Steps 1, 2a, 2b, 3, 4 live 11/06. Next: step 5 (todos API + versions owner-only + CLI + checksum pin; deferred from step 4: export token recipe, every-route-guarded test). Notes: usasia_db docs/build-journal | open | hmlee + Claude |
 | H-onboard | Onboarding tutorial PLAN-onboarding-001-draft2 (day-1 core, tools tiers). Built: account detection (off, D-20261105-12), tools per person (D-20261106-1). Next: user approval → skill + docs/onboarding/<n>.md + kb/tools.md | 승인 대기 | 사용자 |
 
 ## D. 확인 안 된 것
